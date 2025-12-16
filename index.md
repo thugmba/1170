@@ -7,6 +7,7 @@ This course comprehensively explains the fundamental principles underlying digit
 ## Course Materials
 
 - [Vibe Codoing](https://thugmba.github.io/1169/Vibe_Coding/Vibe_Coding.html)
+
 ## Term Project
 
 - [Project](Project.html)
