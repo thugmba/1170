@@ -251,10 +251,10 @@ Analyze your selected company through the lens of **seven key platform business 
 
 - **File Format**: **PDF only**
 
-## Presentation Video (5 minutes)
+## Presentation Video (3 minutes)
 
-- 5 minutes vide of your presentation
-  - Record a 5 minutes video of your presentation
+- 3 minutes vide of your presentation
+  - Record a 3 minutes video of your presentation
   - Upload the video to your Google Drive
   - Submit the URL of the video to iLearn
 
@@ -266,12 +266,12 @@ Analyze your selected company through the lens of **seven key platform business 
 
 ## Week 16 Presentation
 
-- **Duration**: 7 minutes total
-  - 5 minutes presentation
+- **Duration**: 3 minutes total
+  - 3 minutes presentation
   - 2 minutes Q&A
 - **Attendance**: Mandatory
 
-## Presentation Structure (5 minutes)
+## Presentation Structure (3 minutes)
 
 Suggested time allocation:
 
@@ -285,7 +285,7 @@ Suggested time allocation:
 
 :::{.callout-warning}
 ## Time Management
-Practice your presentation multiple times to stay within the 5 minutes limit. Presentations will be stopped at 5 minutes.
+Practice your presentation multiple times to stay within the 3 minutes limit. Presentations will be stopped at 3 minutes.
 :::
 
 ## Q&A Session (2 minutes)
@@ -348,7 +348,7 @@ Be prepared to answer questions about:
 | Criteria | Points | Description |
 |----------|--------|-------------|
 | **Delivery** | 10 | Clear speech; appropriate pace; eye contact; confidence |
-| **Time Management** | 5 | Stays within 5-minute limit; appropriate pacing |
+| **Time Management** | 5 | Stays within 5 minute limit; appropriate pacing |
 | **Content Mastery** | 15 | Demonstrates understanding; answers questions effectively |
 
 **Total: 100 points**
