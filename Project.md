@@ -322,9 +322,10 @@ Be prepared to answer questions about:
 
 ---
 
-# Evaluation Criteria
+# Evaluation Criteria Guidelines
 
-## Written Report (50 points)
+
+## Written Report
 
 | Criteria | Points | Description |
 |----------|--------|-------------|
@@ -334,7 +335,7 @@ Be prepared to answer questions about:
 | **Writing Quality** | 5 | Clear, professional writing; proper grammar; logical organization |
 | **Research & Citations** | 5 | Adequate sources; proper APA citation; credible references |
 
-## Presentation Slides (25 points)
+## Presentation Slides
 
 | Criteria | Points | Description |
 |----------|--------|-------------|
@@ -343,17 +344,13 @@ Be prepared to answer questions about:
 | **Organization** | 5 | Logical flow; appropriate slide count; balanced content distribution |
 | **Data Visualization** | 5 | Effective charts/graphs; clear trends; appropriate visual choices |
 
-## Oral Presentation (25 points)
+## Oral Presentation
 
 | Criteria | Points | Description |
 |----------|--------|-------------|
 | **Delivery** | 10 | Clear speech; appropriate pace; eye contact; confidence |
 | **Time Management** | 5 | Stays within 5 minute limit; appropriate pacing |
 | **Content Mastery** | 15 | Demonstrates understanding; answers questions effectively |
-
-**Total: 100 points**
-
----
 
 # Resources and Support
 
@@ -420,15 +417,15 @@ All work must be original. Proper citation is required for:
 
 You may use AI tools (ChatGPT, Copilot, etc.) for:
 
-- ✓ Brainstorming and ideation
-- ✓ Proofreading and grammar checking
-- ✓ Understanding concepts
+- Brainstorming and ideation
+- Proofreading and grammar checking
+- Understanding concepts
 
 You may NOT use AI tools for:
 
-- ✗ Writing substantial portions of your report
-- ✗ Conducting the analysis
-- ✗ Creating your strategic recommendations
+- Writing substantial portions of your report
+- Conducting the analysis
+- Creating your strategic recommendations
 
 All AI use must be disclosed in an appendix.
 
