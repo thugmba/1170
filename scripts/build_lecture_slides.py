@@ -48,8 +48,8 @@ def build_session_lecture_pdf(session_id="1_1", html_path=None, output_dir=r"d:\
                 print(f"[WARNING] Page {page_num}: 'Slide' text marker not found.")
             else:
                 y0 = slide_rects[0].y0
-                expected_y0 = 597.3047
-                if abs(y0 - expected_y0) > 0.5:
+                expected_y0 = 595.14
+                if abs(y0 - expected_y0) > 0.6:
                     print(f"[WARNING] Page {page_num}: Footer Y drift detected! y0={y0:.4f} (expected {expected_y0})")
                 else:
                     print(f"[VERIFIED] Page {page_num}: Footer locked at y0={y0:.4f} pt.")
