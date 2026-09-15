@@ -1,0 +1,9 @@
+Company_Name,Fiscal_Year,Total_Revenue_USD_M,Extended_Viewing_Fees_USD_M,Operating_Costs_USD_M,Net_Income_USD_M,Filing_Source
+Blockbuster Inc.,2001,5155,798,4210,-240,Blockbuster 2003 Form 10-K Item 8
+Blockbuster Inc.,2002,5566,854,4380,-1628,Blockbuster 2003 Form 10-K Item 8
+Blockbuster Inc.,2003,5912,741,4520,-984,Blockbuster 2004 Form 10-K Item 8
+Blockbuster Inc.,2004,6052,620,4690,-1249,Blockbuster 2005 Form 10-K Item 8
+Netflix Inc.,2001,76,0,84,-38,Netflix 2003 Form 10-K Item 8
+Netflix Inc.,2002,153,0,140,-22,Netflix 2003 Form 10-K Item 8
+Netflix Inc.,2003,272,0,229,7,Netflix 2004 Form 10-K Item 8
+Netflix Inc.,2004,506,0,448,22,Netflix 2005 Form 10-K Item 8

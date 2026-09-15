@@ -1,0 +1,7 @@
+Company_Entity,Fiscal_Year,Revenue_USD_M,Sales_Marketing_USD_M,Operating_Income_USD_M,Net_Income_USD_M,Filing_Source
+Slack Technologies,2018,400.6,233.2,-153.6,-140.7,Slack FY2019 Form 10-K Item 8
+Slack Technologies,2019,630.4,321.4,-571.1,-568.4,Slack FY2020 Form 10-K Item 8
+Slack Technologies,2020,902.6,447.4,-292.5,-300.4,Slack FY2021 Form 10-K Item 8
+Microsoft Productivity Segment,2018,35865,7120,12924,12924,Microsoft 2018 Form 10-K Note 21
+Microsoft Productivity Segment,2019,41160,7840,16214,16214,Microsoft 2019 Form 10-K Note 21
+Microsoft Productivity Segment,2020,46398,8220,18724,18724,Microsoft 2020 Form 10-K Note 21

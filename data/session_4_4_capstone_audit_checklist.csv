@@ -1,0 +1,8 @@
+Audit_Category,Audit_Inspection_Item,Primary_Filing_Requirement,Spreadsheet_Formula_Requirement,Pass_Fail_Threshold
+Editorial Standards,Zero Emojis,Check entire submission,No emojis in text or charts,Mandatory 100% Pass
+Editorial Standards,Zero Em Dashes,Check entire submission,All separators use hyphens or colons,Mandatory 100% Pass
+Data Provenance,Primary Filing Citations,Annual reports or 10-K filings,Specific filing year and page cited for every cell,Zero Unverified Data
+Financial Reconciliation,Income Statement Math,Consolidated 5-year financials,Gross profit and operating profit match formula sums,Zero Variance Tolerance
+Segment Reporting,Platform Revenue Breakdown,Segment disclosures note,Segment revenue equals total consolidated revenue,100% Reconciliation
+Platform Metrics,Take Rate / ARPU Calculation,Operating metrics footnotes,Formula linked directly to raw GMV/Revenue cells,Verified Formula Link
+AI Audit Integrity,LLM Hallucination Audit,LLM output transcript,Documented fact-check table against 10-K disclosures,At least 2 verified checks

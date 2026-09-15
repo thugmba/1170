@@ -1,0 +1,11 @@
+Industry_Sector,Competitor_Entity,Market_Share_Pct_2015,Market_Share_Pct_2020,Market_Share_Pct_2024,Market_Tipping_Status,Data_Source
+Global Search Engine,Google,88.5,86.2,85.5,High Tipping (Natural Data Feedback Loop),StatCounter Global Stats
+Global Search Engine,Microsoft Bing,4.3,6.2,8.2,High Tipping (Natural Data Feedback Loop),StatCounter Global Stats
+Global Search Engine,Yahoo,3.8,2.8,2.5,High Tipping (Natural Data Feedback Loop),StatCounter Global Stats
+Global Search Engine,Yandex,1.5,1.7,1.8,High Tipping (Natural Data Feedback Loop),StatCounter Global Stats
+Global Search Engine,Others,1.9,3.1,2.0,High Tipping (Natural Data Feedback Loop),StatCounter Global Stats
+Mobile Operating System,Google Android,81.2,71.9,70.5,Duopoly Equilibrium (High Multi-Homing Costs),IDC / StatCounter
+Mobile Operating System,Apple iOS,15.8,27.5,28.8,Duopoly Equilibrium (High Multi-Homing Costs),IDC / StatCounter
+Mobile Operating System,Others,3.0,0.6,0.7,Duopoly Equilibrium (High Multi-Homing Costs),IDC / StatCounter
+US Ride Hailing,Uber,82.0,68.0,74.0,Non-Tipping (Low Multi-Homing Frictions),Bloomberg Second Measure
+US Ride Hailing,Lyft,18.0,32.0,26.0,Non-Tipping (Low Multi-Homing Frictions),Bloomberg Second Measure
