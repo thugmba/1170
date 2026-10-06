@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 1.4 Lecture Notes: Scale Dynamics and Winner-Takes-All Markets</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 15px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 46px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 39px; line-height: 1.07; font-weight: 700; }
+  .subtitle { margin: .12in 0 0; font: 400 24px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .28in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 14px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .28in; flex: 1; min-height: 0; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .22in; flex: 1; min-height: 0; }
+  .card { border: 1.2px solid #aeb7c1; padding: .22in .25in; background: rgba(255,255,255,.45); }
+  .card h3 { margin: 0 0 .12in; font: 700 26px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { font: 400 22px/1.32 "Times New Roman", Times, serif; margin: 0; color: #354052; }
+  .card ul { margin: .12in 0 0; padding-left: .24in; }
+  .accent { color: #991b1b; }
+  .teal { color: #0f766e; }
+  .question { font-size: 42px; line-height: 1.12; color: #172033; }
+  .small-label { font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.8px; color: #991b1b; margin-bottom: .1in; }
+  .statement { margin: .06in 0 .18in; font: 700 28px/1.2 "Times New Roman", Times, serif; color: #172033; }
+  .rail { display: grid; grid-template-columns: 92px 1fr; gap: .2in; padding: .12in 0; border-bottom: 1px solid #d5cec2; }
+  .rail:last-child { border-bottom: 0; }
+  .rail-no { font: 700 32px "Times New Roman", Times, serif; color: #991b1b; }
+  .rail h3 { margin: 0 0 .04in; font: 700 26px "Times New Roman", Times, serif; }
+  .rail p { margin: 0; font: 400 21px/1.28 "Times New Roman", Times, serif; color: #526174; }
+  .score-row { display: grid; grid-template-columns: 2.2in 1fr 1.1in; align-items: center; gap: .18in; padding: .1in 0; border-bottom: 1px solid #d5cec2; font: 700 23px "Times New Roman", Times, serif; }
+  .score-row span:last-child { color: #526174; font-size: 20px; font-weight: 400; }
+  .bar { height: 13px; background: #dbe0e5; position: relative; }
+  .bar i { display: block; height: 100%; background: #991b1b; }
+  .case-title { font: 700 29px "Times New Roman", Times, serif; margin: 0 0 .12in; }
+  .case-q { margin-top: .18in; font: 700 20px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .case-copy { font: 400 21px/1.3 "Times New Roman", Times, serif; color: #354052; margin: 0; }
+  .steps { margin: 0; padding: 0 .08in; list-style: none; counter-reset: step; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: .44in 1fr; gap: .12in; margin-bottom: .16in; font: 400 22px/1.3 "Times New Roman", Times, serif; color: #354052; }
+  .steps li::before { content: counter(step); width: .32in; height: .32in; display: flex; align-items: center; justify-content: center; background: #991b1b; color: #fff; font: 700 18px "Times New Roman", Times, serif; }
+  .hero { width: 100%; max-height: 4.55in; object-fit: contain; object-position: center; }
+  .takeaway { margin-top: .2in; padding: .16in .22in; border: 1.2px solid #991b1b; font: 700 24px/1.28 "Times New Roman", Times, serif; color: #991b1b; }
+  .compare { display: grid; grid-template-columns: .82fr 1.18fr; gap: .3in; flex: 1; }
+  .quote { font-size: 35px; line-height: 1.15; margin: .22in 0; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS</div>
+  <div class="body" style="justify-content:center;">
+    <div class="small-label">SESSION 1.4 / 3-HOUR WORKSHOP</div>
+    <h1 style="font-size:58px;">Scale Dynamics &amp;<br>Winner-Takes-All Markets</h1>
+    <p class="subtitle" style="font-size:29px; max-width:10.8in;">A platform founder must answer two questions: Can the business scale without breaking? Can the market become the preferred place to meet?</p>
+  </div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">OPENING QUESTION</div><h2>Two questions frame the entire session</h2>
+  <div class="body grid2">
+    <div class="card"><div class="small-label">QUESTION 01 / OPERATING PROBLEM</div><p class="question"><strong>Can we serve 10x more?</strong></p><p class="statement">Scale-Up</p><p>Growth is not scale-up unless the service can protect quality, trust, and unit economics as volume rises.</p></div>
+    <div class="card"><div class="small-label">QUESTION 02 / MARKET PROBLEM</div><p class="question"><strong>Why would everyone choose one market?</strong></p><p class="statement">Market Tipping</p><p>A larger network must create a clearly better experience than the alternatives.</p></div>
+  </div>
+  <div class="takeaway">Do not confuse a rising user chart with a scalable business or a winner-takes-all market.</div>
+  <div class="footer"><span>SESSION 1.4 / CORE QUESTIONS</span><span>SLIDE 2 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">VISUAL PROMPT</div><h2>Read the founder's questions in the illustration</h2>
+  <div class="body"><img class="hero" src="../assets/session_1_4_strategy_workshop.png" alt="Founder considers whether the service can scale and whether users will choose one market."></div>
+  <div class="footer"><span>LEFT: SCALE-UP / RIGHT: MARKET TIPPING</span><span>SLIDE 3 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 01</div><h2>What does scale-up mean?</h2>
+  <div class="body grid2">
+    <div><p class="quote"><strong>Scale-up</strong> means increasing customers, transactions, or revenue faster than the people, capital, and manual work needed to deliver a good experience.</p><p class="subtitle">Growth adds volume. Scale-up creates a repeatable operating capability.</p></div>
+    <div class="card"><h3>Growth is not enough</h3><p>A delivery platform may double orders by doubling discounts and customer-support staff. It has grown, but may not have scaled.</p><p style="margin-top:.18in;">A platform is closer to scale-up when completed orders rise while response time, trust, and contribution per order hold.</p></div>
+  </div>
+  <div class="footer"><span>SCALE-UP / DEFINE THE OPERATING TEST</span><span>SLIDE 4 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 02</div><h2>The four scale-up stages</h2>
+  <div class="body">
+    <div class="rail"><div class="rail-no">01</div><div><h3>Problem-solution fit</h3><p>Users return without needing a new discount because the product solves a real problem.</p></div></div>
+    <div class="rail"><div class="rail-no">02</div><div><h3>Repeatable match</h3><p>The platform reliably creates useful interactions between its two user sides.</p></div></div>
+    <div class="rail"><div class="rail-no">03</div><div><h3>Operational replication</h3><p>The same process works in a second campus, city, category, or customer segment.</p></div></div>
+    <div class="rail"><div class="rail-no">04</div><div><h3>Compounding advantage</h3><p>More participation improves matching, trust, selection, or speed for the next user.</p></div></div>
+  </div>
+  <div class="footer"><span>SCALE-UP / STAGES</span><span>SLIDE 5 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 03</div><h2>Evaluate scale-up before expanding</h2>
+  <div class="body">
+    <div class="score-row"><span>Demand quality</span><span class="bar"><i style="width:74%"></i></span><span>Do users return?</span></div>
+    <div class="score-row"><span>Capacity + quality</span><span class="bar"><i style="width:58%"></i></span><span>Does service hold?</span></div>
+    <div class="score-row"><span>Unit economics</span><span class="bar"><i style="width:45%"></i></span><span>Does each transaction help?</span></div>
+    <div class="score-row"><span>Network density</span><span class="bar"><i style="width:66%"></i></span><span>Can users find each other?</span></div>
+    <div class="score-row"><span>Defensibility</span><span class="bar"><i style="width:38%"></i></span><span>Is the value hard to recreate?</span></div>
+  </div>
+  <div class="takeaway">A score organizes evidence. It does not replace judgment. The lowest score usually defines the next strategic action.</div>
+  <div class="footer"><span>SCALE-UP / EVALUATION SCORECARD</span><span>SLIDE 6 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 04</div><h2>When can a market tip?</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Network effects</h3><p>Each additional participant improves the experience for another participant. More sellers create choice; more buyers attract sellers.</p></div>
+    <div class="card"><h3>Local density</h3><p>The right participants are concentrated enough to create fast, reliable matches in one market.</p></div>
+    <div class="card"><h3>Multi-homing</h3><p>Users participate on several platforms at once. Easy multi-homing keeps a market contested.</p></div>
+    <div class="card"><h3>Fair switching costs</h3><p>Ratings, trusted relationships, and useful workflows can create a reason to stay. A barrier without user value is not an advantage.</p></div>
+  </div>
+  <div class="footer"><span>MARKET TIPPING / CONDITIONS</span><span>SLIDE 7 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MICRO-APPLICATION</div><h2>Apply one concept immediately</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Card 1: Growth or scale-up?</h3><p>A marketplace grows from `100` to `1,000` registered users after referrals. Support response time slows from one day to five days.</p><p class="case-q">Prompt: What evidence is still missing before calling this scale-up?</p></div>
+    <div class="card"><h3>Card 2: Which stage?</h3><p>Buyers and sellers complete exchanges every week and both sides return. A second campus uses the same payment and identity-check process.</p><p class="case-q">Prompt: What is the highest stage supported by this evidence?</p></div>
+    <div class="card"><h3>Card 3: Score density</h3><p>`60` buyers open an app each week, but only `8` sellers list items. Most buyers see fewer than two relevant listings.</p><p class="case-q">Prompt: Give network density a `1` to `5` score and defend it.</p></div>
+    <div class="card"><h3>Card 4: Will the market tip?</h3><p>Think of a marketplace with verified profiles and easy cross-listing on rival apps.</p><p class="case-q">Prompt: Name one force toward tipping and one force toward a contested market.</p></div>
+  </div>
+  <div class="footer"><span>CONCEPT → IMMEDIATE APPLICATION</span><span>SLIDE 8 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CASE DIAGNOSIS / SUCCESS CASES</div><h2>How scale became a durable advantage</h2>
+  <div class="body grid2">
+    <div class="card"><p class="case-title">Google Search</p><p class="case-copy">Search queries and user interactions can improve relevance. More useful results attract more searches and advertisers.</p><p class="case-q">Ask: What improves as usage grows? What evidence would you still need before assigning a high unit-economics score?</p></div>
+    <div class="card"><p class="case-title">Microsoft Windows</p><p class="case-copy">More organizations using Windows attracted more developers. More compatible software made Windows more useful for organizations.</p><p class="case-q">Ask: Is the ecosystem evidence of operational replication, compounding advantage, or both?</p></div>
+  </div>
+  <div class="footer"><span>FOUR-CASE DIAGNOSIS / SUCCESS</span><span>SLIDE 9 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CASE DIAGNOSIS / CONTESTED OR FAILED TO TIP</div><h2>Why fast growth did not create one winner</h2>
+  <div class="body grid2">
+    <div class="card"><p class="case-title">Uber China-Didi</p><p class="case-copy">Both firms added riders and drivers with incentives. Riders could compare fares across apps, and drivers could receive work from more than one platform.</p><p class="case-q">Ask: Which scorecard dimensions can subsidies improve temporarily, and which do they leave unresolved?</p></div>
+    <div class="card"><p class="case-title">Clubhouse</p><p class="case-copy">Creators and listeners could maintain audiences across services, while rivals could add similar live-audio features.</p><p class="case-q">Ask: Is the weakness in network effects, defensibility, operational replication, or more than one?</p></div>
+  </div>
+  <div class="footer"><span>FOUR-CASE DIAGNOSIS / CONTESTED MARKETS</span><span>SLIDE 10 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / FOUR-CASE DIAGNOSIS</div><h2>Use the same framework for every case</h2>
+  <div class="body grid2">
+    <ol class="steps"><li>Create four rows: Google Search, Microsoft Windows, Uber China-Didi, and Clubhouse.</li><li>Identify the highest scale-up stage supported by the evidence.</li><li>Score demand quality, capacity and quality, unit economics, network density, and defensibility.</li></ol>
+    <ol class="steps" style="counter-reset:step 3;"><li>Mark one score as insufficient evidence if the case card does not support a defensible rating.</li><li>Decide: scalable and likely to tip, scalable but contested, or growth without durable advantage.</li><li>Write a 100-word conclusion: why does a rising growth curve prove neither scale-up nor winner-takes-all?</li></ol>
+  </div>
+  <div class="footer"><span>EXERCISE 1 / 50 MINUTES</span><span>SLIDE 11 / 12</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / INDIVIDUAL STRATEGY PRESENTATION</div><h2>Choose a strategy. Defend it with the scale-up framework.</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Scenario A: Campus resale marketplace</h3><p>Choose between rapid entry into five campuses through referral discounts or a focused one-campus launch with verified identity, secure payments, and reliable meet-up locations.</p><p class="case-q">Question: Are you solving a scale problem, a tipping problem, or both?</p></div>
+    <div class="card"><h3>Scenario B: Student project-workspace</h3><p>Choose between broad low-price individual adoption or integration with three large courses that brings project history, feedback, deadlines, and team tasks into one workflow.</p><p class="case-q">Question: How can the product earn repeat use without making exit unfairly difficult?</p></div>
+  </div>
+  <div class="takeaway">Deliverable: a 3-minute presentation on the weakest scale-up condition, the market-tipping logic, your 90-day action, and the metric that would make you change your mind.</div>
+  <div class="footer"><span>EXERCISE 2 / 70 MINUTES</span><span>SLIDE 12 / 12</span></div>
+</section>
+
+</body>
+</html>

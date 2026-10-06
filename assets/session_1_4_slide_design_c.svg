@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <title>Session 1.4 summary: two questions for platform strategy</title>
+  <rect width="1920" height="1080" fill="#f8f5ef"/>
+  <rect width="1920" height="8" fill="#991b1b"/>
+  <g font-family="Arial,sans-serif">
+    <text x="96" y="84" font-size="23" font-weight="700" letter-spacing="3" fill="#991b1b">SESSION 1.4  /  PLATFORM STRATEGY</text>
+    <text x="96" y="184" font-family="Georgia,serif" font-size="76" font-weight="700" fill="#172033">From Growth to Dominance</text>
+    <text x="96" y="240" font-size="32" fill="#526174">A platform must solve two different problems.</text>
+  </g>
+  <line x1="96" y1="300" x2="1824" y2="300" stroke="#cbc4b8" stroke-width="2"/>
+  <line x1="960" y1="378" x2="960" y2="810" stroke="#cbc4b8" stroke-width="2"/>
+  <g font-family="Arial,sans-serif">
+    <text x="96" y="405" font-size="21" font-weight="700" letter-spacing="2.4" fill="#991b1b">QUESTION 01  /  OPERATIONS</text>
+    <text x="96" y="500" font-family="Georgia,serif" font-size="62" font-weight="700" fill="#172033">Can we scale?</text>
+    <line x1="96" y1="544" x2="800" y2="544" stroke="#991b1b" stroke-width="5"/>
+    <text x="96" y="625" font-size="40" font-weight="700" fill="#172033">Scale-Up</text>
+    <text x="96" y="692" font-size="33" fill="#526174">Stages of Scale</text>
+    <text x="96" y="748" font-size="33" fill="#526174">Evidence and Evaluation</text>
+    <text x="96" y="812" font-size="27" fill="#991b1b">Can quality and economics hold as volume rises?</text>
+    <text x="1056" y="405" font-size="21" font-weight="700" letter-spacing="2.4" fill="#991b1b">QUESTION 02  /  MARKET</text>
+    <text x="1056" y="500" font-family="Georgia,serif" font-size="62" font-weight="700" fill="#172033">Can the market tip?</text>
+    <line x1="1056" y1="544" x2="1824" y2="544" stroke="#991b1b" stroke-width="5"/>
+    <text x="1056" y="625" font-size="40" font-weight="700" fill="#172033">Network Effects</text>
+    <text x="1056" y="692" font-size="33" fill="#526174">Multi-Homing</text>
+    <text x="1056" y="748" font-size="33" fill="#526174">Switching Costs</text>
+    <text x="1056" y="812" font-size="27" fill="#991b1b">Why would users choose one market rather than several?</text>
+  </g>
+  <line x1="96" y1="878" x2="1824" y2="878" stroke="#cbc4b8" stroke-width="2"/>
+  <text x="96" y="950" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#172033">Outcome: Market Tipping and Winner-Takes-All Potential</text>
+  <text x="96" y="1035" font-family="Arial" font-size="18" font-weight="700" letter-spacing="2" fill="#526174">COURSE 1170  /  DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</text>
+</svg>

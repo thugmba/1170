@@ -22,6 +22,19 @@ This skill provides comprehensive pedagogical specifications, structural templat
 * **Tone & Register:**
   * Authoritative, direct, clear, and business-focused.
   * Avoid convoluted academic jargon, empty platitudes, or abstract filler.
+
+### 1.1 Core Concept Instruction Requirement
+
+* **Teach Before Applying:** Every session must give students sufficient conceptual content to understand a framework before asking them to analyze a case, calculate a metric, or make a recommendation. Vocabulary lists and isolated calculations do not count as conceptual instruction.
+* **Minimum Concept Package:** For each central framework, provide:
+  * A plain-language definition and a contrast with the most likely misconception.
+  * The causal mechanism: explain why the framework changes a business outcome, not only what it is called.
+  * A stage model when the topic concerns a process, lifecycle, maturity path, or implementation journey. Each stage must name observable evidence that students can recognize.
+  * An evaluation rubric or decision scorecard that names the criteria, interpretable evidence, and limits of the assessment. Scores may organize judgment but must not be presented as a substitute for judgment.
+  * A worked visual, micro-example, or case that makes the mechanism concrete before independent practice.
+* **Application Alignment:** Exercises and presentation assignments must require students to use the same definitions, stages, and evaluation criteria introduced in the concept section. State the explicit connection so an activity is not experienced as a separate task.
+* **Business-First Explanation:** Define any financial, technical, or operational term in plain language on first use, including what it means for customers, employees, operations, or the balance sheet.
+* **Conceptual Illustration Prompts:** When an illustration is used to teach a framework rather than decorate a page, it must include a small number of readable in-image prompts that direct student attention to the decision or causal mechanism. Use short speech bubbles, thought bubbles, question cards, or callouts such as "What must improve as demand grows?" or "Why would users stay here?". The prompt must be tied to the session's central question, visually adjacent to the relevant person or mechanism, and legible at the intended presentation size. Do not add text merely as decoration.
 * **Mandatory Acronym Expansion (Zero Exception Rule):**
   * Whenever financial, accounting, operational, or technical acronyms (e.g., PP&E, CapEx, OpEx, CAC, LTV, ARR, GMV, EBITDA, AOV, HHI) are introduced in slides, syllabus text, or lab exercises, the full English term must be explicitly defined upon first use (e.g., `Property, Plant, and Equipment (PP&E)`).
   * Every specialized acronym must be paired with an intuitive, plain-language business explanation of its real-world balance-sheet or operational meaning so non-native students with no prior background understand it immediately.
@@ -110,9 +123,19 @@ Each of the 16 sessions must follow this standardized template:
   * Key Term Markers: `20.5px` semi-bold italic serif.
   * Quantitative Metric Numbers in Showdowns: `32px-36px` bold.
   * Dimension Labels: `20px-22px` bold.
+* **Lecture Summary Slide Density Rule:**
+  * Treat the `20px` card-body rule as an absolute floor, not a normal design target. In a classroom summary slide, explanatory text should normally be `28px` or larger, and the two or three primary questions or decisions should normally be `36px` or larger.
+  * A session summary slide is a conceptual map, not a compressed lesson plan. Show the small set of core concepts students will encounter and the relationship among them. Do not include their definitions, stage descriptions, evaluation criteria, case evidence, formulas, or full activity instructions.
+  * Use a concise title, three to five concept names, and at most one guiding question or visual relationship. Move explanatory detail and all evidence to subsequent concept slides.
+  * If the intended content cannot be read at the target size, remove or split content. Do not solve density by shrinking instructional text to the minimum floor.
+  * Before approval, render the slide at its final 16:9 resolution and inspect it as a single full slide. Confirm that the primary instructional content is readable without zooming and that no slide depends on small text to carry a central concept.
+  * **Two-Column Text Safety Rule:** Treat every column as a bounded text area, including small all-caps labels. Do not estimate width from character count. Long labels, letter spacing, and bold weight can substantially increase rendered width. Before export, either shorten the label or verify its rendered bounding box stays inside its column with at least `48px` clearance from a central divider and the slide edge.
+  * **Visual Export Gate:** A source SVG or HTML is not an approved slide. Export the final PNG or PDF, inspect the complete 1920x1080 rendered slide, and check every title, label, rule, card edge, divider, and footer for overlap or clipping. If a visual defect is found, correct the source, re-export, and repeat the inspection before showing it to the user.
 * **Academic Default Typography (Times New Roman Standard):**
   * Baseline Font: `font-family: 'Times New Roman', Times, Georgia, serif;`.
   * Restrained Bold: Harsh heavy bold (`font-weight: 900`) is barred from body text; use semi-bold italic serif (`font-style: italic; font-weight: 600;`) for conceptual terms.
+  * **Font-Fidelity Gate:** CSS component rules must not override the baseline with a different family. After PDF export, run `pdffonts` and confirm that every embedded text font is Times New Roman before approval.
+  * **Renderer-Compatibility Gate:** Treat every HTML-to-PDF renderer warning as a layout defect until investigated. Do not rely on unsupported CSS properties for alignment. Use renderer-supported primitives and visually inspect every slide that uses pseudo-elements, counters, grid alignment, or generated markers after export.
 * **Dedicated A vs. B Showdown Slides:**
   * Unified Height Placement: Showdowns must live inside `.slide-body` (`height: 5.75in`) as side-by-side contrasting brand cards, guaranteeing identical slide height across all pages.
   * Prominent Vector Logos: 48px vector brand marks in the card header row.
@@ -159,6 +182,7 @@ Before approving or deploying any curriculum deliverable, verify compliance agai
    - 16:9 Lecture presentation PDF available for download (`slides/session_X_Y_lecture.pdf`).
    - Slide decks enforce Universal Slide Frame (4px Crimson bar, Header 1.35in, Body 5.75in, Footer 0.5in) with sub-pixel footer coordinates locked at `y0 = 595.14 pt` (+/- 0.5pt).
    - Times New Roman typography enforced; 20% font floor (minimum 20px card body, 15px universal canvas floor); zero `border-left` AI lines.
+   - For every two-column or multi-column slide, rendered text remains inside its assigned column with no overlap at dividers, card boundaries, or slide edges. Final exported PNG/PDF has been visually inspected, not only source code reviewed.
 2. **Mandatory Acronym Expansion:**
    - All accounting, financial, and technical acronyms (PP&E, CapEx, OpEx, CAC, LTV, ARR, GMV, EBITDA, etc.) expanded on first use with plain-language real-world business definitions.
 3. **Table of Contents & Anchor Integrity:**
