@@ -136,6 +136,7 @@ Each of the 16 sessions must follow this standardized template:
   * Restrained Bold: Harsh heavy bold (`font-weight: 900`) is barred from body text; use semi-bold italic serif (`font-style: italic; font-weight: 600;`) for conceptual terms.
   * **Font-Fidelity Gate:** CSS component rules must not override the baseline with a different family. After PDF export, run `pdffonts` and confirm that every embedded text font is Times New Roman before approval.
   * **Renderer-Compatibility Gate:** Treat every HTML-to-PDF renderer warning as a layout defect until investigated. Do not rely on unsupported CSS properties for alignment. Use renderer-supported primitives and visually inspect every slide that uses pseudo-elements, counters, grid alignment, or generated markers after export.
+  * **Generated Marker Geometry Rule:** For a numbered badge, counter, or other generated marker, the text-alignment area and painted background must use the same computed width and height. Do not center text inside a fixed-width pseudo-element while its background stretches to a larger grid track. Test at least one single-digit and one double-digit marker in the exported PDF before approval.
 * **Dedicated A vs. B Showdown Slides:**
   * Unified Height Placement: Showdowns must live inside `.slide-body` (`height: 5.75in`) as side-by-side contrasting brand cards, guaranteeing identical slide height across all pages.
   * Prominent Vector Logos: 48px vector brand marks in the card header row.
