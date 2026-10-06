@@ -33,6 +33,8 @@ This skill provides comprehensive pedagogical specifications, structural templat
   * An evaluation rubric or decision scorecard that names the criteria, interpretable evidence, and limits of the assessment. Scores may organize judgment but must not be presented as a substitute for judgment.
   * A worked visual, micro-example, or case that makes the mechanism concrete before independent practice.
 * **Application Alignment:** Exercises and presentation assignments must require students to use the same definitions, stages, and evaluation criteria introduced in the concept section. State the explicit connection so an activity is not experienced as a separate task.
+* **Mandatory Concept-to-Application Rhythm:** Every concept-centered session must place a `3-5` minute micro-application immediately after each central framework or tightly linked concept cluster. The prompt must ask students to apply the definition, mechanism, stage evidence, or decision criterion just taught. It is formative practice within the lecture phase, not a substitute for either of the two required exercises.
+* **Case-Card Evidence Rule:** Case cards must separate observed evidence from student judgment. Present verifiable facts, conditions, data, and a framework-linked question, but do not print the intended strategic conclusion on the student-facing card. When paired cases are used, require students to explain the different outcomes with the same framework.
 * **Business-First Explanation:** Define any financial, technical, or operational term in plain language on first use, including what it means for customers, employees, operations, or the balance sheet.
 * **Conceptual Illustration Prompts:** When an illustration is used to teach a framework rather than decorate a page, it must include a small number of readable in-image prompts that direct student attention to the decision or causal mechanism. Use short speech bubbles, thought bubbles, question cards, or callouts such as "What must improve as demand grows?" or "Why would users stay here?". The prompt must be tied to the session's central question, visually adjacent to the relevant person or mechanism, and legible at the intended presentation size. Do not add text merely as decoration.
 * **Mandatory Acronym Expansion (Zero Exception Rule):**
@@ -47,7 +49,7 @@ This skill provides comprehensive pedagogical specifications, structural templat
 * **Mandatory Two-Tier Exercise Architecture:**
   * Every session must include a minimum of two structured exercises with ascending difficulty:
   * Exercise 1 (Foundational / Simple): Guided, step-by-step lab protocol with explicit data coordinates and formulas to ensure baseline operational competency.
-  * Exercise 2+ (Advanced / Complex): Unstructured strategic decision challenge requiring students to evaluate tradeoffs, stress-test business models, and deliver a structured 3-bullet decision memo to the Board of Directors or CEO.
+  * Exercise 2+ (Advanced / Complex): An individual strategic decision challenge requiring students to evaluate tradeoffs, stress-test business models, and deliver a structured 3-bullet decision memo to the Board of Directors or CEO. Across the three bullets, students must state the framework and evidence used, the weakest or most uncertain condition, the strategy and its key trade-off, the near-term action, and the metric or additional evidence that would change the decision.
 
 ---
 
@@ -145,6 +147,7 @@ Each of the 16 sessions must follow this standardized template:
 * **Strict Elimination of AI Box Left Lines:**
   * One-sided accent borders (`border-left: 3px/4px solid ...`) are strictly prohibited across all slides, callout boxes, and cards.
   * All containers must use balanced 4-sided translucent surfaces (`border: 1px solid rgba(255,255,255,0.20)`) or clean background cards.
+* **Lecture Presentation Completeness:** The lecture presentation PDF is the classroom teaching material. It must contain enough plain-language explanation, mechanism, evidence criteria, worked example, and application instruction for students to follow the lesson. If material becomes dense, split it across slides rather than shrinking type or assuming a separate lecture-notes document.
 
 ---
 
@@ -170,6 +173,7 @@ Each of the 16 sessions must follow this standardized template:
 * **Zero Emojis:** Strictly prohibited across all documentation, markdown files, HTML templates, slide decks, and script outputs.
 * **Zero Em/En Dashes:** Em dashes (`—`) and en dashes (`–`) are barred. All textual separators use standard hyphens (`-`) or colons (`:`).
 * **Audit-First Methodology:** Every factual claim and financial figure requires verification against primary source documents (SEC Form 10-K, Form 20-F).
+* **Asset Lifecycle:** Do not retain rejected visual options, contact sheets, or intermediate export files in the repository. Create them in a temporary workspace when needed, then discard them. Keep only the selected final asset, an editable source for that final asset when future revision requires it, and files used directly in teaching.
 
 ---
 

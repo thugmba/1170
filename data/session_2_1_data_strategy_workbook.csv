@@ -1,0 +1,2 @@
+Student_Name,Strategy_Choice,Signal_To_Collect,Decision_To_Change,Expected_Customer_Outcome,Success_Metric,Greatest_Risk,First_90_Day_Action,Decision_Change_Trigger,Presentation_Claim
+Example Student,Permission-based recommendation,"Completed view, save, and search sequence",Recommend a next title,More relevant choices and repeat viewing,Weekly churn rate,Customer trust,"Run a consent screen and recommendation test with volunteer users",Users decline permission or churn rises,"Collect only meaningful signals with clear permission and test whether they reduce churn."

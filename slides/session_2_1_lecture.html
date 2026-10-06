@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 2.1 Lecture Presentation: From Signals to Better Decisions</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 15px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 54px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 39px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .12in 0 0; font: 400 25px/1.28 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .26in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 14px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .28in; flex: 1; min-height: 0; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; flex: 1; min-height: 0; }
+  .card { border: 1.2px solid #aeb7c1; padding: .22in .25in; background: rgba(255,255,255,.46); }
+  .card h3 { margin: 0 0 .11in; font: 700 26px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 21px/1.3 "Times New Roman", Times, serif; color: #354052; }
+  .card ul { margin: .1in 0 0; padding-left: .23in; }
+  .small-label { margin: 0 0 .08in; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .statement { margin: .08in 0 .17in; font: 700 28px/1.15 "Times New Roman", Times, serif; }
+  .takeaway { margin-top: .2in; padding: .15in .22in; border: 1.2px solid #991b1b; font: 700 23px/1.28 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; max-height: 4.55in; object-fit: contain; object-position: center; }
+  .quote { margin: .18in 0; font: 700 33px/1.17 "Times New Roman", Times, serif; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; align-items: stretch; flex: 1; min-height: 0; }
+  .flow .card { padding: .18in .15in; }
+  .flow .n { margin-bottom: .12in; font: 700 30px "Times New Roman", Times, serif; color: #991b1b; }
+  .flow p { font-size: 21px; }
+  .rail { display: grid; grid-template-columns: .48in 1fr; gap: .16in; padding: .1in 0; border-bottom: 1px solid #d5cec2; }
+  .rail:last-child { border-bottom: 0; }
+  .rail-no { font: 700 30px "Times New Roman", Times, serif; color: #991b1b; }
+  .rail h3 { margin: 0 0 .03in; font: 700 25px "Times New Roman", Times, serif; }
+  .rail p { margin: 0; font: 400 21px/1.28 "Times New Roman", Times, serif; color: #526174; }
+  .metric { display: grid; grid-template-columns: 1.45in 1fr; gap: .18in; padding: .12in 0; border-bottom: 1px solid #d5cec2; }
+  .metric strong { font: 700 25px "Times New Roman", Times, serif; color: #991b1b; }
+  .metric span { font: 400 21px/1.27 "Times New Roman", Times, serif; color: #354052; }
+  .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: .46in 1fr; gap: .12in; margin-bottom: .14in; font: 400 21px/1.28 "Times New Roman", Times, serif; color: #354052; }
+  .steps li::before { content: counter(step); display: block; height: .33in; line-height: .33in; text-align: center; background: #991b1b; color: #fff; font: 700 18px "Times New Roman", Times, serif; }
+  .hint { margin-top: .12in; color: #526174; font: italic 20px/1.25 "Times New Roman", Times, serif; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 2 / PLATFORM ECONOMICS</div>
+  <div class="body" style="justify-content:center;">
+    <div class="small-label">SESSION 2.1 / 3-HOUR WORKSHOP</div>
+    <h1>From Data to Better Decisions</h1>
+    <p class="subtitle" style="font-size:29px; max-width:10.8in;">A platform gains value only when customer signals improve a real decision, customer experience, and business result.</p>
+  </div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">TODAY'S QUESTIONS</div><h2>What should we learn? What should change?</h2>
+  <div class="body grid2">
+    <div class="card"><div class="small-label">QUESTION 01 / CUSTOMER SIGNALS</div><p class="quote">Which customer signals reveal a real need?</p><p>Not every click is useful. We need signals with enough meaning and context to support a decision.</p></div>
+    <div class="card"><div class="small-label">QUESTION 02 / BUSINESS DECISIONS</div><p class="quote">How can data improve the next action?</p><p>Data becomes valuable when it changes a recommendation, design choice, or investment and the result can be observed.</p></div>
+  </div>
+  <div class="takeaway">By the end of class, you can identify a useful signal, map a feedback loop, and recommend a responsible data strategy.</div>
+  <div class="footer"><span>SESSION 2.1 / LEARNING GOALS</span><span>SLIDE 2 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">OPENING VISUAL</div><h2>Trace the feedback loop in the illustration</h2>
+  <div class="body"><img class="hero" src="../assets/session_2_1_data_feedback_illustration.png" alt="A product manager considers useful viewer signals and a better data decision."></div>
+  <div class="footer"><span>SIGNAL → DECISION → CUSTOMER OUTCOME → LEARNING</span><span>SLIDE 3 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">LANGUAGE BRIDGE</div><h2>Four terms you will use today</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Signal</h3><p>A recorded customer action that may help answer a business question: a save, a completed view, a search, or a repeat visit.</p></div>
+    <div class="card"><h3>Recommendation</h3><p>A suggested next product, item, or piece of content selected for a customer.</p></div>
+    <div class="card"><h3>Feedback loop</h3><p>A repeated process in which an observed result improves the next decision.</p></div>
+    <div class="card"><h3>Churn</h3><p>The percentage of paying customers who cancel in a period. It helps show whether people stay.</p></div>
+  </div>
+  <div class="footer"><span>PLAIN ENGLISH / USE THESE TERMS IN THE ACTIVITIES</span><span>SLIDE 4 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 01</div><h2>Data is not automatically a business asset</h2>
+  <div class="body grid2">
+    <div><p class="quote">A data point becomes useful only when it helps answer a business question and changes an action.</p><p class="subtitle">More data without a better decision is storage, not advantage.</p></div>
+    <div class="card"><h3>Do not confuse a click with a need</h3><p>A high number of clicks may mean interest, confusion, or a failed search. Start with the decision you want to improve, then choose the smallest useful signal.</p></div>
+  </div>
+  <div class="footer"><span>DATA VALUE / DECISION FIRST</span><span>SLIDE 5 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORKED EXAMPLE + MICRO-APPLICATION 01</div><h2>Which event gives the strongest evidence?</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Worked example</h3><p>A viewer finishes a cooking video, saves it, then searches for beginner recipes. The sequence suggests a need for a beginner cooking recommendation. Watch time alone would be weaker evidence.</p></div>
+    <div class="card"><h3>Work alone for 3 minutes</h3><p>A music app records: a two-second song opening, a saved song, and listening to an album twice.</p><p class="hint">Choose the strongest signal of preference. Explain why in one sentence.</p></div>
+  </div>
+  <div class="footer"><span>MICRO-APPLICATION / SIGNAL OR NOISE?</span><span>SLIDE 6 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 02</div><h2>A data feedback loop improves the next action</h2>
+  <div class="body flow">
+    <div class="card"><div class="n">01</div><h3>Collect</h3><p>Observe a relevant signal.</p></div>
+    <div class="card"><div class="n">02</div><h3>Interpret</h3><p>Ask what the signal may mean.</p></div>
+    <div class="card"><div class="n">03</div><h3>Act</h3><p>Change a recommendation or decision.</p></div>
+    <div class="card"><div class="n">04</div><h3>Observe</h3><p>Check the customer outcome.</p></div>
+    <div class="card"><div class="n">05</div><h3>Learn</h3><p>Keep, improve, or stop the action.</p></div>
+  </div>
+  <div class="takeaway">The loop is complete only when the business learns from the result and improves the next action.</div>
+  <div class="footer"><span>DATA FEEDBACK LOOP / FIVE STEPS</span><span>SLIDE 7 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORKED EXAMPLE + MICRO-APPLICATION 02</div><h2>Complete a feedback loop</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Worked example: streaming</h3><p>Viewers who finish a Korean thriller start similar titles. The service tests a recommendation row and observes whether those viewers watch suggested titles. It keeps or changes the row based on the result.</p></div>
+    <div class="card"><h3>Work alone for 3 minutes</h3><p>A campus events app sees that students save events but do not attend.</p><p class="hint">Complete: “The app should test ___ because saved events may mean ___. I would observe ___ to decide whether the test worked.”</p></div>
+  </div>
+  <div class="footer"><span>MICRO-APPLICATION / COMPLETE THE LOOP</span><span>SLIDE 8 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 03</div><h2>Quality, context, and trust set the limit</h2>
+  <div class="body grid3">
+    <div class="card"><h3>Relevant</h3><p>Does this signal help the specific decision we need to make?</p></div>
+    <div class="card"><h3>Contextual</h3><p>Could another explanation produce the same customer action?</p></div>
+    <div class="card"><h3>Trusted</h3><p>Do customers understand and accept how the data is collected and used?</p></div>
+  </div>
+  <div class="takeaway">Privacy and trust are business conditions. Without them, customers may leave or provide less reliable information.</div>
+  <div class="footer"><span>DATA QUALITY / CUSTOMER TRUST</span><span>SLIDE 9 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORKED EXAMPLE + MICRO-APPLICATION 03</div><h2>What is missing before we act?</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Worked example</h3><p>A viewer stops a video after ten seconds. This might show dislike. It could also mean a phone call, a slow connection, or a poor title preview. One event is not enough context.</p></div>
+    <div class="card"><h3>Work alone for 3 minutes</h3><p>A delivery app sees a customer close a restaurant menu.</p><p class="hint">Name one alternative explanation and one additional signal to check before changing the restaurant recommendation.</p></div>
+  </div>
+  <div class="footer"><span>MICRO-APPLICATION / CONTEXT CHECK</span><span>SLIDE 10 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CORE CONCEPT 04</div><h2>Customer economics show whether the loop creates value</h2>
+  <div class="body">
+    <div class="metric"><strong>CAC</strong><span>Customer Acquisition Cost: sales and marketing cost needed to acquire one paying customer.</span></div>
+    <div class="metric"><strong>LTV</strong><span>Customer Lifetime Value: gross profit expected from a customer before that customer leaves.</span></div>
+    <div class="metric"><strong>Churn</strong><span>The percentage of paying customers who cancel in a period.</span></div>
+    <div class="metric"><strong>ARPU</strong><span>Average Revenue Per User or Member: revenue earned from each active customer or member.</span></div>
+  </div>
+  <div class="takeaway">These measures do not prove that a recommendation is good. They show whether a better experience is also improving the business.</div>
+  <div class="footer"><span>CUSTOMER ECONOMICS / PLAIN-LANGUAGE METRICS</span><span>SLIDE 11 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MICRO-APPLICATION 04 + RECAP</div><h2>Choose the first metric, then connect the framework</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Work alone for 3 minutes</h3><p>A streaming service improves recommendations and wants to know whether people stay.</p><p class="hint">Choose the best first metric: new sign-ups, churn rate, or office rent. Explain in one sentence.</p></div>
+    <div class="card"><h3>The decision chain</h3><p><strong>Signal</strong> tells us something about a need.</p><p><strong>Feedback loop</strong> changes the next action.</p><p><strong>Quality and trust</strong> determine whether we can rely on it.</p><p><strong>Economics</strong> shows whether the change creates value.</p></div>
+  </div>
+  <div class="footer"><span>RETRIEVAL CHECK / CONCEPT → EVIDENCE → DECISION</span><span>SLIDE 12 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">CASE CARD / NETFLIX</div><h2>What can the data show, and what can it not prove?</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Observed in the audited dataset</h3><p>Netflix's paid memberships rose from 167.1 million in 2019 to 260.3 million in 2023. Content cash additions fell from $13,917M in 2019 to $13,063M in 2023. Operating income rose from $2,604M to $6,954M.</p></div>
+    <div class="card"><h3>Your judgment</h3><p>Which one observed change should a manager investigate first? What customer-behavior measure would you still need before claiming that a data feedback loop caused the financial outcome?</p></div>
+  </div>
+  <div class="footer"><span>CASE CARD / EVIDENCE IS NOT CAUSATION</span><span>SLIDE 13 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / GUIDED-TO-INDEPENDENT DATA DIAGNOSIS</div><h2>Calculate, describe, then ask the next question</h2>
+  <div class="body grid2">
+    <ol class="steps"><li>Open the Netflix dataset and read the source column.</li><li>With the instructor, calculate 2019 content cash spending as a percentage of revenue in `H2`.</li><li>With the instructor, calculate 2019 annual revenue per member in `I2`.</li></ol>
+    <ol class="steps" style="counter-reset:step 3;"><li>Individually copy the formulas through 2023.</li><li>Write one observed change and one business question.</li><li>Name one customer-behavior measure needed before making a causal claim.</li></ol>
+  </div>
+  <div class="takeaway">Deliverable: three sentences that separate a financial pattern, a business question, and the customer evidence still missing.</div>
+  <div class="footer"><span>EXERCISE 1 / 50 MINUTES</span><span>SLIDE 14 / 15</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / INDIVIDUAL DATA STRATEGY PRESENTATION</div><h2>Choose a data strategy. Defend it responsibly.</h2>
+  <div class="body grid2">
+    <div class="card"><h3>Scenario: StreamWise</h3><p>A student streaming platform can collect every click and sell detailed audience profiles, or ask permission for a smaller set of viewing, saving, and search signals to improve recommendations and content decisions.</p><p class="hint">Choose one approach or design a third approach.</p></div>
+    <div class="card"><h3>Your 3-minute individual presentation</h3><p>1. My strategy is ... because ...</p><p>2. The signal and decision are ...</p><p>3. The greatest risk is ...</p><p>4. In 90 days, I would ...</p><p>5. I would change my decision if ...</p></div>
+  </div>
+  <div class="takeaway">Take one minute to rehearse. Your evidence, risk, action, and decision rule must fit together as one feedback loop.</div>
+  <div class="footer"><span>EXERCISE 2 / 70 MINUTES</span><span>SLIDE 15 / 15</span></div>
+</section>
+
+</body>
+</html>

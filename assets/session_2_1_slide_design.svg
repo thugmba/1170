@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <title>Session 2.1 summary: data feedback loops</title>
+  <rect width="1920" height="1080" fill="#f8f5ef"/>
+  <rect width="1920" height="8" fill="#991b1b"/>
+  <g font-family="Times New Roman, Times, serif">
+    <text x="96" y="84" font-size="23" font-weight="700" letter-spacing="3" fill="#991b1b">SESSION 2.1  /  PLATFORM ECONOMICS</text>
+    <text x="96" y="184" font-size="76" font-weight="700" fill="#172033">From Data to Better Decisions</text>
+    <text x="96" y="240" font-size="32" fill="#526174">A business gains value only when data changes what it does.</text>
+  </g>
+  <line x1="96" y1="300" x2="1824" y2="300" stroke="#cbc4b8" stroke-width="2"/>
+  <line x1="960" y1="378" x2="960" y2="810" stroke="#cbc4b8" stroke-width="2"/>
+  <g font-family="Times New Roman, Times, serif">
+    <text x="96" y="405" font-size="21" font-weight="700" letter-spacing="2.4" fill="#991b1b">QUESTION 01  /  CUSTOMER SIGNALS</text>
+    <text x="96" y="500" font-size="62" font-weight="700" fill="#172033">What should we learn?</text>
+    <line x1="96" y1="544" x2="800" y2="544" stroke="#991b1b" stroke-width="5"/>
+    <text x="96" y="625" font-size="40" font-weight="700" fill="#172033">Useful Behavior Data</text>
+    <text x="96" y="692" font-size="33" fill="#526174">Data Quality and Context</text>
+    <text x="96" y="748" font-size="33" fill="#526174">Privacy and Trust</text>
+    <text x="96" y="812" font-size="27" fill="#991b1b">Which signals reveal a real customer need?</text>
+    <text x="1056" y="405" font-size="21" font-weight="700" letter-spacing="2.4" fill="#991b1b">QUESTION 02  /  BUSINESS DECISIONS</text>
+    <text x="1056" y="500" font-size="62" font-weight="700" fill="#172033">What should change?</text>
+    <line x1="1056" y1="544" x2="1824" y2="544" stroke="#991b1b" stroke-width="5"/>
+    <text x="1056" y="625" font-size="40" font-weight="700" fill="#172033">Data Feedback Loop</text>
+    <text x="1056" y="692" font-size="33" fill="#526174">Better Recommendations</text>
+    <text x="1056" y="748" font-size="33" fill="#526174">Content Investment</text>
+    <text x="1056" y="812" font-size="27" fill="#991b1b">How does learning improve the next decision?</text>
+  </g>
+  <line x1="96" y1="878" x2="1824" y2="878" stroke="#cbc4b8" stroke-width="2"/>
+  <text x="96" y="950" font-family="Times New Roman, Times, serif" font-size="38" font-weight="700" fill="#172033">Outcome: A Data Feedback Loop That Improves Customer and Business Value</text>
+  <text x="96" y="1035" font-family="Times New Roman, Times, serif" font-size="18" font-weight="700" letter-spacing="2" fill="#526174">COURSE 1170  /  DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</text>
+</svg>
