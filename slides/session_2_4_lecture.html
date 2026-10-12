@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 2.4 Lecture Presentation: Module 2 Review: Choosing the Right Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION</div><h2>Session 2.4: Module 2 Review: Choosing the Right Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_2_4_freshbox_strategy_hanji.png" alt="Sora, founder of FreshBox, asks which strategy to use first."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>FreshBox: three strategies, one monthly loss</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">FreshBox sends university students weekly meal-kit boxes with fresh vegetables from local farms. It keeps $3.00 from each box. Sora is its founder.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1.3"><table><tr><th>ONE MONTH</th><th style="text-align:right">VALUE</th></tr><tr><td>Students who signed up</td><td class="num">3,000</td></tr><tr><td>Local farms that supply vegetables</td><td class="num">25</td></tr><tr><td>Boxes ordered per week</td><td class="num">900</td></tr><tr><td>Revenue (900 x $3.00 x 4 weeks)</td><td class="num">$10,800</td></tr><tr><td>Monthly costs</td><td class="num">$12,000</td></tr><tr><td>Monthly loss</td><td class="num">$1,200</td></tr></table></div><div class="card" style="flex:1"><h3>Sora's question</h3><p>Each Module 2 strategy suggests a different plan.</p><p>Which strategy should FreshBox use first?</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SKILL IN ONE PARAGRAPH</div><h2>How do you choose the right strategy?</h2>
+  <div class="body"><p class="para">Diagnose the business problem first, then use the Module 2 strategy that fits it. Check the evidence for that strategy's key condition, compare the options with the same numbers, and start with one strategy while planning the next.</p><div class="takeaway">Use this skill whenever a business has several possible plans and limited time and money.</div></div>
+  <div class="footer"><span>SESSION 2.4 / OVERVIEW</span><span>SLIDE 3 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 2 AT A GLANCE</div><h2>Three strategies, three different problems</h2>
+  <div class="body"><table><tr><th>STRATEGY</th><th>PROBLEM IT SOLVES</th><th>KEY CONDITION</th><th>NUMBER TO WATCH</th></tr><tr><td>Data Feedback Loop (2.1)</td><td>We do not know what customers really want</td><td>Strong signals and permission</td><td>Churn or repeat rate</td></tr><tr><td>Asymmetric Pricing (2.2)</td><td>Two groups need each other: who pays?</td><td>One side price sensitive; the other gains money</td><td>Money-side revenue vs. subsidy cost</td></tr><tr><td>Up-Sell and Cross-Sell (2.3)</td><td>Many users, but they spend too little</td><td>A higher tier or related product customers value</td><td>Conversion and attach rate</td></tr></table></div>
+  <div class="footer"><span>SESSION 2.4 / STRATEGY MAP</span><span>SLIDE 4 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Diagnosis and condition</h2>
+  <div class="body"><div class="term"><strong>Diagnosis</strong><span>Naming the real problem before choosing a solution.<br><em>Example: "Students stop ordering after two weeks" is a diagnosis; "we need more ads" is a solution.</em></span></div><div class="term"><strong>Condition</strong><span>Something that must be true for a strategy to work.<br><em>Example: up-selling needs a higher tier that customers value.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.4 / KEY TERMS 1 OF 2</span><span>SLIDE 5 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Time to result and sequence</h2>
+  <div class="body"><div class="term"><strong>Time to result</strong><span>How long a plan takes before it changes the numbers.<br><em>Example: a data feedback loop may need three months of signals.</em></span></div><div class="term"><strong>Sequence</strong><span>The order in which a business uses strategies.<br><em>Example: first up-sell to cover costs, then a data loop to learn which premium items students want.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.4 / KEY TERMS 2 OF 2</span><span>SLIDE 6 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Name the problem before you choose a strategy</h2>
+  <div class="body"><p class="statement">Write the problem in one sentence that does not include a solution.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>"Students order a box for two weeks and then stop" points to a customer-knowledge problem (Session 2.1), not a pricing problem.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Starting with a favorite strategy ("let's add a premium box") before knowing what is wrong.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / RULE 1 OF 4</span><span>SLIDE 7 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Check the strategy's conditions with evidence</h2>
+  <div class="body"><p class="statement">Each strategy works only when its key condition is true.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>Asymmetric pricing needs a side that is not price sensitive. If most farms would leave over a $200 fee, the condition is weak.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Using a strategy's words without its conditions, such as calling a business a "platform" when it does not connect two groups.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / RULE 2 OF 4</span><span>SLIDE 8 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Compare the options with the same numbers</h2>
+  <div class="body"><p class="statement">For each option: the change in the monthly result, the time to result, and the main risk.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>One plan adds $1,800 a month but needs three months; another adds $3,240 a month and can start next week.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Comparing one option's best case with another option's worst case.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / RULE 3 OF 4</span><span>SLIDE 9 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Start with one strategy and plan the next</h2>
+  <div class="body"><p class="statement">Fix the most urgent problem first, then plan which strategy comes next and why.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>First up-sell and cross-sell to stop the monthly loss, then use a data feedback loop to learn which premium items students want.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Trying all three strategies at once, so the team cannot tell which one worked.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / RULE 4 OF 4</span><span>SLIDE 10 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Spotify: three strategies that fit together</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Spotify keeps a free tier paid for by advertisers, uses listening signals to build personal playlists, and up-sells free listeners to Premium, Duo, and Family plans.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Each strategy fits a clear problem: who pays, what listeners want, and how to earn more per listener. <b>(Rule 1)</b></li><li>The free tier creates the audience and data the other strategies need. <b>(Rule 4)</b></li><li>Premium gives clear extra value: no ads and offline listening. <b>(Rule 2)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / GOOD EXAMPLE 1</span><span>SLIDE 11 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>LinkedIn</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Members create profiles for free. Recruiters and companies pay to search and contact members, and some members pay for Premium features.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Members are the subsidy side recruiters come for, so they stay free. <b>(Rule 2)</b></li><li>Recruiters gain the most from the match, so they are the main money side.</li><li>Premium up-sells members who need more, such as job seekers, without charging all members. <b>(Rule 1)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / GOOD EXAMPLE 2</span><span>SLIDE 12 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>WeWork's 2019 IPO</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>WeWork rented office space on long leases and rented desks to members on short contracts. Before its planned 2019 stock listing (IPO), it called itself a technology platform and was valued at about $47 billion by private investors. When its filings were published, investors questioned that description, and WeWork withdrew the IPO in September 2019.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>It used platform words but did not mainly connect two groups who need each other. <b>(Rule 2)</b></li><li>The numbers showed a property-rental business with large losses. <b>(Rule 3)</b></li><li>Investors who checked the evidence lost trust, and its value fell sharply.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / BAD EXAMPLE 1</span><span>SLIDE 13 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>MoviePass</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In 2017, MoviePass cut its price to $9.95 a month for up to one movie a day, while paying theaters close to the full ticket price for each movie. Its managers hoped to earn money later from subscriber data. Losses grew with every movie watched, and the service shut down in 2019.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>A huge subsidy with no money side to cover it (Session 2.2, Rule 4).</li><li>The data plan was only a hope, not a proven feedback loop. <b>(Rule 2)</b></li><li>One ticket could cost more than a whole month's fee. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / BAD EXAMPLE 2</span><span>SLIDE 14 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Three diagnosis questions</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">1</div><p>Do we know what customers want?</p><p><b>If not: Data Feedback Loop</b></p></div><div class="card"><div class="n">2</div><p>Do we connect two groups and need to decide who pays?</p><p><b>If yes: Asymmetric Pricing</b></p></div><div class="card"><div class="n">3</div><p>Do many customers use the product but spend too little?</p><p><b>If yes: Up-Sell and Cross-Sell</b></p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / TOOL 1 OF 3</span><span>SLIDE 15 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Option comparison table</h2>
+  <div class="body"><table><tr><th>BAKERY APP OPTION</th><th>MONTHLY CHANGE</th><th>TIME TO RESULT</th><th>MAIN RISK</th></tr><tr><td>Cake up-sell</td><td>+$600</td><td>2 weeks</td><td>Customers may not want cake</td></tr><tr><td>Data loop on favorite breads</td><td>+$900</td><td>3 months</td><td>Customers may refuse permission</td></tr></table><div class="takeaway">Write the same three things for every option before you choose.</div></div>
+  <div class="footer"><span>SESSION 2.4 / TOOL 2 OF 3</span><span>SLIDE 16 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.4 / TOOL 3 OF 3</span><span>SLIDE 17 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Match the problem to the strategy</h2>
+  <div class="body"><div class="card"><ul><li>(a) A fitness app has 8,000 free users, but only 200 pay.</li><li>(b) A campus marketplace connects buyers and sellers and does not know which side to charge.</li><li>(c) A news app gets many clicks but does not know which articles make readers come back.</li><li>(d) A bakery app wants each customer to spend more on each order.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 18 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Business [letter]: The problem is [problem in one sentence, with no solution].
+The best strategy is [strategy], because [the key condition is true].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: MUSIC SCHOOL APP</div><div class="tmpl">The problem is that students quit after one month and the school does not know why.
+The best strategy is the Data Feedback Loop, because the school can collect strong signals, such as missed lessons and practice time, with students&#x27; permission.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 19 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Each problem points to one strategy</h2>
+  <div class="body"><table><tr><th>BUSINESS</th><th>STRATEGY</th><th>WHY</th></tr><tr><td>(a) Fitness app</td><td>Up-Sell and Cross-Sell</td><td>Many users, few paying</td></tr><tr><td>(b) Marketplace</td><td>Asymmetric Pricing</td><td>Two groups; the question is who pays</td></tr><tr><td>(c) News app</td><td>Data Feedback Loop</td><td>Does not know which signals show a real need</td></tr><tr><td>(d) Bakery app</td><td>Up-Sell and Cross-Sell</td><td>More spending per order: a drink or a larger size</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 20 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Diagnose and plan one strategy: PetPal</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><p>PetPal connects pet owners with student pet sitters. It has <b>1,000 pet owners</b>; only <b>300</b> book a second time.</p><p>PetPal does not know why owners do not come back. Sitters are happy and many are waiting for bookings.</p></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Repeat booking rate = 300 / 1,000 x 100 = ____ %.</li><li><b>Step 2:</b> Use Tool 1 to choose a strategy, then fill in the template on the next slide.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 21 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Problem: [one sentence, no solution]
+Strategy: [one Module 2 strategy]
+Evidence the condition is met: [what we know or can collect]
+First action: [one action, tested on a test group]
+Measure: [one number and a target]</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: LAUNDRY PICKUP APP</div><div class="tmpl">Problem: many students use the free pickup, but few pay for ironing.
+Strategy: Up-Sell and Cross-Sell.
+Evidence the condition is met: 40% of students say ironed shirts would save them time before interviews.
+First action: offer ironing for $1.00 per shirt at checkout to half of the students.
+Measure: attach rate of the ironing offer; target 15%.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 22 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Repeat rate is 30%: use the Data Feedback Loop</h2>
+  <div class="body"><div class="card good"><ul><li>Repeat booking rate = 300 / 1,000 x 100 = <b>30%</b>.</li><li>PetPal does not know why owners leave (Tool 1, question 1). Pricing is not the main problem: sitters are happy and waiting.</li><li>Collect strong signals with permission: owner ratings, photos the sitter sent, whether the owner booked again.</li><li>Test one change on a test group, such as a photo update during each visit.</li><li>Measure the repeat booking rate, with a target such as 30% to 40%.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 23 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Choose FreshBox's first strategy</h2>
+  <div class="body"><div class="grid3"><div class="card"><div class="small-label">OPTION A</div><h3>Option A: Data Feedback Loop</h3><p>Collect which recipes students cook and rate, with permission. Expect orders to rise from 900 to <b>1,050 boxes a week</b>, after about <b>3 months</b>.</p></div><div class="card"><div class="small-label">OPTION B</div><h3>Option B: Asymmetric Pricing</h3><p>Charge each farm <b>$200 a month</b>. In a survey, <b>40% of farms</b> said they would leave if charged.</p></div><div class="card"><div class="small-label">OPTION C</div><h3>Option C: Up-Sell and Cross-Sell</h3><p>Premium box: FreshBox keeps <b>$5.00</b> instead of $3.00; <b>20%</b> of boxes. Spice kit: keeps <b>$2.00</b>; <b>25%</b> of boxes. Starts next week.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 24 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tool 2; 4 weeks per month)</h2>
+  <div class="body"><div class="card"><ul><li>Option A: extra boxes per week = 1,050 - 900 = ____; extra revenue = extra boxes x $3.00 x 4 = $______</li><li>Option B: farms that stay = 25 x 60% = ____; revenue = farms x $200 = $______</li><li>Option C up-sell: Premium boxes per week = 900 x 20% = ____; extra = Premium boxes x $2.00 x 4 = $______</li><li>Option C cross-sell: spice kits per week = 900 x 25% = ____; extra = kits x $2.00 x 4 = $______</li><li>Then fill in a comparison table: monthly change, time to result, and main risk for each option.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 25 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to the CEO (Tool 3)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [CEO name], [company]
+1. Decision and evidence: We should start with [option] because [the rule it follows] and [one number from your calculation]. Next, we will use [second strategy] because [reason].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next 60 days we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 26 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>CampusPrint: data loop or binding cross-sell?</h2>
+  <div class="body"><div class="tmpl">To: Ben Cho, CEO, CampusPrint
+1. Decision and evidence: We should start with the binding cross-sell because it fits a clear need before exams (Rule 1) and 30% of 2,000 orders x $1.00 = $600 a month covers our $500 loss. Next, we will use a data feedback loop to learn which students print most.
+2. Biggest risk and trade-off: The weakest point is that binding sales may drop after exams. We give up a slower, deeper data plan for now to stop the monthly loss quickly.
+3. Next step and decision rule: In the next 60 days we will offer binding at checkout to half of our users and measure the attach rate. We will change this decision if it is below 20%.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 27 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Start with C, plan A next, avoid B</h2>
+  <div class="body"><table><tr><th>OPTION</th><th>MONTHLY CHANGE</th><th>TIME</th><th>MAIN RISK</th></tr><tr><td>A: Data loop</td><td>+$1,800 (150 x $3.00 x 4)</td><td>About 3 months</td><td>Slow; students may refuse permission</td></tr><tr><td>B: Charge farms</td><td>$3,000 (15 x $200)</td><td>Next month</td><td>10 farms leave; fewer vegetables, fewer boxes</td></tr><tr><td>C: Up-sell + cross-sell</td><td>+$3,240 ($1,440 + $1,800)</td><td>Next week</td><td>Fewer students may choose Premium</td></tr></table><div class="takeaway">A strong memo starts with C to cover the $1,200 loss quickly, plans A next (Rule 4), and explains that farms supply the food students come for, so they are a poor money side.</div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY</span><span>SLIDE 28 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Match a business problem to the Module 2 strategy that fits it.</p></div><div class="card"><div class="n">02</div><p>Check a strategy's key condition with evidence.</p></div><div class="card"><div class="n">03</div><p>Compare options with the same numbers and choose which strategy to use first.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Hagiu, A., and Wright, J. (2020). When Data Creates Competitive Advantage. Harvard Business Review.</p><p class="ref">Eisenmann, T., Parker, G., and Van Alstyne, M. W. (2006). Strategies for Two-Sided Markets. Harvard Business Review.</p><p class="ref">The We Company (2019). Form S-1 Registration Statement. U.S. Securities and Exchange Commission.</p></div></div>
+  <div class="footer"><span>SESSION 2.4 / WRAP-UP</span><span>SLIDE 29 / 29</span></div>
+</section>
+
+</body>
+</html>

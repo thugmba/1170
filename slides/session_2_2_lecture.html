@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 2.2 Lecture Presentation: The Asymmetric Pricing Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION</div><h2>Session 2.2: The Asymmetric Pricing Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_2_2_campusjobs_pricing_hanji.png" alt="Ravi, founder of CampusJobs, asks who should pay: the students or the shops."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>CampusJobs: a free app that earns nothing</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">CampusJobs is a free app that connects university students who want part-time jobs with local shops that need workers. Ravi is its founder.</p><div class="wide-left"><div><table><tr><th>ONE MONTH</th><th style="text-align:right">VALUE</th></tr><tr><td>Students using the app</td><td class="num">6,000</td></tr><tr><td>Shops posting jobs</td><td class="num">120</td></tr><tr><td>Job posts</td><td class="num">300</td></tr><tr><td>Applications from students</td><td class="num">9,000</td></tr><tr><td>Price for students / shops</td><td class="num">$0 / $0</td></tr><tr><td>Monthly costs</td><td class="num">$4,000</td></tr></table></div><div class="card"><h3>Ravi's question</h3><p>A friend says: charge everyone $2.00 a month.</p><p>Who should pay? Would charging students make the app useless for shops?</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Asymmetric Pricing Strategy?</h2>
+  <div class="body"><p class="para">A <b>platform</b> connects two groups who need each other. With asymmetric pricing, it charges them <b>different prices</b>. The <b>subsidy side</b> pays little or nothing, because its presence attracts the other group. The <b>money side</b> pays, because meeting the first group is worth money to it.</p><div class="takeaway">Use it when a business connects two groups, one group is easily driven away by a price, and the other group would gladly pay to reach it.</div></div>
+  <div class="footer"><span>SESSION 2.2 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Platform, subsidy side, money side</h2>
+  <div class="body"><div class="term"><strong>Two-sided platform</strong><span>A business that connects two groups of users who need each other.<br><em>Example: CampusJobs connects students and shops.</em></span></div><div class="term"><strong>Subsidy side</strong><span>The side that pays little or nothing because the platform needs many of them.<br><em>Example: students use CampusJobs for free.</em></span></div><div class="term"><strong>Money side</strong><span>The side that pays because reaching the other side is worth money to them.<br><em>Example: a shop pays to post a job and find workers.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.2 / KEY TERMS 1 OF 2</span><span>SLIDE 4 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Price sensitivity, subsidy, cross-subsidy</h2>
+  <div class="body"><div class="term"><strong>Price sensitivity</strong><span>How much a group's use drops when the price rises.<br><em>Example: if a $2.00 fee makes 60 of every 100 students leave, students are very price sensitive.</em></span></div><div class="term"><strong>Subsidy</strong><span>Value the platform gives away to attract a side.<br><em>Example: free use, or a $5.00 sign-up bonus.</em></span></div><div class="term"><strong>Cross-subsidy</strong><span>Using money from one side to pay for the free service given to the other side.<br><em>Example: shop fees pay the costs of serving students for free.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.2 / KEY TERMS 2 OF 2</span><span>SLIDE 5 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Subsidize the side that the other side comes for</h2>
+  <div class="body"><p class="statement">Ask: "Which group does the other group want to reach?" Keep that group free or cheap.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>Shops join CampusJobs because 6,000 students are there. Without students, no shop would post a job, so students should stay free.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Charging the side that attracts everyone else. When it leaves, the other side leaves too.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / RULE 1 OF 4</span><span>SLIDE 6 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Charge the side that gains the most from the match</h2>
+  <div class="body"><p class="statement">The money side usually earns money or saves time because of the other side.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>A shop that fills a job quickly saves days of searching and keeps its store running. That is worth more to a shop than a job search is worth to a student in cash.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Charging both sides the same price because it looks fair. Equal prices ignore that the two sides value the platform very differently.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / RULE 2 OF 4</span><span>SLIDE 7 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Check price sensitivity before you set a price</h2>
+  <div class="body"><p class="statement">Find out which side leaves when the price rises, and keep the price low for that side.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>A survey finds that a $2.00 fee would make 60% of students leave, but shops would pay $25.00 per job post if each post gets at least 20 applications.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Guessing. A price that looks small to the business ($2.00) can be large for a student budget.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / RULE 3 OF 4</span><span>SLIDE 8 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Make the money side cover the subsidy, and protect the free side</h2>
+  <div class="body"><p class="statement">The money side must pay enough to cover the cost of serving both sides, and must not harm the free side.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>CampusJobs checks that job-post fees are more than its $4,000 monthly costs, and removes fake or unpaid "job" posts so students keep trusting the app.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Giving away free service with no plan for who will pay, or letting the paying side flood the free side with low-quality offers.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / RULE 4 OF 4</span><span>SLIDE 9 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Adobe Acrobat Reader</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In the 1990s, Adobe gave away the Reader program for opening PDF files for free, and sold the Acrobat software that creates and edits PDF files to businesses.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Millions of free readers made PDF the format businesses wanted to use. <b>(Rule 1)</b></li><li>Businesses that create documents gained the most, so they were charged. <b>(Rule 2)</b></li><li>Readers would not have paid just to open a file, so Reader stayed free. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / GOOD EXAMPLE 1</span><span>SLIDE 10 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Google Search</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>People search on Google for free. Advertisers pay Google to show labeled ads next to search results.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Advertisers come because billions of people search there: searchers are the subsidy side. <b>(Rule 1)</b></li><li>Advertisers earn money from the customers they reach: they are the money side. <b>(Rule 2)</b></li><li>Ads pay for the free service, and labels keep searchers' trust. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / GOOD EXAMPLE 2</span><span>SLIDE 11 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Unity's 2023 Runtime Fee</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Unity sells tools that game developers use to build games. In September 2023, it announced a fee charged to developers each time a game was installed, including some games already released. Developers protested, Unity changed the plan within weeks, and its CEO left the following month.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Developers bring the games that make Unity valuable; a sudden fee pushed them away. <b>(Rule 1)</b></li><li>Unity did not first check how developers would react to a fee on installs they could not control. <b>(Rule 3)</b></li><li>Changing prices for games already released broke developers' trust.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / BAD EXAMPLE 1</span><span>SLIDE 12 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Groupon and local merchants</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Groupon sold deep-discount deals, often 50% off, from local businesses to its many shoppers, and took a share of the deal price. Many small businesses found that a deal cost them more than it earned, because most deal buyers did not return at full price.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>The money side paid for a large subsidy but did not gain enough from the match. <b>(Rule 2)</b></li><li>Shoppers came for the discount, not for the merchant. <b>(Rule 4)</b></li><li>Merchants who lost money did not run a second deal, so the platform lost its supply.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / BAD EXAMPLE 2</span><span>SLIDE 13 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Adobe Reader</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Free readers attracted paying creators (Rule 1)</td></tr><tr><td>Google Search</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Advertisers pay; searchers stay free and trust results (Rules 2 and 4)</td></tr><tr><td>Unity 2023</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Charged the side everyone comes for (Rule 1)</td></tr><tr><td>Groupon</td><td style="color:#991b1b;font-weight:700">Bad</td><td>The money side paid more than it gained (Rule 2)</td></tr></table><div class="takeaway">Keep free the side others come for; charge the side that gains the most; make sure the numbers cover the subsidy.</div></div>
+  <div class="footer"><span>SESSION 2.2 / EXAMPLE SUMMARY</span><span>SLIDE 14 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Revenue from each side</h2>
+  <div class="body"><p class="statement">Calculate revenue for each side, then add them.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Revenue = (users on side A x price for A) + (users on side B x price for B)</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a campus events app</h3><ul><li>2,000 students pay $0.</li><li>40 clubs pay $10.00 a month.</li><li>2,000 x $0 + 40 x $10.00 = $400 a month.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / TOOL 1 OF 3</span><span>SLIDE 15 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Value per match for the money side</h2>
+  <div class="body"><p class="statement">The money side pays only if it gets enough matches.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Matches per post = total matches / number of posts</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a tutoring app</h3><ul><li>800 student requests for 100 tutor listings.</li><li>800 / 100 = 8 requests per listing.</li><li>Tutors pay only with at least 10 requests: 8 is not enough yet.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / TOOL 2 OF 3</span><span>SLIDE 16 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.2 / TOOL 3 OF 3</span><span>SLIDE 17 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Find the subsidy side and the money side</h2>
+  <div class="body"><div class="card"><ul><li>(a) A free campus newspaper that is paid for by local businesses' ads.</li><li>(b) A credit card that gives shoppers cash back, while stores pay a fee on each card payment.</li><li>(c) A video game console sold at a low price, while game companies pay the console maker a fee on every game sold.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 18 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Platform [letter]: The subsidy side is [group], because [the other side comes for them].
+The money side is [group], because [what they gain from the match].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: CAMPUS RADIO APP</div><div class="tmpl">The subsidy side is students, because sponsors pay to reach the students who listen.
+The money side is local sponsors, because they gain customers from the students who hear their messages.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 19 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>The subsidy side attracts the money side</h2>
+  <div class="body"><table><tr><th>PLATFORM</th><th>SUBSIDY SIDE</th><th>MONEY SIDE</th></tr><tr><td>(a) Newspaper</td><td>Readers, whom advertisers want to reach</td><td>Local businesses, which gain customers</td></tr><tr><td>(b) Credit card</td><td>Shoppers, who even get cash back</td><td>Stores, which gain sales from card users</td></tr><tr><td>(c) Game console</td><td>Players, who buy a low-priced console</td><td>Game companies, which earn from players</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 20 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Can the money side cover the subsidy? GameNight</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><p>GameNight lists board-game nights at campus cafes. Players use it free and get a <b>$2.00 snack voucher</b> per event; GameNight pays for it.</p><p>Cafes pay <b>$30.00</b> per event. This month: <b>40 events</b>, <b>15 players</b> each.</p></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1 (Tool 1):</b> Cafe revenue = 40 x $30.00 = $____. Voucher cost = 40 x 15 x $2.00 = $____. Profit = $____.</li><li><b>Step 2:</b> Change one price or subsidy so the money side covers the subsidy. Explain why players still come.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 21 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Subsidy side: [group], and what we give them: [subsidy].
+Money side: [group], and what they pay: [price].
+Change: [one change to a price or a subsidy].
+New numbers: revenue $[amount] - subsidy cost $[amount] = $[result].
+Why the subsidy side will still come: [reason linked to a rule].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: BOOK-SWAP APP</div><div class="tmpl">Subsidy side: students, and what we give them: free listings and a $1.00 credit per swap.
+Money side: publishers, and what they pay: $50.00 a month to reach readers.
+Change: lower the swap credit from $1.00 to $0.50.
+New numbers: revenue 10 x $50.00 = $500 - subsidy cost 600 x $0.50 = $300 = $200.
+Why the subsidy side will still come: listing stays free, the main value for students (Rule 1).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 22 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Revenue $1,200 minus vouchers $1,200 = $0</h2>
+  <div class="body"><div class="card good"><ul><li>Cafe revenue = 40 x $30.00 = <b>$1,200</b>. Voucher cost = 40 x 15 x $2.00 = <b>$1,200</b>. Profit = <b>$0</b>.</li><li>Keep the app free for players (Rule 1).</li><li>Raise the cafe fee a little: 40 x $40.00 = $1,600, so $1,600 - $1,200 = $400.</li><li>Or lower the voucher to $1.00: 40 x 15 x $1.00 = $600, so $1,200 - $600 = $600.</li><li>Players still come for the cafes and the games, not mainly for the voucher.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 23 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Choose a pricing plan for CampusJobs</h2>
+  <div class="body"><p class="statement">6,000 students / 120 shops / 300 posts / 9,000 applications / costs $4,000</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">OPTION A</div><h3>Option A: Charge everyone $2.00 a month</h3><p>A survey shows <b>60% of students</b> would leave if they had to pay.</p><p>Shops would also pay $2.00 a month each.</p></div><div class="card" style="flex:1"><div class="small-label">OPTION B</div><h3>Option B: Students free, shops pay per post</h3><p>Shops pay <b>$25.00 per job post</b>.</p><p>Shops will pay only if each post gets <b>at least 20 applications</b>.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 24 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 and 2)</h2>
+  <div class="body"><div class="card"><ul><li>Option A: students who stay = 6,000 x 40% = ____; revenue = students x $2.00 + 120 x $2.00 = $______</li><li>Option A: applications = 9,000 x 40% = ____; applications per post = applications / 300 = ____</li><li>Option B: revenue = 300 x $25.00 = $______; applications per post = 9,000 / 300 = ____</li><li>Which option covers the $4,000 costs, and in which do shops get the 20 applications they need?</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 25 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to the CEO (Tool 3)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [CEO name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next 60 days we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 26 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>TutorLink: charge students or tutors?</h2>
+  <div class="body"><div class="tmpl">To: Ana Lopez, CEO, TutorLink
+1. Decision and evidence: We should keep students free and charge tutors 10% of each lesson, because tutors come for the students (Rule 1) and 1,000 lessons at $20 give us 1,000 x $2 = $2,000 a month.
+2. Biggest risk and trade-off: The weakest point is that tutors may leave if they get too few lessons. We give up student fees to keep the students that tutors want to reach.
+3. Next step and decision rule: In the next 60 days we will measure lessons per tutor. We will change this decision if tutors average fewer than 4 lessons a month.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 27 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Charging everyone earns less and loses the shops</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>The numbers</h3><ul><li>Option A: 2,400 students stay; 2,400 x $2.00 + 120 x $2.00 = <b>$5,040</b>.</li><li>But applications fall to 3,600, or <b>12 per post</b>, below the 20 shops need: shops are likely to leave next.</li><li>Option B: 300 x $25.00 = <b>$7,500</b>, above $4,000 costs, with 9,000 / 300 = <b>30 applications</b> per post.</li></ul></div><div class="card good" style="flex:1"><h3>A strong memo</h3><ul><li>Chooses Option B.</li><li>Uses at least one number from Step 1.</li><li>Names a real risk: shops may post fewer jobs once they pay, or the survey may be wrong.</li><li>States a decision rule, e.g. "If applications per post fall below 20, we will lower the fee."</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY</span><span>SLIDE 28 / 29</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Name the subsidy side and the money side of a platform and explain why.</p></div><div class="card"><div class="n">02</div><p>Check whether the money side covers the cost of a subsidy.</p></div><div class="card"><div class="n">03</div><p>Explain why charging both sides the same price can make a platform earn less.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Parker, G. G., and Van Alstyne, M. W. (2005). Two-Sided Network Effects: A Theory of Information Product Design. Management Science.</p><p class="ref">Eisenmann, T., Parker, G., and Van Alstyne, M. W. (2006). Strategies for Two-Sided Markets. Harvard Business Review.</p><p class="ref">Unity Technologies (2023). An open letter to our community. Unity Blog.</p></div></div>
+  <div class="footer"><span>SESSION 2.2 / WRAP-UP</span><span>SLIDE 29 / 29</span></div>
+</section>
+
+</body>
+</html>
