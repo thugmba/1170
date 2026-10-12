@@ -41,7 +41,7 @@ This course delivers an analytical and practical examination of digital transfor
 * **Module 2: Platform Economics, Big Data & Monetization**
   * Session 2.1: The Data Feedback Loop Strategy
   * Session 2.2: Platform Pricing Strategies I: Subsidies & Asymmetric Pricing ([Dataset](data/session_2_2_pricing_subsidies.csv))
-  * Session 2.3: Platform Pricing Strategies II: Advanced Monetization Models ([Dataset](data/session_2_3_monetization_take_rates.csv))
+  * Session 2.3: The Up-Sell and Cross-Sell Strategy
   * Session 2.4: Midterm Strategy Review & Project Milestone ([Dataset](data/session_2_4_midterm_audit_template.csv))
 * **Module 3: Competitive Strategy & Innovation Frameworks**
   * Session 3.1: Platform Envelopment Attacks ([Dataset](data/session_3_1_envelopment_slack_msft.csv))

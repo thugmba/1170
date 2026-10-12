@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 2.3 Lecture Presentation: The Up-Sell and Cross-Sell Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION</div><h2>Session 2.3: The Up-Sell and Cross-Sell Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_2_3_studynest_pricing_hanji.png" alt="Hana, founder of StudyNest, looks at her pricing table and asks how to earn more without losing students."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>StudyNest: many users, but costs are higher than revenue</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">StudyNest is a note-taking and study app for university students. Students can use it for free or pay for more storage and study tools. Hana is its founder.</p><table><tr><th>PLAN</th><th>WHAT IT GIVES</th><th style="text-align:right">PRICE / MONTH</th><th style="text-align:right">USERS</th></tr><tr><td>Free</td><td>500 MB of notes storage</td><td class="num">$0</td><td class="num">20,000</td></tr><tr><td>Plus</td><td>10 GB storage, exam planner</td><td class="num">$4.00</td><td class="num">1,000</td></tr><tr><td>Pro</td><td>Unlimited storage, exam planner, group study rooms</td><td class="num">$9.00</td><td class="num">200</td></tr></table><div class="takeaway">Revenue = 1,000 x $4.00 + 200 x $9.00 = $5,800 a month. Costs = $9,000. StudyNest loses $3,200 a month. A teammate says: "Raise all prices 30%." Hana worries that students will leave.</div></div>
+  <div class="footer"><span>SESSION 2.3 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Up-Sell and Cross-Sell Strategy?</h2>
+  <div class="body"><p class="para">Earn more from customers who already use a product by offering them <b>more value</b>, not by charging everyone more for the same thing. <b>Up-selling</b> offers a higher, better version of what the customer already uses. <b>Cross-selling</b> offers a related product that helps the customer finish the same goal. Both work only when the price matches the value the customer sees and the offer comes at the right moment.</p><div class="takeaway">Use it when many customers use a product but few pay, or when a company wants more revenue without simply raising prices for everyone.</div></div>
+  <div class="footer"><span>SESSION 2.3 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Price tier and willingness to pay</h2>
+  <div class="body"><div class="term"><strong>Price tier</strong><span>One level of a product at one price.<br><em>Example: StudyNest has Free, Plus, and Pro.</em></span></div><div class="term"><strong>Willingness to pay</strong><span>The highest price a customer would accept for something they value.<br><em>Example: a student who saves 3 hours a week may pay $4.00 a month, but not $15.00.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.3 / KEY TERMS 1 OF 3</span><span>SLIDE 4 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Up-sell and cross-sell</h2>
+  <div class="body"><div class="term"><strong>Up-sell</strong><span>Offering a higher tier or bigger version of the same product.<br><em>Example: a free user who runs out of storage is offered Plus.</em></span></div><div class="term"><strong>Cross-sell</strong><span>Offering a different but related product.<br><em>Example: a Plus user is offered an exam note pack for $6.00.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.3 / KEY TERMS 2 OF 3</span><span>SLIDE 5 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Two rates that measure the strategy</h2>
+  <div class="body"><div class="term"><strong>Conversion rate<br><span style="font-size:24px;color:#526174;">(upgrade rate)</span></strong><span>The percentage of users who move to a paid tier.<br>Conversion rate = users who upgraded / users who could upgrade x 100<br><em>Example: 1,000 / 20,000 x 100 = 5%.</em></span></div><div class="term"><strong>Attach rate</strong><span>The percentage of customers who also buy the cross-sold product.<br>Attach rate = buyers of the add-on / customers who saw the offer x 100<br><em>Example: 30 of 200 Pro users buy the exam pack: 30 / 200 x 100 = 15%.</em></span></div></div>
+  <div class="footer"><span>SESSION 2.3 / KEY TERMS 3 OF 3</span><span>SLIDE 6 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Price by the value the customer sees</h2>
+  <div class="body"><p class="statement">Ask what problem each tier solves and how much that is worth to the customer, not only what it costs you.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>The exam planner saves a student about 3 hours a week before exams. That value explains why students pay $4.00 for Plus, even though storage costs StudyNest very little.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Raising every price by the same amount because costs went up. Customers do not see more value, so many leave.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / RULE 1 OF 4</span><span>SLIDE 7 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Build tiers for different customer groups</h2>
+  <div class="body"><p class="statement">Good, better, best: a free tier to try, a middle tier for most paying customers, a top tier for heavy users.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>Free for students who take a few notes, Plus for students preparing for exams, Pro for study groups. The middle tier often sells best because it looks like good value next to the top tier.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Tiers that are too similar, so customers cannot see why to pay more, or so many tiers that customers get confused.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / RULE 2 OF 4</span><span>SLIDE 8 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Up-sell at the moment of need, and show the extra value</h2>
+  <div class="body"><p class="statement">The best time to offer a higher tier is when the customer feels the limit of the current tier.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>When a free user's storage is full: "Your notes are full. Plus gives you 20 times more space and an exam planner for $4.00 a month."</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Showing upgrade pop-ups to every new user on the first day, before they know whether the app is useful.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / RULE 3 OF 4</span><span>SLIDE 9 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Cross-sell what helps the customer finish the same goal</h2>
+  <div class="body"><p class="statement">A good cross-sell feels like help, not like an extra sales push.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><p>In the two weeks before exams, StudyNest offers Plus and Pro users an exam note pack for $6.00. It fits what they are already trying to do.</p></div><div class="card bad" style="flex:1"><div class="small-label">WHAT TO AVOID</div><h3>Common mistake</h3><p>Offering unrelated products, such as phone cases in a study app, or pushing products customers do not need just to hit a sales target.</p></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / RULE 4 OF 4</span><span>SLIDE 10 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Dropbox storage plans</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Dropbox gives a free Basic plan with 2 GB of storage. When users fill their space, Dropbox shows them how much more space the paid Plus plan gives.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>The free tier lets people learn the product's value before paying. <b>(Rule 2)</b></li><li>The offer appears exactly when the user feels the limit: the storage is full. <b>(Rule 3)</b></li><li>The paid plan gives clearly more of what the user already values. <b>(Rule 1)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / GOOD EXAMPLE 1</span><span>SLIDE 11 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Amazon "Frequently bought together"</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>On a product page, Amazon shows items that customers often buy with that product, such as a memory card with a camera, and lets the shopper add them in one click.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>The items help the customer use the main product, so the offer feels like help. <b>(Rule 4)</b></li><li>The offer appears while the customer is already deciding to buy. <b>(Rule 3)</b></li><li>The customer can easily ignore it, so it does not damage trust.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / GOOD EXAMPLE 2</span><span>SLIDE 12 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Netflix's 2011 price change</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In July 2011, Netflix split its streaming plus DVD-by-mail plan into two plans. A customer who wanted both now paid $15.98 a month instead of $9.99, a 60% increase. Netflix lost about 800,000 U.S. subscribers in the next quarter, and its CEO later apologized.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Customers paid much more for the same service, with no new value. <b>(Rule 1)</b></li><li>It was a price increase for everyone, not an up-sell customers could choose.</li><li>It hit all customers at once, so many left instead of paying more.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / BAD EXAMPLE 1</span><span>SLIDE 13 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Wells Fargo's cross-selling targets</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In 2016, U.S. regulators found that Wells Fargo employees had opened about 2 million bank and credit card accounts without customers' permission, under pressure to meet high cross-selling targets. The bank paid $185 million in fines.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>The products helped employees reach targets, not customers reach their goals. <b>(Rule 4)</b></li><li>Customers did not choose the products, so it was not a real cross-sell.</li><li>Lost trust, fines, and lost customers cost far more than the extra sales.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / BAD EXAMPLE 2</span><span>SLIDE 14 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Dropbox</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Up-sell at the moment of need (Rule 3)</td></tr><tr><td>Amazon</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Related items that help the purchase (Rule 4)</td></tr><tr><td>Netflix 2011</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Higher price, no new value (Rule 1)</td></tr><tr><td>Wells Fargo</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Products for sales targets, not customers (Rule 4)</td></tr></table><div class="takeaway">Customers pay more when they get more value they chose, at the moment they need it.</div></div>
+  <div class="footer"><span>SESSION 2.3 / EXAMPLE SUMMARY</span><span>SLIDE 15 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Revenue after a price change</h2>
+  <div class="body"><p class="statement">When prices rise, some customers may leave. Count only the customers who stay.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Revenue = customers who stay x new price</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a gym</h3><ul><li>100 members x $20.00 = $2,000 a month.</li><li>Price rises to $25.00 and 20 members leave.</li><li>80 x $25.00 = $2,000: no extra money, and fewer members.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / TOOL 1 OF 3</span><span>SLIDE 16 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Revenue from up-selling and cross-selling</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Two formulas</h3><ul><li>Up-sell: users who upgrade x price of the new tier</li><li>Cross-sell: customers who see the offer x attach rate x price of the add-on</li></ul></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a music app</h3><ul><li>5,000 free users; 3% upgrade to a $6.00 plan: 150 x $6.00 = $900 a month.</li><li>1,000 paying users; 10% buy a $3.00 playlist pack: 100 x $3.00 = $300.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / TOOL 2 OF 3</span><span>SLIDE 17 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 2% of free users upgrade in 60 days, we will change the offer."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 2.3 / TOOL 3 OF 3</span><span>SLIDE 18 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Up-sell, cross-sell, or neither? BrewBox</h2>
+  <div class="body"><p class="statement">BrewBox is a campus coffee kiosk with an ordering app. Six possible actions:</p><div class="card"><ul><li>(a) Offer a large size for $0.80 more when a student orders a medium coffee.</li><li>(b) Suggest a muffin with a morning coffee.</li><li>(c) Raise the price of every drink by $0.50.</li><li>(d) Offer a monthly coffee pass instead of single cups.</li><li>(e) Sell phone cases at the counter.</li><li>(f) Sell a reusable cup that gives $0.30 off every refill.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 19 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Action [letter]: [up-sell / cross-sell / neither], because [what the customer gets, and whether it is a higher version of the same product, a related product, or neither].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: CAMPUS BOOKSTORE</div><div class="tmpl">Action: offer a hardcover edition for $8 more to a student buying the paperback.
+Up-sell, because it is a better version of the same book.
+Action: suggest a highlighter set to a student buying a textbook.
+Cross-sell, because it is a related product that helps the student study the book.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 20 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Up-sell, cross-sell, or neither</h2>
+  <div class="body"><table><tr><th>ACTION</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Large size</td><td>Up-sell</td><td>A bigger version of the same drink</td></tr><tr><td>(b) Muffin</td><td>Cross-sell</td><td>A related product for the same moment</td></tr><tr><td>(c) +$0.50 on all drinks</td><td>Neither</td><td>A price increase: no extra value or choice</td></tr><tr><td>(d) Monthly pass</td><td>Up-sell</td><td>A higher plan that gives more coffee</td></tr><tr><td>(e) Phone cases</td><td>Neither</td><td>Does not help the coffee customer's goal (Rule 4)</td></tr><tr><td>(f) Reusable cup</td><td>Cross-sell</td><td>Related, and gives value back on every refill</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 21 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Design an up-sell offer: LingoLeap</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><p>A language-learning app: <b>10,000 free users</b> and <b>400 Premium users</b> at <b>$8.00 a month</b>.</p><p>Free users can take 5 lessons per day. Each week, <b>2,000 free users</b> reach the 5-lesson limit.</p></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Conversion rate = 400 / 10,000 x 100 = ____ %. Premium revenue = 400 x $8.00 = $____.</li><li><b>Step 2:</b> Design the offer with Rules 1 and 3, using the template on the next slide.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 22 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Who: [which users see the offer]
+When: [the moment of need that triggers the offer]
+Message: [the extra value, in one sentence, and the price]
+Measure: [one number we compare between a test group and a comparison group, and our target]
+Money: If [number] users upgrade, extra revenue = [number] x $[price] = $[amount] per month.</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: PHOTO APP ($3.00 PREMIUM)</div><div class="tmpl">Who: free users who have stored 100 photos.
+When: the moment they try to save photo number 101.
+Message: &quot;Keep every memory: Premium stores unlimited photos for $3.00 a month.&quot;
+Measure: upgrade rate of users who see this message vs. users who see the old message; target 6%.
+Money: If 300 users upgrade, extra revenue = 300 x $3.00 = $900 per month.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 23 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Conversion is 4%; Premium earns $3,200 a month</h2>
+  <div class="body"><div class="card good"><ul><li><b>Who:</b> the 2,000 free users who hit the 5-lesson limit each week.</li><li><b>When:</b> right after they finish lesson 5.</li><li><b>Message:</b> names the extra value (for example, unlimited lessons) and the price, $8.00 a month.</li><li><b>Measure:</b> one number with a target, compared with a comparison group.</li><li><b>Money:</b> if 10% of the 2,000 upgrade, 200 x $8.00 = $1,600 more per month.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 24 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Choose a revenue plan for StudyNest</h2>
+  <div class="body"><p class="statement">Revenue $5,800 / costs $9,000 / 20,000 Free, 1,000 Plus ($4.00), 200 Pro ($9.00)</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">OPTION A</div><h3>Option A: Raise all prices by 30%</h3><p>Plus becomes <b>$5.20</b>; Pro becomes <b>$11.70</b>.</p><p>In a survey, <b>25% of paying users</b> said they would cancel if prices rose.</p></div><div class="card" style="flex:1"><div class="small-label">OPTION B</div><h3>Option B: Up-sell and cross-sell</h3><p>Show the Plus offer when a free user's storage is full; expect <b>2%</b> of free users to upgrade.</p><p>In exam season, offer all paying users an exam pack for <b>$6.00</b>; expect an attach rate of <b>20%</b>.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 25 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 and 2)</h2>
+  <div class="body"><div class="card"><ul><li>Option A, nobody leaves: 1,000 x $5.20 + 200 x $11.70 = $______</li><li>Option A, 25% leave: Plus users = 1,000 x 75% = ____; Pro users = 200 x 75% = ____; revenue = Plus x $5.20 + Pro x $11.70 = $______</li><li>Option B up-sell: new Plus users = 20,000 x 2% = ____; extra revenue = new Plus users x $4.00 = $______</li><li>Option B cross-sell: paying users = 1,000 + 200 + new Plus users = ____; buyers = paying users x 20% = ____; extra = buyers x $6.00 = $______</li><li>Option B total in exam season = $5,800 + up-sell + cross-sell = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 26 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to the CEO (Tool 3)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [CEO name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next 60 days we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 27 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>FitClub: raise the fee, or sell a training add-on?</h2>
+  <div class="body"><div class="tmpl">To: Leo Kim, CEO, FitClub
+1. Decision and evidence: We should sell a $15 personal-training add-on instead of raising every fee, because it matches what members want (Rule 4) and 10% of 1,500 members buying it adds 150 x $15 = $2,250 a month.
+2. Biggest risk and trade-off: The weakest point is that members may not buy the add-on after the first month. We give up a fast, certain fee increase to keep members who would leave over a higher price.
+3. Next step and decision rule: In the next 60 days we will offer the add-on to half of our members and measure the attach rate. We will change this decision if fewer than 5% of them buy it.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 28 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Raising all prices earns less; up-sell and cross-sell covers costs</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>The numbers</h3><ul><li>Option A: $7,540 if nobody leaves. If 25% leave: 750 x $5.20 + 150 x $11.70 = <b>$5,655</b>, less than today's $5,800.</li><li>Option B: 400 new Plus users x $4.00 = $1,600. 1,600 paying users x 20% = 320 buyers x $6.00 = $1,920.</li><li>Option B total: $5,800 + $1,600 + $1,920 = <b>$9,320</b>, above the $9,000 costs in exam season.</li></ul></div><div class="card good" style="flex:1"><h3>A strong memo</h3><ul><li>Usually chooses Option B.</li><li>Uses at least one number from Step 1.</li><li>Names a real risk: 2% is only an estimate, and pack sales come mainly in exam season.</li><li>States a clear decision rule.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY</span><span>SLIDE 29 / 30</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain the difference between an up-sell, a cross-sell, and a simple price increase.</p></div><div class="card"><div class="n">02</div><p>Design an up-sell offer with a moment of need and a measurable target.</p></div><div class="card"><div class="n">03</div><p>Calculate whether up-selling and cross-selling earn more than raising all prices.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Dropbox. Dropbox plans (dropbox.com/plans).</p><p class="ref">Netflix (2011). Letter to shareholders, third quarter 2011. Netflix Investor Relations.</p><p class="ref">Consumer Financial Protection Bureau (2016). CFPB fines Wells Fargo $100 million for widespread illegal practice of secretly opening unauthorized accounts.</p></div></div>
+  <div class="footer"><span>SESSION 2.3 / WRAP-UP</span><span>SLIDE 30 / 30</span></div>
+</section>
+
+</body>
+</html>

@@ -90,6 +90,8 @@ slide("MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION",
 
 # 2. Situation data
 slide("THE SITUATION", "StreamWise: members cancel, and Jun does not know why",
+      '<p class="statement" style="font-weight:400;">StreamWise is a new streaming service for university students. '
+      'Members pay $5.00 a month to watch shows and movies. Jun is its founder.</p>'
       '<div class="wide-left">'
       '<div><table><tr><th>MEASURE (ONE MONTH)</th><th style="text-align:right">VALUE</th></tr>'
       '<tr><td>Members at the start of the month</td><td class="num">12,000</td></tr>'
