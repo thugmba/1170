@@ -39,7 +39,7 @@ This course delivers an analytical and practical examination of digital transfor
   * Session 1.3: Two-Sided & Multi-Sided Networks ([Dataset](data/session_1_3_platform_margins.csv))
   * Session 1.4: Scale Dynamics & Winner-Takes-All Markets ([Dataset](data/session_1_4_market_concentration.csv))
 * **Module 2: Platform Economics, Big Data & Monetization**
-  * Session 2.1: Big Data & Digital Asset Utilization ([Dataset](data/session_2_1_content_data.csv))
+  * Session 2.1: The Data Feedback Loop Strategy
   * Session 2.2: Platform Pricing Strategies I: Subsidies & Asymmetric Pricing ([Dataset](data/session_2_2_pricing_subsidies.csv))
   * Session 2.3: Platform Pricing Strategies II: Advanced Monetization Models ([Dataset](data/session_2_3_monetization_take_rates.csv))
   * Session 2.4: Midterm Strategy Review & Project Milestone ([Dataset](data/session_2_4_midterm_audit_template.csv))
