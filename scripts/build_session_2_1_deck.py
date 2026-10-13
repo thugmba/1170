@@ -118,13 +118,46 @@ slide("THE STRATEGY IN ONE PARAGRAPH", "What is the Data Feedback Loop Strategy?
       "SESSION 2.1 / STRATEGY OVERVIEW")
 
 # 5-6. Words
-slide("WORDS YOU NEED FIRST", "Signals",
+slide("WORDS YOU NEED FIRST", "Signals: three questions to ask about every signal",
       '<div class="term"><strong>Signal</strong><span>One recorded customer action.<br><em>Example: a viewer presses "Save" on a show.</em></span></div>'
-      '<div class="term"><strong>Strong signal</strong><span>Shows a clear preference because the customer spent time or effort.<br>'
-      "<em>Example: finishing a 40-minute episode.</em></span></div>"
-      '<div class="term"><strong>Weak signal</strong><span>Can have many meanings.<br>'
-      "<em>Example: opening a title for 3 seconds. The viewer may have clicked by mistake.</em></span></div>",
-      "SESSION 2.1 / KEY TERMS 1 OF 2")
+      '<div class="term"><strong>Q1. How clear is it?</strong><span><b>Strong signal:</b> one clear meaning, because the customer spent time or effort.<br>'
+      "<b>Weak signal:</b> can mean many things.<br>"
+      "<em>Example: finishing a 40-minute episode is strong; opening a title for 3 seconds is weak (maybe a mistaken click).</em></span></div>",
+      "SESSION 2.1 / KEY TERMS 1 OF 3")
+
+slide("WORDS YOU NEED FIRST", "Signals: what they tell us, and when they arrive",
+      '<div class="term"><strong>Q2. What does it tell us?</strong><span><b>Like:</b> what customers enjoy, so we offer more of it.<br>'
+      "<b>Unhappy:</b> what is wrong, so we fix it.<br>"
+      "<em>Example: saving a show shows liking; cancelling shows the member is unhappy.</em></span></div>"
+      '<div class="term"><strong>Q3. Early or late?</strong><span><b>Early:</b> arrives while we can still act.<br>'
+      "<b>Late:</b> arrives after the customer is already gone.<br>"
+      "<em>Example: finishing fewer shows each week is early; cancelling is late.</em></span></div>",
+      "SESSION 2.1 / KEY TERMS 2 OF 3")
+
+slide("QUICK PRACTICE / 5 MIN", "Read the StreamWise signals",
+      '<p class="statement">Write one answer from each column heading. If a number is not a signal (not a customer action), skip Q1 to Q3.</p>'
+      "<table><tr><th style='width:34%'>STREAMWISE DATA</th><th>SIGNAL?<br>YES OR NO</th><th>Q1: HOW CLEAR?<br>STRONG OR WEAK</th><th>Q2: TELLS US?<br>LIKE OR UNHAPPY</th><th>Q3: WHEN?<br>EARLY OR LATE</th></tr>"
+      + "".join(f"<tr><td>{d}</td><td>______</td><td>______</td><td>______</td><td>______</td></tr>" for d in [
+          "Members at the start: 12,000", "Plays started: 48,000", "Plays finished: 9,600",
+          'Titles saved to "My List": 3,100', "Members who cancelled: 420", "Monthly price: $5.00"])
+      + "</table>",
+      "SESSION 2.1 / QUICK PRACTICE")
+
+slide("QUICK PRACTICE / CHECK YOUR ANSWER", "Cancellations are strong, but they come too late",
+      "<table><tr><th style='width:34%'>STREAMWISE DATA</th><th>SIGNAL?<br>YES OR NO</th><th>Q1: HOW CLEAR?<br>STRONG OR WEAK</th><th>Q2: TELLS US?<br>LIKE OR UNHAPPY</th><th>Q3: WHEN?<br>EARLY OR LATE</th></tr>"
+      + "".join(f"<tr><td>{d}</td><td>{a}</td><td>{q1}</td><td>{q2}</td><td>{q3}</td></tr>" for d, a, q1, q2, q3 in [
+          ("Members at the start: 12,000", "No", "-", "-", "-"),
+          ("Plays started: 48,000", "Yes", "Weak", "Like", "Early"),
+          ("Plays finished: 9,600", "Yes", "Strong", "Like", "Early"),
+          ('Titles saved to "My List": 3,100', "Yes", "Strong", "Like", "Early"),
+          ("Members who cancelled: 420", "Yes", "Strong", "Unhappy", "<b>Late</b>"),
+          ("Monthly price: $5.00", "No", "-", "-", "-")])
+      + "</table>"
+      '<p class="subtitle" style="font-size:26px;margin-top:.12in;">Not signals: members is a count, and the price is set by StreamWise. '
+      'Plays started shows only weak liking: just 20% were finished.</p>'
+      '<div class="takeaway">Cancellations are strong but late: they come too late to keep those members and do not say why. '
+      "Watch early signals, such as fewer finished plays.</div>",
+      "SESSION 2.1 / QUICK PRACTICE ANSWER")
 
 slide("WORDS YOU NEED FIRST", "Churn rate, ARPU, and consent",
       '<div class="term"><strong>Churn rate</strong><span>The percentage of members who cancel in a period.<br>'
@@ -133,7 +166,7 @@ slide("WORDS YOU NEED FIRST", "Churn rate, ARPU, and consent",
       "<span>The average money earned from one member in a period.<br><em>Example: StreamWise charges $5.00 per month, so ARPU is $5.00 per member per month.</em></span></div>"
       '<div class="term"><strong>Consent</strong><span>A customer\'s clear permission to collect and use their data for a stated purpose.<br>'
       '<em>Example: "We use what you finish and save to recommend shows."</em></span></div>',
-      "SESSION 2.1 / KEY TERMS 2 OF 2")
+      "SESSION 2.1 / KEY TERMS 3 OF 3")
 
 # 7. Loop
 steps = [("Collect", "Record a signal."), ("Interpret", "Ask what it may mean."),
