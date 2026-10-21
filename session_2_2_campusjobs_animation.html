@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusJobs: The Asymmetric Pricing Strategy (Animated Story)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hanji-bg: #f5eedf;
+    --hanji-card: #faf6ee;
+    --navy: #133250;
+    --crimson: #991b1b;
+    --emerald: #15803d;
+    --amber: #b45309;
+    --border: #dcd4c5;
+    --shadow: rgba(0, 0, 0, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+
+  body {
+    background: #1e2430;
+    color: #172033;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  /* Main Container (16:9 Aspect Ratio) */
+  .stage-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: var(--hanji-bg);
+  }
+
+  /* Base Image */
+  .base-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+  }
+
+  /* Animated Overlays Layer */
+  .overlay-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  /* Interactive Laptop Screen Overlay */
+  .screen-overlay {
+    position: absolute;
+    top: 42.5%;
+    left: 41.5%;
+    width: 37.5%;
+    height: 48.5%;
+    background: #f6efe1;
+    border: 2px solid #133250;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+  }
+
+  .screen-header {
+    background: #133250;
+    color: #ffffff;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: background 0.4s ease;
+  }
+
+  .screen-header.alert { background: #991b1b; }
+  .screen-header.success { background: #166534; }
+
+  .screen-body {
+    flex: 1;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .screen-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid #e2dac9;
+    padding: 4px 0;
+  }
+
+  .screen-row:last-child { border-bottom: none; }
+
+  .screen-val {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .screen-val.red { color: #dc2626; }
+  .screen-val.green { color: #16a34a; }
+
+  /* Speech Bubble Replacement */
+  .bubble-overlay {
+    position: absolute;
+    top: 4%;
+    left: 17%;
+    width: 58%;
+    min-height: 26%;
+    background: #fbf7ef;
+    border: 3px solid #dcd4c5;
+    border-radius: 36px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #172033;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Reaction Callouts */
+  .student-reaction, .shop-reaction {
+    position: absolute;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: auto;
+  }
+
+  .student-reaction {
+    top: 14%;
+    left: 2%;
+    max-width: 220px;
+  }
+
+  .shop-reaction {
+    top: 12%;
+    right: 2%;
+    max-width: 240px;
+  }
+
+  .reaction-alert {
+    background: #fff1f2;
+    border: 2px solid #f43f5e;
+    color: #be123c;
+  }
+
+  .reaction-success {
+    background: #f0fdf4;
+    border: 2px solid #22c55e;
+    color: #15803d;
+  }
+
+  .reaction-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Big Centered Stamp */
+  .stamp-banner {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+  }
+
+  .stamp-banner.alert {
+    background: #dc2626;
+    border: 2px solid #ffffff;
+  }
+
+  .stamp-banner.success {
+    background: #15803d;
+    border: 2px solid #fde047;
+  }
+
+  .stamp-banner.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Sticky Note Overlay */
+  .sticky-overlay {
+    position: absolute;
+    top: 56%;
+    right: 5%;
+    width: 14%;
+    height: 22%;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    pointer-events: auto;
+  }
+
+  .sticky-overlay:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.6);
+  }
+
+  /* Subtitle Narration Bar */
+  .subtitles-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.94);
+    border-top: 2px solid #38bdf8;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+  }
+
+  .subtitles-text {
+    flex: 1;
+  }
+
+  .subtitles-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .subtitles-desc {
+    font-size: 14.5px;
+    color: #f1f5f9;
+    font-weight: 500;
+  }
+
+  /* Scenario Control Buttons */
+  .scenario-btns {
+    display: flex;
+    gap: 8px;
+    margin-left: 20px;
+  }
+
+  .btn-scenario {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-scenario:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .btn-scenario.active-red {
+    background: #dc2626;
+    border-color: #ef4444;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+  }
+
+  .btn-scenario.active-green {
+    background: #15803d;
+    border-color: #22c55e;
+    box-shadow: 0 0 10px rgba(21, 128, 61, 0.5);
+  }
+
+  .btn-scenario.active-blue {
+    background: #0284c7;
+    border-color: #38bdf8;
+  }
+</style>
+</head>
+<body>
+
+<div class="stage-wrapper">
+  <!-- Base Hanji Character Illustration -->
+  <img class="base-image" src="assets/session_2_2_campusjobs_pricing_hanji.png" alt="CampusJobs Storybook Illustration">
+
+  <!-- Interactive Overlays -->
+  <div class="overlay-layer">
+
+    <!-- Speech Bubble Overlay -->
+    <div class="bubble-overlay" id="bubble-text">
+      Who should pay: the students or the shops?
+    </div>
+
+    <!-- Student Reaction (Left) -->
+    <div class="student-reaction reaction-alert" id="student-alert">
+      😱 <strong>TOO EXPENSIVE!</strong><br>
+      60% of students quit ($2.00 fee).<br>
+      Only 2,400 students remain!
+    </div>
+
+    <div class="student-reaction reaction-success" id="student-success">
+      🎉 <strong>100% STUDENTS STAY!</strong><br>
+      Free jobs app attracts all 6,000 students.<br>
+      The Subsidy Magnet is thriving!
+    </div>
+
+    <!-- Shopkeeper Reaction (Right) -->
+    <div class="shop-reaction reaction-alert" id="shop-alert">
+      😡 <strong>ONLY 12 APPLICANTS?!</strong><br>
+      We need at least 20 applicants to hire!<br>
+      I am abandoning CampusJobs!
+    </div>
+
+    <div class="shop-reaction reaction-success" id="shop-success">
+      ☕ <strong>30 APPLICANTS PER POST!</strong><br>
+      Found a great barista in 2 days!<br>
+      $25 fee is well worth the value!
+    </div>
+
+    <!-- Centered Stamp -->
+    <div class="stamp-banner alert" id="stamp-fail">
+      💥 DEATH SPIRAL: SYMMETRIC PRICING FAILS!
+    </div>
+    <div class="stamp-banner success" id="stamp-win">
+      🏆 ASYMMETRIC WIN: +$3,500 NET PROFIT / MO!
+    </div>
+
+    <!-- Dynamic Laptop Screen -->
+    <div class="screen-overlay">
+      <div class="screen-header" id="screen-header">CampusJobs - This Month</div>
+      <div class="screen-body">
+        <div class="screen-row">
+          <span>Students</span>
+          <span class="screen-val" id="val-students">6,000</span>
+        </div>
+        <div class="screen-row">
+          <span>Shops</span>
+          <span class="screen-val" id="val-shops">120</span>
+        </div>
+        <div class="screen-row">
+          <span>Job posts</span>
+          <span class="screen-val" id="val-posts">300</span>
+        </div>
+        <div class="screen-row">
+          <span>Applications</span>
+          <span class="screen-val" id="val-apps">9,000</span>
+        </div>
+        <div class="screen-row">
+          <span id="label-metric">Apps per post</span>
+          <span class="screen-val" id="val-metric">30.0 / post</span>
+        </div>
+        <div class="screen-row">
+          <span id="label-finance">Monthly costs</span>
+          <span class="screen-val" id="val-finance">$4,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clickable Sticky Note -->
+    <div class="sticky-overlay" id="sticky-btn" title="Click to test charging $2!"></div>
+
+  </div>
+
+  <!-- Bottom Navigation & Narration Bar -->
+  <div class="subtitles-bar">
+    <div class="subtitles-text">
+      <div class="subtitles-title" id="sub-title">Scene 1 / The Situation</div>
+      <div class="subtitles-desc" id="sub-desc">Ravi's app connects 6,000 students and 120 shops, but costs $4,000/mo. A friend asks: "Charge everyone $2?"</div>
+    </div>
+    <div class="scenario-btns">
+      <button class="btn-scenario active-blue" id="btn-scen-1" onclick="setScenario(1)">1. Baseline ($0 / $0)</button>
+      <button class="btn-scenario" id="btn-scen-2" onclick="setScenario(2)">2. Test $2 Equal Fee (Collapse)</button>
+      <button class="btn-scenario" id="btn-scen-3" onclick="setScenario(3)">3. Asymmetric ($0 / $25 Win)</button>
+      <button class="btn-scenario" id="btn-auto" onclick="toggleAutoPlay()">▶ Auto-Play Story</button>
+      <button class="btn-scenario" id="btn-video-toggle" onclick="toggleVideoView()" style="background:#0284c7; border-color:#38bdf8;">🎬 MP4 Video Mode</button>
+    </div>
+  </div>
+
+  <!-- Embedded Video Overlay (hidden by default) -->
+  <div id="video-overlay" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; z-index:30;">
+    <video id="mp4-player" src="assets/session_2_2_campusjobs_character_animation.mp4" controls style="width:100%; height:100%; object-fit:contain;"></video>
+    <button onclick="toggleVideoView()" style="position:absolute; top:16px; right:16px; z-index:35; background:rgba(0,0,0,0.7); border:1px solid #fff; color:#fff; padding:8px 16px; border-radius:6px; cursor:pointer; font-weight:700;">✕ Back to Interactive Stage</button>
+  </div>
+</div>
+
+<script>
+  // Web Audio Synthesizer
+  let audioCtx = null;
+  function beep(freq, type, dur, gainVal = 0.08) {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + dur);
+    } catch(e) {}
+  }
+
+  function sfxAlert() { beep(200, 'sawtooth', 0.35, 0.1); setTimeout(() => beep(160, 'sawtooth', 0.4, 0.1), 120); }
+  function sfxWin() { beep(523.25, 'triangle', 0.2); setTimeout(() => beep(659.25, 'triangle', 0.2), 90); setTimeout(() => beep(1046.5, 'triangle', 0.35), 180); }
+  function sfxClick() { beep(700, 'sine', 0.05, 0.03); }
+
+  let currentScenario = 1;
+  let autoTimer = null;
+  let isAutoPlaying = false;
+
+  function setScenario(scen) {
+    currentScenario = scen;
+    clearTimeout(autoTimer);
+
+    document.querySelectorAll('.btn-scenario').forEach(b => {
+      b.classList.remove('active-blue', 'active-red', 'active-green');
+    });
+
+    const studentAlert = document.getElementById('student-alert');
+    const studentSuccess = document.getElementById('student-success');
+    const shopAlert = document.getElementById('shop-alert');
+    const shopSuccess = document.getElementById('shop-success');
+    const stampFail = document.getElementById('stamp-fail');
+    const stampWin = document.getElementById('stamp-win');
+    const screenHeader = document.getElementById('screen-header');
+
+    studentAlert.classList.remove('reaction-active');
+    studentSuccess.classList.remove('reaction-active');
+    shopAlert.classList.remove('reaction-active');
+    shopSuccess.classList.remove('reaction-active');
+    stampFail.classList.remove('show');
+    stampWin.classList.remove('show');
+    screenHeader.className = 'screen-header';
+
+    if (scen === 1) {
+      sfxClick();
+      document.getElementById('btn-scen-1').classList.add('active-blue');
+      document.getElementById('bubble-text').textContent = "Who should pay: the students or the shops?";
+      document.getElementById('sub-title').textContent = "Scene 1 / The Situation";
+      document.getElementById('sub-desc').textContent = "CampusJobs has 6,000 students and 120 shops, but costs $4,000/mo. A friend suggests: 'Why not charge everyone $2?'";
+      
+      screenHeader.textContent = "CampusJobs - This Month";
+      document.getElementById('val-students').textContent = "6,000";
+      document.getElementById('val-students').className = "screen-val";
+      document.getElementById('val-shops').textContent = "120";
+      document.getElementById('val-posts').textContent = "300";
+      document.getElementById('val-apps').textContent = "9,000";
+      document.getElementById('val-apps').className = "screen-val";
+      document.getElementById('val-metric').textContent = "30.0 / post";
+      document.getElementById('val-metric').className = "screen-val";
+      document.getElementById('val-finance').textContent = "-$4,000 (Burn)";
+      document.getElementById('val-finance').className = "screen-val red";
+    }
+    else if (scen === 2) {
+      sfxAlert();
+      document.getElementById('btn-scen-2').classList.add('active-red');
+      document.getElementById('bubble-text').innerHTML = "Oh no! Equal pricing causes a <span style='color:#dc2626;'>Death Spiral!</span>";
+      document.getElementById('sub-title').textContent = "Scene 2 / The Equal Pricing Collapse";
+      document.getElementById('sub-desc').textContent = "A $2.00 fee triggers 60% student churn! Only 12 apps/post remain. Shops starve for applicants and abandon the app!";
+      
+      screenHeader.textContent = "Option A: Charge Everyone $2.00";
+      screenHeader.classList.add('alert');
+      document.getElementById('val-students').textContent = "2,400 (-60%)";
+      document.getElementById('val-students').className = "screen-val red";
+      document.getElementById('val-shops').textContent = "120 (Leaving soon)";
+      document.getElementById('val-posts').textContent = "300";
+      document.getElementById('val-apps').textContent = "3,600 (-60%)";
+      document.getElementById('val-apps').className = "screen-val red";
+      document.getElementById('val-metric').textContent = "12.0 (Needs 20+!)";
+      document.getElementById('val-metric').className = "screen-val red";
+      document.getElementById('val-finance').textContent = "Revenue: $5,040 (Fragile)";
+      document.getElementById('val-finance').className = "screen-val red";
+
+      setTimeout(() => studentAlert.classList.add('reaction-active'), 200);
+      setTimeout(() => shopAlert.classList.add('reaction-active'), 600);
+      setTimeout(() => stampFail.classList.add('show'), 900);
+    }
+    else if (scen === 3) {
+      sfxWin();
+      document.getElementById('btn-scen-3').classList.add('active-green');
+      document.getElementById('bubble-text').innerHTML = "The Answer: <span style='color:#15803d;'>ASYMMETRIC PRICING!</span>";
+      document.getElementById('sub-title').textContent = "Scene 3 / Asymmetric Pricing Breakthrough";
+      document.getElementById('sub-desc').textContent = "Subsidize the magnet side (Students $0). Charge the money side that gains hiring speed (Shops $25). Covers $4,000 cost with +$3,500 profit!";
+      
+      screenHeader.textContent = "Option B: Students $0, Shops $25";
+      screenHeader.classList.add('success');
+      document.getElementById('val-students').textContent = "6,000 (100% FREE)";
+      document.getElementById('val-students').className = "screen-val green";
+      document.getElementById('val-shops').textContent = "120 (Paying)";
+      document.getElementById('val-posts').textContent = "300";
+      document.getElementById('val-apps').textContent = "9,000 (Full Flow)";
+      document.getElementById('val-apps').className = "screen-val green";
+      document.getElementById('val-metric').textContent = "30.0 / post (Goal Met!)";
+      document.getElementById('val-metric').className = "screen-val green";
+      document.getElementById('val-finance').textContent = "+$3,500 Net Profit!";
+      document.getElementById('val-finance').className = "screen-val green";
+
+      setTimeout(() => studentSuccess.classList.add('reaction-active'), 200);
+      setTimeout(() => shopSuccess.classList.add('reaction-active'), 600);
+      setTimeout(() => stampWin.classList.add('show'), 900);
+    }
+  }
+
+  function toggleAutoPlay() {
+    isAutoPlaying = !isAutoPlaying;
+    const btn = document.getElementById('btn-auto');
+    if (isAutoPlaying) {
+      btn.textContent = "⏸ Pause Story";
+      runAutoSequence();
+    } else {
+      btn.textContent = "▶ Auto-Play Story";
+      clearTimeout(autoTimer);
+    }
+  }
+
+  function runAutoSequence() {
+    if (!isAutoPlaying) return;
+    setScenario(1);
+    autoTimer = setTimeout(() => {
+      if (!isAutoPlaying) return;
+      setScenario(2);
+      autoTimer = setTimeout(() => {
+        if (!isAutoPlaying) return;
+        setScenario(3);
+        autoTimer = setTimeout(() => {
+          if (!isAutoPlaying) return;
+          runAutoSequence();
+        }, 9000);
+      }, 9000);
+    }, 7000);
+  }
+
+  document.getElementById('sticky-btn').addEventListener('click', () => {
+    if (currentScenario === 1) setScenario(2);
+    else if (currentScenario === 2) setScenario(3);
+    else setScenario(1);
+  });
+
+  let videoMode = false;
+  function toggleVideoView() {
+    videoMode = !videoMode;
+    const vOverlay = document.getElementById('video-overlay');
+    const player = document.getElementById('mp4-player');
+    if (videoMode) {
+      vOverlay.style.display = 'block';
+      player.play();
+    } else {
+      player.pause();
+      vOverlay.style.display = 'none';
+    }
+  }
+
+  // Initial load
+  setScenario(1);
+</script>
+</body>
+</html>

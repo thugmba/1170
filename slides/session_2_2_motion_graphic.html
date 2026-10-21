@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2.2 Motion Graphic: The Asymmetric Pricing Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #070a13;
+    --bg-card: rgba(18, 26, 47, 0.75);
+    --bg-card-hover: rgba(28, 38, 68, 0.85);
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --border-glow: rgba(56, 189, 248, 0.35);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --cyan: #38bdf8;
+    --emerald: #10b981;
+    --rose: #f43f5e;
+    --amber: #f59e0b;
+    --purple: #a855f7;
+    --blue: #3b82f6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+  
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Animated Background Canvas */
+  #bg-canvas {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  /* Top Navigation & Controls */
+  header {
+    position: relative;
+    z-index: 10;
+    height: 64px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-subtle);
+    background: rgba(7, 10, 19, 0.85);
+    backdrop-filter: blur(16px);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .badge-session {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+
+  .brand-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+  }
+
+  .brand-title span {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-left: 8px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-icon {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-icon:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .btn-icon.active {
+    background: rgba(56, 189, 248, 0.18);
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
+  /* Main Stage Container (16:9 Presentation Stage) */
+  main {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 32px 16px;
+    overflow: hidden;
+  }
+
+  .stage {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 810px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Scenes Container */
+  .scene-viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background: radial-gradient(circle at 50% 20%, rgba(30, 41, 69, 0.5) 0%, rgba(10, 15, 28, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+  }
+
+  .scene {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    padding: 44px 56px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.96) translateY(12px);
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scene.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+  }
+
+  /* Common Scene Header Typography */
+  .scene-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 8px;
+  }
+
+  .scene-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+    animation: pulse 2s infinite;
+  }
+
+  .scene-title {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .scene-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 820px;
+    margin-bottom: 24px;
+  }
+
+  /* Scene 1: The Trap */
+  .trap-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    flex: 1;
+    align-items: center;
+  }
+
+  .stats-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .stat-val {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .stat-val small {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .burn-rate-banner {
+    grid-column: span 2;
+    background: linear-gradient(90deg, rgba(244, 63, 94, 0.15), rgba(244, 63, 94, 0.05));
+    border: 1px solid rgba(244, 63, 94, 0.35);
+    border-radius: 12px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .burn-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--rose);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .burn-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--rose);
+    text-shadow: 0 0 16px rgba(244, 63, 94, 0.4);
+  }
+
+  .dilemma-card {
+    background: linear-gradient(145deg, rgba(30, 41, 69, 0.7), rgba(15, 23, 42, 0.8));
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dilemma-card::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+  }
+
+  .friend-quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .friend-quote::before {
+    content: '“';
+    font-size: 60px;
+    color: var(--cyan);
+    position: absolute;
+    top: -26px; left: -20px;
+    opacity: 0.3;
+    font-family: serif;
+  }
+
+  .dilemma-warning {
+    font-size: 13.5px;
+    color: var(--amber);
+    background: rgba(245, 158, 11, 0.12);
+    border-left: 3px solid var(--amber);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.5;
+  }
+
+  /* Scene 2: The Death Spiral */
+  .spiral-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    flex: 1;
+    align-items: center;
+  }
+
+  .chain-reaction {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .step-node {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    transition: all 0.4s ease;
+  }
+
+  .step-node.active-step {
+    border-color: var(--rose);
+    background: rgba(244, 63, 94, 0.1);
+    transform: translateX(8px);
+  }
+
+  .node-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    flex-shrink: 0;
+  }
+
+  .active-step .node-num {
+    background: var(--rose);
+    color: #ffffff;
+    box-shadow: 0 0 12px var(--rose);
+  }
+
+  .node-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .node-text p {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .spiral-visualizer {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .meter-circle {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .meter-svg {
+    transform: rotate(-90deg);
+  }
+
+  .meter-track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 14;
+  }
+
+  .meter-fill {
+    fill: none;
+    stroke: var(--rose);
+    stroke-width: 14;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    stroke-dashoffset: 226; /* 60% drop */
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .meter-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .meter-center .val {
+    font-size: 34px;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--rose);
+  }
+
+  .meter-center .sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .spiral-alert {
+    background: rgba(244, 63, 94, 0.18);
+    border: 1px dashed var(--rose);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #fecdd3;
+  }
+
+  /* Scene 3: The Asymmetric Seesaw */
+  .seesaw-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .scale-stage {
+    width: 100%;
+    max-width: 860px;
+    height: 260px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .scale-fulcrum {
+    width: 0; height: 0;
+    border-left: 36px solid transparent;
+    border-right: 36px solid transparent;
+    border-bottom: 56px solid #475569;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .scale-beam {
+    width: 720px;
+    height: 14px;
+    background: linear-gradient(90deg, var(--emerald) 0%, #cbd5e1 50%, var(--cyan) 100%);
+    border-radius: 7px;
+    position: absolute;
+    bottom: 54px;
+    transform-origin: center center;
+    transform: rotate(-6deg);
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .scale-tray {
+    position: absolute;
+    top: -150px;
+    width: 240px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  .scale-tray.left {
+    left: 10px;
+    border-top: 4px solid var(--emerald);
+  }
+
+  .scale-tray.right {
+    right: 10px;
+    border-top: 4px solid var(--cyan);
+  }
+
+  .scale-tray h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .scale-tray .tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .scale-tray.left .tag { background: rgba(16, 185, 129, 0.2); color: var(--emerald); }
+  .scale-tray.right .tag { background: rgba(56, 189, 248, 0.2); color: var(--cyan); }
+
+  .price-highlight {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .scale-tray.left .price-highlight { color: var(--emerald); }
+  .scale-tray.right .price-highlight { color: var(--cyan); }
+
+  .cross-subsidy-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 860px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 14px 24px;
+  }
+
+  .flow-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .flow-arrow {
+    color: var(--amber);
+    font-size: 18px;
+    animation: flowPulse 1.5s infinite;
+  }
+
+  /* Scene 4: The 4 Golden Rules */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    flex: 1;
+    align-items: stretch;
+  }
+
+  .rule-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rule-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .rule-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .rule-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .rule-card p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  .rule-footer-tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+    align-self: flex-start;
+  }
+
+  /* Scene 5: Hall of Fame vs Shame */
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .case-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .column-header {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+  }
+
+  .column-header.good { color: var(--emerald); border-color: var(--emerald); }
+  .column-header.bad { color: var(--rose); border-color: var(--rose); }
+
+  .case-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: all 0.25s ease;
+  }
+
+  .case-box:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+  }
+
+  .case-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .case-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .case-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .case-badge.good { background: rgba(16, 185, 129, 0.2); color: var(--emerald); }
+  .case-badge.bad { background: rgba(244, 63, 94, 0.2); color: var(--rose); }
+
+  .case-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Scene 6: Interactive Simulator */
+  .sim-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 28px;
+    flex: 1;
+    align-items: center;
+  }
+
+  .controls-panel {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+
+  .slider-val-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cyan);
+  }
+
+  input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  .preset-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn-preset {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-preset:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+  }
+
+  .output-dashboard {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .kpi-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+
+  .kpi-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .kpi-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 4px;
+  }
+
+  .status-badge {
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+  }
+
+  .status-badge.crash {
+    background: rgba(244, 63, 94, 0.15);
+    border: 1px solid var(--rose);
+    color: #fecdd3;
+  }
+
+  .status-badge.thrive {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid var(--emerald);
+    color: #a7f3d0;
+  }
+
+  /* Scene 7: Memo */
+  .memo-container {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 16px;
+    padding: 28px 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .memo-header {
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--cyan);
+  }
+
+  .memo-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .memo-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .memo-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--cyan);
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .memo-item-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .memo-item-content p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Bottom Playback & Scrubber Controls */
+  footer {
+    position: relative;
+    z-index: 10;
+    height: 72px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(7, 10, 19, 0.9);
+    border-top: 1px solid var(--border-subtle);
+    backdrop-filter: blur(16px);
+  }
+
+  .playback-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .btn-play {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cyan) 0%, #0284c7 100%);
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  }
+
+  .btn-play:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+  }
+
+  .timeline-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    max-width: 680px;
+    margin: 0 24px;
+  }
+
+  .timeline-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .timeline-progress {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--cyan), var(--emerald));
+    border-radius: 3px;
+    transition: width 0.1s linear;
+  }
+
+  .chapter-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .chapter-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .chapter-dot:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .chapter-dot.active {
+    background: var(--cyan);
+    color: #070a13;
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+  }
+
+  .speed-selector {
+    display: flex;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 2px;
+  }
+
+  .btn-speed {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-speed.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+
+  /* Keyframe Animations */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+  }
+
+  @keyframes flowPulse {
+    0%, 100% { transform: translateX(0); opacity: 0.7; }
+    50% { transform: translateX(4px); opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<header>
+  <div class="brand">
+    <div class="badge-session">SESSION 2.2</div>
+    <div class="brand-title">The Asymmetric Pricing Strategy <span>Digital Transformation &amp; Platform Strategy</span></div>
+  </div>
+  <div class="header-actions">
+    <button class="btn-icon active" id="btn-sound" title="Toggle Synthesized Audio FX">
+      <span id="sound-icon">🔊</span> Sound FX: ON
+    </button>
+    <button class="btn-icon" id="btn-mode" title="Toggle Auto-Play Explainer Mode">
+      <span id="mode-icon">🎬</span> Mode: Interactive
+    </button>
+    <button class="btn-icon" id="btn-fs" title="Toggle Fullscreen (F)">
+      <span>⛶</span> Fullscreen
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="stage">
+    <div class="scene-viewport">
+
+      <!-- SCENE 1: THE TRAP -->
+      <section class="scene active" id="scene-1">
+        <div class="scene-eyebrow">ACT 01 / THE FREE APP TRAP</div>
+        <h2 class="scene-title">CampusJobs: Free to Use, Burning Cash</h2>
+        <p class="scene-subtitle">Ravi created a campus job app that connects 6,000 university students with 120 local stores. But free doesn't pay the bills.</p>
+
+        <div class="trap-grid">
+          <div class="stats-card-grid">
+            <div class="stat-box">
+              <div class="stat-label">Students Registered</div>
+              <div class="stat-val">6,000 <small>users</small></div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Local Shops</div>
+              <div class="stat-val">120 <small>stores</small></div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Monthly Job Posts</div>
+              <div class="stat-val">300 <small>openings</small></div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Student Applications</div>
+              <div class="stat-val">9,000 <small>apps</small></div>
+            </div>
+            <div class="burn-rate-banner">
+              <div class="burn-title">
+                <span style="font-size:22px;">🔥</span>
+                <div>
+                  <strong>Monthly Server &amp; Operational Burn</strong>
+                  <div style="font-size:12px; color:rgba(244,63,94,0.8);">Zero revenue from either side</div>
+                </div>
+              </div>
+              <div class="burn-number">-$4,000 / mo</div>
+            </div>
+          </div>
+
+          <div class="dilemma-card">
+            <div class="friend-quote">
+              "Why don't you just charge everyone $2.00 a month? It's fair and tiny!"
+            </div>
+            <div class="dilemma-warning">
+              <strong>The Beginner's Mistake:</strong> Treating two unequal sides of a platform as if they value the service identically.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 2: THE DEATH SPIRAL -->
+      <section class="scene" id="scene-2">
+        <div class="scene-eyebrow">ACT 02 / THE SYMMETRIC PRICING DISASTER</div>
+        <h2 class="scene-title">The $2 Death Spiral: Why Equal Pricing Kills Platforms</h2>
+        <p class="scene-subtitle">When Ravi tests charging students $2.00, high price sensitivity triggers an irreversible collapse.</p>
+
+        <div class="spiral-grid">
+          <div class="chain-reaction">
+            <div class="step-node active-step">
+              <div class="node-num">1</div>
+              <div class="node-text">
+                <h4>60% of Students Vanish Instantly</h4>
+                <p>Students operate on tight budgets. A $2.00 fee repels 3,600 students. Only 2,400 remain.</p>
+              </div>
+            </div>
+            <div class="step-node active-step">
+              <div class="node-num">2</div>
+              <div class="node-text">
+                <h4>Applications Collapse from 30 to 12</h4>
+                <p>9,000 applications drop to 3,600. Per job opening: 3,600 / 300 = <strong>12 applications</strong>.</p>
+              </div>
+            </div>
+            <div class="step-node active-step">
+              <div class="node-num">3</div>
+              <div class="node-text">
+                <h4>Shops Abandon the Platform</h4>
+                <p>Shops need at least <strong>20 applications</strong> to find reliable staff. 12 is a dealbreaker.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="spiral-visualizer">
+            <div class="meter-circle">
+              <svg class="meter-svg" width="200" height="200" viewBox="0 0 200 200">
+                <circle class="meter-track" cx="100" cy="100" r="90" />
+                <circle class="meter-fill" id="spiral-meter" cx="100" cy="100" r="90" />
+              </svg>
+              <div class="meter-center">
+                <div class="val">-60%</div>
+                <div class="sub">Student Retention</div>
+              </div>
+            </div>
+            <div class="spiral-alert">
+              ⚠️ CRITICAL FAILURE: Both sides abandon the app. Revenue falls to $0.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 3: THE ASYMMETRIC SEESAW -->
+      <section class="scene" id="scene-3">
+        <div class="scene-eyebrow">ACT 03 / THE ASYMMETRIC BREAKTHROUGH</div>
+        <h2 class="scene-title">The Seesaw Principle: Subsidy Side vs. Money Side</h2>
+        <p class="scene-subtitle">A platform balances two distinct groups. Subsidize the side that creates value; charge the side that captures value.</p>
+
+        <div class="seesaw-container">
+          <div class="scale-stage">
+            <div class="scale-fulcrum"></div>
+            <div class="scale-beam" id="scale-beam">
+              <div class="scale-tray left">
+                <span class="tag">Subsidy Side</span>
+                <h3>Students</h3>
+                <div class="price-highlight">$0.00 FREE</div>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">High Price Sensitivity</div>
+                <div style="font-size:11.5px; color:#cbd5e1; margin-top:6px;">Attracts the paying side</div>
+              </div>
+
+              <div class="scale-tray right">
+                <span class="tag">Money Side</span>
+                <h3>Local Shops</h3>
+                <div class="price-highlight">$25.00 / post</div>
+                <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">Low Price Sensitivity</div>
+                <div style="font-size:11.5px; color:#cbd5e1; margin-top:6px;">Gains massive hiring value</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cross-subsidy-flow">
+            <div class="flow-item">
+              <span style="color:var(--cyan); font-weight:700;">300 Posts × $25 = $7,500</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-item">
+              <span style="color:var(--rose); font-weight:700;">Covers $4,000 Server Costs</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-item">
+              <span style="color:var(--emerald); font-weight:700;">+$3,500 Net Profit &amp; 30 Apps / Post!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 4: THE 4 RULES -->
+      <section class="scene" id="scene-4">
+        <div class="scene-eyebrow">ACT 04 / THE EXECUTIVE PLAYBOOK</div>
+        <h2 class="scene-title">The 4 Golden Rules of Asymmetric Pricing</h2>
+        <p class="scene-subtitle">Four non-negotiable principles every platform founder and corporate strategist must follow.</p>
+
+        <div class="rules-grid">
+          <div class="rule-card">
+            <div>
+              <div class="rule-badge">RULE 01</div>
+              <h3>Subsidize the Side Others Come For</h3>
+              <p>Identify the magnet group. If they leave, the entire platform collapses. Keep them free or heavily discounted.</p>
+            </div>
+            <div class="rule-footer-tag">CampusJobs: Keep Students Free</div>
+          </div>
+
+          <div class="rule-card">
+            <div>
+              <div class="rule-badge">RULE 02</div>
+              <h3>Charge the Side That Gains the Most</h3>
+              <p>The money side either earns new revenue or eliminates costly friction. Charging them captures a fraction of their surplus.</p>
+            </div>
+            <div class="rule-footer-tag">CampusJobs: Charge Shops $25 / Post</div>
+          </div>
+
+          <div class="rule-card">
+            <div>
+              <div class="rule-badge">RULE 03</div>
+              <h3>Measure Price Sensitivity Before Pricing</h3>
+              <p>Never guess. Run micro-surveys. A price that seems negligible to you ($2.00) can decimate your subsidy side's adoption.</p>
+            </div>
+            <div class="rule-footer-tag">Survey showed 60% student churn</div>
+          </div>
+
+          <div class="rule-card">
+            <div>
+              <div class="rule-badge">RULE 04</div>
+              <h3>Cover Costs &amp; Protect the Free Side</h3>
+              <p>The money side must pay enough to cover both sides' costs ($7,500 > $4,000). Purge spam and fake jobs to preserve trust.</p>
+            </div>
+            <div class="rule-footer-tag">Ban predatory recruiters</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 5: SHOWDOWN -->
+      <section class="scene" id="scene-5">
+        <div class="scene-eyebrow">ACT 05 / INDUSTRY SHOWDOWN</div>
+        <h2 class="scene-title">Hall of Fame vs. Hall of Shame</h2>
+        <p class="scene-subtitle">How world-class companies won big—or crashed hard—based on these four rules.</p>
+
+        <div class="cases-grid">
+          <div class="case-column">
+            <div class="column-header good">🏆 The Masters (Followed the Rules)</div>
+            <div class="case-box">
+              <div class="case-top">
+                <span class="case-name">Adobe Acrobat Reader</span>
+                <span class="case-badge good">RULE 01</span>
+              </div>
+              <div class="case-desc">Gave away Reader free to millions. Because everyone could open PDFs, enterprise creators gladly paid thousands for Acrobat Pro.</div>
+            </div>
+            <div class="case-box">
+              <div class="case-top">
+                <span class="case-name">Google Search</span>
+                <span class="case-badge good">RULES 02 &amp; 04</span>
+              </div>
+              <div class="case-desc">Billions search for free. Advertisers pay billions to capture targeted intent. Clear ad labels preserve user trust.</div>
+            </div>
+          </div>
+
+          <div class="case-column">
+            <div class="column-header bad">❌ The Disasters (Violated the Rules)</div>
+            <div class="case-box">
+              <div class="case-top">
+                <span class="case-name">Unity Runtime Fee (2023)</span>
+                <span class="case-badge bad">VIOLATED R1 &amp; R3</span>
+              </div>
+              <div class="case-desc">Tried charging game developers per install. Alienated the creator side that brings players. Backlash forced the CEO to step down.</div>
+            </div>
+            <div class="case-box">
+              <div class="case-top">
+                <span class="case-name">Groupon Merchant Deals</span>
+                <span class="case-badge bad">VIOLATED RULE 02</span>
+              </div>
+              <div class="case-desc">Forced 50% discounts on local diners. Bargain shoppers never returned at full price. The money side lost money and fled.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 6: INTERACTIVE SIMULATOR -->
+      <section class="scene" id="scene-6">
+        <div class="scene-eyebrow">ACT 06 / STRATEGY LAB</div>
+        <h2 class="scene-title">Live Simulator: Can You Save CampusJobs?</h2>
+        <p class="scene-subtitle">Test different price points. Watch student retention, application volume, and profitability react in real time.</p>
+
+        <div class="sim-container">
+          <div class="controls-panel">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Student Monthly Fee</span>
+                <span class="slider-val-tag" id="val-student-fee">$0.00</span>
+              </div>
+              <input type="range" id="input-student-fee" min="0" max="6" step="0.5" value="0">
+              <div style="font-size:11px; color:var(--text-muted);">Higher fee drives students away (30% drop per $1).</div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Shop Fee per Job Post</span>
+                <span class="slider-val-tag" id="val-shop-fee">$25.00</span>
+              </div>
+              <input type="range" id="input-shop-fee" min="0" max="50" step="5" value="25">
+              <div style="font-size:11px; color:var(--text-muted);">Shops will only pay if apps/post &ge; 20.</div>
+            </div>
+
+            <div class="preset-buttons">
+              <button class="btn-preset" onclick="setSimPreset(2, 2)">Preset A: $2 / $2 (Ravi's Friend)</button>
+              <button class="btn-preset" onclick="setSimPreset(0, 25)">Preset B: $0 / $25 (Optimal)</button>
+              <button class="btn-preset" onclick="setSimPreset(4, 40)">Preset C: $4 / $40 (Greedy)</button>
+            </div>
+          </div>
+
+          <div class="output-dashboard">
+            <div class="kpi-row">
+              <div class="kpi-box">
+                <div class="kpi-title">Active Students</div>
+                <div class="kpi-num" id="kpi-students">6,000</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-title">Apps per Opening</div>
+                <div class="kpi-num" id="kpi-apps-post">30.0 <span style="font-size:12px; font-weight:500; color:var(--emerald);">(Min: 20)</span></div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-title">Total Monthly Revenue</div>
+                <div class="kpi-num" id="kpi-revenue">$7,500</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-title">Monthly Net Profit</div>
+                <div class="kpi-num" id="kpi-profit">+$3,500</div>
+              </div>
+            </div>
+
+            <div class="status-badge thrive" id="sim-status-badge">
+              <span id="sim-status-icon">🚀</span>
+              <span id="sim-status-text">OPTIMAL STRATEGY: High liquidity &amp; sustainable profit!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 7: MEMO -->
+      <section class="scene" id="scene-7">
+        <div class="scene-eyebrow">ACT 07 / EXECUTIVE MEMO</div>
+        <h2 class="scene-title">The 3-Bullet Board Memo (Session Deliverable)</h2>
+        <p class="scene-subtitle">How business leaders present this decision to the Board of Directors or CEO.</p>
+
+        <div class="memo-container">
+          <div class="memo-header">TO: Ravi, Founder &amp; CEO, CampusJobs &nbsp;|&nbsp; RE: Pricing Architecture Decision</div>
+          
+          <div class="memo-bullets">
+            <div class="memo-item">
+              <div class="memo-num">1</div>
+              <div class="memo-item-content">
+                <h4>Decision &amp; Evidence (The Strategy)</h4>
+                <p>We choose <strong>Option B: Keep students $0, charge shops $25 per job post</strong>. Following Rule 1 &amp; Rule 2, subsidizing the student magnet preserves 6,000 active candidates, generating 30 apps/post and <strong>$7,500 monthly revenue</strong>, surpassing our $4,000 operating costs.</p>
+              </div>
+            </div>
+
+            <div class="memo-item">
+              <div class="memo-num">2</div>
+              <div class="memo-item-content">
+                <h4>Weakest Condition &amp; Key Trade-Off (The Risk)</h4>
+                <p>The primary risk is that shops hesitate if hiring speed slows down. We intentionally sacrifice direct student fees to safeguard network liquidity and prevent the 60% student drop experienced under Option A.</p>
+              </div>
+            </div>
+
+            <div class="memo-item">
+              <div class="memo-num">3</div>
+              <div class="memo-item-content">
+                <h4>60-Day Next Step &amp; Decision Rule (The Trigger)</h4>
+                <p>Over the next 60 days, we will track <em>Applications per Job Post</em> and merchant repeat rates. <strong>Decision Rule:</strong> If applications per post decline below <strong>20</strong>, we will immediately freeze shop fees and launch campus referral bonuses.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+            <button class="btn-icon" onclick="copyMemo()">📋 Copy Memo to Clipboard</button>
+            <button class="btn-icon active" onclick="restartExplainer()">🔄 Replay Motion Graphic</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="playback-controls">
+    <button class="btn-play" id="btn-play-pause" title="Play / Pause (Space)">▶</button>
+    <button class="btn-icon" id="btn-prev" title="Previous (Left Arrow)">◀ Prev</button>
+    <button class="btn-icon" id="btn-next" title="Next (Right Arrow)">Next ▶</button>
+  </div>
+
+  <div class="timeline-nav">
+    <div class="timeline-track" id="timeline-track" title="Click to scrub">
+      <div class="timeline-progress" id="timeline-progress"></div>
+    </div>
+    <div class="chapter-dots">
+      <div class="chapter-dot active" data-scene="1" title="Act 1: The Trap">1</div>
+      <div class="chapter-dot" data-scene="2" title="Act 2: The Death Spiral">2</div>
+      <div class="chapter-dot" data-scene="3" title="Act 3: Asymmetric Seesaw">3</div>
+      <div class="chapter-dot" data-scene="4" title="Act 4: The 4 Rules">4</div>
+      <div class="chapter-dot" data-scene="5" title="Act 5: Showdown">5</div>
+      <div class="chapter-dot" data-scene="6" title="Act 6: Strategy Lab">6</div>
+      <div class="chapter-dot" data-scene="7" title="Act 7: Executive Memo">7</div>
+    </div>
+  </div>
+
+  <div class="speed-selector">
+    <button class="btn-speed active" data-speed="1">1x</button>
+    <button class="btn-speed" data-speed="1.5">1.5x</button>
+    <button class="btn-speed" data-speed="2">2x</button>
+  </div>
+</footer>
+
+<script>
+  // --- SOUND SYNTHESIZER (Web Audio API - 100% self-contained) ---
+  let audioCtx = null;
+  let soundEnabled = true;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+  }
+
+  function playTone(freq, type, duration, gainVal = 0.1) {
+    if (!soundEnabled) return;
+    try {
+      initAudio();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch(e) {}
+  }
+
+  function sfxTransition() { playTone(440, 'sine', 0.2, 0.08); setTimeout(() => playTone(880, 'sine', 0.25, 0.05), 60); }
+  function sfxAlert() { playTone(220, 'sawtooth', 0.35, 0.12); setTimeout(() => playTone(180, 'sawtooth', 0.4, 0.12), 100); }
+  function sfxSuccess() { playTone(523.25, 'triangle', 0.2, 0.1); setTimeout(() => playTone(659.25, 'triangle', 0.2, 0.1), 80); setTimeout(() => playTone(1046.5, 'triangle', 0.35, 0.12), 160); }
+  function sfxClick() { playTone(800, 'sine', 0.05, 0.03); }
+
+  // --- BACKGROUND PARTICLES CANVAS ---
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  for (let i = 0; i < 45; i++) {
+    particles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r: Math.random() * 2 + 1,
+      color: Math.random() > 0.5 ? 'rgba(56, 189, 248, 0.3)' : 'rgba(16, 185, 129, 0.25)'
+    });
+  }
+
+  function animateCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+    });
+    requestAnimationFrame(animateCanvas);
+  }
+  animateCanvas();
+
+  // --- SCENE & PLAYBACK MANAGEMENT ---
+  const TOTAL_SCENES = 7;
+  let currentScene = 1;
+  let isPlaying = false;
+  let playSpeed = 1;
+  let sceneTimer = null;
+  const SCENE_DURATIONS = [9000, 10000, 11000, 12000, 11000, 14000, 12000]; // base ms
+
+  function showScene(sceneIndex, triggerSfx = true) {
+    if (sceneIndex < 1 || sceneIndex > TOTAL_SCENES) return;
+    currentScene = sceneIndex;
+
+    document.querySelectorAll('.scene').forEach((el, idx) => {
+      el.classList.toggle('active', (idx + 1) === sceneIndex);
+    });
+
+    document.querySelectorAll('.chapter-dot').forEach((el, idx) => {
+      el.classList.toggle('active', (idx + 1) === sceneIndex);
+    });
+
+    const progressPercent = ((sceneIndex - 1) / (TOTAL_SCENES - 1)) * 100;
+    document.getElementById('timeline-progress').style.width = `${progressPercent}%`;
+
+    if (triggerSfx) {
+      if (sceneIndex === 2) sfxAlert();
+      else if (sceneIndex === 3 || sceneIndex === 7) sfxSuccess();
+      else sfxTransition();
+    }
+
+    // Special scene animations
+    if (sceneIndex === 2) {
+      const meter = document.getElementById('spiral-meter');
+      meter.style.strokeDashoffset = '565';
+      setTimeout(() => { meter.style.strokeDashoffset = '226'; }, 200);
+    }
+  }
+
+  function nextScene() {
+    if (currentScene < TOTAL_SCENES) {
+      showScene(currentScene + 1);
+    } else {
+      pausePlayback();
+      showScene(1);
+    }
+  }
+
+  function prevScene() {
+    if (currentScene > 1) {
+      showScene(currentScene - 1);
+    }
+  }
+
+  function startPlayback() {
+    isPlaying = true;
+    document.getElementById('btn-play-pause').textContent = '⏸';
+    document.getElementById('btn-mode').classList.add('active');
+    document.getElementById('btn-mode').innerHTML = '<span>🎬</span> Mode: Explainer Movie';
+    scheduleNextScene();
+  }
+
+  function pausePlayback() {
+    isPlaying = false;
+    clearTimeout(sceneTimer);
+    document.getElementById('btn-play-pause').textContent = '▶';
+    document.getElementById('btn-mode').classList.remove('active');
+    document.getElementById('btn-mode').innerHTML = '<span>🎬</span> Mode: Interactive';
+  }
+
+  function scheduleNextScene() {
+    clearTimeout(sceneTimer);
+    if (!isPlaying) return;
+    const duration = SCENE_DURATIONS[currentScene - 1] / playSpeed;
+    sceneTimer = setTimeout(() => {
+      if (isPlaying) {
+        nextScene();
+        scheduleNextScene();
+      }
+    }, duration);
+  }
+
+  // --- BUTTON EVENT LISTENERS ---
+  document.getElementById('btn-play-pause').addEventListener('click', () => {
+    sfxClick();
+    if (isPlaying) pausePlayback();
+    else startPlayback();
+  });
+
+  document.getElementById('btn-mode').addEventListener('click', () => {
+    sfxClick();
+    if (isPlaying) pausePlayback();
+    else startPlayback();
+  });
+
+  document.getElementById('btn-next').addEventListener('click', () => {
+    sfxClick();
+    nextScene();
+    if (isPlaying) scheduleNextScene();
+  });
+
+  document.getElementById('btn-prev').addEventListener('click', () => {
+    sfxClick();
+    prevScene();
+    if (isPlaying) scheduleNextScene();
+  });
+
+  document.querySelectorAll('.chapter-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      const targetScene = parseInt(dot.getAttribute('data-scene'), 10);
+      sfxClick();
+      showScene(targetScene);
+      if (isPlaying) scheduleNextScene();
+    });
+  });
+
+  document.querySelectorAll('.btn-speed').forEach(btn => {
+    btn.addEventListener('click', () => {
+      sfxClick();
+      document.querySelectorAll('.btn-speed').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      playSpeed = parseFloat(btn.getAttribute('data-speed'));
+      if (isPlaying) scheduleNextScene();
+    });
+  });
+
+  document.getElementById('btn-sound').addEventListener('click', () => {
+    soundEnabled = !soundEnabled;
+    const btn = document.getElementById('btn-sound');
+    btn.classList.toggle('active', soundEnabled);
+    btn.innerHTML = soundEnabled ? '<span>🔊</span> Sound FX: ON' : '<span>🔇</span> Sound FX: OFF';
+    if (soundEnabled) sfxClick();
+  });
+
+  document.getElementById('btn-fs').addEventListener('click', () => {
+    sfxClick();
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  });
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      document.getElementById('btn-play-pause').click();
+    } else if (e.key === 'ArrowRight') {
+      nextScene();
+      if (isPlaying) scheduleNextScene();
+    } else if (e.key === 'ArrowLeft') {
+      prevScene();
+      if (isPlaying) scheduleNextScene();
+    } else if (e.key === 'f' || e.key === 'F') {
+      document.getElementById('btn-fs').click();
+    } else if (e.key === 'm' || e.key === 'M') {
+      document.getElementById('btn-sound').click();
+    }
+  });
+
+  // --- SCENE 6: LIVE SIMULATOR LOGIC ---
+  const inputStudent = document.getElementById('input-student-fee');
+  const inputShop = document.getElementById('input-shop-fee');
+
+  function updateSimulation() {
+    const studentFee = parseFloat(inputStudent.value);
+    const shopFee = parseFloat(inputShop.value);
+
+    document.getElementById('val-student-fee').textContent = `$${studentFee.toFixed(2)}`;
+    document.getElementById('val-shop-fee').textContent = `$${shopFee.toFixed(2)}`;
+
+    // Price sensitivity: $0 -> 6000, $2 -> 2400 (60% drop), >$3 -> catastrophic
+    // Formula: retention ratio = max(0.05, 1 - (studentFee / 2) * 0.6)
+    let retention = Math.max(0.05, 1 - (studentFee * 0.3));
+    if (studentFee === 0) retention = 1.0;
+
+    const activeStudents = Math.round(6000 * retention);
+    const totalApplications = Math.round(9000 * retention);
+    const appsPerPost = (totalApplications / 300);
+
+    const studentRevenue = activeStudents * studentFee;
+    const shopRevenue = (appsPerPost >= 18) ? (300 * shopFee) : (300 * shopFee * (appsPerPost / 20));
+    const totalRevenue = Math.round(studentRevenue + shopRevenue);
+    const netProfit = totalRevenue - 4000;
+
+    document.getElementById('kpi-students').textContent = activeStudents.toLocaleString();
+    document.getElementById('kpi-apps-post').innerHTML = `${appsPerPost.toFixed(1)} <span style="font-size:12px; font-weight:500; color:${appsPerPost >= 20 ? 'var(--emerald)' : 'var(--rose)'};">(${appsPerPost >= 20 ? 'Pass' : 'Below 20 Min'})</span>`;
+    document.getElementById('kpi-revenue').textContent = `$${totalRevenue.toLocaleString()}`;
+    
+    const profitEl = document.getElementById('kpi-profit');
+    profitEl.textContent = `${netProfit >= 0 ? '+' : ''}$${netProfit.toLocaleString()}`;
+    profitEl.style.color = netProfit >= 0 ? 'var(--emerald)' : 'var(--rose)';
+
+    const badge = document.getElementById('sim-status-badge');
+    const icon = document.getElementById('sim-status-icon');
+    const text = document.getElementById('sim-status-text');
+
+    if (appsPerPost < 20 || netProfit < 0) {
+      badge.className = 'status-badge crash';
+      icon.textContent = '🚨';
+      if (appsPerPost < 20) {
+        text.textContent = `DEATH SPIRAL: Only ${appsPerPost.toFixed(1)} apps/post. Shops will leave!`;
+      } else {
+        text.textContent = `UNSUSTAINABLE: Burning $${Math.abs(netProfit)}/mo after expenses.`;
+      }
+    } else {
+      badge.className = 'status-badge thrive';
+      icon.textContent = '🚀';
+      text.textContent = `OPTIMAL ASYMMETRIC: $${netProfit.toLocaleString()} profit, high liquidity!`;
+    }
+  }
+
+  inputStudent.addEventListener('input', () => { sfxClick(); updateSimulation(); });
+  inputShop.addEventListener('input', () => { sfxClick(); updateSimulation(); });
+
+  window.setSimPreset = function(student, shop) {
+    sfxClick();
+    inputStudent.value = student;
+    inputShop.value = shop;
+    updateSimulation();
+  };
+
+  window.copyMemo = function() {
+    sfxSuccess();
+    const memoText = `TO: Ravi, Founder & CEO, CampusJobs
+RE: Pricing Architecture Decision
+
+1. Decision & Evidence:
+We choose Option B (Students $0, Shops $25/job post). Following Rule 1 & Rule 2, subsidizing the student magnet preserves 6,000 active candidates, generating 30 apps/post and $7,500 monthly revenue, comfortably exceeding our $4,000 operational burn.
+
+2. Weakest Condition & Key Trade-Off:
+The primary risk is merchant hesitation if hiring speed slows down. We intentionally sacrifice direct student fees to safeguard network liquidity and prevent the 60% student drop under symmetric pricing.
+
+3. 60-Day Next Step & Decision Rule:
+Over the next 60 days, we will track Applications per Job Post. Decision Rule: If applications per post decline below 20, we will freeze shop fees and launch campus referral bonuses.`;
+    navigator.clipboard.writeText(memoText).then(() => {
+      alert("✅ 3-Bullet Board Memo copied to clipboard!");
+    });
+  };
+
+  window.restartExplainer = function() {
+    showScene(1);
+    startPlayback();
+  };
+
+  // Initial setup
+  showScene(1, false);
+  updateSimulation();
+</script>
+</body>
+</html>
