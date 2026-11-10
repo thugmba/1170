@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 3.1 Lecture Presentation: The Platform Envelopment Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS</div><h2>Session 3.1: The Platform Envelopment Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_3_1_unihub_envelopment_hanji.png" alt="Jae, founder of UniHub, asks whether UniHub should add a textbook market of its own."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>UniHub: most BookSwap users are already here</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">UniHub is a free campus app for timetables and notices, run by Jae. BookSwap is a separate app for selling used textbooks.</p><table><tr><th></th><th>UNIHUB</th><th>BOOKSWAP</th></tr><tr><td>Users</td><td class="num">18,000</td><td class="num">6,000</td></tr><tr><td>Users who use both apps</td><td class="num">4,200</td><td class="num">4,200</td></tr><tr><td>Already has</td><td>Student login, student ID check, payment</td><td>Its own login and payment</td></tr><tr><td>Earns money from</td><td>Campus ads</td><td>10% fee on each sale</td></tr><tr><td>Cost to win one user</td><td>Almost $0 (in-app banner)</td><td>$8.00 in online ads</td></tr></table><div class="takeaway">A textbook market inside UniHub: one developer for 3 months at $4,000 a month = $12,000 once, plus $1,000 per semester to run. Should UniHub build it?</div></div>
+  <div class="footer"><span>SESSION 3.1 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Platform Envelopment Strategy?</h2>
+  <div class="body"><p class="para">A company that already has many users <b>adds the product of a nearby market to its own platform</b>, often in a <b>bundle</b>, and so wins that market's customers. It works because the attacker already has the customers and many of the parts it needs (accounts, payments, data, a sales team), so it can offer the new product at a much lower cost. The new product does not have to be the best; it must be <b>good enough and easier</b> because it comes in the same app.</p><div class="takeaway">Use it when many of your users also use a product in a nearby market and your existing parts can serve that market. Use it fairly: users must keep a choice.</div></div>
+  <div class="footer"><span>SESSION 3.1 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Nearby market and standalone product</h2>
+  <div class="body"><div class="term"><strong>Nearby market<br><span style="font-size:24px;color:#526174;">(adjacent market)</span></strong><span>A different market that serves many of the same customers.<br><em>Example: textbook trading is next to a campus app; both serve the same students.</em></span></div><div class="term"><strong>Standalone product</strong><span>A product that does one job and is used on its own.<br><em>Example: BookSwap does only textbook trading.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.1 / KEY TERMS 1 OF 4</span><span>SLIDE 4 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Envelopment and overlap rate</h2>
+  <div class="body"><div class="term"><strong>Envelopment</strong><span>A platform enters a nearby market by adding that market's product to its own platform. The company that enters is the <b>attacker</b>; the company already there is the <b>target</b>.<br><em>Example: UniHub (attacker) adds a textbook market and competes with BookSwap (target).</em></span></div><div class="term"><strong>Overlap rate</strong><span>The share of the target's users who already use the attacker's platform.<br>Overlap rate = shared users / target's users x 100<br><em>Example: 4,200 / 6,000 x 100 = 70%.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.1 / KEY TERMS 2 OF 4</span><span>SLIDE 5 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Shared parts and bundle</h2>
+  <div class="body"><div class="term"><strong>Shared parts</strong><span>Things the attacker already has and can use again: accounts, payments, data, sales teams.<br><em>Example: UniHub already checks every user's student ID.</em></span></div><div class="term"><strong>Bundle</strong><span>Two or more products offered together, for one price or free together.<br><em>Example: Microsoft 365 gives companies Word, Excel, and Teams in one subscription.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.1 / KEY TERMS 3 OF 4</span><span>SLIDE 6 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Customer acquisition cost and competition law</h2>
+  <div class="body"><div class="term"><strong>Customer acquisition cost<br><span style="font-size:24px;color:#526174;">(CAC)</span></strong><span>The money a company spends to win one new customer.<br>CAC = marketing spending / new customers<br><em>Example: BookSwap spends $8,000 on ads and wins 1,000 users: $8.00.</em></span></div><div class="term"><strong>Competition law<br><span style="font-size:24px;color:#526174;">(antitrust law)</span></strong><span>Laws that stop large companies from unfairly blocking competitors, for example by forcing customers to take a bundle.<br><em>Example: in 2023, the European Commission investigated Microsoft for bundling Teams with Office.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.1 / KEY TERMS 4 OF 4</span><span>SLIDE 7 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Enter a market where your users already are</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Look for a nearby market whose customers already use your app. The more customers you share, the easier and cheaper it is to reach them.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_1_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">70% of BookSwap's users already open UniHub every day. If UniHub adds a textbook market, these students will see it right away. UniHub does not need to pay for ads.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Entering a market where few of your users are, such as a used-car market for office workers. Then you must pay for ads like any new company, so you have no advantage.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / RULE 1 OF 4</span><span>SLIDE 8 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Use your shared parts again</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">You already have user accounts, a payment system, and customer data. Use them again in the new market. Then each new customer costs you very little.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_1_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">UniHub uses its student login, student ID check, and payment system again. Students do not need a new account, and buyers feel safe because every seller is a real student.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Building the new market as a separate app with a new login and a new payment system. Students must sign up again, and UniHub pays as much as any new company.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / RULE 2 OF 4</span><span>SLIDE 9 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Make the new product good enough and easier to use</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">The new product does not need to be the best. But it must do its main job well. Users switch when one app is easier or cheaper than two.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_1_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">In UniHub Market, a student can list a book in one minute with the login they already have. The fee is 5%, half of BookSwap's 10%.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Adding a weak feature, such as a market where finding a book is slow and hard. Students try it once and go back to BookSwap. Being in the same app does not save a bad product.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / RULE 3 OF 4</span><span>SLIDE 10 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Let users choose, and play fair</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Users must be free to use the new product or not, and you must not block the rival. Forced users get angry, and a big company that blocks rivals can break competition law.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_1_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">UniHub Market is just one tab. Students who do not want it can ignore it. UniHub also keeps showing BookSwap posts on its notice board.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Making every student use UniHub Market, or deleting BookSwap posts from UniHub. Students complain, and the government may step in.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / RULE 4 OF 4</span><span>SLIDE 11 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Microsoft Teams and Slack</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Slack was a popular standalone chat app for companies. In 2017, Microsoft launched Teams inside Office 365 business subscriptions at no extra cost. By October 2020, Teams had more than 115 million daily users. Slack spent about half of its revenue on sales and marketing, and in December 2020 it agreed to be bought by Salesforce for $27.7 billion.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Millions of companies already paid for Office 365. <b>(Rule 1)</b></li><li>Existing accounts, sales team, and Office files made each Teams user almost free to win. <b>(Rule 2)</b></li><li>Good enough for most companies, at no extra price. <b>(Rule 3)</b></li><li><i>Lesson:</i> in 2023 the European Commission investigated the bundle, and Microsoft began selling Office without Teams in Europe. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / GOOD EXAMPLE 1</span><span>SLIDE 12 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Uber Eats</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Uber added food delivery using the same Uber account and saved card, the same maps, and many of the same drivers. In the fourth quarter of 2020, when many people stopped taking rides, Uber's delivery orders were worth $10.1 billion, more than its rides ($6.8 billion).</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>People who take Uber rides also order food. <b>(Rule 1)</b></li><li>Drivers, maps, and payments were used again. <b>(Rule 2)</b></li><li>One account and one saved card made ordering easy. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / GOOD EXAMPLE 2</span><span>SLIDE 13 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Google+ and YouTube</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Google launched Google+ in 2011 to compete with Facebook. In 2013, YouTube began requiring a Google+ profile to post comments. Users complained loudly. Google removed the requirement in 2015 and closed Google+ for consumers in April 2019.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Users were forced into the new product to keep using YouTube. <b>(Rule 4)</b></li><li>Google had the users, but not their friends; a social network needs your friends (Session 1.2). <b>(Rule 3)</b></li><li>Forcing users damaged trust in YouTube, the product people already liked.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / BAD EXAMPLE 1</span><span>SLIDE 14 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Amazon Fire Phone</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In 2014, Amazon launched the Fire Phone, with a Firefly button that recognized products and let users buy them on Amazon. Sales were weak, and in October 2014 Amazon reported a charge of about $170 million, mainly for unsold phones.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Shoppers could already use Amazon on any iPhone or Android phone, so the bundle added little. <b>(Rule 3)</b></li><li>Fewer apps than iPhone and Android: it did not do a phone's main job well enough. <b>(Rule 3)</b></li><li>Shared parts helped Amazon sell more, not make the phone better for users. <b>(Rule 2)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / BAD EXAMPLE 2</span><span>SLIDE 15 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Microsoft Teams</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Customers and shared parts already in place (Rules 1 and 2)</td></tr><tr><td>Uber Eats</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Drivers, maps, and payments used again (Rule 2)</td></tr><tr><td>Google+</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Users forced, product not good enough (Rules 4 and 3)</td></tr><tr><td>Amazon Fire Phone</td><td style="color:#991b1b;font-weight:700">Bad</td><td>The bundle gave users little new value (Rule 3)</td></tr></table><div class="takeaway">Envelopment wins when the attacker already has the users and the parts, and users choose the bundle because it is easier.</div></div>
+  <div class="footer"><span>SESSION 3.1 / EXAMPLE SUMMARY</span><span>SLIDE 16 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Overlap rate</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Overlap rate = shared users / target's users x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: music and podcasts</h3><ul><li>A music app has 40,000 users.</li><li>A standalone podcast app has 10,000 users; 3,000 also use the music app.</li><li>3,000 / 10,000 x 100 = 30%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / TOOL 1 OF 4</span><span>SLIDE 17 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Customer acquisition cost (CAC)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 2</div><h3>Formula</h3><p>CAC = marketing spending / new customers</p><p>Compare the attacker's CAC with the target's CAC.</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: music and podcasts</h3><ul><li>Podcast app: $50,000 on ads, 5,000 users: $10.00.</li><li>Music app: $3,000 on banners in its own app, 6,000 podcast listeners: $0.50.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / TOOL 2 OF 4</span><span>SLIDE 18 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Profit over several periods</h2>
+  <div class="body"><p class="statement">A new product often loses money at first because it costs money to build.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = revenue per period x periods - one-time cost - running cost per period x periods</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a gym app</h3><ul><li>Meal-plan feature costs $5,000 to build.</li><li>Earns $2,000 a month; costs $500 a month to run.</li><li>After 4 months: $8,000 - $5,000 - $2,000 = $1,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / TOOL 3 OF 4</span><span>SLIDE 19 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 10% of our users try the new feature in the first semester, we will stop building it."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 3.1 / TOOL 4 OF 4</span><span>SLIDE 20 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Envelopment or not?</h2>
+  <div class="body"><p class="statement">Six companies plan a move:</p><div class="card"><ul><li>(a) ChatLine, a messaging app with 30 million users, adds money transfers using the same account and saved bank card.</li><li>(b) A bakery opens a second shop in another city.</li><li>(c) An email service adds a free calendar inside the same login and competes with standalone calendar apps.</li><li>(d) A ride-hailing app cuts its ride prices by 20%.</li><li>(e) A phone maker puts a free note-taking app on every new phone and competes with standalone note apps.</li><li>(f) A shoe store sells video games on a separate website with separate customer accounts.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 21 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Move [letter]: [envelopment / not envelopment], because
+shared users: [yes / no], shared parts: [what is used again, or none],
+nearby market: [which market it enters, or none].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER MOVES</div><div class="tmpl">Move: a banking app adds stock trading inside the same app.
+Envelopment, because shared users: yes, shared parts: the same login and bank account, nearby market: stock trading apps.
+Move: a coffee shop adds ten more tables.
+Not envelopment, because shared users: yes, shared parts: none new, nearby market: none (it grows in its own market).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 22 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Envelopment needs shared users, shared parts, and a nearby market</h2>
+  <div class="body"><table><tr><th>MOVE</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) ChatLine money transfers</td><td>Envelopment</td><td>Same users, same account and saved card</td></tr><tr><td>(b) Second bakery</td><td>Not</td><td>Same product in a new place; no nearby market</td></tr><tr><td>(c) Free calendar</td><td>Envelopment</td><td>Same users and login; enters calendar apps</td></tr><tr><td>(d) 20% price cut</td><td>Not</td><td>A price cut in its own market</td></tr><tr><td>(e) Free note app</td><td>Envelopment</td><td>Every phone buyer gets it; enters note apps</td></tr><tr><td>(f) Video games</td><td>Not</td><td>No shared parts; not a market next to shoes</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 23 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Check an envelopment opportunity: FitTrack</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>FitTrack: a running app with <b>50,000 users</b>.</li><li>MealMate: a standalone meal-planning app with <b>20,000 users</b>; <b>9,000</b> also use FitTrack.</li><li>MealMate spent <b>$60,000</b> on ads last year and won <b>10,000</b> new users.</li><li>FitTrack plans meal plans in its app: <b>$5,000</b> on in-app banners, <b>8,000</b> users expected in year 1.</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Overlap rate = 9,000 / 20,000 x 100 = ____ %. MealMate CAC = $60,000 / 10,000 = $____. FitTrack CAC = $5,000 / 8,000 = $____.</li><li><b>Step 2:</b> Check the four rules with the template on the next slide.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 24 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Rule 1 (users already there): overlap rate = [number]%. [strong / weak], because [reason].
+Rule 2 (shared parts): we can use [parts] again. Our CAC is $[number] vs. their $[number].
+Rule 3 (good enough and easier): users will switch because [one reason]. The risk is [one weakness].
+Rule 4 (choice and fairness): we will keep [what users can still choose].
+Verdict: [go / do not go], because [one sentence].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: CITYMAP ADDS PARKING PAYMENT</div><div class="tmpl">Rule 1: overlap rate = 6,000 / 10,000 = 60%. Strong: most ParkPay users already open CityMap while driving.
+Rule 2: maps, accounts, and saved cards used again. Our CAC is $4,000 / 10,000 = $0.40 vs. ParkPay&#x27;s $40,000 / 5,000 = $8.00.
+Rule 3: drivers pay in the app they already use to drive there. Risk: some lots work only with ParkPay.
+Rule 4: we keep showing ParkPay lots on our map.
+Verdict: go, because overlap is high and our CAC is 20 times lower.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 25 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Overlap 45%; CAC $0.63 vs. $6.00</h2>
+  <div class="body"><div class="card good"><ul><li><b>Overlap rate</b> = 9,000 / 20,000 x 100 = <b>45%</b>: medium; almost half of MealMate users already use FitTrack.</li><li><b>CAC:</b> MealMate $60,000 / 10,000 = <b>$6.00</b>; FitTrack $5,000 / 8,000 = <b>$0.63</b> (about 10 times lower).</li><li><b>Shared parts:</b> accounts, workout data that can suggest meals, payment.</li><li><b>Reason to switch:</b> for example, meal plans that match today's run. <b>Risk:</b> MealMate's recipes may be better.</li><li><b>Choice:</b> for example, users can still connect MealMate.</li><li><b>Verdict:</b> go is reasonable; do not go can also be strong if it argues the meal plans would not be good enough (Rule 3).</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 26 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Should UniHub envelop BookSwap?</h2>
+  <div class="body"><p class="statement">18,000 UniHub users / 6,000 BookSwap users, 4,200 shared / each active trader sells about $40 of books per semester</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">ENVELOP</div><h3>Option A: Build UniHub Market</h3><p>Build cost <b>$12,000</b> once (1 developer x 3 months x $4,000), plus <b>$1,000</b> per semester to run.</p><p>Fee <b>5%</b> (half of BookSwap's). Expect <b>20%</b> of UniHub users to trade each semester.</p></div><div class="card" style="flex:1"><div class="small-label">PARTNER</div><h3>Option B: Partner with BookSwap</h3><p>A BookSwap tab inside UniHub. BookSwap pays <b>$2</b> for each new user who joins through UniHub.</p><p>Expect <b>1,400</b> new users per semester. No building cost.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO: FOUR SEMESTERS</span><span>SLIDE 27 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 and 3)</h2>
+  <div class="body"><div class="card"><ul><li>Overlap rate = 4,200 / 6,000 x 100 = ____ %</li><li>Option A: traders per semester = 18,000 x 20% = ____; fee revenue = traders x $40 x 5% = $______</li><li>Option A profit over 4 semesters = 4 x fee revenue - $12,000 - 4 x $1,000 = $______</li><li>Option A if only 10% trade: traders = ____; revenue per semester = $______; profit over 4 semesters = $______</li><li>Option B: revenue per semester = 1,400 x $2 = $______; profit over 4 semesters = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 28 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to the CEO (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [CEO name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next semester we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 29 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>CityMap: build parking payment, or partner with ParkPay?</h2>
+  <div class="body"><div class="tmpl">To: Sara Lin, CEO, CityMap
+1. Decision and evidence: We should build parking payment inside CityMap, because 60% of ParkPay users already use our app (Rule 1) and our CAC is $0.40 against ParkPay&#x27;s $8.00 (Rule 2).
+2. Biggest risk and trade-off: The weakest point is that some parking lots work only with ParkPay. We give up a safe partnership fee to own a payment business that can grow with our map users.
+3. Next step and decision rule: In the next semester we will launch in one city and measure how many drivers pay through CityMap. We will change this decision if fewer than 5% of drivers in that city use it.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 30 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Envelopment wins only if about 19% of users trade</h2>
+  <div class="body"><div class="card"><ul><li>Overlap rate = 4,200 / 6,000 x 100 = <b>70%</b>.</li><li>Option A: 3,600 traders x $40 x 5% = <b>$7,200</b> per semester; profit = $28,800 - $16,000 = <b>$12,800</b>.</li><li>Option A if only 10% trade: 1,800 traders, $3,600 per semester; profit = $14,400 - $16,000 = <b style='white-space:nowrap'>-$1,600</b> (a loss).</li><li>Option B: 1,400 x $2 = $2,800 per semester; profit = <b>$11,200</b>, no building cost and no risk of a loss.</li></ul></div><div class="takeaway">A beats B only above 3,400 traders (about 19% of users), and avoids a loss only above 2,000 traders (about 11%). The team expects 20%: A earns $1,600 more, just above the line.</div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 31 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card good" style="flex:1"><div class="small-label">ENVELOP</div><h3>If you choose Option A</h3><ul><li>Points to the 70% overlap and the shared student ID check (Rules 1 and 2).</li><li>Names the risk that fewer users trade than the team expects.</li><li>Gives a decision rule: "If fewer than 19% of UniHub users trade in the first semester, we will switch to the partnership."</li></ul></div><div class="card good" style="flex:1"><div class="small-label">PARTNER</div><h3>If you choose Option B</h3><ul><li>Explains why safe, certain income ($11,200) is worth more than $1,600 of extra profit at risk.</li><li>Names the trade-off: UniHub gives up control of the textbook market.</li><li>Gives a decision rule for when to build its own market later.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 32 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain envelopment with the words attacker, target, overlap, shared parts, and bundle.</p></div><div class="card"><div class="n">02</div><p>Check an opportunity with the overlap rate, the CAC, and the four rules.</p></div><div class="card"><div class="n">03</div><p>Compare envelopment with a partnership over several periods and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Eisenmann, T., Parker, G., &amp; Van Alstyne, M. (2011). Platform envelopment. Strategic Management Journal, 32(12), 1270-1285.</p><p class="ref">Slack Technologies (2021). Form 10-K for the fiscal year ended January 31, 2021. SEC EDGAR.</p><p class="ref">European Commission (2023). Commission opens investigation into possible anticompetitive practices by Microsoft regarding Teams.</p><p class="ref">Uber Technologies (2021). Uber announces results for fourth quarter and full year 2020.</p><p class="ref">YouTube (2015). Official YouTube Blog, July 2015: Google+ no longer required.</p></div></div>
+  <div class="footer"><span>SESSION 3.1 / WRAP-UP</span><span>SLIDE 33 / 33</span></div>
+</section>
+
+</body>
+</html>

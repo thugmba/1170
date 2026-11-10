@@ -44,7 +44,7 @@ This course delivers an analytical and practical examination of digital transfor
   * Session 2.3: The Up-Sell and Cross-Sell Strategy
   * Session 2.4: Module 2 Review: Choosing the Right Strategy
 * **Module 3: Competitive Strategy & Innovation Frameworks**
-  * Session 3.1: Platform Envelopment Attacks ([Dataset](data/session_3_1_envelopment_slack_msft.csv))
+  * Session 3.1: The Platform Envelopment Strategy
   * Session 3.2: Strategic Cannibalization ([Dataset](data/session_3_2_cannibalization_adobe.csv))
   * Session 3.3: Disruptive Innovation in the Digital Era ([Dataset](data/session_3_3_disruption_blockbuster.csv))
   * Session 3.4: Open Innovation & Ecosystem Orchestration ([Dataset](data/session_3_4_open_apis_shopify.csv))
