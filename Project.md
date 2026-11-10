@@ -42,8 +42,7 @@ By completing this project, you will:
 |------|----------------------|---------------|
 | **Week 10** | **Chapter 1** (Company Introduction), with links to at least 3 performance indicators for company approval | PDF on iLearn: `StudentID_Name_Ch1.pdf` |
 | **Week 13** | **Chapters 1–3** (Company Introduction, Platform Diagnosis, Strategy Analysis) | PDF on iLearn: `StudentID_Name_Ch1-3.pdf` |
-| **Week 14** | **5-minute presentation video** | Upload to Google Drive; submit **only the link** on iLearn |
-| **Friday before Week 15, 5 pm** | **Slides** and **final report** (all chapters, references, and appendices) | PDFs on iLearn: `StudentID_Name_Slides.pdf`, `StudentID_Name_Report.pdf` |
+| **Week 14 (Friday, 5 pm)** | **Final report** (all chapters, references, and appendices), **slides**, and **5-minute presentation video** | PDFs on iLearn: `StudentID_Name_Report.pdf`, `StudentID_Name_Slides.pdf`; video on Google Drive, submit **only the link** on iLearn |
 | **Weeks 15–16** | **Final presentations** in class (5 minutes + 1 minute Q&A) | Attend in person |
 
 Write your report in the [report template](templates/Final_Project_Report_Template.docx) from Week 10, and keep adding to the same file. You will receive feedback on Chapter 1 (Week 10) and Chapters 1–3 (Week 13).
@@ -56,8 +55,7 @@ Write your report in the [report template](templates/Final_Project_Report_Templa
 | **Week 11** | • Read the Week 10 feedback and fix Chapter 1<br>• Collect 5 years (2021–2025) of performance evidence<br>• Start the evidence table<br>• Write Chapter 2 (Platform Diagnosis) | – |
 | **Week 12** | • Choose 2–3 strategies, including one that failed or carries a risk<br>• Fill in the rule-check tables<br>• Make charts of the results | – |
 | **Week 13** | • Write Chapter 3 (Strategy Analysis): what the company did, rule check, result, verdict | **Chapters 1–3** |
-| **Week 14** | • Read the Week 13 feedback<br>• Make at least 10 slides<br>• Practice and record the 5-minute video | **Video link** |
-| **Friday before Week 15** | • Write Chapter 4 (Recommendation)<br>• Finish the references and appendices<br>• Check the format and convert to PDF | **Slides + final report (5 pm)** |
+| **Week 14** | • Read the Week 13 feedback<br>• Write Chapter 4 (Recommendation)<br>• Finish the references and appendices<br>• Make at least 10 slides<br>• Practice and record the 5-minute video<br>• Check the format and convert to PDF | **Final report + slides + video link (Friday, 5 pm)** |
 | **Weeks 15–16** | • Give your live presentation<br>• Answer questions and listen to your classmates | **Presentation** |
 
 ## Company Selection
@@ -97,25 +95,22 @@ Present **at least 3** of the following indicators, reported **by year**:
 - Market share from industry reports or credible news media
 - Figures published in the company's own press releases or official blog
 
-:::{.callout-tip}
-## Where to Find Evidence
+### Where to Find Evidence
+
 - **Listed companies**: your country's stock exchange disclosure system and the company's investor relations (IR) website
 - **Privately held companies**: some countries require certain unlisted companies to publish audited statements in a public registry; check your country's rules first. Otherwise, use the company's press releases, app statistics sites, investment news, and industry reports.
-:::
 
-:::{.callout-important}
-## Company Approval (Week 10)
+### Company Approval (Week 10)
+
 When you submit Chapter 1, include **links to at least 3 performance indicators** (or one recent financial statement). A company will not be approved without these links. This check protects you from discovering in Week 13 that the evidence does not exist.
-:::
 
-:::{.callout-important}
-## Evidence Table (Required Appendix)
+### Evidence Table (Required Appendix)
+
 Attach an **evidence table** to your report. Every factual claim needs one row:
 
 | Claim | Evidence (number or fact) | Source (link) | Year |
 |-------|---------------------------|---------------|------|
 | *Example: The company raised commissions for sellers* | *Commission rose from 8% to 11%* | *Company press release* | *2023* |
-:::
 
 ---
 
@@ -165,10 +160,9 @@ Analyze every strategy you choose with the same four steps:
 3. **Result**: Show what happened, with at least one number from your performance evidence (before and after the move).
 4. **Verdict**: Did the strategy work, fail, or is it too early to tell? Connect the verdict to the rule check.
 
-:::{.callout-tip}
-## Use the class tools
+### Use the Class Tools
+
 Reuse the tools and templates from each session (for example, the signal questions from Session 2.1, the subsidy calculation from Session 2.2, and the overlap rate and CAC comparison from Session 3.1). Your evidence will be stronger and your work will be faster.
-:::
 
 ## Part C: Recommendation — "If I Ran This Company"
 
@@ -277,7 +271,7 @@ Write as if you are the owner of the company:
 
 ## Presentation Video (5 minutes) — Used for Grading
 
-Your presentation score is based on this video (due in **Week 14**). The live presentations in Weeks 15–16 are for sharing and Q&A.
+Your presentation score is based on this video (due **Week 14, Friday, 5 pm**). The live presentations in Weeks 15–16 are for sharing and Q&A.
 
 - Record a 5-minute video of your presentation, showing your slides and your voice (your face is optional)
 - Upload the video to your Google Drive and set sharing to **"Anyone with the link can view"**
@@ -285,7 +279,7 @@ Your presentation score is based on this video (due in **Week 14**). The live pr
 
 ## Deadline
 
-See the **Project Schedule** above: video link in Week 14; slides and final report by **Friday before Week 15, 5 pm**.
+See the **Project Schedule** above: final report, slides, and video link are all due **Week 14, Friday, 5 pm**.
 
 # Presentation Guidelines
 
@@ -307,10 +301,7 @@ Suggested time allocation:
 | Recommendation: "If I Ran This Company" (Part C) | 1:00 |
 | Summary | 0:30 |
 
-:::{.callout-warning}
-## Time Management
 Practice your presentation multiple times to stay within the 5-minute limit. Presentations will be stopped at 5 minutes.
-:::
 
 ## Q&A Session (1 minute)
 
@@ -332,8 +323,7 @@ Be prepared to answer questions about:
 |----------|------------|
 | Week 10 | Chapter 1 (PDF) |
 | Week 13 | Chapters 1–3 (PDF) |
-| Week 14 | Link to the presentation video (Google Drive) |
-| Friday before Week 15, 5 pm | Slides (PDF) and final report (PDF) |
+| Week 14 (Friday, 5 pm) | Final report (PDF), slides (PDF), and link to the presentation video (Google Drive) |
 
 ## Submission Process
 
@@ -342,13 +332,11 @@ Be prepared to answer questions about:
 3. **Check the video link**: Open it in a private browser window to make sure anyone can view it
 4. **Submit to iLearn**: Upload each file, or the video link, to the submission folder for that deadline
 
+### Important Notes
 
-:::{.callout-warning}
-## Important Notes
 - Late submissions will be penalized according to course policy
 - Only PDF format will be accepted
 - Ensure files are not corrupted before submission
-:::
 
 ---
 
@@ -441,11 +429,3 @@ You may NOT use AI tools for:
 - Creating your strategic recommendations
 
 All AI use must be disclosed in an appendix.
-
----
-
-:::{.callout-note}
-## Good Luck!
-
-This project is an opportunity to apply the strategies and rules from this course to a real company from your own country. Take it seriously, start early, and enjoy the learning process. Your analysis could provide genuine insights into platform business strategy!
-:::
