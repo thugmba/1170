@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 4.3 Lecture Presentation: The Super-App Strategy (Case Study: Grab)</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 4 / REAL-WORLD CASE STUDIES &amp; STRATEGIC SYNTHESIS</div><h2>Session 4.3: The Super-App Strategy (Case Study: Grab)</h2>
+  <div class="body"><img class="hero" src="../assets/session_4_3_campusgo_superapp_hanji.png" alt="Ama, founder of CampusGo, asks whether to add every service at once or one at a time."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>CampusGo: an app students open almost every day</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">CampusGo is Ama's app for booking seats on campus shuttles. She wants it to become the one app for daily campus life. An investor says: "Launch food, laundry, printing, tickets, and a wallet at once, with big discounts."</p><table><tr><th>CAMPUSGO (ONE MONTH)</th><th style="text-align:right">VALUE</th></tr><tr><td>Students who use the app</td><td class="num">12,000</td></tr><tr><td>Shuttle rides per student per month</td><td class="num">10</td></tr><tr><td>Profit per ride</td><td class="num">$0.20</td></tr><tr><td>Monthly profit (12,000 x 10 x $0.20)</td><td class="num">$24,000</td></tr><tr><td>Other services</td><td class="num">None</td></tr></table></div>
+  <div class="footer"><span>SESSION 4.3 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Super-App Strategy?</h2>
+  <div class="body"><p class="para">One app that people use very often becomes <b>a single app for many daily services</b>. It starts with a <b>front door</b>, a service people open many times a week, then adds services for the same users, such as food delivery, payments, and loans, under <b>one account and one wallet</b>. Each new service is cheaper to launch because the users are already there (Session 3.1). Grab and WeChat are the best-known examples.</p><div class="takeaway">Use it when your app is used very often, your users need other services that fit next to it, and you can make each service pay for itself in time.</div></div>
+  <div class="footer"><span>SESSION 4.3 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Super-app, front door, usage frequency</h2>
+  <div class="body"><div class="term"><strong>Super-app</strong><span>One app that offers many everyday services under one account and one wallet.<br><em>Example: an app for rides, food delivery, and payments.</em></span></div><div class="term"><strong>Front door</strong><span>The service that brings people into the app many times a week.<br><em>Example: CampusGo's shuttle booking, used 10 times a month.</em></span></div><div class="term"><strong>Usage frequency</strong><span>How often a person uses a service in a period.<br><em>Example: 10 rides a month is high; buying a laptop once in three years is low.</em></span></div></div>
+  <div class="footer"><span>SESSION 4.3 / KEY TERMS 1 OF 2</span><span>SLIDE 4 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>E-wallet, subsidy, contribution</h2>
+  <div class="body"><div class="term"><strong>E-wallet</strong><span>Money stored in an app that can pay for any service in it.<br><em>Example: a student adds $20 and pays for rides and food.</em></span></div><div class="term"><strong>Subsidy<br><span style="font-size:24px;color:#526174;">(incentive)</span></strong><span>Money a company spends to make a service cheaper for users or more attractive for drivers or shops.<br><em>Example: CampusGo pays $1 of every food order.</em></span></div><div class="term"><strong>Contribution</strong><span>What a service earns after its own direct costs and subsidies.<br>= revenue - direct costs - subsidies<br><em>Example: $10,000 - $7,000 - $1,000 = $2,000.</em></span></div></div>
+  <div class="footer"><span>SESSION 4.3 / KEY TERMS 2 OF 2</span><span>SLIDE 5 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Start with a service people use very often</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">The front door must bring users back many times a week. Rarely used services cannot hold up a super-app.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_3_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">CampusGo is opened 10 times a month by 12,000 students, so a new service inside it is seen by many students right away.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Building a super-app around something people use once a year, such as booking graduation photos. Users forget the app.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / RULE 1 OF 4</span><span>SLIDE 6 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Add services the same users already need, one at a time</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Each new service should fit naturally next to the front door, and should be good before the next one is added.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_3_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Students take the shuttle to class, and many order lunch on the way. Food comes first; laundry only after food works well.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Launching many services at once. Each one is weak, users have bad experiences, and the whole app gets a bad name.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / RULE 2 OF 4</span><span>SLIDE 7 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Connect services with one safe wallet</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">A wallet makes every service easier to use, but money and personal data need strong protection and must follow the law.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_3_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">The CampusGo wallet works with a licensed bank partner, checks each user's identity, and pays for rides and food with one tap.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Holding users' money without the right licence or checks. Regulators can stop the service, and users stop trusting the app.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / RULE 3 OF 4</span><span>SLIDE 8 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Make each service pay for itself in time</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Subsidies can start a service, but every service should reach a positive contribution on its own. Stop paying people to use it.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_3_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">CampusGo pays $1 of each food order for the first two months only, then checks whether food earns money without it.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Using discounts forever to keep users in every service. The app grows in users but loses more money each month.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / RULE 4 OF 4</span><span>SLIDE 9 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Grab</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Grab started in 2012 as a taxi-booking app in Malaysia and became a super-app across Southeast Asia, adding food delivery, package delivery, payments, and loans. For years it spent heavily on incentives and lost money. As it cut incentives, it improved: in 2024, revenue grew 19% to $2.8 billion and adjusted EBITDA (a measure of operating profit) turned positive at $313 million, though it still had a net loss of $158 million.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Rides were a front door used many times a week. <b>(Rule 1)</b></li><li>Food, delivery, and payments were added for the same users. <b>(Rule 2)</b></li><li>GrabPay connected the services. <b>(Rule 3)</b></li><li><i>Lesson:</i> years of losses show how costly subsidies are. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / GOOD EXAMPLE 1</span><span>SLIDE 10 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>WeChat</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>WeChat started in 2011 as a messaging app in China. In 2013 it added WeChat Pay. In 2014, at Chinese New Year, users could send digital red envelopes (gifts of money), and many linked their bank cards for the first time. In 2017 it added mini programs from other companies. In early 2025, WeChat had about 1.4 billion monthly users.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Messaging is used many times a day: the strongest front door. <b>(Rule 1)</b></li><li>Each new service fitted what users already did with friends. <b>(Rule 2)</b></li><li>Red envelopes gave a fun reason to link a bank card. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / GOOD EXAMPLE 2</span><span>SLIDE 11 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Paytm Payments Bank</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Paytm, a large Indian payments app, offered wallets, bank accounts, and many other services through Paytm Payments Bank. In January 2024, the Reserve Bank of India ordered the bank to stop taking new deposits and top-ups after February 29, 2024, because audits found "persistent non-compliances." Millions of users had to move their money elsewhere.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>The wallet and bank did not follow the regulator's rules. <b>(Rule 3)</b></li><li>When the money service stopped, users lost trust in the other services too.</li><li>In a super-app, a problem in one service hurts all the others.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / BAD EXAMPLE 1</span><span>SLIDE 12 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Facebook's Libra (Diem)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In 2019, Facebook announced Libra, a new digital currency for its apps, such as Messenger and WhatsApp. Governments and central banks worried about risks to money and privacy. After years of pushback, the project (renamed Diem) was shut down, and its technology was sold to Silvergate Bank in 2022 for about $182 million.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Tried to add a very large money service before regulators trusted it. <b>(Rule 3)</b></li><li>Started with a whole new currency, not a small service users already needed. <b>(Rule 2)</b></li><li>Years of work ended without a launched product.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / BAD EXAMPLE 2</span><span>SLIDE 13 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Grab</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A busy front door, then services for the same users (Rules 1 and 2)</td></tr><tr><td>WeChat</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A daily habit, then a wallet people wanted (Rules 1 and 3)</td></tr><tr><td>Paytm Payments Bank</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Money service broke the rules (Rule 3)</td></tr><tr><td>Libra (Diem)</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Too big a money service, too early (Rules 2 and 3)</td></tr></table><div class="takeaway">One busy front door, one good service at a time, one safe wallet, and every service paying its own way.</div></div>
+  <div class="footer"><span>SESSION 4.3 / EXAMPLE SUMMARY</span><span>SLIDE 14 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: The front-door test</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 1</div><h3>Formula</h3><p>Uses per month = users x times each user opens the service per month</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>Bus-ticket app: 5,000 users x 20 trips = 100,000 uses a month.</li><li>Car-buying app: 5,000 users x 0.03 purchases = 150 uses a month.</li><li>Only the bus app can be a front door.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / TOOL 1 OF 4</span><span>SLIDE 15 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Users who try a new service</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>New service users = app users x share who try it</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>12,000 users; 20% order food.</li><li>12,000 x 20% = 2,400 food users.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / TOOL 2 OF 4</span><span>SLIDE 16 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Contribution of each service</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Contribution = revenue - direct costs - subsidies</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: food delivery</h3><ul><li>Revenue $10,000; restaurants and riders $7,000; discounts $1,000.</li><li>$10,000 - $7,000 - $1,000 = $2,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / TOOL 3 OF 4</span><span>SLIDE 17 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If food delivery does not reach a positive contribution by month 3 without discounts, we will not add laundry."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 4.3 / TOOL 4 OF 4</span><span>SLIDE 18 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Can it be a front door?</h2>
+  <div class="body"><p class="statement">Six apps want to become super-apps:</p><div class="card"><ul><li>(a) A messaging app people use every day.</li><li>(b) A wedding-planning app.</li><li>(c) A bus-ticket app that commuters use twice a day.</li><li>(d) A car-buying website.</li><li>(e) A mobile payment app used for coffee and lunch.</li><li>(f) A tax-filing app used once a year.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 19 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">App [letter]: [good front door / weak front door], because people use it
+[how often], so [what this means for other services in the app].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER APPS</div><div class="tmpl">App: food delivery used three times a week.
+Good front door, because people use it three times a week, so a grocery service inside it would be seen often.
+App: booking house movers.
+Weak front door, because people use it once every few years, so they would forget any other service in it.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 20 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>How often do people open it?</h2>
+  <div class="body"><table><tr><th>APP</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Messaging</td><td>Good</td><td>Every day</td></tr><tr><td>(b) Wedding planning</td><td>Weak</td><td>Once or twice in a lifetime</td></tr><tr><td>(c) Bus tickets</td><td>Good</td><td>Twice a day</td></tr><tr><td>(d) Car buying</td><td>Weak</td><td>Once in several years</td></tr><tr><td>(e) Mobile payments</td><td>Good</td><td>Several times a week</td></tr><tr><td>(f) Tax filing</td><td>Weak</td><td>Once a year</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 21 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Which services pay for themselves? CityDay</h2>
+  <div class="body"><table><tr><th>SERVICE (ONE MONTH)</th><th style="text-align:right">REVENUE</th><th style="text-align:right">DIRECT COSTS</th><th style="text-align:right">SUBSIDIES</th></tr><tr><td>Rides</td><td class="num">$50,000</td><td class="num">$30,000</td><td class="num">$5,000</td></tr><tr><td>Food delivery</td><td class="num">$40,000</td><td class="num">$30,000</td><td class="num">$15,000</td></tr><tr><td>Groceries</td><td class="num">$20,000</td><td class="num">$16,000</td><td class="num">$2,000</td></tr><tr><td>Movie tickets</td><td class="num">$5,000</td><td class="num">$2,000</td><td class="num">$6,000</td></tr></table><div class="card" style="margin-top:.2in"><ul><li><b>Step 1:</b> Contribution of each service (Tool 3), and the total.</li><li><b>Step 2:</b> For each service: keep, fix (cut subsidies), or stop. Use the template on the next slide.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 22 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">[Service]: contribution $[amount]. Without subsidies it would be $[amount].
+We should [keep / fix / stop] it, because [Rule 4 reason, or how it helps the front door].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: LAUNDRY IN ANOTHER APP</div><div class="tmpl">Laundry earns $8,000, costs $6,000, subsidies $3,000.
+Laundry: contribution -$1,000. Without subsidies it would be $2,000.
+We should fix it by cutting the subsidy step by step, because the service itself earns money and only the discounts make it lose (Rule 4).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 23 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Two services pay their way; two need fixing</h2>
+  <div class="body"><div class="card good"><ul><li>Rides = <b>$15,000</b>; food = <b>-$5,000</b>; groceries = <b>$2,000</b>; movie tickets = <b>-$3,000</b>; total = <b>$9,000</b>.</li><li>Without subsidies: food would earn $10,000; movie tickets $3,000.</li><li>Keep rides (the front door) and groceries.</li><li>Fix food by cutting its $15,000 subsidy step by step (Rule 4).</li><li>Fix or stop movie tickets: used rarely (Rule 1), and the subsidy is larger than the revenue.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 24 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>All at once, or one at a time? CampusGo's next 6 months</h2>
+  <div class="body"><p class="statement">12,000 students / $24,000 monthly profit from rides</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">ALL AT ONCE</div><h3>Option A: Five services at once</h3><p>Food, laundry, printing, tickets, and a wallet: <b>$80,000</b> to build, plus <b>$10,000</b> a month of discounts.</p><p>Expect <b>30%</b> of students to use them, <b>$3</b> profit each a month.</p></div><div class="card" style="flex:1"><div class="small-label">ONE AT A TIME</div><h3>Option B: One service at a time</h3><p>Food delivery and a simple wallet: <b>$25,000</b>, discounts only in the first two months (<b>$2,000</b> a month).</p><p>Expect <b>25%</b> to order food, <b>$2</b> profit each a month. Laundry only if food works.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 25 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 2 and 3)</h2>
+  <div class="body"><div class="card"><ul><li>Option A: users = 12,000 x 30% = ____; extra profit = users x $3 x 6 = $______; costs = $80,000 + 6 x $10,000 = $______; result = $______</li><li>Option B: food users = 12,000 x 25% = ____; extra profit = users x $2 x 6 = $______; costs = $25,000 + 2 x $2,000 = $______; result = $______</li><li>Option B if only 10% order food: result = $______</li><li>Option A if only 15% use the new services: result = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 26 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Ama (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next three months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 27 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>CityDay: fix food delivery</h2>
+  <div class="body"><div class="tmpl">To: Victor Lam, CEO, CityDay
+1. Decision and evidence: We should cut the food subsidy from $15,000 to $5,000 a month over three months, because food earns $10,000 before subsidies and should pay for itself (Rule 4).
+2. Biggest risk and trade-off: The weakest point is that some users may order less food. We give up some food orders to stop losing $5,000 a month.
+3. Next step and decision rule: In the next three months we will lower discounts step by step and measure weekly food orders. We will change this decision if orders fall by more than 30%.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 28 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>All at once loses even in its good case</h2>
+  <div class="body"><div class="card"><ul><li>Option A: 3,600 users; $64,800 extra profit; costs $140,000; result = <b>-$75,200</b>.</li><li>Option B: 3,000 food users; $36,000 extra profit; costs $29,000; result = <b>$7,000</b>.</li><li>Option B with 10%: $14,400 - $29,000 = <b>-$14,600</b>.</li><li>Option A with 15%: $32,400 - $140,000 = <b>-$107,600</b>.</li><li>Option A loses money mostly because of discounts. Option B risks much less and shows whether students want food first.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 29 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Usually chooses Option B (Rules 2 and 4).</li><li>Names a real risk: fewer students may order food than expected.</li><li>Builds the wallet with a licensed partner (Rule 3).</li><li>Gives a decision rule: "If fewer than 15% of students order food by month 3, we will not add laundry."</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 30 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain a super-app and test whether a service can be its front door.</p></div><div class="card"><div class="n">02</div><p>Calculate the contribution of each service with and without subsidies.</p></div><div class="card"><div class="n">03</div><p>Compare adding services all at once with one at a time, and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Grab Holdings (2025, February 20). Grab reports fourth quarter and full year 2024 results.</p><p class="ref">South China Morning Post (2018). Tencent's WeChat hits 1 billion monthly active users.</p><p class="ref">Reserve Bank of India (2024, January 31). Action against Paytm Payments Bank Ltd.</p><p class="ref">Banking Dive (2022, February 1). Diem to end crypto project, sell its assets to Silvergate Bank for $182M.</p></div></div>
+  <div class="footer"><span>SESSION 4.3 / WRAP-UP</span><span>SLIDE 31 / 31</span></div>
+</section>
+
+</body>
+</html>

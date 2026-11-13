@@ -45,11 +45,11 @@ This course delivers an analytical and practical examination of digital transfor
   * Session 2.4: Module 2 Review: Choosing the Right Strategy
 * **Module 3: Competitive Strategy & Innovation Frameworks**
   * Session 3.1: The Platform Envelopment Strategy
-  * Session 3.2: Strategic Cannibalization ([Dataset](data/session_3_2_cannibalization_adobe.csv))
-  * Session 3.3: Disruptive Innovation in the Digital Era ([Dataset](data/session_3_3_disruption_blockbuster.csv))
-  * Session 3.4: Open Innovation & Ecosystem Orchestration ([Dataset](data/session_3_4_open_apis_shopify.csv))
+  * Session 3.2: The Cannibalization Strategy
+  * Session 3.3: The Disruption Strategy
+  * Session 3.4: The Open Ecosystem Strategy
 * **Module 4: Real-World Case Studies & Strategic Synthesis**
-  * Session 4.1: Comprehensive Case Study: Amazon ([Dataset](data/session_4_1_case_amazon.csv))
-  * Session 4.2: Comprehensive Case Study: Apple ([Dataset](data/session_4_2_case_apple.csv))
-  * Session 4.3: Applied Digital Learning & Empirical Industry Evidence ([Dataset](data/session_4_3_empirical_audit_grab.csv))
-  * Session 4.4: Final Strategic Assessment & Capstone Defense ([Dataset](data/session_4_4_capstone_audit_checklist.csv))
+  * Session 4.1: The Flywheel Strategy (Case Study: Amazon)
+  * Session 4.2: The Ecosystem Lock-In Strategy (Case Study: Apple)
+  * Session 4.3: The Super-App Strategy (Case Study: Grab)
+  * Session 4.4: Final Review: Choosing the Right Strategy

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 3.4 Lecture Presentation: The Open Ecosystem Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS</div><h2>Session 3.4: The Open Ecosystem Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_3_4_shopnest_ecosystem_hanji.png" alt="Arjun, founder of ShopNest, asks whether to let outside developers build apps for his shops."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>ShopNest: more requests than one team can build</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">ShopNest lets small shops build their own online store. Arjun is its founder. Shops keep asking for new features, and some leave for bigger store builders.</p><table><tr><th>SHOPNEST</th><th style="text-align:right">VALUE</th></tr><tr><td>Shops using ShopNest</td><td class="num">400</td></tr><tr><td>Price per shop</td><td class="num">$50 a month ($600 a year)</td></tr><tr><td>Features shops have asked for</td><td class="num">30</td></tr><tr><td>Features the team can build in a year</td><td class="num">3</td></tr><tr><td>Shops that left last year, mostly for missing features</td><td class="num">60</td></tr><tr><td>Small software companies asking to build add-ons</td><td class="num">12</td></tr></table></div>
+  <div class="footer"><span>SESSION 3.4 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Open Ecosystem Strategy?</h2>
+  <div class="body"><p class="para">A company <b>opens its product so that outside companies, called partners, can build on it</b>. It becomes a <b>platform</b>: it keeps the core of the product and sets the rules, and many partners add features, apps, or ideas that the company could never build alone. Customers get more choice, partners get customers, and the platform becomes harder to leave.</p><div class="takeaway">Use it when customers want more features than your team can build, outside companies are able and willing to build them, and you can protect the core and the customers.</div></div>
+  <div class="footer"><span>SESSION 3.4 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Ecosystem, partner, API</h2>
+  <div class="body"><div class="term"><strong>Ecosystem</strong><span>A group of companies that work around one platform and help each other's customers.<br><em>Example: ShopNest plus the companies that build add-ons for ShopNest shops.</em></span></div><div class="term"><strong>Partner<br><span style="font-size:24px;color:#526174;">(outside developer)</span></strong><span>An outside company that builds something on your platform.<br><em>Example: a small company that builds a loyalty-points app.</em></span></div><div class="term"><strong>API</strong><span>Application programming interface: rules that let one program safely use parts of another program.<br><em>Example: through ShopNest's API, a delivery app can read a shop's orders.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.4 / KEY TERMS 1 OF 2</span><span>SLIDE 4 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Core, revenue share, open innovation</h2>
+  <div class="body"><div class="term"><strong>Core</strong><span>The central parts the platform keeps for itself, because they hold its value and customers' trust.<br><em>Example: ShopNest keeps payments and customer data.</em></span></div><div class="term"><strong>Revenue share</strong><span>The part of a partner's sales that the platform keeps.<br><em>Example: an app earns $1,000; the platform keeps 20%: $200 for the platform, $800 for the partner.</em></span></div><div class="term"><strong>Open innovation</strong><span>Using ideas and work from people outside the company, such as customers, fans, or partners.<br><em>Example: a toy company lets fans send in designs for new sets.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.4 / KEY TERMS 2 OF 2</span><span>SLIDE 5 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Open the edges, keep the core</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Let partners add features around your product, but keep the parts that hold your value and customers' trust.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_4_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">ShopNest opens an API so partners can add delivery tracking, loyalty points, and gift cards. Payments and customer data stay with ShopNest.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Opening everything, including payments and customer data, with no control. Partners can misuse it, and the platform loses its value.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / RULE 1 OF 4</span><span>SLIDE 6 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Make it worth it for partners to join</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Partners build only if they can earn more than it costs them. Give them customers, tools, and a fair share of the money.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_4_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">ShopNest keeps 0% of the first $10,000 each partner earns in a year, and 15% after that. Partners also get free test stores.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Taking a large share of every sale, so partners cannot cover their costs. No partners join, and the app market stays empty.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / RULE 2 OF 4</span><span>SLIDE 7 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Set clear rules and check quality</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Customers trust the platform, not each small partner. Review apps before they go live, and protect customers' data.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_4_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Every app is tested before it appears in the ShopNest app market, and apps can read only the data that a shop allows.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Letting any app in without checks. One bad app that leaks data or breaks stores damages trust in the whole platform.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / RULE 3 OF 4</span><span>SLIDE 8 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Do not compete unfairly with your partners</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Partners invest time and money because they trust you. Do not copy their apps, change the rules suddenly, or push them out.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_4_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">When ShopNest plans a new feature, it tells partners six months ahead and does not copy any partner's app.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Copying the most popular partner app, or cutting partners off with no warning. Other partners stop building.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / RULE 4 OF 4</span><span>SLIDE 9 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>The Shopify App Store</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Shopify helps millions of businesses run online stores. Instead of building every feature itself, it lets outside developers sell apps to Shopify stores through its API and app store. In 2021, Shopify announced that developers would keep all of their first $1 million in app sales each year, and pay only 15% after that, instead of 20% before.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Shopify keeps checkout and payments; partners add thousands of features. <b>(Rule 1)</b></li><li>A low share lets small developers earn enough to keep building. <b>(Rule 2)</b></li><li>Shopify reviews apps before they are listed. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / GOOD EXAMPLE 1</span><span>SLIDE 10 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>LEGO Ideas</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>LEGO lets fans post designs for new LEGO sets online. If a design gets 10,000 supporters, LEGO reviews it. If LEGO makes the set, the fan designer receives a small share (1%) of its sales.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>New ideas from fans; LEGO keeps design checks, production, and the brand. <b>(Rule 1)</b></li><li>Fans get public credit and a share of sales. <b>(Rule 2)</b></li><li>10,000 supporters plus LEGO's review keep quality high. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / GOOD EXAMPLE 2</span><span>SLIDE 11 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Twitter and its developers</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>For years, outside apps such as Tweetbot and Twitterrific gave people other ways to read Twitter. In January 2023, Twitter suddenly cut these apps off with no warning, then changed its rules to ban them. Twitterrific shut down. In 2023, Twitter also stopped free access to its API and began charging developers (from $100 a month).</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Changed the rules suddenly and pushed out partners who helped it grow. <b>(Rule 4)</b></li><li>Developers lost their business overnight, so others stopped trusting the platform. <b>(Rule 2)</b></li><li>Users who liked these apps lost them too.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / BAD EXAMPLE 1</span><span>SLIDE 12 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Facebook and Cambridge Analytica</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In 2014, a personality-quiz app on Facebook collected data from its users and their friends, up to 87 million people. The data was passed to Cambridge Analytica, a political consulting company. After this became public in 2018, the U.S. Federal Trade Commission fined Facebook $5 billion in 2019, partly for failing to control what outside apps did with users' data.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Outside apps could reach far more data than they needed. <b>(Rule 1)</b></li><li>Facebook did not check well what apps did with the data. <b>(Rule 3)</b></li><li>Users lost trust in the whole platform, not only in one app.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / BAD EXAMPLE 2</span><span>SLIDE 13 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Shopify App Store</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A deal small developers want (Rule 2)</td></tr><tr><td>LEGO Ideas</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Open to fans, with clear checks (Rules 1 and 3)</td></tr><tr><td>Twitter</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Pushed out its partners overnight (Rule 4)</td></tr><tr><td>Facebook</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Opened user data without control (Rules 1 and 3)</td></tr></table><div class="takeaway">An ecosystem grows when partners can earn and trust you, and customers stay safe.</div></div>
+  <div class="footer"><span>SESSION 3.4 / EXAMPLE SUMMARY</span><span>SLIDE 14 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Years to build alone</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Years to build alone = features customers want / features your team builds per year</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a booking app</h3><ul><li>Customers want 20 features.</li><li>The team builds 4 a year.</li><li>20 / 4 = 5 years.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / TOOL 1 OF 4</span><span>SLIDE 15 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Value of customers kept and won</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Value = (customers who stay instead of leaving + new customers) x revenue per customer per year</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a booking app</h3><ul><li>Keeps 10 customers who would have left; wins 15 new ones.</li><li>Each pays $300 a year.</li><li>(10 + 15) x $300 = $7,500.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / TOOL 2 OF 4</span><span>SLIDE 16 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Revenue share for the platform and the partner</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Platform's share = partner's sales x share %</p><p>Partner keeps = partner's sales - platform's share</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: an app</h3><ul><li>The app sells $12,000 a year; the platform keeps 20%.</li><li>Platform: $2,400. Partner keeps: $9,600.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / TOOL 3 OF 4</span><span>SLIDE 17 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 10 partner apps are live after six months, we will lower our revenue share."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 3.4 / TOOL 4 OF 4</span><span>SLIDE 18 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Open ecosystem or not?</h2>
+  <div class="body"><p class="statement">Six companies plan a move:</p><div class="card"><ul><li>(a) A game console lets outside studios sell games in its online store.</li><li>(b) A bank lets budgeting apps read a customer's spending, only with permission, through an API.</li><li>(c) A restaurant hires one more cook.</li><li>(d) A map company lets taxi apps use its maps for a fee.</li><li>(e) A phone maker makes its phones work only with its own chargers.</li><li>(f) A toy company invites fans to send in designs for new toys.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 19 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Move [letter]: [open ecosystem / not open ecosystem], because
+[who outside the company builds or adds something, or nobody]
+and [what the company keeps or controls].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER MOVES</div><div class="tmpl">Move: an e-book store lets small publishers upload and sell their own books.
+Open ecosystem, because outside publishers add books, and the store keeps payments, pricing rules, and the reading app.
+Move: a bakery buys a bigger oven.
+Not open ecosystem, because nobody outside the company builds anything.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 20 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Who outside builds something, and what does the company keep?</h2>
+  <div class="body"><table><tr><th>MOVE</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Outside game studios</td><td>Open</td><td>Studios add games; the console keeps the store</td></tr><tr><td>(b) Bank API for budget apps</td><td>Open</td><td>Apps build on data, with the customer's permission</td></tr><tr><td>(c) One more cook</td><td>Not</td><td>Only grows its own work</td></tr><tr><td>(d) Maps for taxi apps</td><td>Open</td><td>Taxi apps build on the maps</td></tr><tr><td>(e) Own chargers only</td><td>Not</td><td>Closes the product to outsiders</td></tr><tr><td>(f) Fan toy designs</td><td>Open</td><td>Open innovation: fans add ideas</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 21 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Design a deal that partners want: BookIt</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>BookIt: a booking platform used by <b>2,000</b> hair salons.</li><li>A partner's reminder app: <b>$8</b> a month per salon; <b>5%</b> of salons expected to buy.</li><li>The app costs the partner <b>$8,000</b> a year to build and run.</li><li>Share rules: <b>30%</b>, <b>15%</b>, or <b>0% on the first $10,000</b> a year (15% after).</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Salons = 2,000 x 5% = ____. Sales = salons x $8 x 12 = $____. Partner keeps at 30% = $____; at 15% = $____; with 0% on the first $10,000 = $____.</li><li><b>Step 2:</b> Which rules leave the partner more than $8,000?</li><li><b>Step 3:</b> Recommend with the template.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 22 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Under [rule], the partner keeps $[amount], which is [more / less] than its cost of $[cost],
+so partners [will / will not] want to build for us.
+We should choose [rule], because [Rule 2 reason],
+even though we give up $[amount] a year from this app.</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: A RECIPE PLATFORM</div><div class="tmpl">A meal-planner app sells $20,000 a year and costs its maker $15,000.
+Under 30%, the partner keeps $14,000, less than its cost, so partners will not want to build for us.
+Under 10%, the partner keeps $18,000, more than its cost.
+We should choose 10%, because partners must earn more than they spend (Rule 2), even though we give up $4,000 a year ($6,000 - $2,000).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 23 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Only a low share leaves the partner a profit</h2>
+  <div class="body"><div class="card good"><ul><li>Salons that buy = <b>100</b>. App sales = 100 x $8 x 12 = <b>$9,600</b>.</li><li>Partner keeps: <b>$6,720</b> at 30%; <b>$8,160</b> at 15%; <b>$9,600</b> with 0% on the first $10,000.</li><li>Only the last two are above the $8,000 cost, and 15% leaves very little.</li><li>A strong answer chooses 0% on the first $10,000 (Rule 2), and notes that BookIt gives up $2,880 a year compared with 30%, in return for more apps that keep salons on BookIt.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 24 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Build alone or open an app market? ShopNest's next 12 months</h2>
+  <div class="body"><p class="statement">400 shops / $600 a year each / 30 features wanted / 3 built per year / 60 shops left last year</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">BUILD ALONE</div><h3>Option A: Build more yourself</h3><p>Hire one more developer for <b>$48,000</b> a year; the team builds 3 more features.</p><p>Expect <b>20</b> fewer shops to leave and <b>20</b> new shops.</p></div><div class="card" style="flex:1"><div class="small-label">OPEN</div><h3>Option B: Open an app market</h3><p>API and app reviews: <b>$15,000</b> once + <b>$500</b> a month. Expect <b>20</b> partners and <b>25</b> apps.</p><p>Expect <b>30</b> fewer shops to leave and <b>40</b> new shops. <b>100</b> shops buy apps at <b>$10</b> a month; ShopNest keeps <b>20%</b>.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 25 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 to 3)</h2>
+  <div class="body"><div class="card"><ul><li>Years to build 30 features alone: today = 30 / 3 = ____; with one more developer = 30 / 6 = ____</li><li>Option A: value = (20 + 20) x $600 = $______; result = value - $48,000 = $______</li><li>Option B costs = $15,000 + 12 x $500 = $______</li><li>Option B: value = (30 + 40) x $600 = $______; share = 100 x $10 x 12 x 20% = $______; result = value + share - costs = $______</li><li>Option B if only 5 partners join (10 fewer leave, 10 new, 20 shops buy apps): (10 + 10) x $600 + 20 x $10 x 12 x 20% - costs = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 26 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Arjun (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next six months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 27 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>BookIt: which revenue share?</h2>
+  <div class="body"><div class="tmpl">To: Grace Park, CEO, BookIt
+1. Decision and evidence: We should keep 0% of the first $10,000 each partner earns, because small partners must earn more than they spend (Rule 2): the reminder app keeps $9,600, above its $8,000 cost.
+2. Biggest risk and trade-off: The weakest point is that we earn almost nothing from small apps at first. We give up $2,880 a year from this app to attract more partners and keep salons on BookIt.
+3. Next step and decision rule: In the next six months we will invite 20 small developers and count live apps. We will change this decision if fewer than 8 apps are live by then.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 28 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Opening wins if partners come, and loses if they do not</h2>
+  <div class="body"><div class="card"><ul><li>Years to build alone: <b>10</b> today; <b>5</b> with one more developer. Too slow for 30 features.</li><li>Option A: (20 + 20) x $600 = $24,000; result = <b>-$24,000</b>.</li><li>Option B costs = <b>$21,000</b>. Value = $42,000; share = <b>$2,400</b>; result = <b>$23,400</b>.</li><li>Option B with only 5 partners: $12,000 + $480 - $21,000 = <b>-$8,520</b>.</li></ul></div><div class="takeaway">The key question is Rule 2: will partners want to build?</div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 29 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Usually chooses Option B.</li><li>Protects the core: payments and data stay with ShopNest (Rule 1).</li><li>Plans a partner-friendly share and app reviews (Rules 2 and 3).</li><li>Gives a decision rule: "If fewer than 10 apps are live after six months, we will lower our share or help partners build."</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 30 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain an open ecosystem with the words platform, partner, API, core, and revenue share.</p></div><div class="card"><div class="n">02</div><p>Design a revenue share that partners want to join.</p></div><div class="card"><div class="n">03</div><p>Compare building alone with opening an app market and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Chesbrough, H. W. (2003). Open Innovation. Harvard Business School Press.</p><p class="ref">Parker, G. G., Van Alstyne, M. W., &amp; Choudary, S. P. (2016). Platform Revolution. W. W. Norton.</p><p class="ref">CNBC (2021, June 29). Shopify cuts app store fees for developers on first $1 million in revenue.</p><p class="ref">LEGO. What happens to my product idea after I reach 10,000 supporters?</p><p class="ref">TechCrunch (2023, January 19). Twitter third-party apps Tweetbot and Twitterrific stop working.</p><p class="ref">Federal Trade Commission (2019, July 24). FTC imposes $5 billion penalty on Facebook.</p></div></div>
+  <div class="footer"><span>SESSION 3.4 / WRAP-UP</span><span>SLIDE 31 / 31</span></div>
+</section>
+
+</body>
+</html>

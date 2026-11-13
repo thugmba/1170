@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 3.3 Lecture Presentation: The Disruption Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS</div><h2>Session 3.3: The Disruption Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_3_3_tutorbite_disruption_hanji.png" alt="Linh, founder of TutorBite, asks whether to chase Apex Academy's best students or serve the students nobody serves."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>TutorBite: a small app next to a strong leader</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">TutorBite is Linh's tutoring app: 15-minute video calls with senior students who explain one homework problem. The campus leader is Apex Academy.</p><table><tr><th></th><th>APEX ACADEMY (LEADER)</th><th>TUTORBITE</th></tr><tr><td>What it offers</td><td>Weekly 2-hour classes, expert teachers</td><td>15-minute video help from senior students</td></tr><tr><td>Price</td><td>$160 a month</td><td>$5 a session</td></tr><tr><td>Customers today</td><td>2,000 students</td><td>300 students</td></tr><tr><td>Profit per customer</td><td>$60 a month</td><td>$2 a session</td></tr></table><div class="takeaway">8,000 more students use no tutoring because Apex costs too much. An investor says: hire expert teachers and go after Apex's students.</div></div>
+  <div class="footer"><span>SESSION 3.3 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Disruption Strategy?</h2>
+  <div class="body"><p class="para">A small company beats a strong leader <b>without fighting it head-on</b>. It starts with customers the leader ignores: people who buy nothing because the leader is too expensive or too hard to use, or customers who get more than they need. It offers a <b>simpler, cheaper product that is good enough</b>. The leader does not fight back, because these customers earn it little profit. Then the newcomer <b>improves step by step</b> until it is good enough for the leader's own customers.</p><div class="takeaway">Use it when the leader's product is expensive or complex, many people are not served, and a simpler product can do the main job.</div></div>
+  <div class="footer"><span>SESSION 3.3 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Leader, disruption, sustaining innovation</h2>
+  <div class="body"><div class="term"><strong>Leader<br><span style="font-size:24px;color:#526174;">(incumbent)</span></strong><span>The strong company that already serves most customers in a market.<br><em>Example: Apex Academy.</em></span></div><div class="term"><strong>Disruption</strong><span>A simpler, cheaper product that starts with customers the leader ignores and later takes the leader's customers.<br><em>Example: TutorBite's $5 sessions.</em></span></div><div class="term"><strong>Sustaining innovation</strong><span>Making a product better for the leader's best customers, often at a higher price.<br><em>Example: Apex adds a second weekly class for $240 a month.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.3 / KEY TERMS 1 OF 2</span><span>SLIDE 4 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Non-consumers, over-served, good enough</h2>
+  <div class="body"><div class="term"><strong>Non-consumers</strong><span>People who need a job done but buy nothing today, often because it costs too much or is too hard.<br><em>Example: the 8,000 students who use no tutoring.</em></span></div><div class="term"><strong>Over-served customers</strong><span>Customers who get more than they need and would happily pay less for less.<br><em>Example: a student who needs help with one problem but pays for a month of classes.</em></span></div><div class="term"><strong>Good enough</strong><span>A product that does the main job the customer needs, even if it is not the best.<br><em>Example: a 15-minute explanation for one homework problem.</em></span></div></div>
+  <div class="footer"><span>SESSION 3.3 / KEY TERMS 2 OF 2</span><span>SLIDE 5 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Start where the leader is not looking</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Begin with non-consumers or with the leader's least profitable customers. They are easy to win, and the leader will not miss them.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_3_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">TutorBite starts with the 8,000 students who use no tutoring. Apex does not serve them, so it will not fight for them.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Going straight after the leader's best customers. The leader is strongest exactly there, and it will fight hard to keep them.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / RULE 1 OF 4</span><span>SLIDE 6 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Make it simpler and cheaper, and good enough for the job</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Do not try to be better than the leader at everything. Be good enough at the main job, and much easier and cheaper.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_3_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">A $5, 15-minute call answers one homework question. Students do not need a 2-hour class for that.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Adding expert teachers, long classes, and a high price to look like the leader. Then the product is neither cheap nor better.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / RULE 2 OF 4</span><span>SLIDE 7 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Choose a model the leader does not want to copy</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">If copying you would earn the leader much less profit than its own product, the leader will ignore you, often until it is too late.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_3_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Apex earns $60 a month from each student. Copying TutorBite would earn it about $2 a session, so Apex protects its $160 classes.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Choosing a model the leader can copy easily and profitably, such as the same classes at a slightly lower price. The leader cuts its price and wins.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / RULE 3 OF 4</span><span>SLIDE 8 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Improve step by step, then move up to better customers</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Use what you learn from your first customers to improve. When you are good enough for the leader's customers, they come to you at a lower price.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_3_3_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">After one year, TutorBite adds $40-a-month exam-prep plans with its best senior tutors. Some of Apex's students start to switch.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Spending a lot of money to grow very fast before the product works. A newcomer has little money and cannot survive big mistakes.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / RULE 4 OF 4</span><span>SLIDE 9 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Netflix and Blockbuster</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Netflix started in 1998 by renting DVDs by mail, with no late fees: slower than a Blockbuster store, but good enough for people who planned ahead. Blockbuster earned a large part of its profit from stores and late fees. In 2000, Netflix offered to sell itself to Blockbuster for $50 million; Blockbuster said no. Netflix started streaming in 2007. Blockbuster filed for bankruptcy in September 2010.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Started with people who did not mind waiting for a DVD. <b>(Rule 1)</b></li><li>No late fees: a model Blockbuster did not want to copy. <b>(Rule 3)</b></li><li>Improved step by step, from mail to streaming. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / GOOD EXAMPLE 1</span><span>SLIDE 10 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>M-Pesa in Kenya</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In March 2007, the phone company Safaricom launched M-Pesa: people send money with a simple text message on a basic phone and put in or take out cash at local shops. Fewer than 20% of Kenyans had access to a bank. Safaricom hoped for 350,000 users in the first year; by November 2007 it had more than 1 million active users. Later it added savings, loans, and bill payments.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Served millions of people that banks did not serve. <b>(Rule 1)</b></li><li>Basic phones and local shops: simpler and cheaper than a bank account. <b>(Rule 2)</b></li><li>Started with sending money, then added more step by step. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / GOOD EXAMPLE 2</span><span>SLIDE 11 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Quibi</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Quibi launched in April 2020 with expensive short shows from Hollywood stars, made for phones. It raised $1.75 billion and charged $4.99 to $7.99 a month. But people already watched free short videos on YouTube and TikTok. Quibi announced it would close in October 2020, about six months after launch.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Went after viewers that strong leaders already served well. <b>(Rule 1)</b></li><li>More expensive than free short videos, not simpler or cheaper. <b>(Rule 2)</b></li><li>Spent heavily before learning what viewers wanted. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / BAD EXAMPLE 1</span><span>SLIDE 12 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Webvan</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Webvan was a U.S. online grocery delivery company. Before it had many customers, it built large high-tech warehouses (about $35 million each) and planned to enter many cities quickly. It lost more than $800 million and went bankrupt in July 2001.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Tried to grow very fast before the service worked and made money. <b>(Rule 4)</b></li><li>Expensive warehouses made its costs high, not low. <b>(Rule 2)</b></li><li>Later online grocers grew slowly, city by city, and survived.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / BAD EXAMPLE 2</span><span>SLIDE 13 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Netflix</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A model the leader did not want to copy (Rule 3)</td></tr><tr><td>M-Pesa</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Served people banks ignored (Rule 1)</td></tr><tr><td>Quibi</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Attacked strong leaders with a pricier product (Rules 1 and 2)</td></tr><tr><td>Webvan</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Grew too fast before the model worked (Rule 4)</td></tr></table><div class="takeaway">Start small where the leader is not looking, then climb step by step.</div></div>
+  <div class="footer"><span>SESSION 3.3 / EXAMPLE SUMMARY</span><span>SLIDE 14 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Size of the non-consumer market</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Non-consumers = people who need the job done - people who buy from the leader</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: websites</h3><ul><li>5,000 small shops in a city need a website.</li><li>1,000 pay a design agency.</li><li>Non-consumers = 5,000 - 1,000 = 4,000 shops.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / TOOL 1 OF 4</span><span>SLIDE 15 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: The leader's profit test</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Will the leader copy you?</h3><p>Compare the leader's profit per customer today with the profit it would earn by copying you. If copying earns much less, the leader will probably not fight back.</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: websites</h3><ul><li>A design agency earns $1,500 profit per website.</li><li>A simple website builder earns $10 a month per shop.</li><li>The agency will not want to copy it.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / TOOL 2 OF 4</span><span>SLIDE 16 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Profit over several periods (from Session 3.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = profit per period x number of periods - one-time cost</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a website builder</h3><ul><li>$6,000 on launch ads; $2,000 profit a month.</li><li>After 12 months: 12 x $2,000 - $6,000 = $18,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / TOOL 3 OF 4</span><span>SLIDE 17 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 500 students use TutorBite in the first three months, we will change the price."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 3.3 / TOOL 4 OF 4</span><span>SLIDE 18 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Disruption or not?</h2>
+  <div class="body"><p class="statement">Six companies plan a new product:</p><div class="card"><ul><li>(a) A startup sells a $300 basic 3D printer to schools that cannot afford $3,000 printers.</li><li>(b) A car maker builds a faster, more expensive sports car to beat a rival's top model.</li><li>(c) A startup offers a free, simple video-call app for families; companies pay for expensive meeting systems.</li><li>(d) A bank adds a metal credit card with airport lounge access for its richest customers.</li><li>(e) A website offers $10 online courses in skills that colleges teach for $3,000.</li><li>(f) A phone maker adds a fourth camera to its most expensive phone.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 19 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Product [letter]: [disruption / not disruption], because
+its first customers are [non-consumers / over-served customers / the leader&#x27;s best customers],
+and it is [simpler and cheaper / better and more expensive] than what the leader sells.</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: SCANNERS</div><div class="tmpl">Product: a $2 app that turns a phone into a simple scanner.
+Disruption, because its first customers are non-consumers who never bought a scanner, and it is simpler and cheaper than a $200 office scanner.
+Product: faster scanning on a $900 office model.
+Not disruption, because it serves the leader&#x27;s best customers and is better and more expensive (sustaining).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 20 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Who are the first customers, and is it simpler and cheaper?</h2>
+  <div class="body"><table><tr><th>PRODUCT</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) $300 3D printer</td><td>Disruption</td><td>Schools that bought no printer; much cheaper</td></tr><tr><td>(b) Faster sports car</td><td>Not</td><td>Better and pricier for the best customers</td></tr><tr><td>(c) Free family video calls</td><td>Disruption</td><td>Families who would never buy a meeting system</td></tr><tr><td>(d) Metal credit card</td><td>Not</td><td>A better product for the richest customers</td></tr><tr><td>(e) $10 online courses</td><td>Disruption</td><td>People who could not pay for college courses</td></tr><tr><td>(f) Fourth camera</td><td>Not</td><td>More features for top customers</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 21 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Check a disruption plan: QuickCut</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>QuickCut: <b>$8</b>, 10-minute haircut kiosks in train stations; <b>$3</b> profit per haircut.</li><li>Salons: <b>$40</b> for 45 minutes with washing and styling; <b>$15</b> profit per haircut.</li><li><b>50,000</b> men need a haircut every month; <b>20,000</b> go to salons; the rest cut their hair at home.</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Non-consumers = 50,000 - 20,000 = ____. Salon profit = $____; QuickCut profit = $____. Copying QuickCut earns a salon ____ times less per haircut.</li><li><b>Step 2:</b> Check the four rules with the template on the next slide.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 22 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Rule 1: our first customers are [who], [number] people.
+Rule 2: we do [the main job] for $[price] instead of $[leader&#x27;s price]; we leave out [what we do not offer].
+Rule 3: the leader earns $[number] per customer; copying us earns $[number].
+Rule 4: first we [first step]; later we [how we move up].
+Verdict: [go / do not go], because [one sentence].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: SITEEASY WEBSITE BUILDER</div><div class="tmpl">Rule 1: our first customers are the 4,000 small shops with no website.
+Rule 2: a simple one-page shop website for $10 a month instead of $2,000; we leave out custom design and meetings.
+Rule 3: the agency earns $1,500 per website; copying us earns $10 a month.
+Rule 4: first one-page sites; later online ordering for bigger shops.
+Verdict: go, because 4,000 shops are not served and agencies will not fight for them.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 23 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>30,000 non-consumers; salons earn 5 times more per haircut</h2>
+  <div class="body"><div class="card good"><ul><li>Non-consumers = <b>30,000</b> men who cut their hair at home. Salon profit <b>$15</b>; QuickCut <b>$3</b>: copying earns <b>5 times</b> less.</li><li><b>Rule 1:</b> the 30,000 men at home, plus salon customers who only want a quick cut.</li><li><b>Rule 2:</b> a clean haircut for $8, leaving out washing, styling, and booking.</li><li><b>Rule 3:</b> salons will not copy a $3-profit model.</li><li><b>Rule 4:</b> start in a few stations, then add more stations or simple extras such as beard trims.</li><li><b>Verdict:</b> go.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 24 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Head-on or disruption? TutorBite's next 12 months</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">HEAD-ON</div><h3>Option A: Go after Apex's students</h3><p>Expert teachers, weekly classes for <b>$120</b> a month, <b>$20</b> profit per student a month. Marketing and hiring <b>$20,000</b> once.</p><p>Expect <b>300</b> of Apex's 2,000 students; only <b>100</b> if Apex cuts its price.</p></div><div class="card" style="flex:1"><div class="small-label">DISRUPTION</div><h3>Option B: Serve non-consumers first</h3><p>Keep <b>$5</b> sessions, <b>$2</b> profit each. Marketing <b>$5,000</b> once.</p><p>Expect <b>10%</b> of the 8,000 non-consumers to join, each using <b>3</b> sessions a month.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 25 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 to 3)</h2>
+  <div class="body"><div class="card"><ul><li>Option A, 300 students: per month = 300 x $20 = $______; over 12 months = 12 x monthly - $20,000 = $______</li><li>Option A if Apex cuts its price (100 students): per month = $______; over 12 months = $______</li><li>Option B: students = 8,000 x 10% = ____; sessions = students x 3 = ____; per month = sessions x $2 = $______; over 12 months = 12 x monthly - $5,000 = $______</li><li>Leader's profit test: Apex earns $60 a month per student. Would copying Option B earn more or less? ____ Option A? ____</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 26 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to the investor (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [name], [role]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next three months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 27 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>QuickCut: open kiosks for men who cut their own hair?</h2>
+  <div class="body"><div class="tmpl">To: Omar Haddad, investor, QuickCut
+1. Decision and evidence: We should open $8 kiosks for the 30,000 men who cut their hair at home (Rule 1), because salons earn $15 a haircut and will not copy a $3-profit model (Rule 3).
+2. Biggest risk and trade-off: The weakest point is that men may keep cutting their hair at home. We give up the higher price of a salon service to win customers nobody serves.
+3. Next step and decision rule: In the next three months we will open two kiosks and count haircuts per day. We will change this decision if a kiosk does fewer than 40 haircuts a day.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 28 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Same profit if all goes well; only one plan depends on the leader</h2>
+  <div class="body"><div class="card"><ul><li>Option A, 300 students: <b>$6,000</b> a month; over 12 months = $72,000 - $20,000 = <b>$52,000</b>.</li><li>Option A if Apex cuts its price: <b>$2,000</b> a month; over 12 months = $24,000 - $20,000 = <b>$4,000</b>.</li><li>Option B: 800 students, 2,400 sessions, <b>$4,800</b> a month; over 12 months = $57,600 - $5,000 = <b>$52,600</b>.</li><li>Leader's profit test: copying B earns Apex far less than $60 a month per student, so Apex will probably ignore it. A is the same kind of class as Apex's, so Apex can fight back.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 29 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Usually chooses Option B: it does not depend on Apex staying quiet (Rules 1 and 3).</li><li>Names a real risk: fewer than 10% of non-consumers may join, or students may use fewer than 3 sessions.</li><li>Plans how to move up later, such as exam-prep plans (Rule 4).</li><li>Gives a decision rule: "If fewer than 500 students use TutorBite in the first three months, we will change the price or the offer."</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 30 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain disruption and how it differs from sustaining innovation.</p></div><div class="card"><div class="n">02</div><p>Find non-consumers and use the leader's profit test.</p></div><div class="card"><div class="n">03</div><p>Compare a head-on attack with a disruption plan and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Christensen, C. M., Raynor, M. E., &amp; McDonald, R. (2015). What is disruptive innovation? Harvard Business Review, 93(12), 44-53.</p><p class="ref">Newsweek (2021). Fact check: Did Blockbuster turn down the chance to buy Netflix for $50 million?</p><p class="ref">Safaricom (2017). The M-PESA wonder: how it all began.</p><p class="ref">NBC News (2020, October 21). Quibi is shutting down just months after launching.</p><p class="ref">TidBITS (2001, July 16). Where Webvan went wrong.</p></div></div>
+  <div class="footer"><span>SESSION 3.3 / WRAP-UP</span><span>SLIDE 31 / 31</span></div>
+</section>
+
+</body>
+</html>

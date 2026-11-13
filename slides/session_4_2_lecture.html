@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 4.2 Lecture Presentation: The Ecosystem Lock-In Strategy (Case Study: Apple)</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 4 / REAL-WORLD CASE STUDIES &amp; STRATEGIC SYNTHESIS</div><h2>Session 4.2: The Ecosystem Lock-In Strategy (Case Study: Apple)</h2>
+  <div class="body"><img class="hero" src="../assets/session_4_2_pulsefit_lockin_hanji.png" alt="Noah, founder of PulseFit, asks how to make customers want to stay."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>PulseFit: customers like the band, then buy a rival's</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">PulseFit is Noah's fitness-band company. A teammate suggests a quick fix: make it impossible to move step and sleep history out of the app, so customers "cannot leave."</p><table><tr><th>PULSEFIT</th><th style="text-align:right">VALUE</th></tr><tr><td>Customers who own a PulseFit band</td><td class="num">10,000</td></tr><tr><td>Price of a band / profit per band</td><td class="num">$60 / $20</td></tr><tr><td>Time until a band wears out</td><td class="num">About 2 years</td></tr><tr><td>Customers who buy their next band from PulseFit</td><td class="num">40%</td></tr><tr><td>Customers who switch to a rival's band</td><td class="num">60%</td></tr><tr><td>Other PulseFit products or services</td><td class="num">None</td></tr></table></div>
+  <div class="footer"><span>SESSION 4.2 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Ecosystem Lock-In Strategy?</h2>
+  <div class="body"><p class="para">A company keeps customers by making its <b>products and services work better together than with anything else</b>. They share one account, one set of data, and one design, so each extra product makes the others more useful, and leaving would cost the customer convenience, data, or benefits. The company then earns <b>steady money from services</b> on top of the products. Apple is the best-known example.</p><div class="takeaway">It works only when customers stay because of value. When a company traps customers or treats partners unfairly, customers and regulators push back.</div></div>
+  <div class="footer"><span>SESSION 4.2 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Ecosystem, lock-in, switching cost</h2>
+  <div class="body"><div class="term"><strong>Ecosystem<br><span style="font-size:24px;color:#526174;">(of products)</span></strong><span>A company's products and services that share one account, one set of data, and one design.<br><em>Example: a PulseFit band, scale, and app.</em></span></div><div class="term"><strong>Lock-in</strong><span>When customers keep buying from one company because leaving would cost them something.<br><em>Example: two years of sleep history are in the PulseFit app.</em></span></div><div class="term"><strong>Switching cost</strong><span>What a customer loses by moving to a rival: money, time, data, or benefits.<br><em>Example: buying a new scale, learning a new app, losing rewards points.</em></span></div></div>
+  <div class="footer"><span>SESSION 4.2 / KEY TERMS 1 OF 2</span><span>SLIDE 4 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Services revenue, lifetime value, regulator</h2>
+  <div class="body"><div class="term"><strong>Services revenue</strong><span>Money earned again and again from services, such as subscriptions, on top of products.<br><em>Example: $5 a month for PulseFit Plus training plans.</em></span></div><div class="term"><strong>Customer lifetime value<br><span style="font-size:24px;color:#526174;">(CLV)</span></strong><span>The total profit from one customer during all the years the customer stays.<br><em>Example: $20 a year for 3 years = $60.</em></span></div><div class="term"><strong>Regulator</strong><span>A government body that makes sure companies follow the law and compete fairly.<br><em>Example: the European Commission.</em></span></div></div>
+  <div class="footer"><span>SESSION 4.2 / KEY TERMS 2 OF 2</span><span>SLIDE 5 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Make each product better when it is used with the others</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">The customer should feel a clear benefit every time two of your products work together.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_2_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">When a customer steps on a PulseFit scale, the band and the app combine weight, steps, and sleep into one weekly health report.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Selling many products that only share a logo. If they do not work better together, customers buy each from whoever is cheapest.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / RULE 1 OF 4</span><span>SLIDE 6 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Earn steady service revenue from the customers you already have</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Products are sold once; services earn money every month and keep customers using the ecosystem.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_2_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">PulseFit Plus costs $5 a month for training plans and sleep coaching that use the band's data.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Adding a service customers do not value, just to charge a monthly fee. Customers cancel and feel tricked.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / RULE 2 OF 4</span><span>SLIDE 7 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Keep customers with value, not with traps</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Customers should stay because the ecosystem is better, not because leaving is made painful. Let them take their own data.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_2_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">PulseFit lets customers download their full history at any time, and most still stay, because the combined report is useful.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Blocking data export or making other brands' accessories stop working. Customers feel trapped and new buyers stay away.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / RULE 3 OF 4</span><span>SLIDE 8 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Play fair with partners, and expect regulators to watch</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">When many customers depend on your ecosystem, you have power over other companies. Using it unfairly brings fines and new laws.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_4_2_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">PulseFit lets other workout apps read band data with the customer's permission, and charges them a small, clear fee.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Blocking partners from telling customers about cheaper offers, or charging very high fees because partners have no other way in.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / RULE 4 OF 4</span><span>SLIDE 9 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Apple</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>An iPhone, a Mac, an iPad, an Apple Watch, and AirPods share one Apple account; photos, messages, and files appear on every device through iCloud. In early 2024, Apple said it had more than 2.2 billion active devices. In fiscal 2024, its services earned $96.2 billion, with a gross margin of about 74%, far higher than its hardware.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Each product works better with the others. <b>(Rule 1)</b></li><li>Services earn money every month from billions of devices. <b>(Rule 2)</b></li><li>Many customers stay because it is easy, not because they cannot leave. <b>(Rule 3)</b></li><li><i>Lesson:</i> its App Store rules have been challenged by regulators (Bad example 2). <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / GOOD EXAMPLE 1</span><span>SLIDE 10 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Starbucks Rewards</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>The Starbucks app combines ordering ahead, paying, and collecting stars for free drinks. At the end of 2023, Starbucks had 34.3 million active Rewards members in the United States, and payments through the program made up about 59% of sales in its U.S. company-operated stores.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Ordering, paying, and rewards work together in one app. <b>(Rule 1)</b></li><li>Money in the app and collected stars bring customers back. <b>(Rule 2)</b></li><li>Customers stay for convenience and free drinks: value, not a trap. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / GOOD EXAMPLE 2</span><span>SLIDE 11 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>HP printer ink</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In September 2016, a software update to some HP printers made other companies' ink cartridges stop working; printers said the cartridges were "damaged." After many complaints, HP offered an optional update to remove the block. In the United States, a court approved a $1.5 million settlement in 2019, and later settlements followed in Europe.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Tried to keep customers with a trap, not with better ink. <b>(Rule 3)</b></li><li>Customers felt tricked and lost trust in the brand.</li><li>Courts and consumer groups stepped in. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / BAD EXAMPLE 1</span><span>SLIDE 12 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Apple and music streaming apps in Europe</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Apple's App Store rules stopped music streaming apps, such as Spotify, from telling iPhone users inside the app that they could pay less on the app's own website. In March 2024, the European Commission fined Apple more than €1.8 billion and ordered it to remove these rules.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Used its control over the iPhone to limit partners unfairly. <b>(Rule 4)</b></li><li>Kept customers from finding better prices: a trap, not value. <b>(Rule 3)</b></li><li>Even a very successful ecosystem faces fines when it treats partners unfairly.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / BAD EXAMPLE 2</span><span>SLIDE 13 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Apple devices and services</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Better together, plus services (Rules 1 and 2)</td></tr><tr><td>Starbucks Rewards</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Customers stay for value (Rule 3)</td></tr><tr><td>HP printer ink</td><td style="color:#991b1b;font-weight:700">Bad</td><td>A trap instead of value (Rule 3)</td></tr><tr><td>Apple App Store in Europe</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Unfair rules for partners (Rule 4)</td></tr></table><div class="takeaway">Lock customers in with value they would miss, never with doors they cannot open.</div></div>
+  <div class="footer"><span>SESSION 4.2 / EXAMPLE SUMMARY</span><span>SLIDE 14 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Customer lifetime value (CLV)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 2</div><h3>Formula</h3><p>CLV = profit per customer per year x years the customer stays</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: phone cases</h3><ul><li>Case only: $10 a year for 2 years = $20.</li><li>Case plus a $3-a-month care plan: $40 a year for 4 years = $160.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / TOOL 1 OF 4</span><span>SLIDE 15 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Value of customers who come back</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit from repeat buyers = customers x repeat rate x profit per purchase</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>5,000 customers; 50% buy again; $20 profit each.</li><li>5,000 x 50% x $20 = $50,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / TOOL 2 OF 4</span><span>SLIDE 16 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Profit over several periods (from Session 3.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = monthly profit x number of months - one-time cost</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: an app update</h3><ul><li>Costs $30,000; adds $2,000 profit a month.</li><li>After 24 months: 24 x $2,000 - $30,000 = $18,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / TOOL 3 OF 4</span><span>SLIDE 17 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 2.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 5% of band owners subscribe to PulseFit Plus in six months, we will change the plan."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 4.2 / TOOL 4 OF 4</span><span>SLIDE 18 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Value or trap?</h2>
+  <div class="body"><p class="statement">Six companies try to keep customers:</p><div class="card"><ul><li>(a) A phone's photos appear on the same company's laptop automatically.</li><li>(b) A printer stops working with other brands' ink.</li><li>(c) A coffee app gives stars that customers trade for free drinks.</li><li>(d) A gym charges $200 to cancel a membership.</li><li>(e) A music app lets users export their playlists to other apps.</li><li>(f) A cloud storage company hides the "delete account" button behind 12 steps.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 19 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Move [letter]: [lock-in by value / lock-in by trap], because customers stay
+[because they get a benefit: which one / because leaving is made hard: how].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER MOVES</div><div class="tmpl">Move: a smartwatch unlocks the same company&#x27;s laptop when the user sits down.
+Lock-in by value, because customers save time every day.
+Move: an airline makes miles expire if a customer flies with another airline once.
+Lock-in by trap, because customers are punished for trying a rival.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 20 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Do customers stay for a benefit, or because leaving is hard?</h2>
+  <div class="body"><table><tr><th>MOVE</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Photos on the laptop</td><td>Value</td><td>Products work better together</td></tr><tr><td>(b) Blocks other ink</td><td>Trap</td><td>Other brands are blocked</td></tr><tr><td>(c) Stars for free drinks</td><td>Value</td><td>A real reward</td></tr><tr><td>(d) $200 to cancel</td><td>Trap</td><td>Leaving is made expensive</td></tr><tr><td>(e) Export playlists</td><td>Value</td><td>Customers who stay do so by choice</td></tr><tr><td>(f) Hidden delete button</td><td>Trap</td><td>Leaving is made hard on purpose</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 21 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>What is a customer in the ecosystem worth? ChefBox</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>Blender only: <b>$15</b> profit a year, stays <b>2</b> years.</li><li>Blender plus a recipe app that controls it ($4 a month): <b>$40</b> profit a year, stays <b>5</b> years.</li><li>Idea: a <b>$25</b> coupon for the first year of the app for every blender owner.</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> CLV blender only = $15 x 2 = $____. CLV blender and app = $40 x 5 = $____. Gain per customer moved = $____ - $____ - $25 = $____.</li><li><b>Step 2:</b> Value or trap? Which rule does the app follow?</li><li><b>Step 3:</b> Recommend with the template.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 22 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">A customer who uses [products] is worth $[CLV], against $[CLV] for [one product only].
+After the cost of $[cost], each customer we move gains us $[amount].
+This is lock-in by [value / trap], because [reason] (Rule [number]).
+We should [offer / not offer] the [plan], and measure [one number].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: PHONE CASES (TOOL 1)</div><div class="tmpl">A customer who uses the case and the care plan is worth $160, against $20 for the case only.
+After the cost of a $15 first-month discount, each customer we move gains us $125.
+This is lock-in by value, because the plan replaces broken cases quickly (Rule 1).
+We should offer the discount, and measure how many keep the plan after 3 months.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 23 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Each customer moved into the ecosystem gains $145</h2>
+  <div class="body"><div class="card good"><ul><li>CLV blender only = <b>$30</b>; CLV blender and app = <b>$200</b>.</li><li>Gain per customer = $200 - $30 - $25 = <b>$145</b>.</li><li>Lock-in by value: the app makes the blender more useful (Rules 1 and 2), and the blender still works without it (Rule 3).</li><li>A strong answer offers the coupon and measures how many coupon users keep paying after the first year.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 24 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Trap or ecosystem? PulseFit's next two years</h2>
+  <div class="body"><p class="statement">10,000 band owners / $20 profit per band / no change: 40% buy their next band from PulseFit</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">TRAP</div><h3>Option A: Lock the data</h3><p>Block customers from moving their history. Expect <b>60%</b> to buy their next band from PulseFit.</p><p>Angry reviews cost <b>2,000</b> new buyers ($20 each). No extra cost.</p></div><div class="card" style="flex:1"><div class="small-label">VALUE</div><h3>Option B: Build the ecosystem</h3><p><b>$50,000</b> for PulseFit Plus ($5 a month, <b>$4</b> profit) and a smart scale (<b>$15</b> profit); data export stays open.</p><p>Expect <b>70%</b> to buy the next band, <b>1,000</b> subscribers for 24 months, <b>1,000</b> scales.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 25 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 2 and 3)</h2>
+  <div class="body"><div class="card"><ul><li>No change: 10,000 x 40% x $20 = $______</li><li>Option A: 10,000 x 60% x $20 = $______; minus 2,000 x $20 = $______; result = $______</li><li>Option B: bands = 10,000 x 70% x $20 = $______; Plus = 1,000 x $4 x 24 = $______; scales = 1,000 x $15 = $______; result = bands + Plus + scales - $50,000 = $______</li><li>Option B if only 300 subscribe, 300 buy a scale, and 50% buy the next band: result = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 26 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Noah (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next six months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 27 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>ChefBox: offer the recipe-app coupon?</h2>
+  <div class="body"><div class="tmpl">To: Ana Ruiz, CEO, ChefBox
+1. Decision and evidence: We should give every blender owner a $25 coupon for the recipe app, because a customer who uses both is worth $200 against $30 for the blender alone (Rules 1 and 2).
+2. Biggest risk and trade-off: The weakest point is that many coupon users may stop paying after the first year. We give up $25 per customer now to build customers who stay five years.
+3. Next step and decision rule: In the next six months we will send the coupon to 1,000 owners and measure how many still pay after month 12. We will change this decision if fewer than 30% keep paying.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 28 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>The trap earns nothing extra; the ecosystem earns more</h2>
+  <div class="body"><div class="card"><ul><li>No change: <b>$80,000</b>.</li><li>Option A: $120,000 - $40,000 = <b>$80,000</b>: no more than doing nothing, and it damages trust (Rule 3).</li><li>Option B: $140,000 + $96,000 + $15,000 - $50,000 = <b>$201,000</b>.</li><li>Option B weak case: $100,000 + $28,800 + $4,500 - $50,000 = <b>$83,300</b>, still slightly above doing nothing.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 29 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Chooses Option B (Rules 1, 2, and 3).</li><li>Names a real risk: few owners may pay for PulseFit Plus.</li><li>Keeps data export open.</li><li>Gives a decision rule: "If fewer than 5% of owners subscribe in six months, we will improve the training plans or lower the price."</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 30 / 31</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain lock-in and switching costs, and tell value lock-in from trap lock-in.</p></div><div class="card"><div class="n">02</div><p>Calculate customer lifetime value inside and outside an ecosystem.</p></div><div class="card"><div class="n">03</div><p>Compare a trap plan with an ecosystem plan and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Shapiro, C., &amp; Varian, H. R. (1999). Information Rules (Chapter 5). Harvard Business School Press.</p><p class="ref">Apple Inc. (2024). Apple reports fourth quarter results. Fiscal 2024 services.</p><p class="ref">Starbucks Corporation (2024). Q1 fiscal 2024 earnings call.</p><p class="ref">The Register (2018, September 21). HP should pay out $1.5m for printer-bricking update.</p><p class="ref">European Commission (2024, March 4). Commission fines Apple over €1.8 billion over App Store rules for music streaming.</p></div></div>
+  <div class="footer"><span>SESSION 4.2 / WRAP-UP</span><span>SLIDE 31 / 31</span></div>
+</section>
+
+</body>
+</html>
