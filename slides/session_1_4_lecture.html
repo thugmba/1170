@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Session 1.4 Lecture Notes: Scale Dynamics and Winner-Takes-All Markets</title>
+<title>Session 1.4 Lecture Presentation: The Winner-Takes-All Strategy</title>
 <style>
   @page { size: 16in 9in; margin: 0; }
   * { box-sizing: border-box; }
@@ -10,168 +10,260 @@
   .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
   .slide:last-child { page-break-after: auto; break-after: auto; }
   .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
-  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 15px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
-  h1 { margin: 0; font-size: 46px; line-height: 1.04; font-weight: 700; }
-  h2 { margin: 0; font-size: 39px; line-height: 1.07; font-weight: 700; }
-  .subtitle { margin: .12in 0 0; font: 400 24px/1.3 "Times New Roman", Times, serif; color: #526174; }
-  .body { flex: 1; min-height: 0; margin-top: .28in; display: flex; flex-direction: column; }
-  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 14px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .28in; flex: 1; min-height: 0; }
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .22in; flex: 1; min-height: 0; }
-  .card { border: 1.2px solid #aeb7c1; padding: .22in .25in; background: rgba(255,255,255,.45); }
-  .card h3 { margin: 0 0 .12in; font: 700 26px/1.15 "Times New Roman", Times, serif; color: #172033; }
-  .card p, .card li { font: 400 22px/1.32 "Times New Roman", Times, serif; margin: 0; color: #354052; }
-  .card ul { margin: .12in 0 0; padding-left: .24in; }
-  .accent { color: #991b1b; }
-  .teal { color: #0f766e; }
-  .question { font-size: 42px; line-height: 1.12; color: #172033; }
-  .small-label { font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.8px; color: #991b1b; margin-bottom: .1in; }
-  .statement { margin: .06in 0 .18in; font: 700 28px/1.2 "Times New Roman", Times, serif; color: #172033; }
-  .rail { display: grid; grid-template-columns: 92px 1fr; gap: .2in; padding: .12in 0; border-bottom: 1px solid #d5cec2; }
-  .rail:last-child { border-bottom: 0; }
-  .rail-no { font: 700 32px "Times New Roman", Times, serif; color: #991b1b; }
-  .rail h3 { margin: 0 0 .04in; font: 700 26px "Times New Roman", Times, serif; }
-  .rail p { margin: 0; font: 400 21px/1.28 "Times New Roman", Times, serif; color: #526174; }
-  .score-row { display: grid; grid-template-columns: 2.2in 1fr 1.1in; align-items: center; gap: .18in; padding: .1in 0; border-bottom: 1px solid #d5cec2; font: 700 23px "Times New Roman", Times, serif; }
-  .score-row span:last-child { color: #526174; font-size: 20px; font-weight: 400; }
-  .bar { height: 13px; background: #dbe0e5; position: relative; }
-  .bar i { display: block; height: 100%; background: #991b1b; }
-  .case-title { font: 700 29px "Times New Roman", Times, serif; margin: 0 0 .12in; }
-  .case-q { margin-top: .18in; font: 700 20px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
-  .case-copy { font: 400 21px/1.3 "Times New Roman", Times, serif; color: #354052; margin: 0; }
-  .steps { margin: 0; padding: 0 .08in; list-style: none; counter-reset: step; }
-  .steps li { counter-increment: step; display: grid; grid-template-columns: .44in 1fr; gap: .12in; margin-bottom: .16in; font: 400 22px/1.3 "Times New Roman", Times, serif; color: #354052; }
-  .steps li::before { content: counter(step); width: auto; height: .32in; display: block; line-height: .32in; text-align: center; background: #991b1b; color: #fff; font: 700 18px "Times New Roman", Times, serif; }
-  .hero { width: 100%; max-height: 4.55in; object-fit: contain; object-position: center; }
-  .takeaway { margin-top: .2in; padding: .16in .22in; border: 1.2px solid #991b1b; font: 700 24px/1.28 "Times New Roman", Times, serif; color: #991b1b; }
-  .compare { display: grid; grid-template-columns: .82fr 1.18fr; gap: .3in; flex: 1; }
-  .quote { font-size: 35px; line-height: 1.15; margin: .22in 0; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
 </style>
 </head>
 <body>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS</div>
-  <div class="body" style="justify-content:center;">
-    <div class="small-label">SESSION 1.4 / 3-HOUR WORKSHOP</div>
-    <h1 style="font-size:58px;">Scale Dynamics &amp;<br>Winner-Takes-All Markets</h1>
-    <p class="subtitle" style="font-size:29px; max-width:10.8in;">A platform founder must answer two questions: Can the business scale without breaking? Can the market become the preferred place to meet?</p>
-  </div>
-  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 12</span></div>
+  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS</div><h2>Session 1.4: The Winner-Takes-All Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_1_4_latebite_winner_hanji.png" alt="Omar, founder of LateBite, asks whether to race QuickEats with discounts or own the late night."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">OPENING QUESTION</div><h2>Two questions frame the entire session</h2>
-  <div class="body grid2">
-    <div class="card"><div class="small-label">QUESTION 01 / OPERATING PROBLEM</div><p class="question"><strong>Can we serve 10x more?</strong></p><p class="statement">Scale-Up</p><p>Growth is not scale-up unless the service can protect quality, trust, and unit economics as volume rises.</p></div>
-    <div class="card"><div class="small-label">QUESTION 02 / MARKET PROBLEM</div><p class="question"><strong>Why would everyone choose one market?</strong></p><p class="statement">Market Tipping</p><p>A larger network must create a clearly better experience than the alternatives.</p></div>
-  </div>
-  <div class="takeaway">Do not confuse a rising user chart with a scalable business or a winner-takes-all market.</div>
-  <div class="footer"><span>SESSION 1.4 / CORE QUESTIONS</span><span>SLIDE 2 / 12</span></div>
+  <div class="eyebrow">THE SITUATION</div><h2>LateBite: race a rich rival, or be different?</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">LateBite is Omar's food-delivery app for students, the only one open after 11 pm. QuickEats, a much bigger rival, now gives $3 off every order. 60% of LateBite users also have QuickEats.</p><table><tr><th>ONE MONTH</th><th style="text-align:right">LATEBITE</th><th style="text-align:right">QUICKEATS</th></tr><tr><td>Orders</td><td class="num">6,000</td><td class="num">9,000</td></tr><tr><td>Hours open</td><td class="num">6 pm - 3 am</td><td class="num">10 am - 11 pm</td></tr><tr><td>Restaurants</td><td class="num">25</td><td class="num">60</td></tr><tr><td>Orders after 11 pm</td><td class="num">2,500</td><td class="num">0</td></tr><tr><td>Money left from each order</td><td class="num">$2</td><td class="num">Not known</td></tr><tr><td>Money in the bank</td><td class="num">$40,000</td><td class="num">Large funding</td></tr></table></div>
+  <div class="footer"><span>SESSION 1.4 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">VISUAL PROMPT</div><h2>Read the founder's questions in the illustration</h2>
-  <div class="body"><img class="hero" src="../assets/session_1_4_strategy_workshop.png" alt="Founder considers whether the service can scale and whether users will choose one market."></div>
-  <div class="footer"><span>LEFT: SCALE-UP / RIGHT: MARKET TIPPING</span><span>SLIDE 3 / 12</span></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Winner-Takes-All Strategy?</h2>
+  <div class="body"><p class="para">Some markets <b>tip</b>: one platform ends up with almost all customers. This happens when a bigger network is clearly better, using two platforms is hard, and most users want the same thing. There, racing to lead, one local market at a time, can make sense. But many markets do not tip, and racing with discounts only burns money. There, <b>choose a niche and be clearly different</b>.</p><div class="takeaway">First test: will this market tip? Then decide: race, or be different.</div></div>
+  <div class="footer"><span>SESSION 1.4 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CORE CONCEPT 01</div><h2>What does scale-up mean?</h2>
-  <div class="body grid2">
-    <div><p class="quote"><strong>Scale-up</strong> means increasing customers, transactions, or revenue faster than the people, capital, and manual work needed to deliver a good experience.</p><p class="subtitle">Growth adds volume. Scale-up creates a repeatable operating capability.</p></div>
-    <div class="card"><h3>Growth is not enough</h3><p>A delivery platform may double orders by doubling discounts and customer-support staff. It has grown, but may not have scaled.</p><p style="margin-top:.18in;">A platform is closer to scale-up when completed orders rise while response time, trust, and contribution per order hold.</p></div>
-  </div>
-  <div class="footer"><span>SCALE-UP / DEFINE THE OPERATING TEST</span><span>SLIDE 4 / 12</span></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Winner-takes-all, tipping, multi-homing, switching cost</h2>
+  <div class="body"><div class="term"><strong>Winner-takes-all market</strong><span>One company ends up with almost all the customers.<br><em>Example: most people in a country use one main search engine.</em></span></div><div class="term"><strong>Tipping</strong><span>Users move to one leader faster and faster, because the bigger network keeps getting better.<br><em>Example: once most friends are on one network, the rest join too.</em></span></div><div class="term"><strong>Multi-homing (Session 1.3)</strong><span>Using several platforms at the same time.<br><em>Example: a student has both LateBite and QuickEats.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.4 / KEY TERMS 1 OF 3</span><span>SLIDE 4 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CORE CONCEPT 02</div><h2>The four scale-up stages</h2>
-  <div class="body">
-    <div class="rail"><div class="rail-no">01</div><div><h3>Problem-solution fit</h3><p>Users return without a new discount because the product solves a real problem. Example: students reuse a resale app because it finds a buyer faster and feels safer than a chat group.</p></div></div>
-    <div class="rail"><div class="rail-no">02</div><div><h3>Repeatable match</h3><p>The platform reliably creates useful interactions between its two user sides. Example: buyers find an item and sellers complete a sale every week.</p></div></div>
-    <div class="rail"><div class="rail-no">03</div><div><h3>Operational replication</h3><p>The same process works in a second campus, city, category, or segment. Example: the same identity check and payment flow works at another campus.</p></div></div>
-    <div class="rail"><div class="rail-no">04</div><div><h3>Compounding advantage</h3><p>More participation improves matching, trust, selection, or speed for the next user. Example: more verified students create faster, safer resale matches.</p></div></div>
-  </div>
-  <div class="footer"><span>SCALE-UP / STAGES</span><span>SLIDE 5 / 12</span></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Switching cost and market share</h2>
+  <div class="body"><div class="term"><strong>Switching cost</strong><span>What a user loses by moving to a rival: money, time, data, or friends.<br><em>Example: leaving your photos and friends behind.</em></span></div><div class="term"><strong>Market share</strong><span>Our sales / all sales in the market x 100.<br><em>Example: 6,000 / 15,000 x 100 = 40%.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.4 / KEY TERMS 2 OF 3</span><span>SLIDE 5 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CORE CONCEPT 03</div><h2>Evaluate scale-up before expanding</h2>
-  <div class="body">
-    <div class="score-row"><span>Demand quality</span><span class="bar"><i style="width:74%"></i></span><span>Do users return?</span></div>
-    <div class="score-row"><span>Capacity + quality</span><span class="bar"><i style="width:58%"></i></span><span>Does service hold?</span></div>
-    <div class="score-row"><span>Unit economics</span><span class="bar"><i style="width:45%"></i></span><span>Does each transaction help?</span></div>
-    <div class="score-row"><span>Network density</span><span class="bar"><i style="width:66%"></i></span><span>Can users find each other?</span></div>
-    <div class="score-row"><span>Defensibility</span><span class="bar"><i style="width:38%"></i></span><span>Is the value hard to recreate?</span></div>
-  </div>
-  <div class="takeaway">A score organizes evidence. It does not replace judgment. The lowest score usually defines the next strategic action.</div>
-  <div class="footer"><span>SCALE-UP / EVALUATION SCORECARD</span><span>SLIDE 6 / 12</span></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Niche and months of cash</h2>
+  <div class="body"><div class="term"><strong>Niche</strong><span>A smaller part of a market with special needs that you can serve better than anyone.<br><em>Example: late-night delivery for students.</em></span></div><div class="term"><strong>Burn rate and months of cash</strong><span>Money lost each month / money in the bank divided by that loss.<br><em>Example: $40,000 / $10,000 = 4 months.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.4 / KEY TERMS 3 OF 3</span><span>SLIDE 6 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CORE CONCEPT 04</div><h2>When does a market tip toward one leading platform?</h2>
-  <div class="body">
-    <p class="subtitle" style="margin-top:0;">Market tipping means most users increasingly choose one platform because it is clearly more useful. It does not mean that every rival disappears.</p>
-    <div class="grid2">
-    <div class="card"><h3>Network effects</h3><p>Each additional participant improves the experience for another participant. More sellers create choice; more buyers attract sellers.</p></div>
-    <div class="card"><h3>Local density</h3><p>The right participants are concentrated enough to create fast, reliable matches in one market.</p></div>
-    <div class="card"><h3>Multi-homing</h3><p>Users participate on several platforms at once. Easy multi-homing keeps a market contested.</p></div>
-    <div class="card"><h3>Fair switching costs</h3><p>Ratings, trusted relationships, and useful workflows can create a reason to stay. A barrier without user value is not an advantage.</p></div>
-    </div>
-  </div>
-  <div class="footer"><span>MARKET TIPPING / CONDITIONS</span><span>SLIDE 7 / 12</span></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Check whether the market can tip before you race</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Three conditions: a bigger network is clearly better, using two platforms is hard, users want the same thing.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_4_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">60% of LateBite users already have both apps, and a second app is free. This market is unlikely to tip.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Believing "the biggest always wins everything." Many markets have two or three winners for years.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / RULE 1 OF 4</span><span>SLIDE 7 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">MICRO-APPLICATION</div><h2>Practice the same four questions</h2>
-  <p class="subtitle">Work alone for 8 minutes. For each card, write one short answer using the concept named in the card. These are practice answers, not calculations.</p>
-  <div class="body grid2">
-    <div class="card"><h3>Card 1: Growth or scale-up?</h3><p>A marketplace grows from `100` to `1,000` registered users after referrals. Support response time slows from one day to five days.</p><p class="case-q">Write: “This is growth, not scale-up, because ___.” Name one missing operating measure.</p></div>
-    <div class="card"><h3>Card 2: Which stage?</h3><p>Buyers and sellers complete exchanges every week and both sides return. A second campus uses the same payment and identity-check process.</p><p class="case-q">Write the highest stage and one evidence sentence: “The stage is ___ because ___.”</p></div>
-    <div class="card"><h3>Card 3: Score density</h3><p>`60` buyers open an app each week, but only `8` sellers list items. Most buyers see fewer than two relevant listings.</p><p class="case-q">Give network density a `1` to `5` score. Defend the score with one fact from the card.</p></div>
-    <div class="card"><h3>Card 4: Will the market tip?</h3><p>Think of a marketplace with verified profiles and easy cross-listing on rival apps.</p><p class="case-q">Write one force toward tipping and one force toward a contested market.</p></div>
-  </div>
-  <div class="footer"><span>CONCEPT → IMMEDIATE APPLICATION</span><span>SLIDE 8 / 12</span></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: If it can tip, win one local market first, and fast</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Tipping happens place by place. Be clearly the biggest in one city or campus before you spread out.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_4_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">LateBite is the clear leader at night on its home campus before it opens on a second campus.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Opening on ten campuses with a few users each. A rival that leads each campus wins them one by one.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / RULE 2 OF 4</span><span>SLIDE 8 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CASE DIAGNOSIS / SUCCESS CASES</div><h2>How scale became a durable advantage</h2>
-  <div class="body grid2">
-    <div class="card"><p class="case-title">Google Search</p><p class="case-copy">Search queries and user interactions can improve relevance. More useful results attract more searches and advertisers.</p><p class="case-q">Ask: What improves as usage grows? What evidence would you still need before assigning a high unit-economics score?</p></div>
-    <div class="card"><p class="case-title">Microsoft Windows</p><p class="case-copy">More organizations using Windows attracted more developers. More compatible software made Windows more useful for organizations.</p><p class="case-q">Ask: Is the ecosystem evidence of operational replication, compounding advantage, or both?</p></div>
-  </div>
-  <div class="footer"><span>FOUR-CASE DIAGNOSIS / SUCCESS</span><span>SLIDE 9 / 12</span></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Do not buy users with discounts alone</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Users who come only for a discount leave when it ends. Spend on things that stay: speed, choice, quality.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_4_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Instead of $3 off, LateBite signs 10 more late-night restaurants and promises delivery in 20 minutes.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Matching a rich rival's discount. Your cash runs out first, and users switch back.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / RULE 3 OF 4</span><span>SLIDE 9 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">CASE DIAGNOSIS / CONTESTED OR FAILED TO TIP</div><h2>Before Exercise 1: diagnose two contested cases</h2>
-  <p class="subtitle">Read for 1 minute. Diagnose Uber China-Didi with the instructor for 2 minutes, then analyze Clubhouse alone for 3 minutes.</p>
-  <div class="body grid2">
-    <div class="card"><p class="case-title">Uber China-Didi: diagnose together</p><p class="case-copy">Both firms added riders and drivers with incentives. Riders could compare fares across apps, and drivers could receive work from more than one platform.</p><p class="case-q">Step 1: underline the evidence of multi-homing. Step 2: name one condition subsidies can improve temporarily and one they cannot solve.</p></div>
-    <div class="card"><p class="case-title">Clubhouse: diagnose alone</p><p class="case-copy">Creators and listeners could maintain audiences across services, while rivals could add similar live-audio features.</p><p class="case-q">Write: “The weakest condition is ___ because ___.” Choose network effects, defensibility, operational replication, or more than one.</p></div>
-  </div>
-  <div class="takeaway">Use the same evidence → condition → explanation sequence for all four cases in Exercise 1.</div>
-  <div class="footer"><span>FOUR-CASE DIAGNOSIS / CONTESTED MARKETS</span><span>SLIDE 10 / 12</span></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: If it will not tip, choose a niche and be different</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Find the customers the leader serves badly, and become the best choice for them.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_4_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">LateBite focuses on 11 pm to 3 am, when QuickEats is closed, and delivers to the dorm room door.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Copying the leader's product at a lower price. Users have no reason to choose the smaller copy.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / RULE 4 OF 4</span><span>SLIDE 10 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">EXERCISE 1 / FOUR-CASE DIAGNOSIS</div><h2>Use the same framework for every case</h2>
-  <div class="body grid2">
-    <ol class="steps"><li>Create four rows: Google Search, Microsoft Windows, Uber China-Didi, and Clubhouse.</li><li>Identify the highest scale-up stage supported by the evidence.</li><li>Score demand quality, capacity and quality, unit economics, network density, and defensibility.</li></ol>
-    <ol class="steps" style="counter-reset:step 3;"><li>Mark one score as insufficient evidence if the case card does not support a defensible rating.</li><li>Decide: scalable and likely to tip, scalable but contested, or growth without durable advantage.</li><li>Write a 100-word conclusion: why does a rising growth curve prove neither scale-up nor winner-takes-all?</li></ol>
-  </div>
-  <div class="footer"><span>EXERCISE 1 / 50 MINUTES</span><span>SLIDE 11 / 12</span></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Yahoo! Auctions in Japan</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Online auctions can tip: buyers go where most sellers are, and sellers go where most buyers are. Yahoo! Japan opened its auction site in 1999, a few months before eBay entered Japan, and grew quickly. By 2002 eBay had only about 3% of the Japanese online auction market, and it closed its Japanese site in March 2002.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Auctions can tip, so being first and biggest mattered. <b>(Rule 1)</b></li><li>Yahoo! Japan became the clear leader in one country, fast. <b>(Rule 2)</b></li><li>More sellers made the site more useful for every buyer, and the gap grew.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / GOOD EXAMPLE 1</span><span>SLIDE 11 / 32</span></div>
 </section>
 
 <section class="slide"><div class="top-rule"></div>
-  <div class="eyebrow">EXERCISE 2 / INDIVIDUAL STRATEGY PRESENTATION</div><h2>Choose a strategy. Defend it with the scale-up framework.</h2>
-  <div class="body grid2">
-    <div class="card"><h3>Scenario A: Campus resale marketplace</h3><p>Choose between rapid entry into five campuses through referral discounts or a focused one-campus launch with verified identity, secure payments, and reliable meet-up locations.</p><p class="case-q">Question: Are you solving a scale problem, a tipping problem, or both?</p></div>
-    <div class="card"><h3>Scenario B: Student project-workspace</h3><p>Choose between broad low-price individual adoption or integration with three large courses that brings project history, feedback, deadlines, and team tasks into one workflow.</p><p class="case-q">Question: How can the product earn repeat use without making exit unfairly difficult?</p></div>
-  </div>
-  <div class="takeaway">Deliverable: a 3-minute presentation on the weakest scale-up condition, the market-tipping logic, your 90-day action, and the metric that would make you change your mind.</div>
-  <div class="footer"><span>EXERCISE 2 / 70 MINUTES</span><span>SLIDE 12 / 12</span></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Bumble</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Dating apps do not tip to one winner: many people use two or three apps, and people want different things. Bumble, started in 2014, chose to be different: women send the first message. In February 2021 Bumble became a public company, and its Bumble app had about 1.1 million paying users.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>It saw the market would not tip: people use several dating apps. <b>(Rule 1)</b></li><li>It did not copy the leader; it served women who wanted more control. <b>(Rule 4)</b></li><li>Users chose it for this difference, not for a discount. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / GOOD EXAMPLE 2</span><span>SLIDE 12 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Groupon</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Groupon sold daily discount deals from local shops and grew very fast; in December 2010 it reportedly turned down about $6 billion from Google. But hundreds of similar deal sites appeared, and shoppers and shops used several of them. It went public in November 2011 at $20 a share; a year later its shares had lost more than three-quarters of their value.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Shoppers and shops easily used many deal sites: the market could not tip. <b>(Rule 1)</b></li><li>It spent heavily on marketing and discounts to keep growing. <b>(Rule 3)</b></li><li>It acted like a future sole winner in a market with many winners.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / BAD EXAMPLE 1</span><span>SLIDE 13 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>MoviePass</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In August 2017, MoviePass let members see one movie a day for $9.95 a month, and paid theaters the full ticket price itself. Members rose to more than 3 million. It hoped size would make theaters share their money. Instead AMC started its own subscription in June 2018. MoviePass ran out of money and closed in September 2019.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>It lost money on almost every member: a price it could not keep. <b>(Rule 3)</b></li><li>More members did not help other members: no network effect, no tipping. <b>(Rule 1)</b></li><li>When the low price ended, members left.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / BAD EXAMPLE 2</span><span>SLIDE 14 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Yahoo! Auctions Japan</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A market that tips; led one country fast (Rules 1 and 2)</td></tr><tr><td>Bumble</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A market that does not tip; chose to be different (Rule 4)</td></tr><tr><td>Groupon</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Raced in a market that could not tip (Rule 1)</td></tr><tr><td>MoviePass</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Bought members with a price it could not keep (Rule 3)</td></tr></table><div class="takeaway">Race only where the market can tip. Everywhere else, be different.</div></div>
+  <div class="footer"><span>SESSION 1.4 / EXAMPLE SUMMARY</span><span>SLIDE 15 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Market share</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Market share = our sales / all sales in the market x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: two scooter apps</h3><ul><li>40,000 rides and 60,000 rides.</li><li>Smaller app: 40,000 / 100,000 x 100 = 40%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / TOOL 1 OF 4</span><span>SLIDE 16 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Multi-homing rate</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Multi-homing rate = our users who also use a rival / our users x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>14,000 of 20,000 users also use a rival app.</li><li>14,000 / 20,000 x 100 = 70%.</li><li>Above about 50%, using two apps is clearly easy.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / TOOL 2 OF 4</span><span>SLIDE 17 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Months of cash</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Months of cash = money in the bank / monthly loss</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>$100,000 in the bank, losing $20,000 a month.</li><li>$100,000 / $20,000 = 5 months.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / TOOL 3 OF 4</span><span>SLIDE 18 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Profit over several periods, with a decision rule</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = monthly profit x number of months - one-time cost</p><p>A <b>decision rule</b> says which result would make you change the plan (Session 1.1).</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>A plan costs $5,000; the business earns $3,000 a month.</li><li>After 6 months: 6 x $3,000 - $5,000 = $13,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.4 / TOOL 4 OF 4</span><span>SLIDE 19 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Will the market tip?</h2>
+  <div class="body"><p class="statement">Six markets:</p><div class="card"><ul><li>(a) A social network where friends share photos.</li><li>(b) Taxi apps in a city where riders and drivers use several apps.</li><li>(c) Operating systems for office computers, where files and software must work together.</li><li>(d) Food-delivery apps.</li><li>(e) An online auction site for rare collectibles.</li><li>(f) Coffee shops in a city.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 20 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Market [letter]: network effects [strong / weak / none];
+using two at once is [easy / hard];
+users want [the same thing / different things].
+So the market is [likely / unlikely] to tip.</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER MARKETS</div><div class="tmpl">Video-call apps for a company&#x27;s staff: strong; hard;
+the same thing. Likely to tip (inside each company).
+Online clothing stores: weak; easy; different things.
+Unlikely to tip.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 21 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Are all three conditions true?</h2>
+  <div class="body"><table><tr><th>MARKET</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Photo social network</td><td>Likely</td><td>Leaving means leaving your friends</td></tr><tr><td>(b) Taxi apps</td><td>Unlikely</td><td>Riders and drivers use several apps</td></tr><tr><td>(c) Office operating systems</td><td>Likely</td><td>Files and software must work together</td></tr><tr><td>(d) Food delivery</td><td>Unlikely</td><td>A second app is free</td></tr><tr><td>(e) Rare-item auctions</td><td>Likely</td><td>Everyone wants the one place with everyone else</td></tr><tr><td>(f) Coffee shops</td><td>Unlikely</td><td>No network effect</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 22 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Race or niche? SeatSwap</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>You run SeatSwap, a ticket-resale app for students: <b>8,000</b> users; <b>5,000</b> also use TicketGo.</li><li>This month: TicketGo <b>3,000</b> trades, SeatSwap <b>2,000</b>.</li><li>SeatSwap loses <b>$5,000</b> a month and has <b>$30,000</b> in the bank.</li><li>Students complain about fake tickets on both apps.</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Market share = ____%. Multi-homing = 5,000 / 8,000 x 100 = ____%. Months of cash = ____.</li><li><b>Step 2:</b> Check the three tipping conditions (Rule 1).</li><li><b>Step 3:</b> Choose: race or niche?</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 23 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Market share [number]%, multi-homing [number]%, [number] months of cash.
+Tipping test: network effects [strong / weak]; using two apps is
+[easy / hard]; users want [the same / different things].
+The market is [likely / unlikely] to tip.
+Decision: [race / niche]. Our plan: [one sentence] (Rule [number]).</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: RIDEON SCOOTERS</div><div class="tmpl">Market share 40%, multi-homing 70%, 5 months of cash.
+Tipping test: weak; easy; different things
+(short trips vs. daily commuting).
+The market is unlikely to tip.
+Decision: niche. Monthly passes and reserved scooters
+for commuters near the train station (Rule 4).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 24 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Unlikely to tip: choose a niche</h2>
+  <div class="body"><div class="card good"><ul><li>Market share = <b>40%</b>. Multi-homing = <b>62.5%</b>. Months of cash = <b>6</b>.</li><li>Network effects are moderate, using two apps is easy (62.5% already do), and students have a special need: no fake tickets.</li><li>The market is <b>unlikely to tip</b>, so a race with 6 months of cash is risky.</li><li>Strong answer: a niche such as "only tickets from verified students, with money back if a ticket is fake" (Rule 4), with no discounts (Rule 3).</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 25 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Should LateBite race QuickEats? Next 6 months</h2>
+  <div class="body"><p class="statement">6,000 orders a month / $2 left from each order / $40,000 in the bank / 60% of users also use QuickEats</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">DISCOUNT</div><h3>Option A: Race</h3><p><b>$3</b> off every order. Orders rise to <b>10,000</b> a month while the discount lasts.</p><p>When it ends, orders fall back to about <b>6,500</b>.</p></div><div class="card" style="flex:1"><div class="small-label">NICHE</div><h3>Option B: Own the late night</h3><p><b>$12,000</b> once: 10 more late-night restaurants and door delivery in 20 minutes.</p><p>Late-night orders rise by <b>1,500</b> a month (2,500 to 4,000). No discount.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 26 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1, 3, and 4)</h2>
+  <div class="body"><div class="card"><ul><li>Market share now = 6,000 / (6,000 + 9,000) x 100 = ______%</li><li>No change: 6,000 x $2 x 6 = $______</li><li>Option A: money left per order = $2 - $3 = $______; monthly result = 10,000 x ______ = $______; months of cash = $40,000 / ______ = ______</li><li>Option B: orders a month = ______; profit over 6 months = ______ x $2 x 6 - $12,000 = $______</li><li>Option B if late-night orders rise by only 600: $______</li><li>Extra orders a month Option B needs to beat no change: extra x $2 x 6 = $12,000, so ______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 27 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Omar (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next two months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 28 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>RideOn: race BikeGo or serve commuters?</h2>
+  <div class="body"><div class="tmpl">To: Daniel Kim, CEO, RideOn
+1. Decision and evidence: We should not race BikeGo with free rides. We should offer monthly passes for commuters near the train station, because 70% of our users already use both apps (Rule 1) and we have only 5 months of cash.
+2. Biggest risk and trade-off: The weakest point is that commuters may want more scooters than we have at 8 am. We give up the hope of becoming the biggest app in the city to become the best app for one group that stays.
+3. Next step and decision rule: In the next two months we will sell passes at one station and measure how many pass holders ride at least 15 days a month. We will change this decision if fewer than 300 passes are sold by the end of month two.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 29 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>The race runs out of cash in month 4</h2>
+  <div class="body"><div class="card"><ul><li>Market share = <b>40%</b>. No change: <b>$72,000</b>.</li><li>Option A: <b>-$1</b> per order; <b>-$10,000</b> a month; <b>4 months</b> of cash, before the race ends. Afterward, orders fall back to about 6,500.</li><li>Option B: 7,500 x $2 x 6 - $12,000 = <b>$78,000</b>, $6,000 more than no change.</li><li>Option B with only 600 extra: <b>$67,200</b>, $4,800 less than no change.</li><li>Option B needs at least <b>1,000</b> extra orders a month.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 30 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Rejects Option A: the market is unlikely to tip (Rule 1), and the discount buys users who leave (Rule 3).</li><li>Chooses Option B (Rule 4): it builds on LateBite's strength, the only app after 11 pm.</li><li>Decision rule: "If late-night orders are below 3,000 a month after two months, we will stop adding restaurants and review the plan."</li><li>May say when Omar would race: only if students started deleting one of the two apps.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 31 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain winner-takes-all markets, tipping, and multi-homing.</p></div><div class="card"><div class="n">02</div><p>Test whether a market can tip; measure share, multi-homing, and months of cash.</p></div><div class="card"><div class="n">03</div><p>Compare a race with a niche plan and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Eisenmann, T., Parker, G., &amp; Van Alstyne, M. W. (2006). Strategies for two-sided markets. Harvard Business Review.</p><p class="ref">Arthur, W. B. (1989). Competing technologies, increasing returns, and lock-in by historical events. The Economic Journal.</p><p class="ref">Internet News (2002, February). eBay enters Taiwan market, exits Japan.</p><p class="ref">Fortune (2021, February 11). Bumble IPO. CNN Money (2010, December 3). Groupon turns down Google.</p><p class="ref">NPR (2019, September 14). MoviePass has officially shut down.</p></div></div>
+  <div class="footer"><span>SESSION 1.4 / WRAP-UP</span><span>SLIDE 32 / 32</span></div>
 </section>
 
 </body>

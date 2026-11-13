@@ -43,8 +43,9 @@ slide("THE SITUATION", "StudySpace: a small loss, and a big rival on the way",
       '<div class="takeaway">Three plans from three strategies. Which one first?</div>',
       f"SESSION {SESSION} / FICTIONAL CLASS DATA")
 
-slide("THE STRATEGY IN ONE PARAGRAPH", "How do we choose among ten strategies?",
+slide("THE STRATEGY IN ONE PARAGRAPH", "How do we choose among fourteen strategies?",
       '<p class="para">Understand your <b>position and problem first</b>, then use the strategy that fits. Some strategies help a company '
+      "<b>build a platform and win its first users</b> (1.1, 1.2, 1.3), or decide <b>when to race</b> (1.4). Some help a company "
       "<b>find out what customers want</b> (2.1). Some decide <b>who pays and how much</b> (2.2, 2.3). Some help a company <b>attack or "
       "defend</b> (3.1, 3.2, 3.3). Some help a company <b>grow and keep customers</b> (3.4, 4.1, 4.2, 4.3). No strategy is good everywhere.</p>"
       '<div class="takeaway">Check the key condition with evidence, compare options with the same numbers, use one strategy first, and plan the next. '
@@ -69,6 +70,14 @@ slide("WORDS YOU NEED FIRST", "Time to result and defense",
       f"SESSION {SESSION} / KEY TERMS 2 OF 2")
 
 # Strategy map
+slide("THE COURSE STRATEGIES AT A GLANCE", "Module 1 strategies",
+      strategy_table([
+          ("Platform Model (1.1)", "Many people own something useful that sits idle", "Strangers can trust each other; easy match", "Take rate, cost to grow"),
+          ("Network Effect (1.2)", "Users get value from other users", "One small group can reach critical mass", "Density, weekly active rate"),
+          ("Two-Sided Market (1.3)", "You connect two groups who need each other", "You can win the harder side first", "Balance, match rate"),
+          ("Winner-Takes-All (1.4)", "A rival races you for the same market", "The market can tip", "Market share, multi-homing")]),
+      f"SESSION {SESSION} / STRATEGY MAP 1 OF 3")
+
 slide("THE COURSE STRATEGIES AT A GLANCE", "Module 2 and Module 3 strategies",
       strategy_table([
           ("Data Feedback Loop (2.1)", "You do not know what customers really want", "Strong signals and permission", "Churn or repeat rate"),
@@ -76,7 +85,7 @@ slide("THE COURSE STRATEGIES AT A GLANCE", "Module 2 and Module 3 strategies",
           ("Up-Sell and Cross-Sell (2.3)", "Many customers spend too little", "Higher tier or related product with value", "Conversion, attach rate"),
           ("Platform Envelopment (3.1)", "Many users next to another market", "High overlap, shared parts", "Overlap rate, CAC"),
           ("Cannibalization (3.2)", "A new technology or rival takes customers", "New product earns enough over time", "Net gain vs. baseline")]),
-      f"SESSION {SESSION} / STRATEGY MAP 1 OF 2")
+      f"SESSION {SESSION} / STRATEGY MAP 2 OF 3")
 
 slide("THE COURSE STRATEGIES AT A GLANCE", "Module 3 and Module 4 strategies",
       strategy_table([
@@ -85,7 +94,7 @@ slide("THE COURSE STRATEGIES AT A GLANCE", "Module 3 and Module 4 strategies",
           ("Flywheel (4.1)", "Growth in one part improves another", "Each arrow of the loop is real", "Loop check, retention"),
           ("Ecosystem Lock-In (4.2)", "Several products better together", "Customers stay for value, not traps", "Customer lifetime value"),
           ("Super-App (4.3)", "Your app is used very often", "Busy front door; each service pays", "Contribution per service")]),
-      f"SESSION {SESSION} / STRATEGY MAP 2 OF 2")
+      f"SESSION {SESSION} / STRATEGY MAP 3 OF 3")
 
 # Rules
 rules = [

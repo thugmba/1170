@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 1.3 Lecture Presentation: The Two-Sided Market Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS</div><h2>Session 1.3: The Two-Sided Market Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_1_3_roomlink_twosided_hanji.png" alt="Kenji, founder of RoomLink, asks whether to bring more students or more rooms first."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>RoomLink: 2,000 students, only 40 rooms</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">RoomLink is Kenji's app that connects students who need a room near campus with local landlords. Students use it for free; the landlord pays $150 when a room is rented. Most students found nothing and left.</p><table><tr><th>ROOMLINK (THIS SEMESTER)</th><th style="text-align:right">VALUE</th></tr><tr><td>Students searching for a room</td><td class="num">2,000</td></tr><tr><td>Rooms listed / rented through RoomLink</td><td class="num">40 / 24 (60%)</td></tr><tr><td>Students who found nothing and left</td><td class="num">1,200</td></tr><tr><td>Landlords within 2 km of campus</td><td class="num">300</td></tr><tr><td>Fee per room rented / money for two semesters</td><td class="num">$150 / $10,000</td></tr></table></div>
+  <div class="footer"><span>SESSION 1.3 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Two-Sided Market Strategy?</h2>
+  <div class="body"><p class="para">A platform that serves <b>two different groups who need each other</b>: students come for rooms, and landlords list rooms only where students look. Each side waits for the other: the <b>chicken-and-egg problem</b>. Solve it in order: win the side that is harder to get, give that side value even before the other side arrives, do the hard work yourself in one small area, and give both sides a reason to finish the deal on your platform.</p><div class="takeaway">Who should pay, and how much, is the topic of Session 2.2.</div></div>
+  <div class="footer"><span>SESSION 1.3 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Two sides, cross-side effect, chicken and egg</h2>
+  <div class="body"><div class="term"><strong>Two-sided market</strong><span>A platform serves two different groups who need each other.<br><em>Example: students (one side) and landlords (the other side).</em></span></div><div class="term"><strong>Cross-side network effect</strong><span>More users on one side make the platform more useful for the other side.<br><em>Example: more rooms make RoomLink more useful for students.</em></span></div><div class="term"><strong>Chicken-and-egg problem</strong><span>Each side waits for the other side to come first.<br><em>Example: no rooms, no students; no students, no rooms.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.3 / KEY TERMS 1 OF 3</span><span>SLIDE 4 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Harder side, seeding, match rate</h2>
+  <div class="body"><div class="term"><strong>Harder side</strong><span>The side that is harder to win and that the other side comes for.<br><em>Example: rooms are scarce, students are many: landlords.</em></span></div><div class="term"><strong>Seeding</strong><span>Doing the work of one side yourself at the start.<br><em>Example: Kenji photographs rooms and writes the listings.</em></span></div><div class="term"><strong>Match rate</strong><span>Deals / listings (or searches) x 100.<br><em>Example: 24 rented / 40 listed = 60%.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.3 / KEY TERMS 2 OF 3</span><span>SLIDE 5 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Multi-homing and going around the platform</h2>
+  <div class="body"><div class="term"><strong>Multi-homing</strong><span>Using several platforms at the same time.<br><em>Example: a landlord lists on RoomLink and with an agent.</em></span></div><div class="term"><strong>Going around the platform</strong><span>The two sides meet on the platform but finish the deal directly.<br><em>Example: they swap phone numbers and skip RoomLink.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.3 / KEY TERMS 3 OF 3</span><span>SLIDE 6 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Win the harder side first</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Ask which side the other side comes for, and which is harder to get. More of the easy side does not help.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_3_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Kenji spends on landlords, because 2,000 students already search but only 40 rooms are listed.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Buying ads for more students when there are almost no rooms. They find nothing and leave.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / RULE 1 OF 4</span><span>SLIDE 7 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Give the first side value before the other arrives</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">The harder side will join if the platform helps them today, even with few users on the other side.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_3_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">A free tool for leases, rent reminders, and repairs that landlords use for their current tenants.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Asking landlords to list a room and wait. If no student calls soon, they forget the app.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / RULE 2 OF 4</span><span>SLIDE 8 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Do the hard work yourself, in one small area</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">At the start, do what users will later do alone, in one small area so both sides meet quickly.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_3_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Kenji visits landlords within 1 km of campus, takes the photos, and writes the listings himself.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Launching in the whole city at once. Rooms and students are spread so thin that few ever meet.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / RULE 3 OF 4</span><span>SLIDE 9 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Give both sides a reason to finish the deal with you</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">If the platform only introduces people, they go around it. Add value that works only on the platform.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_3_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Leases signed on RoomLink protect the deposit, are checked, and get repair help in the app.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Offering nothing after the introduction. Both sides swap phone numbers and skip the fee.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / RULE 4 OF 4</span><span>SLIDE 10 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>OpenTable</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>OpenTable started in San Francisco in 1998 to let diners book restaurant tables online. It first gave restaurants software to manage their own reservations and tables, which helped them even when few diners booked online. Diners book for free; restaurants pay. In 2014, Priceline bought OpenTable for about $2.6 billion.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>It won restaurants first, because diners come where restaurants are. <b>(Rule 1)</b></li><li>Its table software helped restaurants even with few online diners. <b>(Rule 2)</b></li><li>It started in one city before moving to others. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / GOOD EXAMPLE 1</span><span>SLIDE 11 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>DoorDash</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In January 2013, four Stanford students started a food-delivery website for Palo Alto, called PaloAltoDelivery.com. They put local restaurant menus online and delivered the first orders themselves. By 2023, DoorDash had become the largest food-delivery company in the United States.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>The founders did the drivers' work themselves at the start. <b>(Rule 3)</b></li><li>One small town, so restaurants, eaters, and drivers met quickly. <b>(Rule 3)</b></li><li>Restaurants got new orders without doing anything new. <b>(Rule 2)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / GOOD EXAMPLE 2</span><span>SLIDE 12 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Homejoy</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Homejoy connected people who wanted their home cleaned with cleaners. It attracted customers with very cheap first cleanings, but many did not book again at the normal price. Former employees said good cleaners and regular customers often made private arrangements. Homejoy also faced lawsuits about its workers, and it closed in July 2015.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>After the first match, both sides had little reason to stay, so they went around it. <b>(Rule 4)</b></li><li>Cheap first offers brought customers who did not stay (Session 1.4).</li><li>It expanded to many cities before each city worked well. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / BAD EXAMPLE 1</span><span>SLIDE 13 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Google Helpouts</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>In November 2013, Google launched Helpouts, where experts gave live video help (cooking, guitar, computer help) for a fee. It covered many topics at once. In February 2015, Google said Helpouts had not grown as fast as expected, and it closed in April 2015.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Experts waited for customers and got little value while they waited. <b>(Rule 2)</b></li><li>Many topics at once: few experts and few users in each. <b>(Rule 3)</b></li><li>It did not first win the harder side in each topic. <b>(Rule 1)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / BAD EXAMPLE 2</span><span>SLIDE 14 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>OpenTable</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Useful to restaurants first (Rules 1 and 2)</td></tr><tr><td>DoorDash</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Founders did the work in one town (Rule 3)</td></tr><tr><td>Homejoy</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Both sides went around it (Rule 4)</td></tr><tr><td>Google Helpouts</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Experts waited with no value (Rule 2)</td></tr></table><div class="takeaway">Bring the harder side first, and keep both sides on the platform after the match.</div></div>
+  <div class="footer"><span>SESSION 1.3 / EXAMPLE SUMMARY</span><span>SLIDE 15 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Balance between the sides</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Balance = users on the demand side / providers on the supply side</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a pet-sitting app</h3><ul><li>300 pet owners searching; 60 sitters.</li><li>300 / 60 = 5 owners per sitter.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / TOOL 1 OF 4</span><span>SLIDE 16 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Match rate</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Match rate = deals / searches (or listings) x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>120 bookings from 300 pet owners searching.</li><li>120 / 300 x 100 = 40%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / TOOL 2 OF 4</span><span>SLIDE 17 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Profit over several periods (from Session 1.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = extra revenue per period x number of periods - cost</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>A plan costs $3,000 and adds $1,000 a month.</li><li>After 6 months: 6 x $1,000 - $3,000 = $3,000.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / TOOL 3 OF 4</span><span>SLIDE 18 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 1.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 30 new rooms are listed in the first two months, we will change the plan."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 1.3 / TOOL 4 OF 4</span><span>SLIDE 19 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Name the two sides</h2>
+  <div class="body"><p class="statement">Six platforms:</p><div class="card"><ul><li>(a) A ride-hailing app.</li><li>(b) A video game console.</li><li>(c) A phone app store.</li><li>(d) An online market for handmade goods.</li><li>(e) A free newspaper.</li><li>(f) A credit card.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 20 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Platform [letter]: side 1 = [group], side 2 = [group].
+More [side 1] attracts more [side 2] because [reason].
+Harder side to win first: [group], because [reason].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: A HOTEL BOOKING WEBSITE</div><div class="tmpl">Side 1 = travelers, side 2 = hotels.
+More hotels attract more travelers because travelers want many choices.
+Harder side to win first: hotels, because travelers come only where many hotels are listed.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 21 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Which side does the other side come for?</h2>
+  <div class="body"><table><tr><th>PLATFORM</th><th>TWO SIDES</th><th>HARDER SIDE FIRST</th></tr><tr><td>(a) Ride-hailing</td><td>Riders, drivers</td><td>Drivers</td></tr><tr><td>(b) Game console</td><td>Players, game makers</td><td>Game makers</td></tr><tr><td>(c) App store</td><td>Phone users, developers</td><td>Developers</td></tr><tr><td>(d) Handmade market</td><td>Buyers, makers</td><td>Makers</td></tr><tr><td>(e) Free newspaper</td><td>Readers, advertisers</td><td>Readers</td></tr><tr><td>(f) Credit card</td><td>Shoppers, stores</td><td>Stores</td></tr></table><div class="takeaway">Other answers can be strong if the reason is clear.</div></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 22 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Which side is missing? PetSit</h2>
+  <div class="body"><table><tr><th>AREA</th><th style="text-align:right">PET OWNERS SEARCHING</th><th style="text-align:right">SITTERS LISTED</th><th style="text-align:right">BOOKINGS</th></tr><tr><td>North</td><td class="num">600</td><td class="num">10</td><td class="num">6</td></tr><tr><td>Center</td><td class="num">300</td><td class="num">60</td><td class="num">120</td></tr><tr><td>South</td><td class="num">100</td><td class="num">80</td><td class="num">20</td></tr></table><div class="card" style="margin-top:.2in;"><ul><li><b>Step 1:</b> For each area, balance = owners / sitters, and match rate = bookings / owners x 100.</li><li><b>Step 2:</b> Which side is missing in each area?</li><li><b>Step 3:</b> Choose one action for each area, and the rule it follows.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 23 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">[Area]: [number] owners per sitter, match rate [number]%.
+The missing side is [owners / sitters / none].
+Action: [one action] (Rule [number]).</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: BOOKSWAP, CAMPUS 1</div><div class="tmpl">500 buyers searching, 20 sellers, 10 sales.
+Campus 1: 25 buyers per seller, match rate 2%.
+The missing side is sellers.
+Action: ask final-year students to list the books they no longer need,
+and write the listings for them (Rule 3).</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 24 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Each area is missing a different side</h2>
+  <div class="body"><table><tr><th>AREA</th><th style="text-align:right">OWNERS PER SITTER</th><th style="text-align:right">MATCH RATE</th><th>MISSING SIDE</th><th>ONE ACTION</th></tr><tr><td>North</td><td class="num">60</td><td class="num">1%</td><td>Sitters</td><td>Help dorm students make sitter profiles (Rule 3)</td></tr><tr><td>Center</td><td class="num">5</td><td class="num">40%</td><td>None</td><td>Payment protection (Rule 4)</td></tr><tr><td>South</td><td class="num">1.25</td><td class="num">20%</td><td>Owners</td><td>Reach owners at pet shops and vets (Rule 1)</td></tr></table><div class="takeaway">The same platform can be missing a different side in each area. Look at each area separately.</div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 25 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Students or landlords first? RoomLink, next 2 semesters</h2>
+  <div class="body"><p class="statement">2,000 students / 40 rooms listed, 24 rented / $150 fee per room rented / $10,000 to spend</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">EASY SIDE</div><h3>Option A: More students</h3><p><b>$10,000</b> on student ads: 2,000 more students search.</p><p>Rooms do not change, but <b>70%</b> of them rent instead of 60%.</p></div><div class="card" style="flex:1"><div class="small-label">HARDER SIDE</div><h3>Option B: More landlords</h3><p><b>$4,000</b> for a free lease-and-rent tool, plus <b>$3,000</b> per semester for a helper who visits landlords and writes listings.</p><p>Expect <b>100</b> more rooms each semester; 60% rent.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 26 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1, 2, and 3)</h2>
+  <div class="body"><div class="card"><ul><li>Balance now = 2,000 / 40 = ______ students per room</li><li>Option A: rooms rented = 40 x 70% = ______; extra = ______; extra fees over 2 semesters = extra x $150 x 2 = $______; profit = $______</li><li>Option B: rooms rented = 140 x 60% = ______; extra = ______; extra fees = $______; profit = $______</li><li>Option B with only 50 new rooms each semester: profit = $______</li><li>New rooms per semester Option B needs to pay back $10,000: new rooms x 60% x $150 x 2 = $10,000, so ______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 27 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Kenji (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next two months we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 28 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>PetSit: sitters first in North?</h2>
+  <div class="body"><div class="tmpl">To: Lina Haddad, founder, PetSit
+1. Decision and evidence: We should spend this month&#x27;s budget on sitters in North, not on owners, because North has 60 owners per sitter and a match rate of only 1% (Rule 1).
+2. Biggest risk and trade-off: The weakest point is that students may not want to pet-sit during exams. We give up growth in owner numbers to make the owners we already have find a sitter.
+3. Next step and decision rule: In the next two months we will help students in three dorms create sitter profiles and measure the match rate in North. We will change this decision if the match rate is still below 10% after two months.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 29 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>More students cannot rent rooms that do not exist</h2>
+  <div class="body"><div class="card"><ul><li>Balance now = <b>50</b> students per room: rooms are the harder side.</li><li>Option A: 28 rooms rented; extra 4; $1,200 - $10,000 = <b>-$8,800</b>.</li><li>Option B: 84 rooms rented; extra 60; $18,000 - $10,000 = <b>$8,000</b>.</li><li>Option B with only 50 new rooms: 54 rented; extra 30; $9,000 - $10,000 = <b>-$1,000</b>.</li><li>Payback line: $10,000 / $180 = about <b>56</b> new rooms per semester.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 30 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Chooses Option B (Rules 1, 2, and 3), but only if the helper adds at least about 56 rooms per semester.</li><li>Decision rule: "If fewer than 30 new rooms are listed in the first two months, we will change the plan."</li><li>Adds a reason to sign the lease on RoomLink, such as deposit protection (Rule 4), so new landlords do not go around the app.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 31 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain a two-sided market, the chicken-and-egg problem, and the harder side.</p></div><div class="card"><div class="n">02</div><p>Measure balance and match rate to find the missing side.</p></div><div class="card"><div class="n">03</div><p>Compare growing one side with the other and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Rochet, J.-C., &amp; Tirole, J. (2003). Platform competition in two-sided markets. JEEA, 1(4), 990-1029.</p><p class="ref">Caillaud, B., &amp; Jullien, B. (2003). Chicken &amp; egg. RAND Journal of Economics, 34(2), 309-328.</p><p class="ref">OpenTable, Inc. (2014). Schedule 14D-9: The Priceline Group to acquire OpenTable. SEC EDGAR.</p><p class="ref">The Stanford Daily (2013, September 23). Alumni-founded startup delivers local eatery goods to campus.</p><p class="ref">Fortune (2015, July 17). Homejoy is closing. 9to5Google (2015, February 13). Google Helpouts is shutting down.</p></div></div>
+  <div class="footer"><span>SESSION 1.3 / WRAP-UP</span><span>SLIDE 32 / 32</span></div>
+</section>
+
+</body>
+</html>

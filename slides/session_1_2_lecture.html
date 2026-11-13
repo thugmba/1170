@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 1.2 Lecture Presentation: The Network Effect Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS</div><h2>Session 1.2: The Network Effect Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_1_2_classchat_network_hanji.png" alt="Tomás, founder of ClassChat, asks whether to advertise to the whole campus or fill a few classes first."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>ClassChat: 3,000 users, but every class feels empty</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">ClassChat is Tomás's free app where students in the same class chat, share notes, and ask questions before exams. Users are spread over 300 classes, so most students open an almost empty class and leave.</p><table><tr><th>CLASSCHAT (THIS SEMESTER)</th><th style="text-align:right">VALUE</th></tr><tr><td>Users / classes with at least one user</td><td class="num">3,000 / 300</td></tr><tr><td>Students in a typical class / users in it</td><td class="num">60 / 10</td></tr><tr><td>Weekly active rate, classes with 30 or more users</td><td class="num">80%</td></tr><tr><td>Weekly active rate, classes with fewer than 30 users</td><td class="num">15%</td></tr><tr><td>Money to spend on growth</td><td class="num">$6,000</td></tr></table></div>
+  <div class="footer"><span>SESSION 1.2 / FICTIONAL CLASS DATA</span><span>SLIDE 2 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Network Effect Strategy?</h2>
+  <div class="body"><p class="para">Some products become <b>more useful for each user when more people use them</b>: a chat app is useless if none of your friends use it. Nobody wants to join first, and an almost empty product loses its first users. So you <b>fill one small group first</b> until it is clearly useful there, give early users a reason to stay, help people join together, and check with data that each new user really makes the product better. Then you move to the next group.</p><div class="takeaway">Use it when users get value from each other, not only from the product itself.</div></div>
+  <div class="footer"><span>SESSION 1.2 / STRATEGY OVERVIEW</span><span>SLIDE 3 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Network effect, critical mass, penguin problem</h2>
+  <div class="body"><div class="term"><strong>Network effect</strong><span>A product becomes more useful for each user as more people use it.<br><em>Example: a chat app is more useful when more classmates use it.</em></span></div><div class="term"><strong>Direct network effect</strong><span>Users gain from users of the same group. (Session 1.3: two different groups.)<br><em>Example: chat app users want other chat app users.</em></span></div><div class="term"><strong>Critical mass</strong><span>The number of users at which a product is useful enough that people stay and invite others.<br><em>Example: about 30 of the 60 students in a class.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.2 / KEY TERMS 1 OF 3</span><span>SLIDE 4 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Penguin problem and density</h2>
+  <div class="body"><div class="term"><strong>Penguin problem</strong><span>Everyone waits for someone else to join first, so nobody joins.<br><em>Example: penguins on the ice wait for one to jump into the water first.</em></span></div><div class="term"><strong>Density</strong><span>How full a group is. Density = users in the group / people in the group x 100.<br><em>Example: 12 users in a class of 60: 20%.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.2 / KEY TERMS 2 OF 3</span><span>SLIDE 5 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Standalone value and weekly active rate</h2>
+  <div class="body"><div class="term"><strong>Standalone value</strong><span>The value a user gets even when no one else uses the product.<br><em>Example: a note app that organizes your own notes.</em></span></div><div class="term"><strong>Weekly active rate</strong><span>Weekly active users / all users x 100.<br><em>Example: 45 of 300 users: 15%.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.2 / KEY TERMS 3 OF 3</span><span>SLIDE 6 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Fill one small group first</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">A product feels alive when a group is full, not when many groups each have a few users.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_2_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">ClassChat spends its budget on 40 first-year business classes, so most students there join at once.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Advertising to the whole campus. Users are spread thin, no class feels alive, and new users leave.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / RULE 1 OF 4</span><span>SLIDE 7 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Give the first user value even when alone</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Early users join an almost empty product. Give them a reason to stay until their friends arrive.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_2_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">ClassChat organizes each student's own timetable and notes, so it is useful from the first day.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">A product that is useless until friends arrive. The first users delete it before friends come.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / RULE 2 OF 4</span><span>SLIDE 8 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Help the first penguins jump together</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">People join when they see others join. Bring a whole group in at the same moment.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_2_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">A class ambassador asks everyone to join in the first lecture, so 40 students join on the same day.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Letting people join one by one, or limiting invitations so friends cannot get in.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / RULE 3 OF 4</span><span>SLIDE 9 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Check that new users make it better for others</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Do not count downloads only. Measure whether fuller groups are more active.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_2_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">80% weekly active where 30 or more students joined; 15% where fewer joined. The effect is real.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Celebrating downloads. Many people install the app once and never come back.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / RULE 4 OF 4</span><span>SLIDE 10 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Facebook</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Facebook started on February 4, 2004, open only to Harvard students. A month later it opened to just three more universities (Columbia, Stanford, and Yale), then to other universities one by one, before opening to everyone in 2006.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>It filled one university at a time, so each campus was full of real friends. <b>(Rule 1)</b></li><li>Students at a campus joined together, because their friends had just joined. <b>(Rule 3)</b></li><li>It opened a new campus only when earlier ones were active. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / GOOD EXAMPLE 1</span><span>SLIDE 11 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>Sony PlayStation 3 and Blu-ray</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Around 2006, two movie-disc formats competed: Blu-ray (Sony) and HD DVD (Toshiba). Buyers and film studios waited to see which would win. Sony put a Blu-ray player inside every PS3. About 10.5 million PS3s were sold by early 2008, Warner Bros. chose Blu-ray only, and in February 2008 Toshiba stopped making HD DVD.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Every PS3 buyer became a Blu-ray owner at once: millions jumped together. <b>(Rule 3)</b></li><li>The PS3 was useful as a game console even without movies. <b>(Rule 2)</b></li><li>More owners made studios choose Blu-ray, which helped every owner.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / GOOD EXAMPLE 2</span><span>SLIDE 12 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>Google Wave</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Google Wave was a tool for writing and chatting together online. In September 2009, Google opened it to about 100,000 invited users. Most could not invite their friends or coworkers, and many did not understand what to use it for. In August 2010, Google stopped developing it.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Limited invitations: users could not bring the people they worked with. <b>(Rule 3)</b></li><li>A tool for working together is useless alone. <b>(Rule 2)</b></li><li>Users were spread over the world instead of whole teams joining. <b>(Rule 1)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / BAD EXAMPLE 1</span><span>SLIDE 13 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Clubhouse</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Clubhouse is an app for live audio conversations. It grew very fast in early 2021 and had about 14 million downloads by mid-April 2021. But many users found few good live rooms, other apps added live audio, and use fell sharply. In April 2023, Clubhouse cut more than half of its staff.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Growth was measured by downloads, not by users who came back. <b>(Rule 4)</b></li><li>With no interesting room live, the app gave a user nothing to do. <b>(Rule 2)</b></li><li>Users could easily listen on other apps too (Session 1.4).</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / BAD EXAMPLE 2</span><span>SLIDE 14 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Facebook</td><td style="color:#2f6b47;font-weight:700">Good</td><td>One campus at a time (Rule 1)</td></tr><tr><td>PS3 and Blu-ray</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Millions joined together (Rule 3)</td></tr><tr><td>Google Wave</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Friends could not get in (Rule 3)</td></tr><tr><td>Clubhouse</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Counted downloads, not return visits (Rule 4)</td></tr></table><div class="takeaway">A full small group beats a large empty network.</div></div>
+  <div class="footer"><span>SESSION 1.2 / EXAMPLE SUMMARY</span><span>SLIDE 15 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Density</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Density = users in the group / people in the group x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a dorm</h3><ul><li>200 students; 50 use a laundry-sharing app.</li><li>50 / 200 x 100 = 25%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / TOOL 1 OF 4</span><span>SLIDE 16 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Weekly active rate</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Weekly active rate = weekly active users / all users x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example</h3><ul><li>50 users; 35 use it every week.</li><li>35 / 50 x 100 = 70%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / TOOL 2 OF 4</span><span>SLIDE 17 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Cost per new user</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Cost per new user = money spent / new users</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a game</h3><ul><li>$2,000 on ads brings 500 new players.</li><li>$2,000 / 500 = $4.00.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / TOOL 3 OF 4</span><span>SLIDE 18 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule (from Session 1.1)</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 30 students in a class join by week 3, we will stop spending in that class."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 1.2 / TOOL 4 OF 4</span><span>SLIDE 19 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Is there a network effect?</h2>
+  <div class="body"><p class="statement">Six products:</p><div class="card"><ul><li>(a) A messaging app.</li><li>(b) A calculator app.</li><li>(c) An online game where players play against each other.</li><li>(d) A flashlight app.</li><li>(e) A language-exchange app that matches learners who teach each other.</li><li>(f) A paid photo-editing app.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 20 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Product [letter]: [network effect / no network effect],
+because when one more user joins,
+[who gains what / nobody else gains anything].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER PRODUCTS</div><div class="tmpl">A video-call app: network effect, because when one more user joins,
+everyone who knows that person can now call them.
+An alarm clock app: no network effect, because when one more user joins,
+nobody else gains anything.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 21 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Does one more user help the others?</h2>
+  <div class="body"><table><tr><th>PRODUCT</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Messaging app</td><td>Network effect</td><td>More people you can message</td></tr><tr><td>(b) Calculator</td><td>No</td><td>Works the same alone</td></tr><tr><td>(c) Online game</td><td>Network effect</td><td>More players, faster matches</td></tr><tr><td>(d) Flashlight</td><td>No</td><td>Works the same alone</td></tr><tr><td>(e) Language exchange</td><td>Network effect</td><td>More partners for each language</td></tr><tr><td>(f) Photo editor</td><td>No</td><td>Works the same for each user</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 22 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Find critical mass: GymBuddy</h2>
+  <div class="body"><table><tr><th>GYM</th><th style="text-align:right">MEMBERS</th><th style="text-align:right">GYMBUDDY USERS</th><th style="text-align:right">WEEKLY ACTIVE</th></tr><tr><td>A</td><td class="num">400</td><td class="num">40</td><td class="num">6</td></tr><tr><td>B</td><td class="num">500</td><td class="num">200</td><td class="num">150</td></tr><tr><td>C</td><td class="num">300</td><td class="num">150</td><td class="num">105</td></tr><tr><td>D</td><td class="num">600</td><td class="num">60</td><td class="num">9</td></tr><tr><td>E</td><td class="num">200</td><td class="num">30</td><td class="num">6</td></tr></table><div class="card" style="margin-top:.2in;"><ul><li><b>Step 1:</b> For each gym, density and weekly active rate (Tools 1 and 2).</li><li><b>Step 2:</b> At what density does the weekly active rate jump?</li><li><b>Step 3:</b> How many more users does each low gym need? Which gym is cheapest to fill?</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 23 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Critical mass is about [number]% density, because groups above it
+have [number]% weekly active users and groups below it only [number]%.
+We should focus on [group] next, because it needs only [number] more users.
+We will use Rule [number]: [one action].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: STUDYBUDDY IN FOUR DORMS</div><div class="tmpl">Critical mass is about 50% density, because dorms above it have
+75-80% weekly active users and dorms below it only 20%.
+We should focus on Dorm 3 next, because it needs only 40 more users
+(Dorm 2 needs 160).
+We will use Rule 3: invite a whole floor to a study night.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 24 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Critical mass is about 40%; fill Gym E next</h2>
+  <div class="body"><table><tr><th>GYM</th><th style="text-align:right">DENSITY</th><th style="text-align:right">WEEKLY ACTIVE RATE</th><th style="text-align:right">USERS NEEDED FOR 40%</th></tr><tr><td>A</td><td class="num">10%</td><td class="num">15%</td><td class="num">120</td></tr><tr><td>B</td><td class="num">40%</td><td class="num">75%</td><td class="num">-</td></tr><tr><td>C</td><td class="num">50%</td><td class="num">70%</td><td class="num">-</td></tr><tr><td>D</td><td class="num">10%</td><td class="num">15%</td><td class="num">180</td></tr><tr><td>E</td><td class="num">15%</td><td class="num">20%</td><td class="num">50</td></tr></table><div class="takeaway">A strong answer names one action, such as a "find a partner" week where a whole class joins together (Rule 3).</div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 25 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Where should ClassChat spend $6,000?</h2>
+  <div class="body"><p class="statement">300 classes of 60 / about 10 users each / 80% active at 30+ users, 15% below / both options: $6,000, 1,500 new users</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">SPREAD WIDE</div><h3>Option A: Ads for the whole campus</h3><p>The 1,500 new users spread evenly over all <b>300</b> classes.</p></div><div class="card" style="flex:1"><div class="small-label">FILL ONE GROUP</div><h3>Option B: Fill 40 classes first</h3><p>$100 ambassador in each of <b>40</b> first-year business classes ($4,000) and a launch event ($2,000).</p><p>All 1,500 join in those 40 classes, which now have <b>400</b> users.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 26 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1, 2, and 3)</h2>
+  <div class="body"><div class="card"><ul><li>Cost per new user in both options = $6,000 / 1,500 = $______</li><li>Now: weekly active users = 3,000 x 15% = ______</li><li>Option A: users per class = 4,500 / 300 = ______; density = ______%; weekly active = 4,500 x ______% = ______</li><li>Option B: users per class in 40 classes = (400 + 1,500) / 40 = ______; weekly active there = 1,900 x ______% = ______; other 260 classes = 2,600 x 15% = ______; total = ______</li><li>New users Option B needs so that the 40 classes reach 30 each: 40 x 30 - 400 = ______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 27 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Tomás (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [founder name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the first weeks we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 28 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>GymBuddy: focus on Gym E?</h2>
+  <div class="body"><div class="tmpl">To: Sam Lee, founder, GymBuddy
+1. Decision and evidence: We should focus next month&#x27;s budget on Gym E, because gyms at 40% density have 70-75% weekly active users (Rule 4) and Gym E needs only 50 more users to get there (Rule 1).
+2. Biggest risk and trade-off: The weakest point is that Gym E is small, so it adds few users. We give up faster growth in user numbers to make one more gym truly active.
+3. Next step and decision rule: In the next four weeks we will run a &quot;find a partner&quot; week at Gym E and measure density. We will change this decision if Gym E is still below 30% density after four weeks.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 29 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Same cost, almost 3 times more active users</h2>
+  <div class="body"><div class="card"><ul><li>Cost per new user = <b>$4.00</b> in both options. Now: <b>450</b> weekly active users.</li><li>Option A: <b>15</b> users per class, density <b>25%</b> (below critical mass); 4,500 x 15% = <b>675</b>.</li><li>Option B: <b>47.5</b> users per class; 1,900 x 80% = 1,520, plus 2,600 x 15% = 390; total = <b>1,910</b>.</li><li>Option B needs at least <b>800</b> new users in the 40 classes. With only 600, each class has 25 users, and the total falls to 3,600 x 15% = 540.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 30 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Chooses Option B (Rules 1 and 3): the cost is the same, so the difference is where the users go.</li><li>Names the risk: ambassadors may bring fewer than 800 users.</li><li>Decision rule: "If fewer than 20 students in a class join by week 3, we will move that ambassador budget to another class."</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 31 / 32</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain network effects, critical mass, and the penguin problem.</p></div><div class="card"><div class="n">02</div><p>Measure density and weekly activity to find critical mass.</p></div><div class="card"><div class="n">03</div><p>Compare "spread wide" with "fill one group first" and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Katz, M. L., &amp; Shapiro, C. (1985). Network externalities, competition, and compatibility. American Economic Review, 75(3).</p><p class="ref">Farrell, J., &amp; Saloner, G. (1986). Installed base and compatibility. American Economic Review, 76(5).</p><p class="ref">Harvard Magazine (2019). How Facebook escaped Harvard.</p><p class="ref">The Japan Times (2008, February 20). It's official: Toshiba pulls plug on HD DVD.</p><p class="ref">eWeek (2010). Google cancels Wave. CNBC (2023, April 27). Clubhouse layoffs.</p></div></div>
+  <div class="footer"><span>SESSION 1.2 / WRAP-UP</span><span>SLIDE 32 / 32</span></div>
+</section>
+
+</body>
+</html>

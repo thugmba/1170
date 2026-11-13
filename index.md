@@ -34,22 +34,22 @@ This course delivers an analytical and practical examination of digital transfor
 ## Curriculum Structure: 4 Modules x 4 Sessions
 
 * **Module 1: Foundations of Platform Business & Network Dynamics**
-  * Session 1.1: Course Orientation & The Fundamentals of Platform Businesses ([Dataset](data/session_1_1_asset_intensity.csv))
-  * Session 1.2: Network Effects & The Penguin Effect ([Dataset](data/session_1_2_network_effects.csv))
-  * Session 1.3: Two-Sided & Multi-Sided Networks ([Dataset](data/session_1_3_platform_margins.csv))
-  * Session 1.4: Scale Dynamics & Winner-Takes-All Markets ([Dataset](data/session_1_4_market_concentration.csv))
+  * **Week 1** · Session 1.1: The Platform Model Strategy
+  * **Week 2** · Session 1.2: The Network Effect Strategy
+  * **Week 3** · Session 1.3: The Two-Sided Market Strategy
+  * **Week 4** · Session 1.4: The Winner-Takes-All Strategy
 * **Module 2: Platform Economics, Big Data & Monetization**
-  * Session 2.1: The Data Feedback Loop Strategy
-  * Session 2.2: The Asymmetric Pricing Strategy
-  * Session 2.3: The Up-Sell and Cross-Sell Strategy
-  * Session 2.4: Module 2 Review: Choosing the Right Strategy
+  * **Week 5** · Session 2.1: The Data Feedback Loop Strategy
+  * **Week 6** · Session 2.2: The Asymmetric Pricing Strategy
+  * **Week 7** · Session 2.3: The Up-Sell and Cross-Sell Strategy
+  * **Week 8** · Session 2.4: Module 2 Review: Choosing the Right Strategy
 * **Module 3: Competitive Strategy & Innovation Frameworks**
-  * Session 3.1: The Platform Envelopment Strategy
-  * Session 3.2: The Cannibalization Strategy
-  * Session 3.3: The Disruption Strategy
-  * Session 3.4: The Open Ecosystem Strategy
+  * **Week 9** · Session 3.1: The Platform Envelopment Strategy
+  * **Week 10** · Session 3.2: The Cannibalization Strategy
+  * **Week 11** · Session 3.3: The Disruption Strategy
+  * **Week 12** · Session 3.4: The Open Ecosystem Strategy
 * **Module 4: Real-World Case Studies & Strategic Synthesis**
-  * Session 4.1: The Flywheel Strategy (Case Study: Amazon)
-  * Session 4.2: The Ecosystem Lock-In Strategy (Case Study: Apple)
-  * Session 4.3: The Super-App Strategy (Case Study: Grab)
-  * Session 4.4: Final Review: Choosing the Right Strategy
+  * **Week 13** · Session 4.1: The Flywheel Strategy (Case Study: Amazon)
+  * **Week 14** · Session 4.2: The Ecosystem Lock-In Strategy (Case Study: Apple)
+  * **Week 15** · Session 4.3: The Super-App Strategy (Case Study: Grab)
+  * **Week 16** · Session 4.4: Final Review: Choosing the Right Strategy

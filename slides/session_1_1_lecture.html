@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Session 1.1 Lecture Presentation: The Platform Model Strategy</title>
+<style>
+  @page { size: 16in 9in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f8f5ef; color: #172033; font-family: "Times New Roman", Times, serif; }
+  .slide { width: 16in; height: 9in; padding: .48in .8in .38in; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: #f8f5ef; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .top-rule { height: 4px; position: absolute; top: 0; left: 0; right: 0; background: #991b1b; }
+  .eyebrow { flex: 0 0 auto; margin: 0 0 .12in; font: 700 17px "Times New Roman", Times, serif; letter-spacing: 2px; color: #991b1b; }
+  h1 { margin: 0; font-size: 66px; line-height: 1.04; font-weight: 700; }
+  h2 { margin: 0; font-size: 50px; line-height: 1.08; font-weight: 700; }
+  .subtitle { margin: .14in 0 0; font: 400 33px/1.3 "Times New Roman", Times, serif; color: #526174; }
+  .body { flex: 1; min-height: 0; margin-top: .24in; display: flex; flex-direction: column; }
+  .footer { flex: 0 0 .35in; margin-top: .2in; border-top: 1px solid #c9c2b6; padding-top: .1in; display: flex; justify-content: space-between; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1.2px; color: #526174; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2in; }
+  .wide-left { display: grid; grid-template-columns: 1.15fr .85fr; gap: .26in; }
+  .card { border: 1.2px solid #aeb7c1; padding: .2in .24in; background: rgba(255,255,255,.55); }
+  .card h3 { margin: 0 0 .12in; font: 700 36px/1.15 "Times New Roman", Times, serif; color: #172033; }
+  .card p, .card li { margin: 0; font: 400 33px/1.36 "Times New Roman", Times, serif; color: #354052; }
+  .card p + p { margin-top: .1in; }
+  .card ul { margin: .04in 0 0; padding-left: .26in; }
+  .card li + li { margin-top: .12in; }
+  .good { border: 1.6px solid #2f6b47; background: #f1f7f2; }
+  .bad { border: 1.6px solid #991b1b; background: #fbf1f0; }
+  .small-label { margin: 0 0 .1in; font: 700 20px "Times New Roman", Times, serif; letter-spacing: 1.6px; color: #991b1b; }
+  .good .small-label { color: #2f6b47; }
+  .statement { margin: 0 0 .22in; font: 700 40px/1.25 "Times New Roman", Times, serif; color: #172033; }
+  .para { margin: 0; font: 400 37px/1.45 "Times New Roman", Times, serif; color: #263245; }
+  .takeaway { margin-top: .24in; padding: .16in .24in; border: 1.2px solid #991b1b; font: 700 32px/1.3 "Times New Roman", Times, serif; color: #991b1b; }
+  .hero { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .14in; }
+  .flow .card { padding: .18in .16in; }
+  .flow .n { margin-bottom: .1in; font: 700 36px "Times New Roman", Times, serif; color: #991b1b; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #c9c2b6; padding: .09in .14in; text-align: left; font: 400 34px/1.25 "Times New Roman", Times, serif; color: #263245; }
+  th { font-weight: 700; color: #991b1b; font-size: 22px; letter-spacing: 1px; }
+  td.num { text-align: right; font-weight: 700; }
+  .tmpl { margin: 0; padding: .16in .2in; border: 1.2px solid #aeb7c1; background: #ffffff; white-space: pre-wrap; font: 400 29px/1.38 "Times New Roman", Times, serif; color: #172033; }
+  .tmpl b { color: #991b1b; }
+  .tag { display: inline-block; padding: .02in .1in; margin-left: .06in; border: 1px solid currentColor; font: 700 16px "Times New Roman", Times, serif; letter-spacing: 1px; vertical-align: middle; }
+  .term { display: grid; grid-template-columns: 3.2in 1fr; gap: .24in; padding: .18in 0; border-bottom: 1px solid #d5cec2; }
+  .term:last-child { border-bottom: 0; }
+  .term strong { font: 700 36px/1.25 "Times New Roman", Times, serif; color: #991b1b; }
+  .term span { font: 400 33px/1.38 "Times New Roman", Times, serif; color: #354052; }
+  .term em { font-style: italic; color: #526174; }
+  .ref { margin: 0 0 .12in; font: 400 25px/1.3 "Times New Roman", Times, serif; color: #354052; }
+</style>
+</head>
+<body>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS</div><h2>Session 1.1: The Platform Model Strategy</h2>
+  <div class="body"><img class="hero" src="../assets/session_1_1_campusbikes_platform_hanji.png" alt="Leo, owner of CampusBikes, asks whether to buy 70 more bikes or connect the bikes students already own."></div>
+  <div class="footer"><span>COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY</span><span>SLIDE 1 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">COURSE ORIENTATION</div><h2>How every session in this course works</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">In this course you are the owner of a growing business. Each week you learn one strategy.</p><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>A business situation and one strategy in one paragraph</p></div><div class="card"><div class="n">02</div><p>Words, four rules, and real companies that did it well or badly</p></div><div class="card"><div class="n">03</div><p>Tools and three exercises: easy, medium, hard (with a memo)</p></div></div><div class="takeaway">At the end of the course you use these strategies in your final project.</div></div>
+  <div class="footer"><span>SESSION 1.1 / ORIENTATION</span><span>SLIDE 2 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE SITUATION</div><h2>CampusBikes: too few bikes in busy months</h2>
+  <div class="body"><p class="statement" style="font-weight:400;">CampusBikes is Leo's bike rental shop next to campus. Students rent a bike for $5 a day. In busy months, 70 students a day go home without a bike, while many student bikes sit unused.</p><table><tr><th>CAMPUSBIKES</th><th style="text-align:right">VALUE</th></tr><tr><td>Bikes CampusBikes owns / rental price</td><td class="num">50 / $5 a day</td></tr><tr><td>Busy months each year</td><td class="num">4</td></tr><tr><td>Students who want a bike / turned away (busy day)</td><td class="num">120 / 70</td></tr><tr><td>Students who own a bike they rarely ride</td><td class="num">800</td></tr><tr><td>Cost of one new bike</td><td class="num">$300</td></tr><tr><td>Repair and storage, per bike</td><td class="num">$15 a month</td></tr></table></div>
+  <div class="footer"><span>SESSION 1.1 / FICTIONAL CLASS DATA</span><span>SLIDE 3 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE STRATEGY IN ONE PARAGRAPH</div><h2>What is the Platform Model Strategy?</h2>
+  <div class="body"><p class="para">A <b>pipeline</b> business makes or buys a product and sells it, so to grow it must buy more. A <b>platform</b> connects people who already have something (providers) with people who need it (users), and earns a small fee on each match. It grows by adding providers, not by buying more things, so it grows faster with less money at risk.</p><div class="takeaway">In return, the platform must do new jobs well: help strangers trust each other, make the trade easy, and keep quality high without owning the product.</div></div>
+  <div class="footer"><span>SESSION 1.1 / STRATEGY OVERVIEW</span><span>SLIDE 4 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Pipeline, platform, provider and user</h2>
+  <div class="body"><div class="term"><strong>Pipeline business</strong><span>Makes or buys a product and sells it, step by step, like water through a pipe.<br><em>Example: a bakery bakes bread and sells it.</em></span></div><div class="term"><strong>Platform business</strong><span>Connects two groups so they can trade, and earns a fee on each match.<br><em>Example: Airbnb connects people who have a spare room with travelers.</em></span></div><div class="term"><strong>Provider and user</strong><span>The provider has something to offer; the user wants it.<br><em>Example: a student who rents out a bike / a student who rents it.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.1 / KEY TERMS 1 OF 3</span><span>SLIDE 5 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Asset, idle resource, take rate</h2>
+  <div class="body"><div class="term"><strong>Asset</strong><span>Something a business owns that it uses to earn money.<br><em>Example: CampusBikes' 50 bikes.</em></span></div><div class="term"><strong>Idle resource</strong><span>Something people already own but rarely use.<br><em>Example: a bike that sits in a dorm most of the week.</em></span></div><div class="term"><strong>Take rate</strong><span>The fee the platform keeps, as a share of the price. Take rate = fee / price x 100.<br><em>Example: $1 of a $5 rental: 20%.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.1 / KEY TERMS 2 OF 3</span><span>SLIDE 6 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">WORDS YOU NEED FIRST</div><h2>Transaction cost and trust tools</h2>
+  <div class="body"><div class="term"><strong>Transaction cost</strong><span>The time, money, and worry needed to find a partner, pay, and check the promise is kept.<br><em>Example: meeting a stranger to hand over cash for a bike.</em></span></div><div class="term"><strong>Trust tools</strong><span>Things that help strangers trust each other: ID checks, ratings, deposits, insurance.<br><em>Example: a $50 deposit held by the app until the bike comes back.</em></span></div></div>
+  <div class="footer"><span>SESSION 1.1 / KEY TERMS 3 OF 3</span><span>SLIDE 7 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 1</div><h2>Rule 1: Connect what others already own</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">Look for useful things that sit idle. When you connect them, you grow without paying for every new unit.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_1_rule_1_hanji.png" alt="Rule 1: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">800 student bikes sit unused. CampusBikes lists them in its app instead of buying 70 new bikes.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Calling yourself a platform but still buying or renting every asset. You carry a pipeline's costs.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / RULE 1 OF 4</span><span>SLIDE 8 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 2</div><h2>Rule 2: Help strangers trust each other</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">A user will not rent a stranger's bike, and an owner will not lend it, unless both feel safe.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_1_rule_2_hanji.png" alt="Rule 2: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">ID checks, ratings for owners and riders, a $50 deposit, and repair cover for damaged bikes.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Posting phone numbers and leaving the rest to users. After one stolen bike, everyone leaves.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / RULE 2 OF 4</span><span>SLIDE 9 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 3</div><h2>Rule 3: Make finding, paying, and checking easy</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">The platform wins when it makes the costs of a trade much smaller than doing the trade alone.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_1_rule_3_hanji.png" alt="Rule 3: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">A map of nearby bikes, one-tap payment, and a lock code. No meeting is needed.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Users must message owners, agree on a time, and meet to hand over cash. Students give up.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / RULE 3 OF 4</span><span>SLIDE 10 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">THE FOUR RULES / RULE 4</div><h2>Rule 4: Keep quality high with simple rules</h2>
+  <div class="body"><p class="statement" style="font-size:34px;margin-bottom:.16in;">You do not own the product, but users blame you when it is bad. Set a few clear rules for providers.</p><div style="display:flex;gap:.26in;align-items:flex-start;"><img src="../assets/session_1_1_rule_4_hanji.png" alt="Rule 4: do and avoid" style="width:6.6in;height:3.71in;object-fit:contain;flex:none;border:1.2px solid #aeb7c1;"><div style="flex:1;"><div class="card good"><div class="small-label">DO</div><h3>Example</h3><p style="font-size:27px">Every bike passes a 3-point check (brakes, tires, lights). Owners with two bad ratings are removed.</p></div><div class="card bad" style="margin-top:.18in"><div class="small-label">AVOID</div><h3>Common mistake</h3><p style="font-size:27px">Letting anyone list anything. One broken bike hurts trust in every bike on the platform.</p></div></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / RULE 4 OF 4</span><span>SLIDE 11 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 1</div><h2>Airbnb</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Airbnb owns almost no homes. It connects people who have a spare room or home with travelers. At the end of 2023 it had about 7.7 million active listings, with about 6,900 employees. A hotel company grows differently: Marriott paid about $13 billion in 2016 to buy Starwood Hotels.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Hosts already owned the rooms, so Airbnb grew without buying buildings. <b>(Rule 1)</b></li><li>Reviews, ID checks, and in-app payment helped strangers trust each other. <b>(Rule 2)</b></li><li>Searching, booking, and paying happen in one app. <b>(Rule 3)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / GOOD EXAMPLE 1</span><span>SLIDE 12 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD EXAMPLE 2</div><h2>YouTube</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>YouTube does not make most of its videos. People and companies upload them, and YouTube connects them with viewers and shares ad money with many creators. In 2019, YouTube said that more than 500 hours of video were uploaded every minute.</p></div><div class="card good" style="flex:1"><h3>Why it is good</h3><ul><li>Creators bring the videos, so YouTube does not pay for each video up front. <b>(Rule 1)</b></li><li>Uploading and finding videos is fast and free. <b>(Rule 3)</b></li><li>Community rules remove harmful videos, so viewers and advertisers keep trusting it. <b>(Rule 4)</b></li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / GOOD EXAMPLE 2</span><span>SLIDE 13 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 1</div><h2>WeWork</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>WeWork rented office space to companies and called itself a technology company. But it signed long leases on its buildings, while members could leave after a month. When demand for offices fell, it still had to pay rent. In November 2023 it filed for bankruptcy protection, with more than $13 billion in lease payments owed.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>It rented every building itself, like a pipeline. <b>(Rule 1)</b></li><li>Its income could disappear in a month; its costs lasted for years.</li><li>Calling itself a platform did not change how the business worked.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / BAD EXAMPLE 1</span><span>SLIDE 14 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BAD EXAMPLE 2</div><h2>Bird</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>What happened</h3><p>Bird put electric scooters on city streets and rented them through an app. Bird paid for the scooters itself, and many were damaged, stolen, or wore out quickly. Some cities limited scooters left blocking sidewalks. In December 2023, Bird filed for bankruptcy protection.</p></div><div class="card bad" style="flex:1"><h3>Why it is bad</h3><ul><li>Bird paid for every scooter, so each new area needed more money. <b>(Rule 1)</b></li><li>Scooters lying on sidewalks angered cities and people who walk. <b>(Rule 4)</b></li><li>An easy app could not cover the cost of owning every scooter.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / BAD EXAMPLE 2</span><span>SLIDE 15 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">GOOD AND BAD AT A GLANCE</div><h2>Which rule made the difference?</h2>
+  <div class="body"><table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr><tr><td>Airbnb</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Connect rooms others own, with trust tools (Rules 1 and 2)</td></tr><tr><td>YouTube</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Creators bring videos; easy upload (Rules 1 and 3)</td></tr><tr><td>WeWork</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Rented every building itself (Rule 1)</td></tr><tr><td>Bird</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Owned every scooter (Rule 1)</td></tr></table><div class="takeaway">A platform connects what others own. A business that owns everything is a pipeline, whatever it calls itself.</div></div>
+  <div class="footer"><span>SESSION 1.1 / EXAMPLE SUMMARY</span><span>SLIDE 16 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 1</div><h2>Tool 1: Take rate</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISES 2 AND 3</div><h3>Formula</h3><p>Take rate = fee per match / price x 100</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a parking app</h3><ul><li>It keeps $2 of each $10 parking booking.</li><li>$2 / $10 x 100 = 20%.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / TOOL 1 OF 4</span><span>SLIDE 17 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 2</div><h2>Tool 2: Cost to grow: buying or connecting</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 2</div><h3>Formula</h3><p>Pipeline: new units x cost per unit</p><p>Platform: one-time cost to set up (app, checks, insurance)</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a tool shop needs 20 more drills</h3><ul><li>Buying: 20 x $80 = $1,600.</li><li>Connecting neighbors' drills: $500 once.</li><li>Buying costs $1,600 / $500 = 3.2 times more.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / TOOL 2 OF 4</span><span>SLIDE 18 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 3</div><h2>Tool 3: Profit over several periods</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">USED IN EXERCISE 3</div><h3>Formula</h3><p>Profit = revenue per period x periods - one-time cost - running cost per period x periods</p></div><div class="card good" style="flex:1"><div class="small-label">WHAT IT LOOKS LIKE</div><h3>Example: a $1,000 machine</h3><ul><li>Earns $400 a month; costs $100 a month to run.</li><li>After 6 months: 6 x $400 - $1,000 - 6 x $100 = $800.</li></ul></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / TOOL 3 OF 4</span><span>SLIDE 19 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">BEFORE THE EXERCISES / TOOL 4</div><h2>Tool 4: Trade-off and decision rule</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 2</div><h3>Trade-off</h3><p>What you give up to get something you value more.</p></div><div class="card" style="flex:1"><div class="small-label">MEMO BULLET 3</div><h3>Decision rule</h3><p>A promise, written before you start, about which result would make you change your decision.</p><p><i>Example: "If fewer than 30 students list a bike in the first month, we will buy 20 bikes instead."</i></p></div></div></div>
+  <div class="footer"><span>SESSION 1.1 / TOOL 4 OF 4</span><span>SLIDE 20 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Pipeline or platform?</h2>
+  <div class="body"><p class="statement">Six businesses:</p><div class="card"><ul><li>(a) A bakery bakes bread and sells it in its shop.</li><li>(b) An app connects drivers with people who rent out their empty parking spaces.</li><li>(c) A TV channel makes its own shows and sells ads.</li><li>(d) A website lets students sell used clothes to each other and keeps 10% of each sale.</li><li>(e) A car maker builds cars and sells them through dealers.</li><li>(f) An app lets home cooks sell meals to their neighbors.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 1 / SCENARIO</span><span>SLIDE 21 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / EASY / 20 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Business [letter]: [pipeline / platform], because it [makes or buys / connects]
+[what], and earns money from [selling its own product / a fee on each match].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TWO OTHER BUSINESSES</div><div class="tmpl">A hotel company builds hotels and rents rooms.
+Pipeline, because it builds hotels, and earns money from selling its own rooms.
+A ride-hailing app connects riders with drivers who use their own cars.
+Platform, because it connects riders and drivers, and earns a fee on each ride.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 22 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 1 / CHECK YOUR ANSWER</div><h2>Does it make and sell, or connect and take a fee?</h2>
+  <div class="body"><table><tr><th>BUSINESS</th><th>ANSWER</th><th>WHY</th></tr><tr><td>(a) Bakery</td><td>Pipeline</td><td>Makes and sells its own bread</td></tr><tr><td>(b) Parking-space app</td><td>Platform</td><td>Connects drivers and space owners</td></tr><tr><td>(c) TV channel</td><td>Pipeline</td><td>Makes its own shows</td></tr><tr><td>(d) Used-clothes website</td><td>Platform</td><td>Connects sellers and buyers, 10% fee</td></tr><tr><td>(e) Car maker</td><td>Pipeline</td><td>Builds and sells its own cars</td></tr><tr><td>(f) Home-cook app</td><td>Platform</td><td>Connects cooks and neighbors</td></tr></table></div>
+  <div class="footer"><span>EXERCISE 1 / ANSWER KEY</span><span>SLIDE 23 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Buy more, or connect? CamPro</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><h3>Scenario</h3><ul><li>CamPro rents cameras to art students for <b>$20</b> a day. It owns 20 and needs <b>30</b> more in project season.</li><li><b>150</b> students own a good camera they use less than once a month.</li><li><b>Buying:</b> 30 cameras at <b>$400</b> each.</li><li><b>Connecting:</b> owner gets $15, CamPro keeps <b>$5</b>; set-up costs <b>$2,000</b> once.</li></ul></div><div class="card" style="flex:1"><h3>Your steps</h3><ul><li><b>Step 1:</b> Take rate = $5 / $20 x 100 = ____%. Buying = 30 x $400 = $____. Connecting = $____. Buying costs ____ times more.</li><li><b>Step 2:</b> Check the four rules with the template.</li><li><b>Step 3:</b> Give a verdict: connect or buy.</li></ul></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / SCENARIO</span><span>SLIDE 24 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / MEDIUM / 30 MIN</div><h2>Use the template</h2>
+  <div class="body"><div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1"><div class="small-label">TEMPLATE</div><div class="tmpl">Rule 1 (idle resources): [number] people own [what] they rarely use.
+Rule 2 (trust): we will use [trust tools].
+Rule 3 (easy trade): it will be easy because [how].
+Rule 4 (quality): every [item] must [simple rule].
+Verdict: [connect / buy], because [one sentence with a number].</div></div><div style="flex:1"><div class="small-label">WORKED EXAMPLE: TOOLTOWN DRILLS</div><div class="tmpl">Rule 1: 200 neighbors own a drill they use a few times a year.
+Rule 2: ID checks, ratings, and a $30 deposit.
+Rule 3: book and pay in the app; pick up at our store.
+Rule 4: every drill is charged and tested at our counter.
+Verdict: connect, because it costs $500 instead of $1,600.</div></div></div></div>
+  <div class="footer"><span>EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE</span><span>SLIDE 25 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 2 / CHECK YOUR ANSWER</div><h2>Connecting costs 6 times less</h2>
+  <div class="body"><div class="card good"><ul><li>Take rate = <b>25%</b>. Buying = <b>$12,000</b>; connecting = <b>$2,000</b>; buying costs <b>6 times</b> more.</li><li>Rule 1 is strong: 150 students own a camera they rarely use.</li><li>A strong answer names trust tools (ID checks, ratings, a deposit, damage insurance), an easy trade, and one quality rule.</li><li>A careful answer also names the risk: students may not want to lend an expensive camera.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 2 / ANSWER KEY</span><span>SLIDE 26 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / HARD / 50 MIN</div><h2>Buy bikes or become a platform? CampusBikes, next 2 years</h2>
+  <div class="body"><p class="statement">24 months, 8 busy months / serve 70 more students a day / each extra bike rented about 20 days a busy month</p><div style="display:flex;gap:.26in;align-items:flex-start;"><div class="card" style="flex:1"><div class="small-label">PIPELINE</div><h3>Option A: Buy 70 bikes</h3><p><b>$300</b> per bike, plus <b>$15</b> a month per bike for 24 months.</p><p>CampusBikes keeps the full <b>$5</b> a day.</p></div><div class="card" style="flex:1"><div class="small-label">PLATFORM</div><h3>Option B: Connect student bikes</h3><p>Owner gets $4; CampusBikes keeps <b>$1</b> a day.</p><p><b>$3,000</b> once, plus <b>$100</b> a month for insurance and support.</p></div></div></div>
+  <div class="footer"><span>EXERCISE 3 / SCENARIO</span><span>SLIDE 27 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 1</div><h2>Calculate before you decide (Tools 1 and 3)</h2>
+  <div class="body"><div class="card"><ul><li>Take rate in Option B = $1 / $5 x 100 = ______ %</li><li>Bike-days in busy months = 70 x 20 x 8 = ______</li><li>Option A: revenue = bike-days x $5 = $______; costs = 70 x $300 + 70 x $15 x 24 = $______; profit = $______</li><li>Option B: revenue = bike-days x $1 = $______; costs = $3,000 + $100 x 24 = $______; profit = $______</li><li>If only half as many students want a bike: Option A profit = $______; Option B profit = $______</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / CALCULATIONS</span><span>SLIDE 28 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / STEP 2</div><h2>Write a 3-bullet memo to Leo (Tool 4)</h2>
+  <div class="body"><div class="small-label">TEMPLATE</div><div class="tmpl">To: [owner name], [company]
+1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].
+2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].
+3. Next step and decision rule: In the next busy month we will [one action] and measure [one number]. We will change this decision if [result].</div><div class="takeaway">Then give a 2-minute presentation using your three bullets.</div></div>
+  <div class="footer"><span>EXERCISE 3 / MEMO TEMPLATE</span><span>SLIDE 29 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / WORKED EXAMPLE</div><h2>CamPro: connect students' cameras?</h2>
+  <div class="body"><div class="tmpl">To: Mia Park, owner, CamPro
+1. Decision and evidence: We should connect students&#x27; cameras, because 150 students own a camera they rarely use (Rule 1) and connecting costs $2,000 against $12,000 for buying.
+2. Biggest risk and trade-off: The weakest point is that owners may fear damage to an expensive camera. We give up the full $20 a day on new cameras to avoid $12,000 of cameras that sit unused outside project season.
+3. Next step and decision rule: In the next project season we will open listings with damage insurance and measure how many cameras are listed. We will change this decision if fewer than 15 cameras are listed in the first two weeks.</div></div>
+  <div class="footer"><span>EXERCISE 3 / WORKED EXAMPLE</span><span>SLIDE 30 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>Buying earns more only if almost all rentals happen</h2>
+  <div class="body"><div class="card"><ul><li>Take rate = <b>20%</b>. Bike-days = <b>11,200</b>.</li><li>Option A: $56,000 - $46,200 = <b>$9,800</b>. Option B: $11,200 - $5,400 = <b>$5,800</b>.</li><li>Half the demand: Option A = $28,000 - $46,200 = <b>-$18,200</b>; Option B = $5,600 - $5,400 = <b>$200</b>.</li><li>Option A wins only if demand is at least about <b>91%</b> of the expected level ($40,800 more costs / $44,800 more revenue).</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 1 OF 2</span><span>SLIDE 31 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">EXERCISE 3 / CHECK YOUR ANSWER</div><h2>What a strong memo looks like</h2>
+  <div class="body"><div class="card good"><ul><li>Option B earns a little less but cannot lose much, and it can grow beyond 70 bikes at no extra cost (800 student bikes).</li><li>A memo for Option B points to idle bikes (Rule 1) and trust tools (Rule 2), and names the risk that few students list bikes.</li><li>Decision rule: "If fewer than 70 bikes are listed by the second busy month, we will buy 30 bikes."</li><li>A memo for Option A must explain why Leo is sure demand will stay high.</li></ul></div></div>
+  <div class="footer"><span>EXERCISE 3 / ANSWER KEY 2 OF 2</span><span>SLIDE 32 / 33</span></div>
+</section>
+
+<section class="slide"><div class="top-rule"></div>
+  <div class="eyebrow">SUCCESS CHECK</div><h2>Can you do these three things?</h2>
+  <div class="body"><div class="flow" style="grid-template-columns:repeat(3,1fr);"><div class="card"><div class="n">01</div><p>Explain pipeline and platform with provider, user, asset, and take rate.</p></div><div class="card"><div class="n">02</div><p>Compare the cost of growing by buying with growing by connecting.</p></div><div class="card"><div class="n">03</div><p>Compare the two plans over several periods and write a decision rule.</p></div></div><div style="margin-top:.3in;"><div class="small-label">REFERENCES</div><p class="ref">Van Alstyne, M. W., Parker, G. G., &amp; Choudary, S. P. (2016). Pipelines, platforms, and the new rules of strategy. Harvard Business Review.</p><p class="ref">Coase, R. H. (1937). The nature of the firm. Economica, 4(16), 386-405.</p><p class="ref">Airbnb (2024). Fourth quarter and full-year 2023 financial results.</p><p class="ref">Tubefilter (2019, May 7). More than 500 hours of content are uploaded to YouTube every minute.</p><p class="ref">GlobeSt (2023, November 7). WeWork files for Chapter 11. CNBC (2023, December 20). Bird files for bankruptcy.</p></div></div>
+  <div class="footer"><span>SESSION 1.1 / WRAP-UP</span><span>SLIDE 33 / 33</span></div>
+</section>
+
+</body>
+</html>
