@@ -43,7 +43,7 @@ By completing this project, you will:
 | **Week 10** | **Chapter 1** (Company Introduction), with links to at least 3 performance indicators for company approval | PDF on iLearn: `StudentID_Name_Ch1.pdf` |
 | **Week 13** | **Chapters 1–3** (Company Introduction, Platform Diagnosis, Strategy Analysis) | PDF on iLearn: `StudentID_Name_Ch1-3.pdf` |
 | **Week 14 (Friday, 5 pm)** | **Final report** (all chapters, references, and appendices), **slides**, and **5-minute presentation video** | PDFs on iLearn: `StudentID_Name_Report.pdf`, `StudentID_Name_Slides.pdf`; video on Google Drive, submit **only the link** on iLearn |
-| **Weeks 15–16** | **Final presentations** in class (5 minutes + 1 minute Q&A) | Attend in person |
+| **Weeks 15–16** | **Final presentations** in class (5 minutes + 1 minute Q&A), using **only the slides you submitted in Week 14** | Attend in person |
 
 Write your report in the [report template](templates/Final_Project_Report_Template.docx) from Week 10, and keep adding to the same file. You will receive feedback on Chapter 1 (Week 10) and Chapters 1–3 (Week 13).
 
@@ -56,7 +56,7 @@ Write your report in the [report template](templates/Final_Project_Report_Templa
 | **Week 12** | • Choose 2–3 strategies, including one that failed or carries a risk<br>• Fill in the rule-check tables<br>• Make charts of the results | – |
 | **Week 13** | • Write Chapter 3 (Strategy Analysis): what the company did, rule check, result, verdict | **Chapters 1–3** |
 | **Week 14** | • Read the Week 13 feedback<br>• Write Chapter 4 (Recommendation)<br>• Finish the references and appendices<br>• Make at least 10 slides<br>• Practice and record the 5-minute video<br>• Check the format and convert to PDF | **Final report + slides + video link (Friday, 5 pm)** |
-| **Weeks 15–16** | • Give your live presentation<br>• Answer questions and listen to your classmates | **Presentation** |
+| **Weeks 15–16** | • Give your live presentation with the slides you submitted in Week 14 (no changes allowed)<br>• Answer questions and listen to your classmates | **Presentation** |
 
 ## Company Selection
 
@@ -289,6 +289,7 @@ See the **Project Schedule** above: final report, slides, and video link are all
   - 5 minutes presentation
   - 1 minute Q&A
 - **Attendance**: Mandatory
+- **Slides**: You present **only with the slides you submitted in Week 14**. You **cannot change** your slides on the presentation day.
 
 ## Presentation Structure (5 minutes)
 
@@ -337,6 +338,7 @@ Be prepared to answer questions about:
 - Late submissions will be penalized according to course policy
 - Only PDF format will be accepted
 - Ensure files are not corrupted before submission
+- The slides you submit in Week 14 are the slides you present; you cannot change them on the presentation day
 
 ---
 
