@@ -20,22 +20,57 @@ def slide(eyebrow, title, body, footer):
     slides.append((eyebrow, title, body, footer))
 
 
+
+
+def task(text):
+    return f'<p style="font-size:29px;line-height:1.3;margin:0 0 .18in;color:#172033;"><b>Your task:</b> {text}</p>'
+
+
+WS_TD = 'style="font-size:30px;padding:.09in .1in;"'
+
+
+def worksheet(rows, td=WS_TD):
+    head = "<tr><th>#</th><th>WHAT TO CALCULATE</th><th>HOW</th><th>YOUR ANSWER</th></tr>"
+    body = "".join("<tr>" + "".join(f"<td {td}>{c}</td>" for c in (str(i),) + r + ("",)) + "</tr>"
+                   for i, r in enumerate(rows, 1))
+    return ('<table style="table-layout:fixed;"><colgroup><col style="width:5%"><col style="width:40%">'
+            '<col style="width:35%"><col style="width:20%"></colgroup>' + head + body + "</table>")
+
+
+def practice(title, facts, questions, footer):
+    slide(f"{footer} / PRACTICE", title,
+          two(flexcard("The facts", ul(facts), "card", "SNAPBOX PHOTO BOOTHS"),
+              flexcard("Your questions", ul(questions), "card", "SHOW YOUR CALCULATION")),
+          f"SESSION {SESSION} / {footer} PRACTICE")
+
+
 # Cover and situation
 slide("MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS", f"Session {SESSION}: {TITLE}",
-      '<img class="hero" src="../assets/session_3_3_tutorbite_disruption_hanji.png" '
-      'alt="Lily, founder of TutorBite, asks whether to chase Apex Academy\'s best students or serve the students nobody serves.">',
+      '<img class="hero" src="../assets/session_3_3_sweetslice_disruption_hanji.png" '
+      'alt="Lily, owner of the Sweet Slice cake shop, asks whether to make fancy cakes like Royal Cakes or serve the people who buy no cake.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
-slide("THE SITUATION", "TutorBite: a small app next to a strong leader",
-      '<p class="statement" style="font-weight:400;">TutorBite is Lily\'s tutoring app: 15-minute video calls with senior students '
-      "who explain one homework problem. The campus leader is Apex Academy.</p>"
-      "<table><tr><th></th><th>APEX ACADEMY (LEADER)</th><th>TUTORBITE</th></tr>"
-      "<tr><td>What it offers</td><td>Weekly 2-hour classes, expert teachers</td><td>15-minute video help from senior students</td></tr>"
-      "<tr><td>Price</td><td>$160 a month</td><td>$5 a session</td></tr>"
-      "<tr><td>Customers today</td><td>2,000 students</td><td>300 students</td></tr>"
-      "<tr><td>Profit per customer</td><td>$60 a month</td><td>$2 a session</td></tr></table>"
-      '<div class="takeaway">8,000 more students use no tutoring because Apex costs too much. '
-      "An investor says: hire expert teachers and go after Apex's students.</div>",
+slide("THE SITUATION", "Sweet Slice: a tiny cake shop across from a strong leader",
+      '<p class="statement" style="font-weight:400;font-size:30px;">Sweet Slice is Lily\'s tiny cake shop near campus: single slices and cupcakes, '
+      "ready to eat. Across the street is Royal Cakes, the leader in town.</p>"
+      "<table><tr><th></th><th>ROYAL CAKES (LEADER)</th><th>SWEET SLICE (LILY)</th></tr>"
+      "<tr><td>What it sells</td><td>Decorated whole cakes for 10 people, ordered 2 days ahead</td><td>Single slices and cupcakes, ready now</td></tr>"
+      "<tr><td>Price</td><td>$40 a cake</td><td>$5 a slice</td></tr>"
+      "<tr><td>Sales a month</td><td>2,000 cakes</td><td>1,500 slices</td></tr>"
+      "<tr><td>Profit</td><td>$15 a cake</td><td>$2 a slice</td></tr></table>"
+      '<div class="takeaway">10,000 people a month want a cake for a small celebration; only 2,000 buy from Royal. '
+      "An investor says: hire a top pastry chef, make fancy cakes, and take Royal's customers.</div>",
+      f"SESSION {SESSION} / FICTIONAL CLASS DATA")
+
+slide("THE SITUATION", "Why do 8,000 people buy no cake?",
+      two(flexcard("What they want", ul([
+          "A cake for a <b>small</b> celebration: a birthday with two or three friends, or passing an exam.",
+          "Something sweet, with a candle, <b>today</b>."]), "card", "THE JOB TO BE DONE"),
+          flexcard("What Royal Cakes offers", ul([
+              "A cake for <b>10 people</b>, ordered <b>two days ahead</b>.",
+              "<b>$40</b>: too much for three friends.",
+              "So they buy <b>no cake at all</b>."]), "card bad", "TOO BIG, TOO EXPENSIVE"))
+      + '<div class="takeaway">Lily\'s question: fight Royal for its 2,000 customers, or serve the 8,000 people nobody serves?</div>',
       f"SESSION {SESSION} / FICTIONAL CLASS DATA")
 
 slide("THE STRATEGY IN ONE PARAGRAPH", f"What is the {TITLE[4:]}?",
@@ -50,39 +85,39 @@ slide("THE STRATEGY IN ONE PARAGRAPH", f"What is the {TITLE[4:]}?",
 # Words
 slide("WORDS YOU NEED FIRST", "Leader, disruption, sustaining innovation",
       term("Leader<br><span style=\"font-size:24px;color:#526174;\">(incumbent)</span>",
-           "The strong company that already serves most customers in a market.", "Apex Academy.")
+           "The strong company that already serves most customers in a market.", "Royal Cakes.")
       + term("Disruption", "A simpler, cheaper product that starts with customers the leader ignores and later takes the leader's customers.",
-             "TutorBite's $5 sessions.")
+             "Sweet Slice's $5 slices.")
       + term("Sustaining innovation", "Making a product better for the leader's best customers, often at a higher price.",
-             "Apex adds a second weekly class for $240 a month."),
+             "Royal Cakes adds a three-layer cake for $60."),
       f"SESSION {SESSION} / KEY TERMS 1 OF 2")
 
 slide("WORDS YOU NEED FIRST", "Non-consumers, over-served, good enough",
       term("Non-consumers", "People who need a job done but buy nothing today, often because it costs too much or is too hard.",
-           "the 8,000 students who use no tutoring.")
+           "the 8,000 people who want a cake but buy none.")
       + term("Over-served customers", "Customers who get more than they need and would happily pay less for less.",
-             "a student who needs help with one problem but pays for a month of classes.")
+             "a student who wants cake for three people but must buy a cake for 10.")
       + term("Good enough", "A product that does the main job the customer needs, even if it is not the best.",
-             "a 15-minute explanation for one homework problem."),
+             "a slice with one candle for a birthday with two friends."),
       f"SESSION {SESSION} / KEY TERMS 2 OF 2")
 
 # Rules
 rules = [
     ("Rule 1", "Start where the leader is not looking",
      "Begin with non-consumers or with the leader's least profitable customers. They are easy to win, and the leader will not miss them.",
-     "TutorBite starts with the 8,000 students who use no tutoring. Apex does not serve them, so it will not fight for them.",
+     "Sweet Slice starts with the 8,000 people who want a cake but buy none. Royal Cakes does not serve them, so it will not fight for them.",
      "Going straight after the leader's best customers. The leader is strongest exactly there, and it will fight hard to keep them."),
     ("Rule 2", "Make it simpler and cheaper, and good enough for the job",
      "Do not try to be better than the leader at everything. Be good enough at the main job, and much easier and cheaper.",
-     "A $5, 15-minute call answers one homework question. Students do not need a 2-hour class for that.",
-     "Adding expert teachers, long classes, and a high price to look like the leader. Then the product is neither cheap nor better."),
+     "A $5 slice with a candle, ready now, is enough for a birthday with two friends. They do not need a 10-person cake.",
+     "Adding a famous chef, fancy decorations, and a high price to look like the leader. Then the product is neither cheap nor better."),
     ("Rule 3", "Choose a model the leader does not want to copy",
      "If copying you would earn the leader much less profit than its own product, the leader will ignore you, often until it is too late.",
-     "Apex earns $60 a month from each student. Copying TutorBite would earn it about $2 a session, so Apex protects its $160 classes.",
-     "Choosing a model the leader can copy easily and profitably, such as the same classes at a slightly lower price. The leader cuts its price and wins."),
+     "Royal earns $15 on each cake. Copying Sweet Slice would earn it about $2 a slice, so Royal protects its $40 cakes.",
+     "Choosing a model the leader can copy easily and profitably, such as the same cakes at a slightly lower price. The leader cuts its price and wins."),
     ("Rule 4", "Improve step by step, then move up to better customers",
      "Use what you learn from your first customers to improve. When you are good enough for the leader's customers, they come to you at a lower price.",
-     "After one year, TutorBite adds $40-a-month exam-prep plans with its best senior tutors. Some of Apex's students start to switch.",
+     "After a year of slices, Sweet Slice adds $12 mini cakes, then $25 whole cakes. Some of Royal's customers start to switch.",
      "Spending a lot of money to grow very fast before the product works. A newcomer has little money and cannot survive big mistakes."),
 ]
 for i, (no, title, rule, ex, mistake) in enumerate(rules, 1):
@@ -144,159 +179,269 @@ slide("GOOD AND BAD AT A GLANCE", "Which rule made the difference?",
 slide("BEFORE THE EXERCISES / TOOL 1", "Tool 1: Size of the non-consumer market",
       two(flexcard("Formula", "<p>Non-consumers = people who need the job done - people who buy from the leader</p>",
                    "card", "USED IN EXERCISES 2 AND 3"),
-          flexcard("Example: websites", ul([
-              "5,000 small shops in a city need a website.",
-              "1,000 pay a design agency.",
-              "Non-consumers = 5,000 - 1,000 = 4,000 shops."]), "card good", "WHAT IT LOOKS LIKE")),
+          flexcard("Example: Sweet Slice", ul([
+              "10,000 people a month want a cake for a small celebration.",
+              "2,000 buy a Royal cake.",
+              "Non-consumers = 10,000 - 2,000 = 8,000 people."]), "card good", "WHAT IT LOOKS LIKE")),
       f"SESSION {SESSION} / TOOL 1 OF 4")
+
+slide("TOOL PRACTICE / THE CASE", "Practice case: SnapBox photo booths",
+      two(flexcard("Until now: the photo studio", ul([
+          "Students who want nice photos with friends go to a <b>photo studio</b>.",
+          "A photographer takes photos for <b>one hour</b>; the studio charges <b>$80</b>.",
+          "Most students <b>never go</b>."]), "card", "THE LEADER"),
+          flexcard("SnapBox's idea", ul([
+              "<b>Self-service photo booths</b> on shopping streets.",
+              "Four photos for <b>$6</b>, printed in one minute.",
+              "<b>No photographer.</b>"]), "card", "THE NEWCOMER"))
+      + '<div class="takeaway">Each tool slide uses Sweet Slice as its example. After each tool, you practice the same tool on SnapBox. '
+      "Across the four practices, decide whether SnapBox is a real disruption and how fast it should grow.</div>",
+      f"SESSION {SESSION} / PRACTICE CASE")
+
+practice("Practice Tool 1: Who are SnapBox's first customers?",
+         ["The city has <b>60,000</b> students.",
+          "<b>30%</b> say they want photos with friends at least once a month.",
+          "Photo studios serve <b>3,000</b> of these students a month.",
+          "Of these studio customers, <b>40%</b> only want quick, fun photos, not a photographer."],
+         ["<b>(a)</b> How many students need the job done?",
+          "<b>(b)</b> How many are non-consumers?",
+          "<b>(c)</b> How many studio customers are over-served?",
+          "<b>(d)</b> Which group should SnapBox start with, and which group should it leave alone? Explain with Rule 1."],
+         "TOOL 1")
 
 slide("BEFORE THE EXERCISES / TOOL 2", "Tool 2: The leader's profit test",
       two(flexcard("Will the leader copy you?", "<p>Compare the leader's profit per customer today with the profit it would earn by copying you. "
                    "If copying earns much less, the leader will probably not fight back.</p>", "card", "USED IN EXERCISES 2 AND 3"),
-          flexcard("Example: websites", ul([
-              "A design agency earns $1,500 profit per website.",
-              "A simple website builder earns $10 a month per shop.",
-              "The agency will not want to copy it."]), "card good", "WHAT IT LOOKS LIKE")),
+          flexcard("Example: Sweet Slice", ul([
+              "Royal Cakes earns <b>$15</b> on each cake. Copying Sweet Slice earns <b>$2</b> a slice.",
+              "To earn one cake's profit, Royal must sell $15 / $2 = 7.5 slices: 7 or 8 customers instead of one.",
+              "Royal will not want to copy Sweet Slice."]), "card good", "WHAT IT LOOKS LIKE")),
       f"SESSION {SESSION} / TOOL 2 OF 4")
 
+practice("Practice Tool 2: Will photo studios copy SnapBox?",
+         ["Studio session: the customer pays <b>$80</b>; the studio's cost (photographer, room, printing) is <b>$40</b>.",
+          "SnapBox use: the customer pays <b>$6</b>; SnapBox's cost is <b>$3</b>.",
+          "A photographer can do <b>8</b> sessions a day."],
+         ["<b>(a)</b> Profit per customer for the studio and for SnapBox.",
+          "<b>(b)</b> How many booth uses earn the same profit as one studio session? (Round up.)",
+          "<b>(c)</b> A studio puts one booth in its lobby and gets <b>40</b> uses a day. Compare the booth's daily profit with one photographer's day.",
+          "<b>(d)</b> Will studios copy SnapBox? What are they more likely to do instead?"],
+         "TOOL 2")
+
 slide("BEFORE THE EXERCISES / TOOL 3", "Tool 3: Profit over several periods (from Session 3.1)",
-      two(flexcard("Formula", "<p>Profit = profit per period x number of periods - one-time cost</p>", "card", "USED IN EXERCISE 3"),
-          flexcard("Example: a website builder", ul([
-              "$6,000 on launch ads; $2,000 profit a month.",
-              "After 12 months: 12 x $2,000 - $6,000 = $18,000."]), "card good", "WHAT IT LOOKS LIKE")),
+      two(flexcard("Formula", "<p>Profit = profit per period x number of periods - one-time cost</p>", "card", "USED IN EXERCISES 2 AND 3"),
+          flexcard("Example: Sweet Slice", ul([
+              "Lily spends $3,000 on a second display fridge and earns $1,000 more profit a month.",
+              "After 12 months: 12 x $1,000 - $3,000 = $9,000."]), "card good", "WHAT IT LOOKS LIKE")),
       f"SESSION {SESSION} / TOOL 3 OF 4")
 
+practice("Practice Tool 3: When does one booth pay off?",
+         ["One booth costs <b>$4,000</b> to buy and set up.",
+          "Rent for its space: <b>$700</b> a month.",
+          "Each use brings <b>$3</b> profit before rent.",
+          "Use <b>30</b> days a month."],
+         ["<b>(a)</b> At <b>30</b> uses a day: profit a month after rent, and profit over 12 months.",
+          "<b>(b)</b> How many months to earn back the $4,000?",
+          "<b>(c)</b> At only <b>15</b> uses a day: profit over 12 months.",
+          "<b>(d)</b> The smallest number of uses a day that gives a profit of $0 or more over 12 months. (Round up.)"],
+         "TOOL 3")
+
 slide("BEFORE THE EXERCISES / TOOL 4", "Tool 4: Trade-off and decision rule (from Session 2.1)",
-      two(flexcard("Trade-off", "<p>What you give up to get something you value more.</p>", "card", "MEMO BULLET 2"),
+      two(flexcard("Trade-off", "<p>What you give up to get something you value more.</p>"
+                   "<p><i>Sweet Slice: Lily gives up the higher price of fancy whole cakes to win the 8,000 people nobody serves "
+                   "and to stay out of Royal's way.</i></p>", "card", "MEMO BULLET 2"),
           flexcard("Decision rule", "<p>A promise, written before you start, about which result would make you change your decision.</p>"
-                   '<p><i>Example: "If fewer than 500 students use TutorBite in the first three months, we will change the price."</i></p>',
+                   '<p><i>Sweet Slice: "If we sell fewer than 400 slices a week by the end of month 3, we will change the price or the menu."</i></p>',
                    "card", "MEMO BULLET 3")),
       f"SESSION {SESSION} / TOOL 4 OF 4")
 
-# Exercise 1
-slide("EXERCISE 1 / EASY / 20 MIN", "Disruption or not?",
-      '<p class="statement">Six companies plan a new product:</p><div class="card">' + ul([
-          "(a) A startup sells a $300 basic 3D printer to schools that cannot afford $3,000 printers.",
-          "(b) A car maker builds a faster, more expensive sports car to beat a rival's top model.",
-          "(c) A startup offers a free, simple video-call app for families; companies pay for expensive meeting systems.",
-          "(d) A bank adds a metal credit card with airport lounge access for its richest customers.",
-          "(e) A website offers $10 online courses in skills that colleges teach for $3,000.",
-          "(f) A phone maker adds a fourth camera to its most expensive phone."]) + "</div>",
-      "EXERCISE 1 / SCENARIO")
+practice("Practice Tool 4: Five booths now, or one booth first?",
+         ["<b>Plan 1:</b> open <b>5</b> booths at once (5 x $4,000 = $20,000).",
+          "<b>Plan 2:</b> open <b>1</b> booth first and add more later.",
+          "Nobody knows yet how many uses a day a booth will get.",
+          "Use your Tool 3 numbers."],
+         ["<b>(a)</b> With 5 booths: 12-month profit if each booth gets <b>30</b>, <b>15</b>, or <b>8</b> uses a day.",
+          "<b>(b)</b> Trade-off: what does SnapBox give up by opening only 1 booth first, and what does it protect?",
+          "<b>(c)</b> Which rule supports starting with one booth?",
+          "<b>(d)</b> Write a decision rule with a number, a time, and an action. (Hint: Tool 3 (d).)"],
+         "TOOL 4")
 
-slide("EXERCISE 1 / EASY / 20 MIN", "Use the template",
-      two(tbox("TEMPLATE",
-               "Product [letter]: [disruption / not disruption], because\n"
-               "its first customers are [non-consumers / over-served customers / the leader's best customers],\n"
-               "and it is [simpler and cheaper / better and more expensive] than what the leader sells."),
-          tbox("WORKED EXAMPLE: SCANNERS",
-               "Product: a $2 app that turns a phone into a simple scanner.\n"
-               "Disruption, because its first customers are non-consumers who never bought a scanner, "
-               "and it is simpler and cheaper than a $200 office scanner.\n"
-               "Product: faster scanning on a $900 office model.\n"
-               "Not disruption, because it serves the leader's best customers and is better and more expensive (sustaining).")),
-      "EXERCISE 1 / TEMPLATE AND WORKED EXAMPLE")
+slide("TOOL PRACTICE / CHECK YOUR ANSWERS", "SnapBox, Tools 1 and 2: a real disruption",
+      '<div class="card good">' + ul([
+          "<b>Tool 1:</b> (a) 60,000 x 30% = <b>18,000</b>. (b) 18,000 - 3,000 = <b>15,000</b> non-consumers. "
+          "(c) 3,000 x 40% = <b>1,200</b> over-served.",
+          "(d) Start with the 15,000 (and the 1,200). Leave alone the other 1,800 studio customers who want a photographer: "
+          "they are the studio's best customers, and it will fight for them (Rule 1).",
+          "<b>Tool 2:</b> (a) studio <b>$40</b>; SnapBox <b>$3</b>. (b) $40 / $3 = 13.3, so <b>14</b> uses. "
+          "(c) booth 40 x $3 = <b>$120</b> a day; photographer 8 x $40 = <b>$320</b> a day.",
+          "(d) Probably not. Studios will more likely improve sessions for their best customers, such as a $120 premium session "
+          "(sustaining innovation, Rule 3)."]) + "</div>",
+      "TOOL PRACTICE / ANSWER KEY 1 OF 2")
+
+slide("TOOL PRACTICE / CHECK YOUR ANSWERS", "SnapBox, Tools 3 and 4: test one booth before five",
+      '<div class="card good">' + ul([
+          "<b>Tool 3:</b> (a) 900 uses x $3 = $2,700 - $700 = <b>$2,000</b> a month; 12 x $2,000 - $4,000 = <b>$20,000</b>. "
+          "(b) <b>2 months</b>. (c) 450 x $3 - $700 = $650; 12 x $650 - $4,000 = <b>$3,800</b>.",
+          "(d) $4,000 / 12 = $333 after rent = $1,033 before rent; $1,033 / $3 = 344 uses a month; 344 / 30 = 11.5, so <b>12 a day</b>.",
+          "<b>Tool 4:</b> (a) <b>$100,000</b> / <b>$19,000</b> / <b>-$18,800</b> (at 8 uses, each booth earns $20 a month: 12 x $20 - $4,000 = -$3,760).",
+          "(b) It gives up up to $80,000 of extra profit in the best case to avoid an $18,800 loss. (c) <b>Rule 4</b> (remember Webvan).",
+          '(d) Example: "If the first booth averages at least 12 uses a day for two months, we will open four more; if not, we will move it."']) + "</div>",
+      "TOOL PRACTICE / ANSWER KEY 2 OF 2")
+
+# Exercise 1
+E1_TD = 'style="font-size:24px;padding:.06in .09in;"'
+E1_ROWS = [
+    ("<i>Example: a $2 phone app that works as a scanner; office scanners cost $200</i>", "<i>Non-consumers</i>",
+     "<i>Simpler, cheaper</i>", "<i>Disruption</i>", "<i>Rules 1, 2</i>"),
+    ("(a) A $3 rice-box stand for students who skip lunch because restaurants charge $12", "", "", "", ""),
+    ("(b) A famous steak house adds a $120 dinner for its best customers", "", "", "", ""),
+    ("(c) A free app that fixes the light in photos; studios charge $50 to edit", "", "", "", ""),
+    ("(d) A coffee chain adds a gold card with free drinks for its biggest spenders", "", "", "", ""),
+    ("(e) $10 online cooking videos; cooking schools charge $500 a course", "", "", "", ""),
+    ("(f) A phone maker adds a fourth camera to its most expensive phone", "", "", "", ""),
+]
+slide("EXERCISE 1 / EASY / 20 MIN", "Disruption or not? Fill in the table",
+      task("For each new product, ask: <b>Who are the first customers?</b> Is it <b>simpler and cheaper</b> than the leader's, "
+           "or <b>better and more expensive</b>? Non-consumers or over-served + simpler and cheaper = disruption.")
+      + '<table style="table-layout:fixed;"><colgroup><col style="width:40%"><col style="width:17%"><col style="width:15%">'
+      '<col style="width:14%"><col style="width:14%"></colgroup>'
+      "<tr><th>NEW PRODUCT</th><th>FIRST CUSTOMERS</th><th>SIMPLER OR BETTER?</th><th>ANSWER</th><th>WHY (RULE)</th></tr>"
+      + "".join("<tr>" + "".join(f"<td {E1_TD}>{c}</td>" for c in r) + "</tr>" for r in E1_ROWS) + "</table>",
+      "EXERCISE 1 / WORKSHEET")
 
 slide("EXERCISE 1 / CHECK YOUR ANSWER", "Who are the first customers, and is it simpler and cheaper?",
-      "<table><tr><th>PRODUCT</th><th>ANSWER</th><th>WHY</th></tr>"
-      "<tr><td>(a) $300 3D printer</td><td>Disruption</td><td>Schools that bought no printer; much cheaper</td></tr>"
-      "<tr><td>(b) Faster sports car</td><td>Not</td><td>Better and pricier for the best customers</td></tr>"
-      "<tr><td>(c) Free family video calls</td><td>Disruption</td><td>Families who would never buy a meeting system</td></tr>"
-      "<tr><td>(d) Metal credit card</td><td>Not</td><td>A better product for the richest customers</td></tr>"
-      "<tr><td>(e) $10 online courses</td><td>Disruption</td><td>People who could not pay for college courses</td></tr>"
-      "<tr><td>(f) Fourth camera</td><td>Not</td><td>More features for top customers</td></tr></table>",
+      '<table style="table-layout:fixed;"><colgroup><col style="width:24%"><col style="width:24%"><col style="width:20%"><col style="width:32%"></colgroup>'
+      "<tr><th>PRODUCT</th><th>FIRST CUSTOMERS</th><th>ANSWER</th><th>WHY (RULE)</th></tr>"
+      "<tr><td>(a) $3 rice box</td><td>Non-consumers</td><td>Disruption</td><td>Simpler, cheaper (Rules 1, 2)</td></tr>"
+      "<tr><td>(b) $120 steak dinner</td><td>Leader's best</td><td>Sustaining</td><td>Leader is strong here (Rule 1)</td></tr>"
+      "<tr><td>(c) Free photo app</td><td>Non-consumers</td><td>Disruption</td><td>Simpler, cheaper (Rules 1, 2)</td></tr>"
+      "<tr><td>(d) Gold card</td><td>Leader's best</td><td>Sustaining</td><td>For top spenders (Rule 1)</td></tr>"
+      "<tr><td>(e) $10 videos</td><td>Non-consumers</td><td>Disruption</td><td>Simpler, cheaper (Rules 1, 2)</td></tr>"
+      "<tr><td>(f) Fourth camera</td><td>Leader's best</td><td>Sustaining</td><td>Better and pricier (Rule 1)</td></tr></table>"
+      "",
       "EXERCISE 1 / ANSWER KEY")
 
 # Exercise 2
 slide("EXERCISE 2 / MEDIUM / 30 MIN", "Check a disruption plan: QuickCut",
-      two(flexcard("Scenario", ul([
-          "QuickCut: <b>$8</b>, 10-minute haircut kiosks in train stations; <b>$3</b> profit per haircut.",
-          "Salons: <b>$40</b> for 45 minutes with washing and styling; <b>$15</b> profit per haircut.",
-          "<b>50,000</b> men need a haircut every month; <b>20,000</b> go to salons; the rest cut their hair at home."])),
-          flexcard("Your steps", ul([
-              "<b>Step 1:</b> Non-consumers = 50,000 - 20,000 = ____. Salon profit = $____; QuickCut profit = $____. "
-              "Copying QuickCut earns a salon ____ times less per haircut.",
-              "<b>Step 2:</b> Check the four rules with the template on the next slide."]))),
+      task("Is QuickCut a real disruption, and should it open? <b>Step 1:</b> fill in the calculation table (next slide). "
+           "<b>Step 2:</b> check the four rules and give a verdict (slide after).")
+      + two(flexcard("QuickCut (the newcomer)", ul([
+          "<b>$8</b>, 10-minute haircut shops in train stations.",
+          "No washing, styling, or booking.",
+          "Cost per haircut: <b>$5</b>.",
+          "Each shop costs <b>$6,000</b> to open; QuickCut plans <b>3</b> shops."]), "card", "SCENARIO"),
+          flexcard("Salons and customers", ul([
+              "Salons: <b>$40</b> for 45 minutes with washing and styling. Cost per haircut: <b>$25</b>.",
+              "<b>50,000</b> men need a haircut every month; <b>20,000</b> go to salons; the rest cut their hair at home.",
+              "QuickCut expects <b>1 in 10</b> men who cut their hair at home to come once a month."]), "card", "THE MARKET")),
       "EXERCISE 2 / SCENARIO")
 
-slide("EXERCISE 2 / MEDIUM / 30 MIN", "Use the template",
-      two(tbox("TEMPLATE",
-               "Rule 1: our first customers are [who], [number] people.\n"
-               "Rule 2: we do [the main job] for $[price] instead of $[leader's price]; we leave out [what we do not offer].\n"
-               "Rule 3: the leader earns $[number] per customer; copying us earns $[number].\n"
-               "Rule 4: first we [first step]; later we [how we move up].\n"
-               "Verdict: [go / do not go], because [one sentence]."),
-          tbox("WORKED EXAMPLE: SITEEASY WEBSITE BUILDER",
-               "Rule 1: our first customers are the 4,000 small shops with no website.\n"
-               "Rule 2: a simple one-page shop website for $10 a month instead of $2,000; we leave out custom design and meetings.\n"
-               "Rule 3: the agency earns $1,500 per website; copying us earns $10 a month.\n"
-               "Rule 4: first one-page sites; later online ordering for bigger shops.\n"
-               "Verdict: go, because 4,000 shops are not served and agencies will not fight for them.")),
+slide("EXERCISE 2 / STEP 1", "Fill in the table: one row at a time",
+      task("Calculate each row and write the result in the last column. Later rows use earlier rows.")
+      + worksheet([
+          ("Non-consumers (Tool 1)", "50,000 - 20,000"),
+          ("Salon profit per haircut", "$40 - $25"),
+          ("QuickCut profit per haircut", "$8 - $5"),
+          ("How many times more a salon earns (Tool 2)", "row 2 / row 3"),
+          ("QuickCut haircuts a month", "row 1 x 10%"),
+          ("QuickCut profit a month", "row 5 x row 3"),
+          ("Profit over 12 months (Tool 3)", "12 x row 6 - 3 x $6,000"),
+      ]),
+      "EXERCISE 2 / CALCULATION TABLE")
+
+slide("EXERCISE 2 / STEP 2", "Check the four rules and give a verdict",
+      task("Copy the template. Replace every [bracket] with your numbers from Step 1 and your own words. The example shows a finished answer.")
+      + two(tbox("TEMPLATE",
+                 "Rule 1: our first customers are [who], [number] people.\n"
+                 "Rule 2: we do [the main job] for $[price] instead of $[leader's price]; we leave out [what we do not offer].\n"
+                 "Rule 3: the leader earns $[number] per customer; copying us earns $[number].\n"
+                 "Rule 4: first we [first step]; later we [how we move up].\n"
+                 "Verdict: [go / do not go], because [one sentence]."),
+            tbox("WORKED EXAMPLE: WASHGO ($3 DORM WASHING MACHINES; LAUNDRY SHOPS CHARGE $15 A BAG)",
+                 "Rule 1: our first customers are the 6,000 dorm students who wash clothes by hand.\n"
+                 "Rule 2: one load of clothes for $3 instead of $15; we leave out ironing and folding.\n"
+                 "Rule 3: the laundry shop earns $7 a bag; copying us earns $1 a load.\n"
+                 "Rule 4: first machines in two dorms; later dryers and an app that shows free machines.\n"
+                 "Verdict: go, because 6,000 students are not served and laundry shops will not fight for them.")),
       "EXERCISE 2 / TEMPLATE AND WORKED EXAMPLE")
 
 slide("EXERCISE 2 / CHECK YOUR ANSWER", "30,000 non-consumers; salons earn 5 times more per haircut",
       '<div class="card good">' + ul([
-          "Non-consumers = <b>30,000</b> men who cut their hair at home. Salon profit <b>$15</b>; QuickCut <b>$3</b>: copying earns <b>5 times</b> less.",
-          "<b>Rule 1:</b> the 30,000 men at home, plus salon customers who only want a quick cut.",
-          "<b>Rule 2:</b> a clean haircut for $8, leaving out washing, styling, and booking.",
-          "<b>Rule 3:</b> salons will not copy a $3-profit model.",
-          "<b>Rule 4:</b> start in a few stations, then add more stations or simple extras such as beard trims.",
+          "<b>Row 1:</b> <b>30,000</b>. <b>Row 2:</b> <b>$15</b>. <b>Row 3:</b> <b>$3</b>. <b>Row 4:</b> <b>5 times</b>.",
+          "<b>Row 5:</b> <b>3,000</b> haircuts. <b>Row 6:</b> <b>$9,000</b>. <b>Row 7:</b> $108,000 - $18,000 = <b>$90,000</b>.",
+          "<b>Rule 1:</b> the 30,000 men at home, plus salon customers who only want a quick cut. "
+          "<b>Rule 2:</b> a clean haircut for $8, without washing, styling, or booking.",
+          "<b>Rule 3:</b> salons earn 5 times more per haircut and will not copy a $3-profit model. "
+          "<b>Rule 4:</b> start with one shop, then add stations or simple extras such as beard trims.",
           "<b>Verdict:</b> go."]) + "</div>",
       "EXERCISE 2 / ANSWER KEY")
 
 # Exercise 3
-slide("EXERCISE 3 / HARD / 50 MIN", "Head-on or disruption? TutorBite's next 12 months",
-      two(flexcard("Option A: Go after Apex's students", "<p>Expert teachers, weekly classes for <b>$120</b> a month, <b>$20</b> profit per student a month. "
-                   "Marketing and hiring <b>$20,000</b> once.</p><p>Expect <b>300</b> of Apex's 2,000 students; only <b>100</b> if Apex cuts its price.</p>",
-                   "card", "HEAD-ON"),
-          flexcard("Option B: Serve non-consumers first", "<p>Keep <b>$5</b> sessions, <b>$2</b> profit each. Marketing <b>$5,000</b> once.</p>"
-                   "<p>Expect <b>10%</b> of the 8,000 non-consumers to join, each using <b>3</b> sessions a month.</p>", "card", "DISRUPTION")),
-      "EXERCISE 3 / SCENARIO")
+slide("EXERCISE 3 / HARD / 50 MIN", "Should Sweet Slice fight Royal Cakes head-on?",
+      task("Help Lily choose A or B for the next 12 months. <b>Step 1:</b> calculate (next slide). <b>Step 2:</b> write a memo to the investor. "
+           "<b>Step 3:</b> present it in 2 minutes.")
+      + two(flexcard("Option A: Go after Royal's customers", "<p>Hire a top pastry chef; decorated whole cakes for <b>$30</b>, "
+                     "<b>$10</b> profit each. Chef and ads: <b>$20,000</b> once.</p>"
+                     "<p>Expect <b>600</b> of Royal's 2,000 cakes a month; only <b>200</b> if Royal cuts its price.</p>",
+                     "card", "HEAD-ON"),
+            flexcard("Option B: Serve non-consumers first", "<p>Keep <b>$5</b> slices, <b>$2</b> profit each. Ads on campus: <b>$5,000</b> once.</p>"
+                     "<p>Expect <b>10%</b> of the 8,000 non-consumers to become regular customers, each buying <b>3</b> slices a month.</p>",
+                     "card", "DISRUPTION")),
+      "EXERCISE 3 / SCENARIO: 12 MONTHS")
 
-slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 1 to 3)",
-      '<div class="card">' + ul([
-          "Option A, 300 students: per month = 300 x $20 = $______; over 12 months = 12 x monthly - $20,000 = $______",
-          "Option A if Apex cuts its price (100 students): per month = $______; over 12 months = $______",
-          "Option B: students = 8,000 x 10% = ____; sessions = students x 3 = ____; per month = sessions x $2 = $______; "
-          "over 12 months = 12 x monthly - $5,000 = $______",
-          "Leader's profit test: Apex earns $60 a month per student. Would copying Option B earn more or less? ____ Option A? ____"]) + "</div>",
-      "EXERCISE 3 / CALCULATIONS")
+slide("EXERCISE 3 / STEP 1", "Fill in the table before you decide (Tools 1 to 3)",
+      task("Calculate each row and write the result in the last column. Later rows use earlier rows.")
+      + worksheet([
+          ("A: profit a month (600 cakes)", "600 x $10"),
+          ("A: profit over 12 months", "12 x row 1 - $20,000"),
+          ("A: profit a month if Royal cuts its price", "200 x $10"),
+          ("A: 12 months if Royal cuts its price", "12 x row 3 - $20,000"),
+          ("B: regular customers", "8,000 x 10%"),
+          ("B: slices a month", "row 5 x 3"),
+          ("B: profit a month", "row 6 x $2"),
+          ("B: profit over 12 months", "12 x row 7 - $5,000"),
+          ("Royal earns $15 a cake. Would copying B earn it more or less? Copying A? (Tool 2)", "compare"),
+      ], td='style="font-size:25px;padding:.05in .1in;"'),
+      "EXERCISE 3 / CALCULATION TABLE")
 
 slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the investor (Tool 4)",
-      '<div class="small-label">TEMPLATE</div>' + tmpl(
+      task("Copy the template. Replace every [bracket] with your choice, your numbers from Step 1, and your own words. "
+           "The next slide shows a finished memo for QuickCut.")
+      + '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [name], [role]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
           "2. Biggest risk and trade-off: The weakest point is [risk]. We give up [what we lose] to gain [what we protect or win].\n"
           "3. Next step and decision rule: In the next three months we will [one action] and measure [one number]. "
           "We will change this decision if [result].")
-      + '<div class="takeaway">Then give a 2-minute presentation using your three bullets.</div>',
+      + '<div class="takeaway"><b>Step 3:</b> give a 2-minute presentation using your three bullets.</div>',
       "EXERCISE 3 / MEMO TEMPLATE")
 
-slide("EXERCISE 3 / WORKED EXAMPLE", "QuickCut: open kiosks for men who cut their own hair?",
+slide("EXERCISE 3 / WORKED EXAMPLE", "QuickCut: open shops for men who cut their own hair?",
       tmpl("To: Oliver Hayes, investor, QuickCut\n"
-           "1. Decision and evidence: We should open $8 kiosks for the 30,000 men who cut their hair at home (Rule 1), because salons "
+           "1. Decision and evidence: We should open $8 haircut shops for the 30,000 men who cut their hair at home (Rule 1), because salons "
            "earn $15 a haircut and will not copy a $3-profit model (Rule 3).\n"
            "2. Biggest risk and trade-off: The weakest point is that men may keep cutting their hair at home. We give up the higher price "
            "of a salon service to win customers nobody serves.\n"
-           "3. Next step and decision rule: In the next three months we will open two kiosks and count haircuts per day. "
-           "We will change this decision if a kiosk does fewer than 40 haircuts a day."),
+           "3. Next step and decision rule: In the next three months we will open one shop and count haircuts per day. "
+           "We will open the other two shops only if the first shop does at least 30 haircuts a day."),
       "EXERCISE 3 / WORKED EXAMPLE")
 
 slide("EXERCISE 3 / CHECK YOUR ANSWER", "Same profit if all goes well; only one plan depends on the leader",
       '<div class="card">' + ul([
-          "Option A, 300 students: <b>$6,000</b> a month; over 12 months = $72,000 - $20,000 = <b>$52,000</b>.",
-          "Option A if Apex cuts its price: <b>$2,000</b> a month; over 12 months = $24,000 - $20,000 = <b>$4,000</b>.",
-          "Option B: 800 students, 2,400 sessions, <b>$4,800</b> a month; over 12 months = $57,600 - $5,000 = <b>$52,600</b>.",
-          "Leader's profit test: copying B earns Apex far less than $60 a month per student, so Apex will probably ignore it. "
-          "A is the same kind of class as Apex's, so Apex can fight back."]) + "</div>",
+          "<b>Row 1:</b> <b>$6,000</b>. <b>Row 2:</b> $72,000 - $20,000 = <b>$52,000</b>.",
+          "<b>Row 3:</b> <b>$2,000</b>. <b>Row 4:</b> $24,000 - $20,000 = <b>$4,000</b>.",
+          "<b>Row 5:</b> <b>800</b>. <b>Row 6:</b> <b>2,400</b> slices. <b>Row 7:</b> <b>$4,800</b>. <b>Row 8:</b> $57,600 - $5,000 = <b>$52,600</b>.",
+          "<b>Row 9:</b> copying B earns Royal <b>less</b> ($2 a slice against $15 a cake), so Royal will probably ignore it. "
+          "A is the same kind of cake as Royal's, so Royal can easily fight back by cutting its price."]) + "</div>",
       "EXERCISE 3 / ANSWER KEY 1 OF 2")
 
 slide("EXERCISE 3 / CHECK YOUR ANSWER", "What a strong memo looks like",
       '<div class="card good">' + ul([
-          "Usually chooses Option B: it does not depend on Apex staying quiet (Rules 1 and 3).",
-          "Names a real risk: fewer than 10% of non-consumers may join, or students may use fewer than 3 sessions.",
-          "Plans how to move up later, such as exam-prep plans (Rule 4).",
-          'Gives a decision rule: "If fewer than 500 students use TutorBite in the first three months, we will change the price or the offer."']) + "</div>",
+          "Both options earn about $52,000 if all goes well, but A falls to $4,000 if Royal fights back. B does not depend on Royal.",
+          "Usually chooses Option B (Rules 1 and 3).",
+          "Names a real risk: fewer than 10% of non-consumers may come, or each may buy fewer than 3 slices a month.",
+          "Plans how to move up later: mini cakes, then whole cakes (Rule 4).",
+          'Gives a decision rule: "If we sell fewer than 450 slices a week by the end of month 3, we will change the price or the menu."']) + "</div>",
       "EXERCISE 3 / ANSWER KEY 2 OF 2")
 
 # Success check and references
@@ -313,6 +458,15 @@ slide("SUCCESS CHECK", "Can you do these three things?",
       '<p class="ref">TidBITS (2001, July 16). Where Webvan went wrong.</p></div>',
       f"SESSION {SESSION} / WRAP-UP")
 
+
+# Answer keys go to the end of the deck, so students cannot copy them during the exercises
+answer_keys = [sl for sl in slides if "CHECK YOUR ANSWER" in sl[0]]
+slides = [sl for sl in slides if "CHECK YOUR ANSWER" not in sl[0]]
+slide("ANSWER KEY", "Answers to the practice and exercises",
+      '<p class="statement" style="font-weight:400;">Open these slides only after you finish. '
+      "Compare your numbers and reasons with the answers, and ask about any difference.</p>",
+      f"SESSION {SESSION} / ANSWER KEY")
+slides += answer_keys
 
 if __name__ == "__main__":
     build(slides, SESSION, TITLE)
