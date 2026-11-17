@@ -103,13 +103,13 @@ Present **at least 3** of the following indicators, reported **by year**:
 
 When you submit Chapter 1, include **links to at least 3 performance indicators** (or one recent financial statement). A company will not be approved without these links. This check protects you from discovering late in the project that the evidence does not exist.
 
-### Evidence Table (Required Appendix)
+### Evidence Table (Required Appendix A)
 
 Attach an **evidence table** to your report. Every factual claim needs one row:
 
 | Claim | Evidence (number or fact) | Source (link) | Year |
 |-------|---------------------------|---------------|------|
-| *Example: The company raised commissions for sellers* | *Commission rose from 8% to 11%* | *Company press release* | *2023* |
+| *Example: The company raised commissions for sellers* | *Commission rose from 8% to 11%* | *Company press release (link)* | *2023* |
 
 ---
 
@@ -142,7 +142,7 @@ Choose **2 or 3 strategies** from the menu below that the company actually used 
 | **Platform Envelopment** (3.1) | 1. Enter a market where your users already are<br>2. Use your shared parts again<br>3. Make the new product good enough and easier to use<br>4. Let users choose, and play fair |
 | **Cannibalization** (3.2) | 1. Compare with the future, not with today<br>2. Count the net gain, not only the new sales<br>3. Give the new product its own team and its own goals<br>4. Move customers step by step, and keep their trust |
 | **Disruption** (3.3) | 1. Start where the leader is not looking<br>2. Make it simpler and cheaper, and good enough for the job<br>3. Choose a model the leader does not want to copy<br>4. Improve step by step, then move up to better customers |
-| **Open Innovation** (3.4) | Use the questions from Session 3.4: Does the company open its platform to outside developers or partners (for example, through APIs)? What do partners gain? How does the company keep quality and control? |
+| **Open Ecosystem** (3.4) | 1. Open the edges, keep the core<br>2. Make it worth it for partners to join<br>3. Set clear rules and check quality<br>4. Do not compete unfairly with your partners |
 
 ### Four Steps for Each Strategy
 
@@ -151,7 +151,7 @@ Analyze every strategy you choose with the same four steps:
 1. **What the company did**: Describe the move with the year and a source.
 2. **Rule check**: For each rule of the strategy, decide whether the company **followed** it, **broke** it, or whether it is **unclear**, and give one piece of evidence. Use a table like this:
 
-   | Rule | Followed / Broke / Unclear | Evidence |
+   | Rule | Followed / Broke / Unclear | Evidence (with source) |
    |------|----------------------------|----------|
    | Rule 1: ... | Followed | ... |
    | Rule 2: ... | Broke | ... |
@@ -181,6 +181,7 @@ Imagine you are the owner of the company. Use the method from Session 2.4:
 ### Format Requirements
 
 - **Template**: Use the [report template (Word, A4)](templates/Final_Project_Report_Template.docx). Keep its headings and format.
+- **Cover page**: the title (*Platform Strategy Analysis of [Company Name]*), the course name, your name, student ID, home country, and the submission date, as in the template.
 - **Length**: **at least 10 pages** for sections 1–4. The cover page, references, and appendices do not count. You may write more.
 - **File Format**: **PDF only**
 
@@ -190,10 +191,10 @@ Imagine you are the owner of the company. Use the method from Session 2.4:
 | Margins | 2.54 cm on all sides |
 | Font | Times New Roman |
 | Body text | 12 pt, line spacing 1.5 |
-| Headings | 14 pt bold (level 1), 12 pt bold (level 2) |
+| Headings | 14 pt bold (level 1), 12 pt bold (levels 2 and 3) |
 | Tables and figure captions | 10 pt; every table and figure has a number and a title (for example, *Table 1. Rule check for Asymmetric Pricing*) |
 | Page numbers | Bottom center, starting after the cover page |
-| Citations | APA 7th edition |
+| Citations | APA 7th edition; references in alphabetical order |
 
 Tables and figures count toward the 10 pages, but **at least 7 pages must be written text**.
 
@@ -204,9 +205,10 @@ Tables and figures count toward the 10 pages, but **at least 7 pages must be wri
 | 1 | **Company Introduction** | What the company does, why you chose it, and the 2–3 strategies you will analyze | 1 |
 | 2 | **Platform Diagnosis** (Part A) | The groups the platform connects, its network effects, how it won its first users, and its market position | 1.5 |
 | 3 | **Strategy Analysis** (Part B) | For each strategy: (1) what the company did, (2) rule-check table, (3) result with numbers, (4) verdict. At least one strategy must have failed or carry a clear risk | 5 |
-| 4 | **Recommendation** (Part C) | "If I ran this company": the problem in one sentence, the chosen strategy, a comparison with one other option, and the next step | 2.5 |
-| 5 | **References** | All sources in APA 7th edition format | not counted |
-| 6 | **Appendix: Evidence Table** | One row per factual claim: claim, evidence, source link, year | not counted |
+| 4 | **Recommendation: If I Ran This Company** (Part C) | "If I ran this company": the problem in one sentence, the chosen strategy, a comparison with one other option, and the next step | 2.5 |
+| 5 | **References** | All sources in APA 7th edition format, in alphabetical order | not counted |
+| 6 | **Appendix A: Evidence Table** | One row per factual claim: claim, evidence, source link, year | not counted |
+| 7 | **Appendix B: AI Use Disclosure** | Each AI tool you used and what you used it for, or "None" | not counted |
 
 ### What to Write in Each Section
 
@@ -218,38 +220,44 @@ Tables and figures count toward the 10 pages, but **at least 7 pages must be wri
 
 **2. Platform Diagnosis** (1.5 pages)
 
-- **Sides**: Which groups does the platform connect? What does each group want from the other?
-- **Network effects**: Does the platform become more useful as more users join? Direct or indirect?
-- **First users**: How did the company solve the penguin effect (nobody wants to join first)?
-- **Market position**: Is the company the leader? Do users also use rival platforms?
+Write four sub-sections, as in the template:
+
+- **2.1 Sides of the Platform**: Which groups does the platform connect? What does each group want from the other?
+- **2.2 Network Effects**: Does the platform become more useful as more users join? Direct or indirect?
+- **2.3 First Users (Penguin Effect)**: How did the company solve the penguin effect (nobody wants to join first)?
+- **2.4 Market Position**: Is the company the leader? Is the market moving toward one winner? Do users also use rival platforms (multihoming)?
 
 **3. Strategy Analysis** (5 pages, about 2 pages per strategy)
 
-Write one sub-section for each strategy, with the same four parts:
+Write one sub-section for each strategy (3.1, 3.2, and the optional 3.3), with the same four parts:
 
-1. **What the company did**: one paragraph describing the move, with the year and a source.
-2. **Rule check**: a table with the four rules of the strategy. For each rule, write *Followed*, *Broke*, or *Unclear*, plus one piece of evidence.
+1. **What the company did**: one paragraph describing what the company did, when (year), and why, with a source.
+2. **Rule check**: a table with the four rules of the strategy. For each rule, write *Followed*, *Broke*, or *Unclear*, plus one piece of evidence with its source. Number each table (*Table 1. Rule check for [Strategy Name]*).
 3. **Result**: numbers before and after the move (for example, users in 2021 and 2024). A simple chart is welcome.
 4. **Verdict**: did it work, fail, or is it too early to tell? Explain which rules caused this result.
 
 Remember: at least one strategy must have failed or carry a clear risk.
 
-**4. Recommendation** (2.5 pages)
+**4. Recommendation: If I Ran This Company** (2.5 pages)
 
 Write as if you are the owner of the company:
 
 1. **Problem**: the biggest problem the company faces today, in one sentence. Do not include the solution.
 2. **Strategy**: the strategy you choose to solve it, and why its rules can be followed (with evidence).
-3. **Comparison**: one other option, compared with the same numbers (expected result, time to result, main risk).
+3. **Comparison**: one other option, compared with the same numbers in a table (*Table 4. Comparison of options*: expected result, time to result, main risk).
 4. **Next step**: which strategy should come after this one, and why.
 
 **5. References**
 
-- Every source in your report, in APA 7th edition format.
+- Every source in your report, in APA 7th edition format, in alphabetical order.
 
-**6. Appendix: Evidence Table**
+**6. Appendix A: Evidence Table**
 
 - One row for every factual claim in the report: *claim*, *evidence (number or fact)*, *source link*, *year*.
+
+**7. Appendix B: AI Use Disclosure**
+
+- Each AI tool you used and what you used it for (for example, grammar checking). Write "None" if you did not use AI tools.
 
 ## Presentation Slides (at least 10 slides)
 
@@ -437,4 +445,4 @@ You may NOT use AI tools for:
 - Conducting the analysis
 - Creating your strategic recommendations
 
-All AI use must be disclosed in an appendix.
+All AI use must be disclosed in Appendix B of the report (AI Use Disclosure). If you used AI to make the slides, also show it on the title slide.
