@@ -41,11 +41,10 @@ By completing this project, you will:
 | When | What to submit or do | How to submit |
 |------|----------------------|---------------|
 | **Week 10** | **Chapter 1** (Company Introduction), with links to at least 3 performance indicators for company approval | PDF on iLearn: `StudentID_Name_Ch1.pdf` |
-| **Week 13** | **Chapters 1–3** (Company Introduction, Platform Diagnosis, Strategy Analysis) | PDF on iLearn: `StudentID_Name_Ch1-3.pdf` |
 | **Week 14 (Friday, 5 pm)** | **Final report** (all chapters, references, and appendices), **slides**, and **5-minute presentation video** | PDFs on iLearn: `StudentID_Name_Report.pdf`, `StudentID_Name_Slides.pdf`; video on Google Drive, submit **only the link** on iLearn |
 | **Weeks 15–16** | **Final presentations** in class (5 minutes + 1 minute Q&A), using **only the slides you submitted in Week 14** | Attend in person |
 
-Write your report in the [report template](templates/Final_Project_Report_Template.docx) from Week 10, and keep adding to the same file. You will receive feedback on Chapter 1 (Week 10) and Chapters 1–3 (Week 13).
+Write your report in the [report template](templates/Final_Project_Report_Template.docx) from Week 10, and keep adding to the same file. You will receive feedback on Chapter 1 after Week 10.
 
 ### Weekly Activities (Recommended)
 
@@ -54,8 +53,8 @@ Write your report in the [report template](templates/Final_Project_Report_Templa
 | **Week 10** | • Choose a platform company from your home country<br>• Find links to at least 3 performance indicators<br>• Write Chapter 1 in the template | **Chapter 1** |
 | **Week 11** | • Read the Week 10 feedback and fix Chapter 1<br>• Collect 5 years (2021–2025) of performance evidence<br>• Start the evidence table<br>• Write Chapter 2 (Platform Diagnosis) | – |
 | **Week 12** | • Choose 2–3 strategies, including one that failed or carries a risk<br>• Fill in the rule-check tables<br>• Make charts of the results | – |
-| **Week 13** | • Write Chapter 3 (Strategy Analysis): what the company did, rule check, result, verdict | **Chapters 1–3** |
-| **Week 14** | • Read the Week 13 feedback<br>• Write Chapter 4 (Recommendation)<br>• Finish the references and appendices<br>• Make at least 10 slides<br>• Practice and record the 5-minute video<br>• Check the format and convert to PDF | **Final report + slides + video link (Friday, 5 pm)** |
+| **Week 13** | • Write Chapter 3 (Strategy Analysis): what the company did, rule check, result, verdict | – |
+| **Week 14** | • Write Chapter 4 (Recommendation)<br>• Finish the references and appendices<br>• Make at least 10 slides<br>• Practice and record the 5-minute video<br>• Check the format and convert to PDF | **Final report + slides + video link (Friday, 5 pm)** |
 | **Weeks 15–16** | • Give your live presentation with the slides you submitted in Week 14 (no changes allowed)<br>• Answer questions and listen to your classmates | **Presentation** |
 
 ## Company Selection
@@ -102,7 +101,7 @@ Present **at least 3** of the following indicators, reported **by year**:
 
 ### Company Approval (Week 10)
 
-When you submit Chapter 1, include **links to at least 3 performance indicators** (or one recent financial statement). A company will not be approved without these links. This check protects you from discovering in Week 13 that the evidence does not exist.
+When you submit Chapter 1, include **links to at least 3 performance indicators** (or one recent financial statement). A company will not be approved without these links. This check protects you from discovering late in the project that the evidence does not exist.
 
 ### Evidence Table (Required Appendix)
 
@@ -177,7 +176,7 @@ Imagine you are the owner of the company. Use the method from Session 2.4:
 
 # Deliverables
 
-## Written Report (at least 10 pages) — Main Deliverable
+## Written Report (at least 10 pages)
 
 ### Format Requirements
 
@@ -263,19 +262,28 @@ Write as if you are the owner of the company:
 
 | Minimum slides | Content |
 |--------|---------|
-| 1 | Title (company name, your name) |
+| 1 | Title: your title, your name, and student ID (and, if you used AI for the slides, the AI tool's name and your prompts) |
 | 2 | Company introduction and platform diagnosis (Part A) |
 | 4–5 | Strategy analysis (Part B): about 2 slides per strategy (rule-check table, result) |
 | 2 | Recommendation: "If I ran this company" (Part C) |
 | 1 | Summary |
 
-## Presentation Video (5 minutes) — Used for Grading
+If you used an AI tool to make the slides, show the **AI tool's name and your prompts on the title slide**, as in @fig-title-slide.
 
-Your presentation score is based on this video (due **Week 14, Friday, 5 pm**). The live presentations in Weeks 15–16 are for sharing and Q&A.
+![Example title slide: title, author, and AI use (fictional student and company; the prompt is only an example)](assets/project_title_slide_example.png){#fig-title-slide width=100%}
 
-- Record a 5-minute video of your presentation, showing your slides and your voice (your face is optional)
-- Upload the video to your Google Drive and set sharing to **"Anyone with the link can view"**
-- Submit the URL of the video to iLearn
+## Presentation Video (5 minutes)
+
+- Record your 5-minute presentation in English.
+- **Only you need to be in the video:** your face must be visible throughout. Slides are not needed in the video.
+- **Sample video:** [A Plan Is Not a Strategy](https://youtu.be/iuYlGRnC7J8) (Harvard Business Review; @fig-sample-video). Watch it for the format:
+  - One speaker, framed from the waist up, in the middle of the screen.
+  - A plain, quiet background with nothing distracting behind the speaker.
+  - The speaker looks at the camera and talks to the viewer, using natural hand gestures, without reading from a script.
+  - Only a short caption with the speaker's name appears on screen. No slides.
+- Upload the video to Google Drive. Set sharing to **"Anyone with the link"** with the role **Viewer**, and submit the link in iLearn by the Week 14 deadline.
+
+![A frame from the sample video: one speaker, waist up, plain background, no slides. Source: Harvard Business Review, "A Plan Is Not a Strategy" (YouTube).](assets/project_sample_video_screenshot.png){#fig-sample-video width=80%}
 
 ## Deadline
 
@@ -323,7 +331,6 @@ Be prepared to answer questions about:
 | Deadline | Submission |
 |----------|------------|
 | Week 10 | Chapter 1 (PDF) |
-| Week 13 | Chapters 1–3 (PDF) |
 | Week 14 (Friday, 5 pm) | Final report (PDF), slides (PDF), and link to the presentation video (Google Drive) |
 
 ## Submission Process
@@ -346,8 +353,8 @@ Be prepared to answer questions about:
 
 | Item | Points |
 |------|--------|
-| Written Report | 70 |
-| Presentation (graded from the video: slides and delivery) | 30 |
+| Written Report | 30 |
+| In-class Presentation (Weeks 15–16) | 70 |
 | **Total** | **100** |
 
 # Resources and Support
