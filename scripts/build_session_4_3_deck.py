@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 4 / REAL-WORLD CASE STUDIES &amp; STRATEGIC SYNTHESIS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_4_3_campusgo_superapp_hanji.png" '
-      'alt="Ama, founder of CampusGo, asks whether to add every service at once or one at a time.">',
+      'alt="Ava, founder of CampusGo, asks whether to add every service at once or one at a time.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "CampusGo: an app students open almost every day",
-      '<p class="statement" style="font-weight:400;">CampusGo is Ama\'s app for booking seats on campus shuttles. She wants it to become '
+      '<p class="statement" style="font-weight:400;">CampusGo is Ava\'s app for booking seats on campus shuttles. She wants it to become '
       'the one app for daily campus life. An investor says: "Launch food, laundry, printing, tickets, and a wallet at once, with big discounts."</p>'
       "<table><tr><th>CAMPUSGO (ONE MONTH)</th><th style=\"text-align:right\">VALUE</th></tr>"
       '<tr><td>Students who use the app</td><td class="num">12,000</td></tr>'
@@ -258,7 +258,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 2 and 3)",
           "Option A if only 15% use the new services: result = $______"]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Ama (Tool 4)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Ava (Tool 4)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
@@ -269,7 +269,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Ama (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "CityDay: fix food delivery",
-      tmpl("To: Victor Lam, CEO, CityDay\n"
+      tmpl("To: Victor Lambert, CEO, CityDay\n"
            "1. Decision and evidence: We should cut the food subsidy from $15,000 to $5,000 a month over three months, because food "
            "earns $10,000 before subsidies and should pay for itself (Rule 4).\n"
            "2. Biggest risk and trade-off: The weakest point is that some users may order less food. We give up some food orders to stop "

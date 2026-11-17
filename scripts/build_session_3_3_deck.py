@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_3_3_tutorbite_disruption_hanji.png" '
-      'alt="Linh, founder of TutorBite, asks whether to chase Apex Academy\'s best students or serve the students nobody serves.">',
+      'alt="Lily, founder of TutorBite, asks whether to chase Apex Academy\'s best students or serve the students nobody serves.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "TutorBite: a small app next to a strong leader",
-      '<p class="statement" style="font-weight:400;">TutorBite is Linh\'s tutoring app: 15-minute video calls with senior students '
+      '<p class="statement" style="font-weight:400;">TutorBite is Lily\'s tutoring app: 15-minute video calls with senior students '
       "who explain one homework problem. The campus leader is Apex Academy.</p>"
       "<table><tr><th></th><th>APEX ACADEMY (LEADER)</th><th>TUTORBITE</th></tr>"
       "<tr><td>What it offers</td><td>Weekly 2-hour classes, expert teachers</td><td>15-minute video help from senior students</td></tr>"
@@ -273,7 +273,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the investor (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "QuickCut: open kiosks for men who cut their own hair?",
-      tmpl("To: Omar Haddad, investor, QuickCut\n"
+      tmpl("To: Oliver Hayes, investor, QuickCut\n"
            "1. Decision and evidence: We should open $8 kiosks for the 30,000 men who cut their hair at home (Rule 1), because salons "
            "earn $15 a haircut and will not copy a $3-profit model (Rule 3).\n"
            "2. Biggest risk and trade-off: The weakest point is that men may keep cutting their hair at home. We give up the higher price "

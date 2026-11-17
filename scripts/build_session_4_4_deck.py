@@ -28,11 +28,11 @@ def strategy_table(rows):
 # Cover and situation
 slide("MODULE 4 / REAL-WORLD CASE STUDIES &amp; STRATEGIC SYNTHESIS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_4_4_studyspace_review_hanji.png" '
-      'alt="Riya, founder of StudySpace, asks which strategy to use first before UniLife arrives.">',
+      'alt="Rachel, founder of StudySpace, asks which strategy to use first before UniLife arrives.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "StudySpace: a small loss, and a big rival on the way",
-      '<p class="statement" style="font-weight:400;">StudySpace is Riya\'s app for booking study rooms in libraries and cafes. '
+      '<p class="statement" style="font-weight:400;">StudySpace is Rachel\'s app for booking study rooms in libraries and cafes. '
       "UniLife, a campus super-app that 15,000 students open every day, will add room booking within six months (envelopment, Session 3.1).</p>"
       "<table><tr><th>STUDYSPACE (ONE MONTH)</th><th style=\"text-align:right\">VALUE</th></tr>"
       '<tr><td>Students who use the app</td><td class="num">6,000</td></tr>'
@@ -108,7 +108,7 @@ rules = [
      "Choosing a strategy because a famous company used it. Copying Apple's lock-in without products that are truly better together fails."),
     ("Rule 3", "Compare options with the same numbers over the same time",
      "For each option, write the result over the same period, the time to result, the main risk, and whether it helps against the rival.",
-     "Riya compares all three plans over the same six months, including what each costs at the start.",
+     "Rachel compares all three plans over the same six months, including what each costs at the start.",
      "Comparing one option's best case with another's worst case, or one option's first month with another's sixth month."),
     ("Rule 4", "Choose one strategy now, plan the next, and watch your rivals",
      "Start with the strategy that fixes the most urgent problem. Write which strategy comes next and what rival move would change your plan.",
@@ -284,7 +284,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tool 2)",
           "Comparison table: 6-month result, time to result, main risk, help against UniLife."]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Riya (Tool 3)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Rachel (Tool 3)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should start with [option] because [the rule it follows] and [one number from your calculation]. "
@@ -296,7 +296,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Riya (Tool 3)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "FitHub: defend with lock-in by value",
-      tmpl("To: Lena Wu, CEO, FitHub\n"
+      tmpl("To: Lena Ward, CEO, FitHub\n"
            "1. Decision and evidence: We should start with lock-in by value (4.2), because members already value our reviews and history, "
            "and 300 coaching members show the services fit together. Next, we will push our flywheel by adding gyms (4.1).\n"
            "2. Biggest risk and trade-off: The weakest point is that the super-app's 20% discount may win price-sensitive members. "

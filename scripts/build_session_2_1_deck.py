@@ -85,13 +85,13 @@ def tmpl(text):
 slide("MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION",
       "Session 2.1: The Data Feedback Loop Strategy",
       '<img class="hero" src="../assets/session_2_1_streamwise_signals_hanji.png" '
-      'alt="Jun, founder of StreamWise, looks at a dashboard and asks which signals should change the next decision.">',
+      'alt="Josh, founder of StreamWise, looks at a dashboard and asks which signals should change the next decision.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 # 2. Situation data
-slide("THE SITUATION", "StreamWise: members cancel, and Jun does not know why",
+slide("THE SITUATION", "StreamWise: members cancel, and Josh does not know why",
       '<p class="statement" style="font-weight:400;">StreamWise is a new streaming service for university students. '
-      'Members pay $5.00 a month to watch shows and movies. Jun is its founder.</p>'
+      'Members pay $5.00 a month to watch shows and movies. Josh is its founder.</p>'
       '<div class="wide-left">'
       '<div><table><tr><th>MEASURE (ONE MONTH)</th><th style="text-align:right">VALUE</th></tr>'
       '<tr><td>Members at the start of the month</td><td class="num">12,000</td></tr>'
@@ -100,7 +100,7 @@ slide("THE SITUATION", "StreamWise: members cancel, and Jun does not know why",
       '<tr><td>Titles saved to "My List"</td><td class="num">3,100</td></tr>'
       '<tr><td>Members who cancelled</td><td class="num">420</td></tr>'
       '<tr><td>Monthly price per member</td><td class="num">$5.00</td></tr></table></div>'
-      + card("Jun's three questions", ul([
+      + card("Josh's three questions", ul([
           "Which signals should he use?",
           "What should he change because of them?",
           "Should he sell viewer profiles to an advertiser, or would that hurt students' trust?"]))
@@ -393,7 +393,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the CEO (Tool 3)",
 slide("EXERCISE 3 / WORKED EXAMPLE", "FitTrack: an insurer wants users' location history",
       '<p class="subtitle" style="margin:0 0 .14in;">FitTrack is a running app. An insurance company offers $2.00 per user per month for location history.</p>'
       + tmpl(
-          "To: Mia Park, CEO, FitTrack\n"
+          "To: Mia Parker, CEO, FitTrack\n"
           "1. Decision and evidence: We should refuse to sell location history and instead ask permission to use running data "
           "only for training plans, because users expect privacy (Rule 4) and 25% of surveyed users said they would leave if we sold it.\n"
           "2. Biggest risk and trade-off: The weakest point is that we do not yet know whether better training plans will keep users. "

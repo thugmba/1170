@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_3_4_shopnest_ecosystem_hanji.png" '
-      'alt="Arjun, founder of ShopNest, asks whether to let outside developers build apps for his shops.">',
+      'alt="Adam, founder of ShopNest, asks whether to let outside developers build apps for his shops.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "ShopNest: more requests than one team can build",
-      '<p class="statement" style="font-weight:400;">ShopNest lets small shops build their own online store. Arjun is its founder. '
+      '<p class="statement" style="font-weight:400;">ShopNest lets small shops build their own online store. Adam is its founder. '
       "Shops keep asking for new features, and some leave for bigger store builders.</p>"
       "<table><tr><th>SHOPNEST</th><th style=\"text-align:right\">VALUE</th></tr>"
       '<tr><td>Shops using ShopNest</td><td class="num">400</td></tr>'
@@ -264,7 +264,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 1 to 3)",
           "(10 + 10) x $600 + 20 x $10 x 12 x 20% - costs = $______"]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Arjun (Tool 4)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Adam (Tool 4)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
@@ -275,7 +275,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Arjun (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "BookIt: which revenue share?",
-      tmpl("To: Grace Park, CEO, BookIt\n"
+      tmpl("To: Grace Parker, CEO, BookIt\n"
            "1. Decision and evidence: We should keep 0% of the first $10,000 each partner earns, because small partners must earn "
            "more than they spend (Rule 2): the reminder app keeps $9,600, above its $8,000 cost.\n"
            "2. Biggest risk and trade-off: The weakest point is that we earn almost nothing from small apps at first. We give up "

@@ -34,19 +34,19 @@ def flexcard(heading, inner, cls="card", label=None):
 slide("MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION",
       "Session 2.3: The Up-Sell and Cross-Sell Strategy",
       '<img class="hero" src="../assets/session_2_3_studynest_pricing_hanji.png" '
-      'alt="Hana, founder of StudyNest, looks at her pricing table and asks how to earn more without losing students.">',
+      'alt="Hannah, founder of StudyNest, looks at her pricing table and asks how to earn more without losing students.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 # 2. Situation
 slide("THE SITUATION", "StudyNest: many users, but costs are higher than revenue",
       '<p class="statement" style="font-weight:400;">StudyNest is a note-taking and study app for university students. '
-      'Students can use it for free or pay for more storage and study tools. Hana is its founder.</p>'
+      'Students can use it for free or pay for more storage and study tools. Hannah is its founder.</p>'
       "<table><tr><th>PLAN</th><th>WHAT IT GIVES</th><th style=\"text-align:right\">PRICE / MONTH</th><th style=\"text-align:right\">USERS</th></tr>"
       '<tr><td>Free</td><td>500 MB of notes storage</td><td class="num">$0</td><td class="num">20,000</td></tr>'
       '<tr><td>Plus</td><td>10 GB storage, exam planner</td><td class="num">$4.00</td><td class="num">1,000</td></tr>'
       '<tr><td>Pro</td><td>Unlimited storage, exam planner, group study rooms</td><td class="num">$9.00</td><td class="num">200</td></tr></table>'
       '<div class="takeaway">Revenue = 1,000 x $4.00 + 200 x $9.00 = $5,800 a month. Costs = $9,000. StudyNest loses $3,200 a month. '
-      'A teammate says: "Raise all prices 30%." Hana worries that students will leave.</div>',
+      'A teammate says: "Raise all prices 30%." Hannah worries that students will leave.</div>',
       "SESSION 2.3 / FICTIONAL CLASS DATA")
 
 # 3. Strategy paragraph
@@ -268,7 +268,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the CEO (Tool 3)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "FitClub: raise the fee, or sell a training add-on?",
-      tmpl("To: Leo Kim, CEO, FitClub\n"
+      tmpl("To: Leo Kelly, CEO, FitClub\n"
            "1. Decision and evidence: We should sell a $15 personal-training add-on instead of raising every fee, because it matches "
            "what members want (Rule 4) and 10% of 1,500 members buying it adds 150 x $15 = $2,250 a month.\n"
            "2. Biggest risk and trade-off: The weakest point is that members may not buy the add-on after the first month. "

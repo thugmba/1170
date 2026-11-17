@@ -283,7 +283,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Leo (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "CamPro: connect students' cameras?",
-      tmpl("To: Mia Park, owner, CamPro\n"
+      tmpl("To: Mia Parker, owner, CamPro\n"
            "1. Decision and evidence: We should connect students' cameras, because 150 students own a camera they rarely use (Rule 1) "
            "and connecting costs $2,000 against $12,000 for buying.\n"
            "2. Biggest risk and trade-off: The weakest point is that owners may fear damage to an expensive camera. We give up the full "

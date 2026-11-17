@@ -22,12 +22,12 @@ def slide(eyebrow, title, body, footer):
 
 slide("MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_2_4_freshbox_strategy_hanji.png" '
-      'alt="Sora, founder of FreshBox, asks which strategy to use first.">',
+      'alt="Sarah, founder of FreshBox, asks which strategy to use first.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "FreshBox: three strategies, one monthly loss",
       '<p class="statement" style="font-weight:400;">FreshBox sends university students weekly meal-kit boxes with fresh vegetables '
-      "from local farms. It keeps $3.00 from each box. Sora is its founder.</p>"
+      "from local farms. It keeps $3.00 from each box. Sarah is its founder.</p>"
       '<div style="display:flex;gap:.26in;align-items:flex-start;"><div style="flex:1.3"><table><tr><th>ONE MONTH</th><th style="text-align:right">VALUE</th></tr>'
       '<tr><td>Students who signed up</td><td class="num">3,000</td></tr>'
       '<tr><td>Local farms that supply vegetables</td><td class="num">25</td></tr>'
@@ -35,7 +35,7 @@ slide("THE SITUATION", "FreshBox: three strategies, one monthly loss",
       '<tr><td>Revenue (900 x $3.00 x 4 weeks)</td><td class="num">$10,800</td></tr>'
       '<tr><td>Monthly costs</td><td class="num">$12,000</td></tr>'
       '<tr><td>Monthly loss</td><td class="num">$1,200</td></tr></table></div>'
-      + card("Sora's question", "<p>Each Module 2 strategy suggests a different plan.</p><p>Which strategy should FreshBox use first?</p>", 'card" style="flex:1') + "</div>",
+      + card("Sarah's question", "<p>Each Module 2 strategy suggests a different plan.</p><p>Which strategy should FreshBox use first?</p>", 'card" style="flex:1') + "</div>",
       "SESSION 2.4 / FICTIONAL CLASS DATA")
 
 slide("THE SKILL IN ONE PARAGRAPH", "How do you choose the right strategy?",
@@ -213,7 +213,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the CEO (Tool 3)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "CampusPrint: data loop or binding cross-sell?",
-      tmpl("To: Ben Cho, CEO, CampusPrint\n"
+      tmpl("To: Ben Carter, CEO, CampusPrint\n"
            "1. Decision and evidence: We should start with the binding cross-sell because it fits a clear need before exams (Rule 1) "
            "and 30% of 2,000 orders x $1.00 = $600 a month covers our $500 loss. Next, we will use a data feedback loop to learn which students print most.\n"
            "2. Biggest risk and trade-off: The weakest point is that binding sales may drop after exams. "

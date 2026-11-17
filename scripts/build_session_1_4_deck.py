@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_1_4_latebite_winner_hanji.png" '
-      'alt="Omar, founder of LateBite, asks whether to race QuickEats with discounts or own the late night.">',
+      'alt="Owen, founder of LateBite, asks whether to race QuickEats with discounts or own the late night.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "LateBite: race a rich rival, or be different?",
-      '<p class="statement" style="font-weight:400;">LateBite is Omar\'s food-delivery app for students, the only one open after 11 pm. '
+      '<p class="statement" style="font-weight:400;">LateBite is Owen\'s food-delivery app for students, the only one open after 11 pm. '
       "QuickEats, a much bigger rival, now gives $3 off every order. 60% of LateBite users also have QuickEats.</p>"
       "<table><tr><th>ONE MONTH</th><th style=\"text-align:right\">LATEBITE</th><th style=\"text-align:right\">QUICKEATS</th></tr>"
       '<tr><td>Orders</td><td class="num">6,000</td><td class="num">9,000</td></tr>'
@@ -267,7 +267,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 1, 3, and 4)",
           "Extra orders a month Option B needs to beat no change: extra x $2 x 6 = $12,000, so ______"]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Omar (Tool 4)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Owen (Tool 4)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
@@ -278,7 +278,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Omar (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "RideOn: race BikeGo or serve commuters?",
-      tmpl("To: Daniel Kim, CEO, RideOn\n"
+      tmpl("To: Daniel King, CEO, RideOn\n"
            "1. Decision and evidence: We should not race BikeGo with free rides. We should offer monthly passes for commuters near the "
            "train station, because 70% of our users already use both apps (Rule 1) and we have only 5 months of cash.\n"
            "2. Biggest risk and trade-off: The weakest point is that commuters may want more scooters than we have at 8 am. We give up the "
@@ -302,7 +302,7 @@ slide("EXERCISE 3 / CHECK YOUR ANSWER", "What a strong memo looks like",
           "Rejects Option A: the market is unlikely to tip (Rule 1), and the discount buys users who leave (Rule 3).",
           "Chooses Option B (Rule 4): it builds on LateBite's strength, the only app after 11 pm.",
           'Decision rule: "If late-night orders are below 3,000 a month after two months, we will stop adding restaurants and review the plan."',
-          "May say when Omar would race: only if students started deleting one of the two apps."]) + "</div>",
+          "May say when Owen would race: only if students started deleting one of the two apps."]) + "</div>",
       "EXERCISE 3 / ANSWER KEY 2 OF 2")
 
 # Success check and references

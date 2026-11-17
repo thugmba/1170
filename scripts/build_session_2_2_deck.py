@@ -39,12 +39,12 @@ def term(name, text, example):
 
 slide("MODULE 2 / PLATFORM ECONOMICS, BIG DATA &amp; MONETIZATION", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_2_2_campusjobs_pricing_hanji.png" '
-      'alt="Ravi, founder of CampusJobs, asks who should pay: the students or the shops.">',
+      'alt="Ryan, founder of CampusJobs, asks who should pay: the students or the shops.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "CampusJobs: a free app that earns nothing",
       '<p class="statement" style="font-weight:400;">CampusJobs is a free app that connects university students who want '
-      "part-time jobs with local shops that need workers. Ravi is its founder.</p>"
+      "part-time jobs with local shops that need workers. Ryan is its founder.</p>"
       '<div class="wide-left"><div><table><tr><th>ONE MONTH</th><th style="text-align:right">VALUE</th></tr>'
       '<tr><td>Students using the app</td><td class="num">6,000</td></tr>'
       '<tr><td>Shops posting jobs</td><td class="num">120</td></tr>'
@@ -52,7 +52,7 @@ slide("THE SITUATION", "CampusJobs: a free app that earns nothing",
       '<tr><td>Applications from students</td><td class="num">9,000</td></tr>'
       '<tr><td>Price for students / shops</td><td class="num">$0 / $0</td></tr>'
       '<tr><td>Monthly costs</td><td class="num">$4,000</td></tr></table></div>'
-      + card("Ravi's question", "<p>A friend says: charge everyone $2.00 a month.</p>"
+      + card("Ryan's question", "<p>A friend says: charge everyone $2.00 a month.</p>"
              "<p>Who should pay? Would charging students make the app useless for shops?</p>") + "</div>",
       "SESSION 2.2 / FICTIONAL CLASS DATA")
 
@@ -231,7 +231,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the CEO (Tool 3)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "TutorLink: charge students or tutors?",
-      tmpl("To: Ana Lopez, CEO, TutorLink\n"
+      tmpl("To: Anna Lopez, CEO, TutorLink\n"
            "1. Decision and evidence: We should keep students free and charge tutors 10% of each lesson, because tutors come for the students (Rule 1) "
            "and 1,000 lessons at $20 give us 1,000 x $2 = $2,000 a month.\n"
            "2. Biggest risk and trade-off: The weakest point is that tutors may leave if they get too few lessons. "

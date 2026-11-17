@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_1_2_classchat_network_hanji.png" '
-      'alt="Tomás, founder of ClassChat, asks whether to advertise to the whole campus or fill a few classes first.">',
+      'alt="Tyler, founder of ClassChat, asks whether to advertise to the whole campus or fill a few classes first.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "ClassChat: 3,000 users, but every class feels empty",
-      '<p class="statement" style="font-weight:400;">ClassChat is Tomás\'s free app where students in the same class chat, share notes, '
+      '<p class="statement" style="font-weight:400;">ClassChat is Tyler\'s free app where students in the same class chat, share notes, '
       "and ask questions before exams. Users are spread over 300 classes, so most students open an almost empty class and leave.</p>"
       "<table><tr><th>CLASSCHAT (THIS SEMESTER)</th><th style=\"text-align:right\">VALUE</th></tr>"
       '<tr><td>Users / classes with at least one user</td><td class="num">3,000 / 300</td></tr>'
@@ -264,7 +264,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 1, 2, and 3)",
           "New users Option B needs so that the 40 classes reach 30 each: 40 x 30 - 400 = ______"]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Tomás (Tool 4)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Tyler (Tool 4)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
@@ -275,7 +275,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Tomás (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "GymBuddy: focus on Gym E?",
-      tmpl("To: Sam Lee, founder, GymBuddy\n"
+      tmpl("To: Sam Lewis, founder, GymBuddy\n"
            "1. Decision and evidence: We should focus next month's budget on Gym E, because gyms at 40% density have 70-75% weekly "
            "active users (Rule 4) and Gym E needs only 50 more users to get there (Rule 1).\n"
            "2. Biggest risk and trade-off: The weakest point is that Gym E is small, so it adds few users. We give up faster growth in "

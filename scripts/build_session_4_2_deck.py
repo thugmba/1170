@@ -269,7 +269,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Noah (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "ChefBox: offer the recipe-app coupon?",
-      tmpl("To: Ana Ruiz, CEO, ChefBox\n"
+      tmpl("To: Anna Reed, CEO, ChefBox\n"
            "1. Decision and evidence: We should give every blender owner a $25 coupon for the recipe app, because a customer who uses "
            "both is worth $200 against $30 for the blender alone (Rules 1 and 2).\n"
            "2. Biggest risk and trade-off: The weakest point is that many coupon users may stop paying after the first year. We give up "

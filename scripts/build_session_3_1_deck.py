@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_3_1_unihub_envelopment_hanji.png" '
-      'alt="Jae, founder of UniHub, asks whether UniHub should add a textbook market of its own.">',
+      'alt="Jake, founder of UniHub, asks whether UniHub should add a textbook market of its own.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "UniHub: most BookSwap users are already here",
-      '<p class="statement" style="font-weight:400;">UniHub is a free campus app for timetables and notices, run by Jae. '
+      '<p class="statement" style="font-weight:400;">UniHub is a free campus app for timetables and notices, run by Jake. '
       "BookSwap is a separate app for selling used textbooks.</p>"
       "<table><tr><th></th><th>UNIHUB</th><th>BOOKSWAP</th></tr>"
       '<tr><td>Users</td><td class="num">18,000</td><td class="num">6,000</td></tr>'
@@ -301,7 +301,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to the CEO (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "CityMap: build parking payment, or partner with ParkPay?",
-      tmpl("To: Sara Lin, CEO, CityMap\n"
+      tmpl("To: Sara Lane, CEO, CityMap\n"
            "1. Decision and evidence: We should build parking payment inside CityMap, because 60% of ParkPay users already use "
            "our app (Rule 1) and our CAC is $0.40 against ParkPay's $8.00 (Rule 2).\n"
            "2. Biggest risk and trade-off: The weakest point is that some parking lots work only with ParkPay. We give up a safe "

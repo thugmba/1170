@@ -23,11 +23,11 @@ def slide(eyebrow, title, body, footer):
 # Cover and situation
 slide("MODULE 1 / FOUNDATIONS OF PLATFORM BUSINESS &amp; NETWORK DYNAMICS", f"Session {SESSION}: {TITLE}",
       '<img class="hero" src="../assets/session_1_3_roomlink_twosided_hanji.png" '
-      'alt="Kenji, founder of RoomLink, asks whether to bring more students or more rooms first.">',
+      'alt="Kevin, founder of RoomLink, asks whether to bring more students or more rooms first.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
 slide("THE SITUATION", "RoomLink: 2,000 students, only 40 rooms",
-      '<p class="statement" style="font-weight:400;">RoomLink is Kenji\'s app that connects students who need a room near campus with local '
+      '<p class="statement" style="font-weight:400;">RoomLink is Kevin\'s app that connects students who need a room near campus with local '
       "landlords. Students use it for free; the landlord pays $150 when a room is rented. Most students found nothing and left.</p>"
       "<table><tr><th>ROOMLINK (THIS SEMESTER)</th><th style=\"text-align:right\">VALUE</th></tr>"
       '<tr><td>Students searching for a room</td><td class="num">2,000</td></tr>'
@@ -59,7 +59,7 @@ slide("WORDS YOU NEED FIRST", "Harder side, seeding, match rate",
       term("Harder side", "The side that is harder to win and that the other side comes for.",
            "rooms are scarce, students are many: landlords.")
       + term("Seeding", "Doing the work of one side yourself at the start.",
-             "Kenji photographs rooms and writes the listings.")
+             "Kevin photographs rooms and writes the listings.")
       + term("Match rate", "Deals / listings (or searches) x 100.", "24 rented / 40 listed = 60%."),
       f"SESSION {SESSION} / KEY TERMS 2 OF 3")
 
@@ -74,7 +74,7 @@ slide("WORDS YOU NEED FIRST", "Multi-homing and going around the platform",
 rules = [
     ("Rule 1", "Win the harder side first",
      "Ask which side the other side comes for, and which is harder to get. More of the easy side does not help.",
-     "Kenji spends on landlords, because 2,000 students already search but only 40 rooms are listed.",
+     "Kevin spends on landlords, because 2,000 students already search but only 40 rooms are listed.",
      "Buying ads for more students when there are almost no rooms. They find nothing and leave."),
     ("Rule 2", "Give the first side value before the other arrives",
      "The harder side will join if the platform helps them today, even with few users on the other side.",
@@ -82,7 +82,7 @@ rules = [
      "Asking landlords to list a room and wait. If no student calls soon, they forget the app."),
     ("Rule 3", "Do the hard work yourself, in one small area",
      "At the start, do what users will later do alone, in one small area so both sides meet quickly.",
-     "Kenji visits landlords within 1 km of campus, takes the photos, and writes the listings himself.",
+     "Kevin visits landlords within 1 km of campus, takes the photos, and writes the listings himself.",
      "Launching in the whole city at once. Rooms and students are spread so thin that few ever meet."),
     ("Rule 4", "Give both sides a reason to finish the deal with you",
      "If the platform only introduces people, they go around it. Add value that works only on the platform.",
@@ -261,7 +261,7 @@ slide("EXERCISE 3 / STEP 1", "Calculate before you decide (Tools 1, 2, and 3)",
           "New rooms per semester Option B needs to pay back $10,000: new rooms x 60% x $150 x 2 = $10,000, so ______"]) + "</div>",
       "EXERCISE 3 / CALCULATIONS")
 
-slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Kenji (Tool 4)",
+slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Kevin (Tool 4)",
       '<div class="small-label">TEMPLATE</div>' + tmpl(
           "To: [founder name], [company]\n"
           "1. Decision and evidence: We should choose [option] because [the rule it follows] and [one number from your calculation].\n"
@@ -272,7 +272,7 @@ slide("EXERCISE 3 / STEP 2", "Write a 3-bullet memo to Kenji (Tool 4)",
       "EXERCISE 3 / MEMO TEMPLATE")
 
 slide("EXERCISE 3 / WORKED EXAMPLE", "PetSit: sitters first in North?",
-      tmpl("To: Lina Haddad, founder, PetSit\n"
+      tmpl("To: Lisa Hayes, founder, PetSit\n"
            "1. Decision and evidence: We should spend this month's budget on sitters in North, not on owners, because North has 60 owners "
            "per sitter and a match rate of only 1% (Rule 1).\n"
            "2. Biggest risk and trade-off: The weakest point is that students may not want to pet-sit during exams. We give up growth in "
