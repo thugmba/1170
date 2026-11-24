@@ -50,6 +50,25 @@ slide("MODULE 3 / COMPETITIVE STRATEGY &amp; INNOVATION FRAMEWORKS", f"Session {
       'alt="Lily, owner of the Sweet Slice cake shop, asks whether to make fancy cakes like Royal Cakes or serve the people who buy no cake.">',
       "COURSE 1170 / DIGITAL TRANSFORMATION &amp; PLATFORM STRATEGY")
 
+# Warm-up (one slide, photo background with subtitle band)
+AB = "position:absolute;"
+slide("", "",
+      '<img src="../assets/session_3_3_warmup_milktea.png" alt="A student with a wallet stands outside a milk tea shop '
+      'whose sign says Large only, 700 ml, 5.50, no small or medium sizes." '
+      f'style="{AB}left:0;top:0;width:16in;height:8.15in;object-fit:cover;object-position:50% 30%;">'
+      f'<div style="{AB}left:0;top:0;width:16in;height:2.1in;background:linear-gradient(rgba(15,23,42,.9) 45%,rgba(15,23,42,0));"></div>'
+      f'<div style="{AB}left:.8in;top:.42in;color:#fff;"><div class="eyebrow" style="color:#fcd9a8;">WARM-UP / 10 MINUTES</div>'
+      '<h2 style="color:#fff;">Warm-up: you wanted to buy, but bought nothing</h2></div>'
+      f'<div style="{AB}left:0;top:5.55in;width:16in;height:2.6in;background:linear-gradient(rgba(15,23,42,0),rgba(15,23,42,.9) 30%);"></div>'
+      f'<div style="{AB}left:.8in;top:6.1in;width:14.4in;color:#fff;">'
+      '<p style="font-size:25px;line-height:1.4;margin:0;"><i>&ldquo;I want a small cup of milk tea after lunch. '
+      "The shop near campus sells only one size: a large 700 ml cup. "
+      "A large cup is too much tea, too much sugar, and too much money for me. "
+      "So on most days, I buy nothing. The shop never sees me in its sales, but I still want milk tea.&rdquo;</i></p>"
+      '<p style="font:700 30px \'Times New Roman\', Times, serif;color:#fcd9a8;margin:.14in 0 0;">'
+      "&#10140; Write your own experience like this in about five sentences.</p></div>",
+      f"SESSION {SESSION} / WARM-UP")
+
 slide("THE SITUATION", "Sweet Slice: a tiny cake shop across from a strong leader",
       '<p class="statement" style="font-weight:400;font-size:30px;">Sweet Slice is Lily\'s tiny cake shop near campus: single slices and cupcakes, '
       "ready to eat. Across the street is Royal Cakes, the leader in town.</p>"
@@ -140,26 +159,30 @@ examples = [
      ["Started with people who did not mind waiting for a DVD. <b>(Rule 1)</b>",
       "No late fees: a model Blockbuster did not want to copy. <b>(Rule 3)</b>",
       "Improved step by step, from mail to streaming. <b>(Rule 4)</b>"], "Why it is good"),
-    ("GOOD EXAMPLE 2", "M-Pesa in Kenya", "good",
-     "In March 2007, the phone company Safaricom launched M-Pesa: people send money with a simple text message on a basic phone and put in "
-     "or take out cash at local shops. Fewer than 20% of Kenyans had access to a bank. Safaricom hoped for 350,000 users in the first year; "
-     "by November 2007 it had more than 1 million active users. Later it added savings, loans, and bill payments.",
-     ["Served millions of people that banks did not serve. <b>(Rule 1)</b>",
-      "Basic phones and local shops: simpler and cheaper than a bank account. <b>(Rule 2)</b>",
-      "Started with sending money, then added more step by step. <b>(Rule 4)</b>"], "Why it is good"),
-    ("BAD EXAMPLE 1", "Quibi", "bad",
-     "Quibi launched in April 2020 with expensive short shows from Hollywood stars, made for phones. It raised $1.75 billion and charged "
-     "$4.99 to $7.99 a month. But people already watched free short videos on YouTube and TikTok. Quibi announced it would close in "
-     "October 2020, about six months after launch.",
-     ["Went after viewers that strong leaders already served well. <b>(Rule 1)</b>",
-      "More expensive than free short videos, not simpler or cheaper. <b>(Rule 2)</b>",
-      "Spent heavily before learning what viewers wanted. <b>(Rule 4)</b>"], "Why it is bad"),
-    ("BAD EXAMPLE 2", "Webvan", "bad",
-     "Webvan was a U.S. online grocery delivery company. Before it had many customers, it built large high-tech warehouses (about "
-     "$35 million each) and planned to enter many cities quickly. It lost more than $800 million and went bankrupt in July 2001.",
-     ["Tried to grow very fast before the service worked and made money. <b>(Rule 4)</b>",
-      "Expensive warehouses made its costs high, not low. <b>(Rule 2)</b>",
-      "Later online grocers grew slowly, city by city, and survived."], "Why it is bad"),
+    ("GOOD EXAMPLE 2", "Canva and Adobe", "good",
+     "Adobe's design software (Photoshop, Illustrator) is powerful but hard to learn, costs more than $50 a month, and earns most of "
+     "its profit from professional designers. Canva launched in 2013 as a free, simple tool in the browser: pick a template, drag in "
+     "photos and words, and finish a poster in minutes. Adobe offered a simple tool, Adobe Express, only in 2021. By 2025, Canva had "
+     "about 265 million users a month, and it now serves company teams and professionals too.",
+     ["Started with students, teachers, and small shops that bought no design software. <b>(Rule 1)</b>",
+      "Free templates: simpler, cheaper, and good enough for a poster. <b>(Rule 2)</b>",
+      "A free beginner tool earned Adobe little, so Adobe waited about eight years. <b>(Rule 3)</b>"], "Why it is good"),
+    ("BAD EXAMPLE 1 / THE LEADER'S MISTAKE", "Dell and ASUS", "bad",
+     "Dell paid ASUS, a Taiwanese parts maker, to make its circuit boards. Then Dell asked ASUS to put the computers together, manage "
+     "suppliers, and help design them. Each step made Dell look more profitable, because it owned fewer factories. But ASUS learned "
+     "to make a whole computer, then sold computers under its own brand, such as the cheap Eee PC laptop in 2007. Today ASUS is one "
+     "of the largest laptop brands in the world.",
+     ["ASUS started with low-profit work Dell was happy to give away. <b>(Rule 1)</b>",
+      "Dell compared profits and gave away more and more work. <b>(Rule 3)</b>",
+      "ASUS moved up step by step: parts, assembly, design, its own brand. <b>(Rule 4)</b>"], "Why it is bad for Dell"),
+    ("BAD EXAMPLE 2 / THE LEADER'S MISTAKE", "Department stores and Walmart", "bad",
+     "In the 1960s, department stores such as Sears sold goods in big cities with many staff and high prices. Sam Walton opened the "
+     "first Walmart in 1962 in Rogers, a small town in Arkansas: self-service, simple shelves, and low prices every day. It earned "
+     "little on each item but sold a lot. Walmart grew town by town and added groceries in Supercenters (from 1988). By 1990 it had "
+     "passed Sears as the largest U.S. retailer. Sears filed for bankruptcy in 2018.",
+     ["Walmart started in small towns the city stores ignored. <b>(Rule 1)</b>",
+      "Copying Walmart would have cut the stores' high profit per item. <b>(Rule 3)</b>",
+      "Walmart grew town by town before big cities and groceries. <b>(Rule 4)</b>"], "Why it is bad for the stores"),
 ]
 for label, name, kind, story, reasons, why in examples:
     slide(label, name,
@@ -169,9 +192,9 @@ for label, name, kind, story, reasons, why in examples:
 slide("GOOD AND BAD AT A GLANCE", "Which rule made the difference?",
       "<table><tr><th>EXAMPLE</th><th>RESULT</th><th>THE RULE THAT DECIDED IT</th></tr>"
       '<tr><td>Netflix</td><td style="color:#2f6b47;font-weight:700">Good</td><td>A model the leader did not want to copy (Rule 3)</td></tr>'
-      '<tr><td>M-Pesa</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Served people banks ignored (Rule 1)</td></tr>'
-      '<tr><td>Quibi</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Attacked strong leaders with a pricier product (Rules 1 and 2)</td></tr>'
-      '<tr><td>Webvan</td><td style="color:#991b1b;font-weight:700">Bad</td><td>Grew too fast before the model worked (Rule 4)</td></tr></table>'
+      '<tr><td>Canva</td><td style="color:#2f6b47;font-weight:700">Good</td><td>Served people who bought no design software (Rules 1 and 2)</td></tr>'
+      '<tr><td>Dell vs ASUS</td><td style="color:#991b1b;font-weight:700">Bad for Dell</td><td>Gave away low-profit work to a future rival (Rule 3)</td></tr>'
+      '<tr><td>Stores vs Walmart</td><td style="color:#991b1b;font-weight:700">Bad for the stores</td><td>Ignored small towns and low prices (Rules 1 and 3)</td></tr></table>'
       '<div class="takeaway">Start small where the leader is not looking, then climb step by step.</div>',
       f"SESSION {SESSION} / EXAMPLE SUMMARY")
 
@@ -284,7 +307,7 @@ slide("TOOL PRACTICE / CHECK YOUR ANSWERS", "SnapBox, Tools 3 and 4: test one bo
           "(b) <b>2 months</b>. (c) 450 x $3 - $700 = $650; 12 x $650 - $4,000 = <b>$3,800</b>.",
           "(d) $4,000 / 12 = $333 after rent = $1,033 before rent; $1,033 / $3 = 344 uses a month; 344 / 30 = 11.5, so <b>12 a day</b>.",
           "<b>Tool 4:</b> (a) <b>$100,000</b> / <b>$19,000</b> / <b>-$18,800</b> (at 8 uses, each booth earns $20 a month: 12 x $20 - $4,000 = -$3,760).",
-          "(b) It gives up up to $80,000 of extra profit in the best case to avoid an $18,800 loss. (c) <b>Rule 4</b> (remember Webvan).",
+          "(b) It gives up up to $80,000 of extra profit in the best case to avoid an $18,800 loss. (c) <b>Rule 4</b> (remember how Walmart grew town by town).",
           '(d) Example: "If the first booth averages at least 12 uses a day for two months, we will open four more; if not, we will move it."']) + "</div>",
       "TOOL PRACTICE / ANSWER KEY 2 OF 2")
 
@@ -453,9 +476,9 @@ slide("SUCCESS CHECK", "Can you do these three things?",
       '<div style="margin-top:.3in;"><div class="small-label">REFERENCES</div>'
       '<p class="ref">Christensen, C. M., Raynor, M. E., &amp; McDonald, R. (2015). What is disruptive innovation? Harvard Business Review, 93(12), 44-53.</p>'
       '<p class="ref">Newsweek (2021). Fact check: Did Blockbuster turn down the chance to buy Netflix for $50 million?</p>'
-      '<p class="ref">Safaricom (2017). The M-PESA wonder: how it all began.</p>'
-      '<p class="ref">NBC News (2020, October 21). Quibi is shutting down just months after launching.</p>'
-      '<p class="ref">TidBITS (2001, July 16). Where Webvan went wrong.</p></div>',
+      '<p class="ref">Christensen, C. M. (2010). How will you measure your life? Harvard Business Review, 88(7/8), 46-51.</p>'
+      '<p class="ref">Time (1991, February 25). Mr. Sam stuns Goliath.</p>'
+      '<p class="ref">TechCrunch (2026, February 18). Canva gets to $4B in revenue as LLM referral traffic rises.</p></div>',
       f"SESSION {SESSION} / WRAP-UP")
 
 
